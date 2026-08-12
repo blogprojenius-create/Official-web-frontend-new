@@ -1,0 +1,98 @@
+Folder analysis for the official web frontend
+
+Project purpose:
+This folder is the frontend of the ProJenius website. It is a React + Vite application that renders the public-facing website, including pages like Home, About, Services, Blog, Contact, Courses, Career Guidance, and more.
+
+Main folders and what they are used for:
+
+1. src/
+This is the main source code folder of the application.
+It contains all React components, pages, styling, and the app entry point.
+
+2. src/Components/
+This folder contains reusable UI building blocks used across the website.
+Examples include:
+- Header.jsx
+- Footer.jsx
+- HeroSection.jsx
+- AboutSection.jsx
+- ContactSection.jsx
+- ChatBot.jsx
+- PagePopup.jsx
+- ScrollToTop.jsx
+
+These components are used to build the different sections of the site and keep the UI organized.
+
+3. src/Pages/
+This folder contains the page-level components for the website.
+Each file represents a route/page, such as:
+- Home.jsx
+- About.jsx
+- Services.jsx
+- Blog.jsx
+- Contact.jsx
+- Courses.jsx
+- CareerGuidance.jsx
+- Internship.jsx
+- Startup.jsx
+- Workshop.jsx
+
+These pages are the main screens the user navigates to.
+
+4. src/assets/
+This folder stores static assets used by the app, including stylesheets and JavaScript helper files.
+It is used to organize CSS and additional frontend logic that support the UI.
+
+5. src/App.jsx
+This is the main application component that defines the overall structure of the app and likely connects the routes/pages together.
+
+6. src/main.jsx
+This is the entry point of the React application.
+It mounts the app into the browser and initializes the project.
+
+7. public/
+This folder is for static files that are served directly by Vite without processing.
+It may contain images, icons, and other public assets.
+
+8. index.html
+This is the main HTML file for the Vite app.
+It is the page shell into which the React app is injected.
+
+9. vite.config.js
+This file configures Vite, the build tooling for the frontend.
+It can define aliases, dev server behavior, and build settings.
+
+10. package.json
+This file contains the project metadata, scripts, and dependencies.
+It defines commands such as:
+- npm start or npm run dev for running the app
+- npm run build for building the app
+
+11. .env and .env.example
+These files store environment variables used by the frontend.
+They are important for configuring API URLs, chat endpoints, and other runtime settings.
+
+12. eslint.config.js
+This file configures linting rules for the project.
+It helps maintain code quality and consistent coding style.
+
+What this folder is used for overall:
+The folder is responsible for the entire public website experience.
+It handles:
+- page rendering
+- UI components and layout
+- animations and interactive sections
+- blog-related pages
+- course and internship content pages
+- chat/contact functionality
+- styling and visual presentation
+
+How the project is structured:
+- Components are reusable pieces of UI.
+- Pages are complete screens or routes.
+- Assets hold supporting CSS/JS resources.
+- Public contains static files served directly.
+- Vite manages development/build processes.
+
+In simple terms:
+This folder is the website frontend. It is where the user interface is built and presented to visitors.

@@ -1,0 +1,1023 @@
+/* =========================================
+   PROJECT / WORK SHOWCASE
+   UNIQUE PREFIX: nv-
+========================================= */
+
+
+/* =========================================
+   RESET SAFETY
+========================================= */
+
+.nv-work-showcase *,
+.nv-work-showcase *::before,
+.nv-work-showcase *::after {
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   MAIN SECTION
+========================================= */
+
+.nv-work-showcase {
+    width: 100%;
+    padding-top: 10px;
+    padding: 30px 0;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.nv-work-container {
+    width: 1400px;
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.nv-work-header {
+    text-align: center;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================
+   OUR PROJECTS — BADGE
+   SAME STYLE AS WHO WE ARE
+========================================= */
+
+.nv-sub-heading {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 8px 18px;
+
+    margin-bottom: 18px;
+
+    border-radius: 999px;
+
+    background: rgba(22, 184, 229, 0.06);
+
+    border: 1px solid rgba(22, 184, 229, 0.22);
+
+    color: #5fc4df;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================
+   BADGE DOT
+========================================= */
+
+.nv-sub-heading-dot {
+    width: 7px;
+    height: 7px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #5fc4df;
+
+    animation: nvDotPulse 2.8s ease-in-out infinite;
+}
+
+
+@keyframes nvDotPulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.45;
+        transform: scale(0.7);
+    }
+}
+
+
+/* =========================================
+   MAIN TITLE
+========================================= */
+
+.nv-title {
+    position: relative;
+
+    margin: 0 auto;
+
+    color: #0b1328;
+
+    font-family: inherit;
+
+    font-size: 48px;
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    letter-spacing: -0.035em;
+
+    text-align: center;
+
+    white-space: normal;
+}
+
+
+/* =========================================
+   TITLE ACCENT
+========================================= */
+
+.nv-title-accent {
+    color: #16a9cf;
+
+    font-family: inherit;
+
+    font-weight: inherit;
+}
+
+
+/* =========================================
+   TITLE UNDERLINE
+   75px
+   CENTERED
+   SLOW ANIMATION
+========================================= */
+
+.nv-title-line {
+    width: 75px;
+    height: 5px;
+
+    margin: 14px auto 18px;
+
+    border-radius: 999px;
+
+    background: #16b8e5;
+
+    transform-origin: center;
+
+    animation: nvTitleLine 2.8s ease-in-out infinite;
+}
+
+
+@keyframes nvTitleLine {
+
+    0%,
+    100% {
+        opacity: 0.3;
+
+        transform: scaleX(0.75);
+
+        box-shadow:
+            0 0 0 rgba(22, 184, 229, 0);
+    }
+
+    50% {
+        opacity: 1;
+
+        transform: scaleX(1);
+
+        box-shadow:
+            0 0 12px rgba(22, 184, 229, 0.65);
+    }
+}
+
+
+/* =========================================
+   HEADER DESCRIPTION
+========================================= */
+
+.nv-work-header p {
+    max-width: 760px;
+
+    margin: 0 auto;
+
+    color: #6b7280;
+
+    font-size: 16px;
+
+    line-height: 30px;
+}
+
+
+/* =========================================
+   SWIPER
+========================================= */
+
+.nv-work-showcase .swiper {
+    width: 100%;
+
+    padding: 0;
+
+    overflow: visible;
+}
+
+
+/* =========================================
+   SWIPER SLIDES
+========================================= */
+
+.nv-work-showcase .swiper-slide {
+    opacity: 1 !important;
+
+    filter: none !important;
+
+    transform: none;
+
+    display: flex;
+
+    justify-content: center;
+}
+
+
+/* Remove Swiper effects */
+
+.nv-work-showcase .swiper-slide-prev,
+.nv-work-showcase .swiper-slide-next {
+    opacity: 1 !important;
+
+    filter: none !important;
+}
+
+
+.nv-work-showcase .swiper-slide-shadow-left,
+.nv-work-showcase .swiper-slide-shadow-right {
+    display: none !important;
+}
+
+
+/* =========================================
+   WORK CARD
+========================================= */
+
+.nv-work-card {
+    position: relative;
+
+    width: 100%;
+
+    height: 460px;
+
+    border-radius: 28px;
+
+    perspective: 1200px;
+
+    transition: transform 0.4s ease;
+}
+
+
+/* =========================================
+   CARD SCALE
+========================================= */
+
+.nv-work-showcase .swiper-slide .nv-work-card {
+    transform: scale(0.95);
+}
+
+
+.nv-work-showcase .swiper-slide-active .nv-work-card {
+    transform: scale(1);
+
+    z-index: 10;
+}
+
+
+/* =========================================
+   FLIP BOX
+========================================= */
+
+.nv-flip-box {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    transition: transform 0.8s ease;
+
+    transition-delay: 0s;
+
+    transform-style: preserve-3d;
+}
+
+
+/* =========================================
+   ACTIVE FLIP
+========================================= */
+
+.nv-work-showcase .swiper-slide-active .nv-flip-box {
+    transform: rotateY(180deg);
+
+    transition-delay: 1s;
+}
+
+
+/* =========================================
+   FRONT + BACK
+========================================= */
+
+.nv-flip-front,
+.nv-flip-back {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    border-radius: 28px;
+
+    overflow: hidden;
+
+    backface-visibility: hidden;
+
+    -webkit-backface-visibility: hidden;
+
+    transition: box-shadow 0.4s ease;
+}
+
+
+/* =========================================
+   FRONT
+========================================= */
+
+.nv-flip-front {
+    background: #000;
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================================
+   FRONT IMAGE
+========================================= */
+
+.nv-flip-front img {
+    width: 100% !important;
+
+    height: 100% !important;
+
+    object-fit: cover !important;
+
+    object-position: center !important;
+
+    display: block;
+
+    transform: scale(1.8);
+
+    transition: transform 0.8s ease;
+}
+
+
+/* =========================================
+   ACTIVE FRONT GLOW
+========================================= */
+
+.nv-work-showcase .swiper-slide-active .nv-flip-front {
+    box-shadow:
+        0 0 30px rgba(0, 191, 255, 0.5);
+}
+
+
+/* =========================================
+   BACK CARD
+========================================= */
+
+.nv-flip-back {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(15, 23, 42, 0.98),
+            rgba(17, 24, 39, 0.95)
+        ),
+        url("/images/pattern.png");
+
+    color: #ffffff;
+
+    transform: rotateY(180deg);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: flex-start;
+
+    padding: 35px;
+
+    text-align: left;
+
+    border: 3px solid rgba(102, 199, 221, 0.3);
+
+    box-shadow:
+        0 0 15px rgba(102, 199, 221, 0.15),
+        inset 0 0 15px rgba(102, 199, 221, 0.1);
+}
+
+
+/* =========================================
+   ACTIVE BACK GLOW
+========================================= */
+
+.nv-work-showcase .swiper-slide-active .nv-flip-back {
+    border-color: #00bfff;
+
+    box-shadow:
+        0 0 30px rgba(0, 191, 255, 0.5),
+        inset 0 0 20px rgba(0, 191, 255, 0.3);
+}
+
+
+/* =========================================
+   PROJECT TITLE
+========================================= */
+
+.nv-project-title {
+    font-size: 30px;
+
+    font-weight: 800;
+
+    line-height: 1.3;
+
+    color: #ffffff;
+
+    margin: 0 0 18px;
+}
+
+
+/* =========================================
+   PROJECT TYPE
+========================================= */
+
+.nv-subtitle {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: fit-content;
+
+    padding: 10px 22px;
+
+    border-radius: 40px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #00bfff,
+            #52d6ff
+        );
+
+    color: #000000;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.nv-desc {
+    color: rgba(255, 255, 255, 0.88);
+
+    font-size: 16px;
+
+    line-height: 28px;
+
+    margin: 0 0 25px;
+}
+
+
+/* =========================================
+   RATING
+========================================= */
+
+.nv-rating {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 12px;
+}
+
+
+.nv-rating-stars {
+    display: flex;
+
+    align-items: center;
+
+    gap: 4px;
+}
+
+
+.nv-rating-stars i {
+    color: #FFD700;
+
+    font-size: 18px;
+
+    line-height: 1;
+}
+
+
+.nv-rating-text {
+    color: #FFD700;
+
+    font-size: 18px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================
+   NAVIGATION BUTTONS
+========================================= */
+
+.nv-work-showcase .swiper-button-next,
+.nv-work-showcase .swiper-button-prev {
+    width: 50px;
+
+    height: 50px;
+
+    margin-top: -25px;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.nv-work-showcase .swiper-button-next:hover,
+.nv-work-showcase .swiper-button-prev:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 14px 30px rgba(0, 0, 0, 0.14);
+}
+
+
+.nv-work-showcase .swiper-button-next::after,
+.nv-work-showcase .swiper-button-prev::after {
+    font-size: 18px;
+
+    font-weight: 700;
+
+    color: #111827;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 991px) {
+
+    .nv-work-showcase {
+        padding: 60px 0;
+    }
+
+
+    .nv-work-container {
+        max-width: 92%;
+    }
+
+
+    .nv-work-header {
+        margin-bottom: 15px;
+    }
+
+
+    .nv-title {
+        font-size: 42px;
+    }
+
+
+    .nv-work-header p {
+        max-width: 680px;
+
+        font-size: 15px;
+
+        line-height: 28px;
+    }
+
+
+    .nv-work-card {
+        height: 420px;
+    }
+
+
+    .nv-flip-back {
+        padding: 28px;
+    }
+
+
+    .nv-project-title {
+        font-size: 24px;
+    }
+
+
+    .nv-desc {
+        font-size: 15px;
+
+        line-height: 26px;
+    }
+
+
+    .nv-work-showcase .swiper-button-next,
+    .nv-work-showcase .swiper-button-prev {
+        width: 46px;
+
+        height: 46px;
+    }
+
+
+    .nv-work-showcase .swiper-button-next::after,
+    .nv-work-showcase .swiper-button-prev::after {
+        font-size: 16px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 767px) {
+
+    .nv-work-showcase {
+        padding: 50px 0;
+    }
+
+
+    .nv-work-container {
+        max-width: 92%;
+    }
+
+
+    .nv-work-header {
+        margin-bottom: 40px;
+    }
+
+
+    /* Our Projects badge */
+
+    .nv-sub-heading {
+        font-size: 11px;
+
+        letter-spacing: 2px;
+
+        padding: 8px 16px;
+
+        margin-bottom: 16px;
+    }
+
+
+    /* Title */
+
+    .nv-title {
+        font-size: 30px;
+
+        line-height: 1.3;
+
+        white-space: normal;
+    }
+
+
+    /* Keep line centered */
+
+    .nv-title-line {
+        width: 75px;
+
+        height: 5px;
+
+        margin: 12px auto 16px;
+    }
+
+
+    .nv-work-header p {
+        font-size: 14px;
+
+        line-height: 26px;
+
+        max-width: 95%;
+    }
+
+
+    /* Card */
+
+    .nv-work-card {
+        height: 380px;
+
+        border-radius: 22px;
+    }
+
+
+    .nv-flip-front,
+    .nv-flip-back {
+        border-radius: 22px;
+    }
+
+
+    .nv-flip-back {
+        padding: 24px;
+    }
+
+
+    .nv-project-title {
+        font-size: 22px;
+
+        line-height: 1.3;
+
+        margin-bottom: 14px;
+    }
+
+
+    .nv-subtitle {
+        font-size: 12px;
+
+        padding: 8px 16px;
+
+        margin-bottom: 16px;
+    }
+
+
+    .nv-desc {
+        font-size: 14px;
+
+        line-height: 24px;
+
+        margin-bottom: 18px;
+    }
+
+
+    .nv-rating {
+        margin-top: 8px;
+    }
+
+
+    .nv-rating-stars {
+        gap: 3px;
+    }
+
+
+    .nv-rating-stars i {
+        font-size: 16px;
+    }
+
+
+    .nv-rating-text {
+        font-size: 16px;
+    }
+
+
+    /* Navigation */
+
+    .nv-work-showcase .swiper-button-next,
+    .nv-work-showcase .swiper-button-prev {
+        width: 42px;
+
+        height: 42px;
+
+        margin-top: -21px;
+    }
+
+
+    .nv-work-showcase .swiper-button-next::after,
+    .nv-work-showcase .swiper-button-prev::after {
+        font-size: 15px;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .nv-work-showcase {
+        padding: 45px 0;
+    }
+
+
+    .nv-work-container {
+        max-width: 92%;
+    }
+
+
+    .nv-work-header {
+        margin-bottom: 35px;
+    }
+
+
+    .nv-sub-heading {
+        font-size: 10px;
+
+        letter-spacing: 1.8px;
+
+        padding: 7px 15px;
+    }
+
+
+    .nv-sub-heading-dot {
+        width: 6px;
+
+        height: 6px;
+    }
+
+
+    .nv-title {
+        font-size: 27px;
+
+        line-height: 1.3;
+    }
+
+
+    .nv-title-line {
+        width: 75px;
+
+        height: 5px;
+
+        margin: 11px auto 14px;
+    }
+
+
+    .nv-work-header p {
+        font-size: 13px;
+
+        line-height: 24px;
+    }
+
+
+    .nv-work-card {
+        height: 340px;
+
+        border-radius: 18px;
+    }
+
+
+    .nv-flip-front,
+    .nv-flip-back {
+        border-radius: 18px;
+    }
+
+
+    .nv-flip-back {
+        padding: 20px;
+    }
+
+
+    .nv-project-title {
+        font-size: 20px;
+
+        line-height: 1.3;
+
+        margin-bottom: 12px;
+    }
+
+
+    .nv-subtitle {
+        font-size: 11px;
+
+        padding: 7px 14px;
+
+        margin-bottom: 14px;
+    }
+
+
+    .nv-desc {
+        font-size: 13px;
+
+        line-height: 22px;
+
+        margin-bottom: 16px;
+    }
+
+
+    .nv-rating-stars i {
+        font-size: 15px;
+    }
+
+
+    .nv-rating-text {
+        font-size: 15px;
+    }
+
+
+    .nv-work-showcase .swiper-button-next,
+    .nv-work-showcase .swiper-button-prev {
+        width: 38px;
+
+        height: 38px;
+
+        margin-top: -19px;
+    }
+
+
+    .nv-work-showcase .swiper-button-next::after,
+    .nv-work-showcase .swiper-button-prev::after {
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+    .nv-work-showcase {
+        padding: 40px 0;
+    }
+
+
+    .nv-title {
+        font-size: 25px;
+    }
+
+
+    .nv-work-header p {
+        font-size: 12px;
+
+        line-height: 22px;
+    }
+
+
+    .nv-work-card {
+        height: 320px;
+    }
+
+
+    .nv-flip-back {
+        padding: 18px;
+    }
+
+
+    .nv-project-title {
+        font-size: 18px;
+    }
+
+
+    .nv-desc {
+        font-size: 12px;
+
+        line-height: 21px;
+    }
+}
+
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .nv-sub-heading-dot,
+    .nv-title-line {
+        animation: none;
+    }
+
+    .nv-flip-box {
+        transition: none;
+    }
+
+    .nv-flip-front img {
+        transition: none;
+    }
+}

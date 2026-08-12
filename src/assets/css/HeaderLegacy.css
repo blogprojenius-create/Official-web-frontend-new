@@ -1,0 +1,231 @@
+.glass-header {
+  left: 0;
+  padding: 12px 4vw;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.glass-navbar-inner {
+  align-items: center;
+  background: rgba(13, 20, 36, 0.94);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 4px solid #66c7dd;
+  border-radius: 30px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+  display: flex;
+  gap: 22px;
+  justify-content: flex-end;
+  margin: 0 auto;
+  min-height: 80px;
+  padding: 0 40px;
+  pointer-events: all;
+  width: min(100%, 1000px);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.glass-logo {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  margin-right: 90px;
+  text-decoration: none;
+}
+
+.glass-logo img,
+.shiny-logo-img {
+  display: block;
+  height: auto;
+  max-width: 180px;
+  width: 180px;
+}
+
+.glass-nav-links {
+  align-items: center;
+  display: flex;
+  flex: 1 1 auto;
+  gap: 18px;
+  justify-content: center;
+  min-width: 0;
+}
+
+.glass-nav-item {
+  align-items: center;
+  display: flex;
+  min-height: 68px;
+  position: relative;
+}
+
+.glass-nav-link {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  color: #ffffff !important;
+  display: inline-flex;
+  font-size: 16px;
+  font-weight: 800;
+  gap: 6px;
+  line-height: 1;
+  padding: 10px 6px;
+  position: relative;
+  text-decoration: none !important;
+  white-space: nowrap;
+}
+
+.glass-nav-link::after {
+  background: #66c7dd;
+  border-radius: 999px;
+  bottom: 1px;
+  content: "";
+  height: 3px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  transform: scaleX(0);
+  transition: transform 220ms ease;
+}
+
+.glass-nav-link:hover::after,
+.glass-nav-item.active .glass-nav-link::after {
+  transform: scaleX(1);
+}
+
+.glass-dropdown {
+  background: rgba(13, 20, 36, 0.96);
+  border: 1px solid rgba(102, 199, 221, 0.18);
+  border-radius: 18px;
+  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.34);
+  left: 50%;
+  min-width: 190px;
+  padding: 10px;
+  pointer-events: all;
+  position: absolute;
+  top: calc(100% - 4px);
+  transform: translateX(-50%);
+}
+
+.glass-dropdown-item {
+  border-radius: 12px;
+  color: #ffffff !important;
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 12px 14px;
+  text-decoration: none !important;
+}
+
+.glass-dropdown-item:hover,
+.glass-dropdown-item.active {
+  background: rgba(102, 199, 221, 0.14);
+  color: #66c7dd !important;
+}
+
+.glass-hamburger {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 16px;
+  color: #ffffff;
+  cursor: pointer;
+  display: none;
+  height: 46px;
+  justify-content: center;
+  width: 46px;
+}
+
+.glass-mobile-drawer {
+  background: rgba(13, 20, 36, 0.98);
+  display: none;
+  inset: 0;
+  min-height: 100dvh;
+  padding: 112px 22px 28px;
+  pointer-events: all;
+  position: fixed;
+  z-index: 999;
+}
+
+.glass-mobile-drawer nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 0 auto;
+  width: min(100%, 520px);
+}
+
+.glass-mobile-link {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  color: #ffffff !important;
+  display: flex;
+  font-size: 21px;
+  font-weight: 800;
+  justify-content: space-between;
+  min-height: 54px;
+  padding: 0 4px;
+  text-decoration: none !important;
+  width: 100%;
+}
+
+.glass-mobile-link.active,
+.glass-mobile-link:hover {
+  color: #66c7dd !important;
+}
+
+.glass-mobile-sub {
+  overflow: hidden;
+  padding-left: 14px;
+}
+
+.glass-mobile-link.sub {
+  color: rgba(255, 255, 255, 0.72) !important;
+  font-size: 16px;
+  min-height: 44px;
+}
+
+.header-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1), transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.header-hidden {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transform: translateY(-14px) !important;
+}
+
+@media (max-width: 1080px) {
+  .glass-nav-links {
+    display: none;
+  }
+
+  .glass-navbar-inner {
+    min-height: 78px;
+  }
+
+  .glass-hamburger,
+  .glass-mobile-drawer {
+    display: flex;
+  }
+}
+
+@media (max-width: 560px) {
+  .glass-header {
+    padding: 12px;
+  }
+
+  .glass-navbar-inner {
+    min-height: 68px;
+    padding: 12px 14px;
+  }
+
+  .glass-logo img {
+    width: 148px;
+  }
+}

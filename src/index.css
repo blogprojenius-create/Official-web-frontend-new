@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --font-family-base: "Outfit", "Poppins", "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-heading: clamp(2.4rem, 5vw, 4.75rem);
+    --font-section: clamp(1.9rem, 3.4vw, 3rem);
+    --font-body: 1rem;
+    --line-heading: 1.08;
+    --line-section: 1.16;
+    --line-body: 1.7;
+    --color-ink: #111827;
+    --color-muted: #5b6475;
+    --color-navy: #081120;
+    --color-accent: #66c7dd;
+    --color-action: #2563eb;
+    --radius-card: 8px;
+    --shadow-card: 0 18px 48px rgba(17, 24, 39, 0.08);
+    --shadow-card-hover: 0 24px 64px rgba(17, 24, 39, 0.13);
+    --section-padding: clamp(4rem, 7vw, 7rem);
+    --container-gutter: clamp(1rem, 3vw, 2rem);
+    --motion-fast: 180ms cubic-bezier(0.22, 1, 0.36, 1);
+    --motion-standard: 260ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    font-family: var(--font-family-base);
+}
+
+html {
+    overflow-x: clip;
+    scroll-padding-top: 96px;
+}
+
+body{
+    color: var(--color-ink);
+    font-family: var(--font-family-base);
+    font-size: var(--font-body);
+    font-weight:400;
+    line-height: var(--line-body);
+    margin: 0;
+    overflow-x: clip;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+svg,
+video,
+canvas,
+iframe {
+    max-width: 100%;
+}
+
+img {
+    height: auto;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-family: var(--font-family-base);
+    font-weight:800;
+    letter-spacing:0;
+}
+
+#title {
+    font-weight: 700;
+    font-size: var(--font-section);
+    line-height: var(--line-section);
+}
+
+@media(max-width:482px){
+    #title{
+        text-align: center;
+        font-size: var(--font-section);
+    }
+    #sub-heading{
+    display: flex;
+    justify-content: center;
+}
+}
+
+
+#title.section-title{
+    font-weight: 700;
+    font-size: var(--font-section);
+}
+#sub-heading{
+    color: #66c7dd;
+    margin-bottom: 4px;
+    font-size: var(--font-body);
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+#sub-heading.about{
+    color: #66c7dd;
+    justify-content: center;
+    margin-bottom: 4px;
+    font-size: var(--font-body);
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    display: flex;
+    text-transform: uppercase;
+}  
+
+.container.title-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 300px;
+    height: auto;
+}
+
+h1.page-title {
+    color: white;
+    font-size: clamp(32px, 5vw, 62px);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.5px;
+    text-shadow: 0 4px 24px rgba(0, 0, 0, 0.36);
+    position: relative;
+    z-index: 1;
+}
+
+.header-wrap {
+    min-height: clamp(280px, 32vw, 380px);
+    height: auto;
+    border-bottom: none;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+/* Cinematic overlay gradient */
+.header-wrap::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        160deg,
+        rgba(10, 15, 29, 0.88) 0%,
+        rgba(14, 116, 144, 0.35) 50%,
+        rgba(10, 15, 29, 0.85) 100%
+    );
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Bottom gradient accent bar */
+.header-wrap::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #66c7dd 30%, #2563eb 60%, transparent);
+    z-index: 2;
+    pointer-events: none;
+}
+
+.btn {
+    background: #2563EB;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 999px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+    border: none;
+    min-height: 44px;
+    transition: background-color var(--motion-standard), color var(--motion-standard), transform var(--motion-standard), box-shadow var(--motion-standard), border-color var(--motion-standard);
+    will-change: transform;
+}
+
+.btn:hover {
+    background: #1D4ED8;
+    color: #ffffff;
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+[data-aos]{
+    transform: translate3d(0,0,0);
+}
+
+.container {
+    padding-left: var(--container-gutter);
+    padding-right: var(--container-gutter);
+}
+
+.section-desc,
+p {
+    font-size: var(--font-body);
+    line-height: var(--line-body);
+}
+
+@media (max-width: 767px) {
+    h1.page-title {
+        text-align: center;
+    }
+
+    .header-wrap {
+        min-height: 330px;
+    }
+
+    .container.title-section {
+        align-items: center;
+        min-height: 240px;
+        text-align: center;
+        position: relative;
+        z-index: 2;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.001ms !important;
+    }
+}
+
+/* Enterprise responsive normalization */
+:where(section) {
+    max-width: 100%;
+    overflow-x: clip;
+}
+
+:where(.row) {
+    min-width: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+:where([class*="col-"]) {
+    min-width: 0;
+}
+
+/* Global page-fit: no section should ever exceed the viewport */
+#root {
+    overflow-x: clip;
+    width: 100%;
+}
+
+#root > div {
+    overflow-x: clip;
+}
+
+:where(.card, .box, .icon-box, .process-card, .why-card, .quote-form-card, .talk-first-card, .what-happens-card, .faq-grid-card, .blog-post-card, .modern-course-card, .startup-service-card, .startup-process-card, .workshop-event-card, .workshop-award-item, .internship-domain-card, .internship-stat-card, .cg-box) {
+    border-radius: var(--radius-card);
+}
+
+:where(.card, .box, .process-card, .why-card, .quote-form-card, .what-happens-card, .faq-grid-card, .modern-course-card, .workshop-event-card, .internship-stat-card, .cg-box) {
+    overflow-wrap: anywhere;
+}
+
+:where(a, button, .btn, input, textarea, select) {
+    max-width: 100%;
+}
+
+:where(input, textarea, select, .form-control, .form-select) {
+    min-width: 0;
+}
+
+:where(.btn, button, a) {
+    -webkit-tap-highlight-color: transparent;
+}
+
+:where(.btn, .hero-btn-primary, .hero-btn-secondary, .service-btn, .workshop-whatsapp-btn, .workshop-gallery-link, .internship-track-apply, .modern-btn-primary, .modern-btn-secondary, .startup-contact-btn, .startup-cta-btn) {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+:where(.section-heading, .text-center) :where(#title, h1, h2) {
+    overflow-wrap: anywhere;
+}
+
+@media (max-width: 991px) {
+    :where(.row.g-5, .row.g-4) {
+        --bs-gutter-y: 1.5rem;
+    }
+
+    :where(.contact-main-section, .faq-grid-section, .development-hero, .service-1, .modern-course-section) {
+        padding-block: clamp(3.5rem, 8vw, 5rem);
+    }
+}
+
+@media (max-width: 575px) {
+    :where(.btn, button, .hero-btn-primary, .hero-btn-secondary, .service-btn, .workshop-whatsapp-btn, .workshop-gallery-link, .internship-track-apply, .modern-btn-primary, .modern-btn-secondary) {
+        min-height: 44px;
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    :where(.quote-form-card, .talk-first-card, .what-happens-card, .faq-grid-card) {
+        padding: 24px;
+    }
+}
+
+/* Shared small-screen safeguards for every routed page. */
+.course-filter-bar {
+    top: 96px !important;
+    z-index: 900 !important;
+}
+
+@media (max-width: 767px) {
+    .course-filter-bar {
+        position: static !important;
+    }
+
+    :where(.container) {
+        width: 100%;
+    }
+
+    :where(h1, h2, h3, h4, p, a, button, label, td, th) {
+        overflow-wrap: anywhere;
+    }
+
+    :where(.d-flex) > :where(*) {
+        min-width: 0;
+    }
+}
+
+@media (max-width: 380px) {
+    :root {
+        --container-gutter: 0.875rem;
+    }
+
+    .btn {
+        padding-inline: 16px;
+    }
+}

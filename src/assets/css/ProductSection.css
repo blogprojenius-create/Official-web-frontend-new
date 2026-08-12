@@ -1,0 +1,1180 @@
+/* =========================================================
+   PRODUCT / TABS SECTION
+========================================================= */
+
+.tabs-section *,
+.tabs-section *::before,
+.tabs-section *::after {
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.tabs-section {
+    position: relative;
+
+    width: 100%;
+
+    background:
+        linear-gradient(
+            160deg,
+            #f0f7ff 0%,
+            #e8f4fb 40%,
+            #f0f9fc 100%
+        );
+
+    /* REDUCED TOP & BOTTOM SPACE */
+    padding: 40px 20px 50px;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   DECORATIVE BLOBS
+========================================================= */
+
+.tabs-section::before {
+    content: "";
+
+    position: absolute;
+
+    top: -120px;
+    left: -120px;
+
+    width: 420px;
+    height: 420px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(102, 199, 221, 0.15),
+            transparent 65%
+        );
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+.tabs-section::after {
+    content: "";
+
+    position: absolute;
+
+    bottom: -80px;
+    right: -80px;
+
+    width: 360px;
+    height: 360px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(37, 99, 235, 0.08),
+            transparent 65%
+        );
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.tabs-section .container {
+    position: relative;
+
+    z-index: 1;
+
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    padding: 0;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.tabs-section .heading {
+    position: relative;
+
+    z-index: 1;
+
+    text-align: center;
+
+    /* REDUCED */
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   OUR PRODUCT BADGE
+========================================================= */
+
+.product-sub-heading {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 7px 17px;
+
+    /* REDUCED */
+    margin-bottom: 10px;
+
+    border-radius: 999px;
+
+    background: rgba(22, 184, 229, 0.06);
+
+    border: 1px solid rgba(22, 184, 229, 0.22);
+
+    color: #5fc4df;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   DOT
+========================================================= */
+
+.product-sub-dot {
+    width: 7px;
+    height: 7px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #5fc4df;
+
+    animation:
+        productDotPulse
+        2.8s
+        ease-in-out
+        infinite;
+}
+
+
+@keyframes productDotPulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.45;
+        transform: scale(0.7);
+    }
+}
+
+
+/* =========================================================
+   MAIN TITLE
+========================================================= */
+
+.product-title {
+    position: relative;
+
+    width: 100%;
+
+    max-width: 100%;
+
+    margin: 0 auto;
+
+    /* REDUCED */
+    padding-bottom: 18px;
+
+    color: #0b1328;
+
+    font-family: inherit;
+
+    font-size: clamp(
+        28px,
+        4vw,
+        48px
+    );
+
+    font-weight: 700;
+
+    line-height: 1.15;
+
+    letter-spacing: -0.035em;
+
+    text-align: center;
+
+    white-space: normal;
+}
+
+
+/* =========================================================
+   TITLE ACCENT
+========================================================= */
+
+.product-title-accent {
+    color: #16a9cf;
+
+    font-family: inherit;
+
+    font-weight: inherit;
+}
+
+
+/* =========================================================
+   TITLE UNDERLINE
+========================================================= */
+
+.product-title::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 0;
+
+    width: 75px;
+
+    height: 5px;
+
+    border-radius: 999px;
+
+    background: #16b8e5;
+
+    transform:
+        translateX(-50%)
+        scaleX(0.75);
+
+    animation:
+        productTitleLine
+        2.8s
+        ease-in-out
+        infinite;
+}
+
+
+@keyframes productTitleLine {
+
+    0%,
+    100% {
+        opacity: 0.3;
+
+        transform:
+            translateX(-50%)
+            scaleX(0.75);
+
+        box-shadow:
+            0 0 0
+            rgba(22, 184, 229, 0);
+    }
+
+    50% {
+        opacity: 1;
+
+        transform:
+            translateX(-50%)
+            scaleX(1);
+
+        box-shadow:
+            0 0 12px
+            rgba(22, 184, 229, 0.65);
+    }
+}
+
+
+/* =========================================================
+   HEADER DESCRIPTION
+========================================================= */
+
+.tabs-section .heading p {
+    max-width: 760px;
+
+    /* REDUCED */
+    margin: 10px auto 0;
+
+    color: #64748b;
+
+    font-size: 16px;
+
+    line-height: 26px;
+}
+
+
+/* =========================================================
+   TAB FILTER BUTTONS
+========================================================= */
+
+.tabs-header {
+    position: relative;
+
+    z-index: 1;
+
+    display: flex;
+
+    gap: 10px;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    /* REDUCED */
+    margin-bottom: 24px;
+}
+
+
+/* =========================================================
+   TAB BUTTON
+========================================================= */
+
+.tab-btn {
+    padding: 9px 24px;
+
+    border:
+        1.5px solid
+        rgba(14, 116, 144, 0.2);
+
+    border-radius: 50px;
+
+    background:
+        rgba(255, 255, 255, 0.85);
+
+    backdrop-filter: blur(8px);
+
+    -webkit-backdrop-filter: blur(8px);
+
+    color: #334155;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    font-family:
+        "Outfit",
+        "Inter",
+        sans-serif;
+
+    letter-spacing: 0.2px;
+
+    transition:
+        all 0.28s
+        cubic-bezier(
+            0.34,
+            1.56,
+            0.64,
+            1
+        );
+
+    box-shadow:
+        0 2px 10px
+        rgba(15, 23, 42, 0.05);
+}
+
+
+/* =========================================================
+   TAB HOVER
+========================================================= */
+
+.tab-btn:hover {
+    background:
+        rgba(102, 199, 221, 0.12);
+
+    color: #0891b2;
+
+    border-color:
+        rgba(8, 145, 178, 0.45);
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 6px 18px
+        rgba(8, 145, 178, 0.15);
+}
+
+
+/* =========================================================
+   ACTIVE TAB
+========================================================= */
+
+.tab-btn.active {
+    background:
+        linear-gradient(
+            135deg,
+            #0e7490,
+            #66c7dd
+        );
+
+    color: #ffffff;
+
+    border-color: transparent;
+
+    box-shadow:
+        0 8px 24px
+        rgba(14, 116, 144, 0.32),
+
+        0 2px 6px
+        rgba(14, 116, 144, 0.2);
+
+    transform:
+        translateY(-2px);
+}
+
+
+/* =========================================================
+   MAIN PRODUCT CARD
+========================================================= */
+
+.tabs-content {
+    position: relative;
+
+    z-index: 1;
+
+    display: grid;
+
+    grid-template-columns:
+        1.1fr 0.9fr;
+
+    /* REDUCED */
+    gap: 30px;
+
+    align-items: center;
+
+    background:
+        rgba(255, 255, 255, 0.92);
+
+    backdrop-filter: blur(16px);
+
+    -webkit-backdrop-filter: blur(16px);
+
+    border-radius: 22px;
+
+    /* REDUCED */
+    padding: 30px;
+
+    border:
+        1px solid
+        rgba(14, 116, 144, 0.1);
+
+    box-shadow:
+
+        0 4px 6px
+        rgba(15, 23, 42, 0.03),
+
+        0 20px 60px
+        rgba(15, 23, 42, 0.07),
+
+        inset 0 1px 0
+        rgba(255, 255, 255, 0.9);
+
+    transition:
+        box-shadow 0.35s ease;
+}
+
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
+.tabs-content:hover {
+    box-shadow:
+
+        0 4px 6px
+        rgba(15, 23, 42, 0.04),
+
+        0 28px 70px
+        rgba(15, 23, 42, 0.1),
+
+        inset 0 1px 0
+        rgba(255, 255, 255, 0.9);
+}
+
+
+/* =========================================================
+   CARD TOP ACCENT
+========================================================= */
+
+.tabs-content::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    left: 30px;
+    right: 30px;
+
+    height: 3px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #0e7490,
+            #66c7dd,
+            transparent
+        );
+
+    border-radius:
+        0 0 4px 4px;
+
+    opacity: 0.6;
+}
+
+
+/* =========================================================
+   PRODUCT IMAGE
+========================================================= */
+
+.tabs-image {
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+
+    box-shadow:
+
+        0 8px 24px
+        rgba(15, 23, 42, 0.1),
+
+        0 2px 6px
+        rgba(15, 23, 42, 0.06);
+}
+
+
+.tabs-image::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(15, 23, 42, 0.18) 0%,
+            transparent 50%
+        );
+
+    pointer-events: none;
+}
+
+
+.tabs-image img {
+    width: 100%;
+
+    /* REDUCED IMAGE HEIGHT */
+    height: 320px;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        transform 0.65s
+        cubic-bezier(
+            0.25,
+            1,
+            0.5,
+            1
+        );
+}
+
+
+.tabs-image:hover img {
+    transform:
+        scale(1.04);
+}
+
+
+/* =========================================================
+   PRODUCT TEXT
+========================================================= */
+
+.tabs-text {
+    display: flex;
+
+    flex-direction: column;
+
+    /* REDUCED */
+    gap: 4px;
+}
+
+
+/* =========================================================
+   PRODUCT TITLE
+========================================================= */
+
+.tabs-text h2 {
+    color: #0f172a;
+
+    font-size:
+        clamp(
+            22px,
+            2.8vw,
+            32px
+        );
+
+    font-weight: 800;
+
+    margin:
+        0 0 8px;
+
+    line-height: 1.2;
+
+    letter-spacing: -0.3px;
+
+    font-family:
+        "Outfit",
+        "Inter",
+        sans-serif;
+}
+
+
+/* =========================================================
+   PRODUCT DESCRIPTION
+========================================================= */
+
+.tabs-text p {
+    color: #475569;
+
+    line-height: 1.65;
+
+    /* REDUCED */
+    margin:
+        0 0 16px;
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   EXPLORE BUTTON
+========================================================= */
+
+.explore-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 10px 22px;
+
+    width: fit-content;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0e7490,
+            #66c7dd
+        );
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    font-family:
+        "Outfit",
+        "Inter",
+        sans-serif;
+
+    cursor: pointer;
+
+    transition:
+        all 0.28s
+        cubic-bezier(
+            0.34,
+            1.56,
+            0.64,
+            1
+        );
+
+    box-shadow:
+        0 8px 22px
+        rgba(14, 116, 144, 0.28);
+
+    text-decoration: none;
+
+    letter-spacing: 0.2px;
+}
+
+
+/* =========================================================
+   BUTTON ARROW
+========================================================= */
+
+.explore-btn::after {
+    content: "→";
+
+    display: inline-block;
+
+    transition:
+        transform 0.25s ease;
+}
+
+
+/* =========================================================
+   BUTTON HOVER
+========================================================= */
+
+.explore-btn:hover {
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 14px 30px
+        rgba(14, 116, 144, 0.38);
+
+    color: #ffffff;
+
+    text-decoration: none;
+}
+
+
+.explore-btn:hover::after {
+    transform:
+        translateX(4px);
+}
+
+
+/* =========================================================
+   LARGE TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .tabs-content {
+        gap: 25px;
+
+        padding: 26px;
+    }
+
+    .tabs-image img {
+        height: 300px;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .tabs-section {
+        padding:
+            45px 20px 50px;
+    }
+
+
+    .tabs-section .heading {
+        margin-bottom: 18px;
+    }
+
+
+    .tabs-content {
+        grid-template-columns: 1fr;
+
+        padding: 25px;
+
+        gap: 20px;
+    }
+
+
+    .tabs-image img {
+        height: 300px;
+    }
+
+
+    .tabs-text h2 {
+        font-size: 26px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .tabs-section {
+        padding:
+            35px 16px 40px;
+    }
+
+
+    .tabs-section .heading {
+        margin-bottom: 16px;
+    }
+
+
+    /* BADGE */
+
+    .product-sub-heading {
+        font-size: 11px;
+
+        padding:
+            7px 15px;
+
+        gap: 7px;
+
+        margin-bottom: 8px;
+    }
+
+
+    .product-sub-dot {
+        width: 6px;
+        height: 6px;
+    }
+
+
+    /* TITLE */
+
+    .product-title {
+        font-size: 30px;
+
+        line-height: 1.25;
+
+        padding-bottom: 17px;
+    }
+
+
+    .product-title::after {
+        width: 70px;
+
+        height: 4px;
+    }
+
+
+    /* DESCRIPTION */
+
+    .tabs-section .heading p {
+        font-size: 14px;
+
+        line-height: 24px;
+
+        padding:
+            0 10px;
+
+        margin-top: 8px;
+    }
+
+
+    /* TABS */
+
+    .tabs-header {
+        gap: 8px;
+
+        margin-bottom: 18px;
+    }
+
+
+    .tab-btn {
+        font-size: 13px;
+
+        padding:
+            8px 16px;
+    }
+
+
+    /* CONTENT */
+
+    .tabs-content {
+        gap: 18px;
+
+        padding: 20px;
+
+        border-radius: 17px;
+    }
+
+
+    .tabs-content::before {
+        left: 20px;
+
+        right: 20px;
+    }
+
+
+    /* IMAGE */
+
+    .tabs-image img {
+        height: 250px;
+    }
+
+
+    /* TEXT */
+
+    .tabs-text h2 {
+        font-size: 22px;
+
+        line-height: 1.25;
+
+        margin-bottom: 6px;
+    }
+
+
+    .tabs-text p {
+        font-size: 14px;
+
+        line-height: 1.65;
+
+        margin-bottom: 16px;
+    }
+
+
+    /* BUTTON */
+
+    .explore-btn {
+        font-size: 13px;
+
+        padding:
+            9px 18px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .tabs-section {
+        padding:
+            30px 14px 35px;
+    }
+
+
+    .tabs-section .heading {
+        margin-bottom: 14px;
+    }
+
+
+    /* BADGE */
+
+    .product-sub-heading {
+        font-size: 10px;
+
+        padding:
+            6px 14px;
+
+        letter-spacing: 0.08em;
+    }
+
+
+    /* TITLE */
+
+    .product-title {
+        font-size: 26px;
+
+        line-height: 1.25;
+
+        padding-bottom: 15px;
+    }
+
+
+    .product-title::after {
+        width: 65px;
+
+        height: 4px;
+    }
+
+
+    /* DESCRIPTION */
+
+    .tabs-section .heading p {
+        font-size: 13px;
+
+        line-height: 22px;
+
+        padding: 0;
+
+        margin-top: 7px;
+    }
+
+
+    /* TABS */
+
+    .tabs-header {
+        gap: 7px;
+
+        margin-bottom: 16px;
+    }
+
+
+    .tab-btn {
+        flex:
+            1 1 auto;
+
+        width: auto;
+
+        text-align: center;
+
+        font-size: 12px;
+
+        padding:
+            8px 10px;
+    }
+
+
+    /* CONTENT */
+
+    .tabs-content {
+        padding: 16px;
+
+        gap: 16px;
+
+        border-radius: 15px;
+    }
+
+
+    .tabs-content::before {
+        left: 16px;
+
+        right: 16px;
+    }
+
+
+    /* IMAGE */
+
+    .tabs-image img {
+        height: 210px;
+    }
+
+
+    /* TEXT */
+
+    .tabs-text h2 {
+        font-size: 20px;
+
+        line-height: 1.25;
+
+        margin-bottom: 5px;
+    }
+
+
+    .tabs-text p {
+        font-size: 13px;
+
+        line-height: 1.6;
+
+        margin-bottom: 14px;
+    }
+
+
+    /* BUTTON */
+
+    .explore-btn {
+        font-size: 12px;
+
+        padding:
+            8px 16px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .tabs-section {
+        padding:
+            25px 12px 30px;
+    }
+
+
+    .product-title {
+        font-size: 24px;
+    }
+
+
+    .tabs-section .heading p {
+        font-size: 12px;
+
+        line-height: 21px;
+    }
+
+
+    .tabs-content {
+        padding: 14px;
+
+        gap: 14px;
+    }
+
+
+    .tabs-image img {
+        height: 195px;
+    }
+
+
+    .tabs-text h2 {
+        font-size: 18px;
+    }
+
+
+    .tabs-text p {
+        font-size: 12px;
+
+        line-height: 1.6;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .product-sub-dot,
+    .product-title::after {
+        animation: none;
+    }
+
+    .tabs-image img {
+        transition: none;
+    }
+
+    .tab-btn,
+    .explore-btn {
+        transition: none;
+    }
+}

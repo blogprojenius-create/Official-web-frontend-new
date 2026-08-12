@@ -1,0 +1,833 @@
+/* =========================================================
+   CONTACT SECTION
+========================================================= */
+
+.contact-section {
+    overflow: hidden;
+    background: #111827;
+}
+
+
+/* =========================================================
+   TOP SECTION
+========================================================= */
+
+.contact-section .section-1 {
+    background: #121929;
+    padding: 25px 0 85px;
+    position: relative;
+}
+
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.contact-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   LET'S GET STARTED
+   WHO WE ARE STYLE
+========================================================= */
+
+.contact-sub-heading {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 7px 17px;
+
+    margin-bottom: 10px;
+
+    border-radius: 999px;
+
+    background: rgba(22, 184, 229, 0.06);
+
+    border: 1px solid rgba(22, 184, 229, 0.22);
+
+    color: #5fc4df;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   BADGE DOT
+========================================================= */
+
+.contact-sub-dot {
+    width: 7px;
+    height: 7px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #5fc4df;
+
+    /* SLOW BLINK */
+    animation:
+        contactDotPulse
+        2.8s
+        ease-in-out
+        infinite;
+}
+
+
+@keyframes contactDotPulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.45;
+        transform: scale(0.7);
+    }
+}
+
+
+/* =========================================================
+   MAIN TITLE
+========================================================= */
+
+.contact-section .contact-section-title {
+    position: relative;
+
+    display: inline-block;
+
+    width: auto;
+
+    margin: 0;
+
+    padding: 0 0 20px;
+
+    color: #ffffff;
+
+    font-size: clamp(28px, 4vw, 48px);
+
+    font-weight: 700;
+
+    line-height: 1.15;
+
+    letter-spacing: -0.035em;
+
+    text-align: center;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   WORK TOGETHER ACCENT
+========================================================= */
+
+.contact-title-accent {
+    color: #16a9cf;
+    font-weight: inherit;
+}
+
+
+/* =========================================================
+   TITLE UNDERLINE
+========================================================= */
+
+.contact-section .contact-section-title::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: 0;
+
+    width: 75px;
+    height: 5px;
+
+    border-radius: 999px;
+
+    background: #16b8e5;
+
+    transform:
+        translateX(-50%)
+        scaleX(0.75);
+
+    /* SLOW BLINK */
+    animation:
+        contactTitleLine
+        2.8s
+        ease-in-out
+        infinite;
+}
+
+
+@keyframes contactTitleLine {
+
+    0%,
+    100% {
+
+        opacity: 0.3;
+
+        transform:
+            translateX(-50%)
+            scaleX(0.75);
+
+        box-shadow:
+            0 0 0
+            rgba(22, 184, 229, 0);
+    }
+
+    50% {
+
+        opacity: 1;
+
+        transform:
+            translateX(-50%)
+            scaleX(1);
+
+        box-shadow:
+            0 0 12px
+            rgba(22, 184, 229, 0.65);
+    }
+}
+
+
+/* =========================================================
+   IMAGE CARD SECTION
+========================================================= */
+
+.contact-section .section-2 {
+    margin-top: -55px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   CONTACT CARD
+========================================================= */
+
+.contact-card {
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 28px;
+
+    height: 400px;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.contact-card img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
+
+.contact-card .overlay {
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(15, 23, 42, 0.4) 0%,
+            rgba(17, 24, 39, 0.85) 100%
+        );
+}
+
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.contact-card .card-content {
+    position: absolute;
+
+    left: 40px;
+    bottom: 35px;
+
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+/* =========================================================
+   CARD HEADING
+========================================================= */
+
+.contact-card .card-content h3 {
+    color: #fff;
+
+    font-size: clamp(26px, 4vw, 48px);
+
+    line-height: 1.1;
+
+    font-weight: 700;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   BUTTON
+========================================================= */
+
+.contact-section .btn {
+    position: relative;
+
+    overflow: hidden;
+
+    height: 2.8rem;
+
+    padding: 8px 20px;
+
+    border-radius: 1.5rem;
+
+    background: #2563EB;
+
+    color: #fff;
+
+    border: none;
+
+    cursor: pointer;
+
+    font-weight: 500;
+
+    box-shadow:
+        0 10px 24px
+        rgba(37, 99, 235, 0.28);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+
+    white-space: nowrap;
+}
+
+
+.contact-section .btn:hover {
+    background: #162b34;
+
+    color: #2563EB;
+
+    transform:
+        translateY(-2px)
+        scale(1.03);
+
+    box-shadow:
+        0 14px 30px
+        rgba(37, 99, 235, 0.34);
+}
+
+
+.contact-section .btn:active {
+    transform:
+        translateY(0)
+        scale(0.98);
+}
+
+
+.contact-section .btn .btn-content {
+    position: relative;
+
+    z-index: 1;
+
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   COUNTER SECTION
+========================================================= */
+
+.counter-section {
+    background:
+        linear-gradient(
+            to bottom,
+            #111827 0%,
+            rgba(17, 24, 39, 0.7) 50%,
+            rgba(17, 24, 39, 0.4) 100%
+        ),
+        url('/images/contact-section-bg.png');
+
+    background-position: center;
+
+    background-size: cover;
+
+    background-repeat: no-repeat;
+
+    padding: 85px 0 45px;
+
+    margin-top: -45px;
+}
+
+
+/* =========================================================
+   COUNTER WRAPPER
+========================================================= */
+
+.counter-wrapper {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+
+/* =========================================================
+   COUNTER BOX
+========================================================= */
+
+.counter-box {
+    text-align: center;
+
+    flex: 1;
+
+    min-width: 140px;
+}
+
+
+/* =========================================================
+   COUNTER NUMBER
+========================================================= */
+
+.counter-box h2 {
+    color: #fff;
+
+    font-size: clamp(32px, 6vw, 58px);
+
+    font-weight: 700;
+
+    margin-bottom: 6px;
+
+    position: relative;
+}
+
+
+/* =========================================================
+   COUNTER LABEL
+========================================================= */
+
+.counter-box p {
+    color: #fff;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   IMAGE SLIDER
+========================================================= */
+
+.image-slider {
+    position: relative;
+
+    width: 100%;
+
+    height: 100%;
+
+    overflow: hidden;
+}
+
+
+.image-slider .contact-img {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    opacity: 0;
+
+    animation:
+        fadeSlider
+        8s
+        infinite;
+}
+
+
+/* IMAGE 1 */
+
+.image-slider .contact-img:nth-child(1) {
+    animation-delay: 0s;
+}
+
+
+/* IMAGE 2 */
+
+.image-slider .contact-img:nth-child(2) {
+    animation-delay: 4s;
+}
+
+
+/* =========================================================
+   IMAGE ANIMATION
+========================================================= */
+
+@keyframes fadeSlider {
+
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    45% {
+        opacity: 1;
+        transform: scale(1.04);
+    }
+
+    55% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.07);
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 991px) {
+
+    .contact-section .section-1 {
+        padding: 25px 0 75px;
+    }
+
+    .contact-section .contact-section-title {
+        font-size: 40px;
+    }
+
+    .contact-section .section-2 {
+        margin-top: -45px;
+    }
+
+    .contact-card {
+        height: 330px;
+        border-radius: 24px;
+    }
+
+    .contact-card .card-content {
+        left: 30px;
+        bottom: 30px;
+    }
+
+    .contact-card .card-content h3 {
+        font-size: 38px;
+        margin-bottom: 15px;
+    }
+
+    .counter-section {
+        padding: 70px 0 40px;
+        margin-top: -35px;
+    }
+
+    .counter-wrapper {
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .counter-box h2 {
+        font-size: 48px;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 767px) {
+
+    .contact-section .section-1 {
+        padding: 25px 0 70px;
+    }
+
+    .contact-sub-heading {
+        font-size: 11px;
+
+        padding: 7px 15px;
+
+        margin-bottom: 9px;
+    }
+
+    .contact-sub-dot {
+        width: 7px;
+        height: 7px;
+
+        animation:
+            contactDotPulse
+            2.8s
+            ease-in-out
+            infinite;
+    }
+
+    .contact-section .contact-section-title {
+
+        width: 100%;
+        max-width: 100%;
+
+        font-size:
+            clamp(25px, 7vw, 34px);
+
+        line-height: 1.2;
+
+        white-space: nowrap;
+
+        padding-bottom: 20px;
+    }
+
+    .contact-section .contact-section-title::after {
+
+        width: 75px;
+
+        height: 5px;
+
+        animation:
+            contactTitleLine
+            2.8s
+            ease-in-out
+            infinite;
+    }
+
+    .contact-section .section-2 {
+        margin-top: -40px;
+    }
+
+    .contact-card {
+        height: 300px;
+        border-radius: 22px;
+    }
+
+    .contact-card .card-content {
+        left: 22px;
+        bottom: 22px;
+    }
+
+    .contact-card .card-content h3 {
+        font-size: 30px;
+        margin-bottom: 14px;
+    }
+
+    .contact-section .btn {
+        height: 2.7rem;
+        padding: 7px 17px;
+    }
+
+    .contact-section .btn .btn-content {
+        font-size: 15px;
+    }
+
+    .counter-section {
+        padding: 70px 0 35px;
+        margin-top: -30px;
+    }
+
+    .counter-wrapper {
+        justify-content: center;
+        gap: 25px 18px;
+    }
+
+    .counter-box {
+        min-width: 120px;
+    }
+
+    .counter-box h2 {
+        font-size: 38px;
+        margin-bottom: 5px;
+    }
+
+    .counter-box p {
+        font-size: 10px;
+        letter-spacing: 0.7px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 482px) {
+
+    .contact-section .section-1 {
+        padding: 22px 0 62px;
+    }
+
+    .contact-sub-heading {
+        font-size: 10px;
+        padding: 6px 14px;
+    }
+
+    .contact-sub-dot {
+        width: 7px;
+        height: 7px;
+
+        animation:
+            contactDotPulse
+            2.8s
+            ease-in-out
+            infinite;
+    }
+
+    .contact-section .contact-section-title {
+        font-size: 23px;
+        padding-bottom: 18px;
+    }
+
+    .contact-section .contact-section-title::after {
+        width: 75px;
+        height: 4px;
+
+        animation:
+            contactTitleLine
+            2.8s
+            ease-in-out
+            infinite;
+    }
+
+    .contact-section .section-2 {
+        margin-top: -35px;
+    }
+
+    .contact-card {
+        height: 240px !important;
+        border-radius: 18px;
+    }
+
+    .contact-card .card-content {
+        left: 18px !important;
+        bottom: 18px !important;
+    }
+
+    .contact-card .card-content h3 {
+        font-size: 24px;
+        margin-bottom: 11px !important;
+    }
+
+    .contact-section .btn {
+        height: 2.5rem !important;
+        padding: 6px 15px !important;
+    }
+
+    .contact-section .btn .btn-content {
+        font-size: 14px !important;
+    }
+
+    .counter-section {
+        padding: 65px 0 30px;
+    }
+
+    .counter-wrapper {
+        gap: 20px 14px;
+    }
+
+    .counter-box {
+        min-width: 105px;
+    }
+
+    .counter-box h2 {
+        font-size: 32px;
+    }
+
+    .counter-box p {
+        font-size: 9px;
+    }
+}
+
+
+/* =========================================================
+   EXTRA SMALL MOBILE
+========================================================= */
+
+@media (max-width: 380px) {
+
+    .contact-section .contact-section-title {
+        font-size: 21px;
+    }
+
+    .contact-card {
+        height: 215px !important;
+        border-radius: 16px;
+    }
+
+    .contact-card .card-content {
+        left: 15px !important;
+        bottom: 15px !important;
+    }
+
+    .contact-card .card-content h3 {
+        font-size: 21px;
+    }
+
+    .counter-section {
+        padding: 55px 0 25px;
+    }
+
+    .counter-box {
+        min-width: 100px;
+    }
+
+    .counter-box h2 {
+        font-size: 28px;
+    }
+}
