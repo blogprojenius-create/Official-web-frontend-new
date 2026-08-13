@@ -16,7 +16,7 @@ import Internship from "./Pages/Internship";
 import CareerGuidance from "./Pages/CareerGuidance";
 import JoinOurTeam from "./Pages/JoinOurTeam";
 import BookCall from "./Pages/BookCall";
-import JobApplication from "./pages/JobApplication";
+import JobApplication from "./Pages/JobApplication";
 
 import Footer from "./Components/Footer";
 import PagePopup from "./Components/PagePopup";
