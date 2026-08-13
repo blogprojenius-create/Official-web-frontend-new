@@ -1,5 +1,3 @@
-// Team.jsx
-
 import React, { useEffect, useRef, useState } from "react";
 import "../index.css";
 import "../assets/css/TeamSection.css";
@@ -35,6 +33,7 @@ const teamMembers = [
 
 export default function TeamSection() {
   const sectionRef = useRef(null);
+
   const [animateName, setAnimateName] = useState(false);
   const [animateImage, setAnimateImage] = useState(false);
   const [animateBio, setAnimateBio] = useState(false);
@@ -50,7 +49,10 @@ export default function TeamSection() {
 
   useEffect(() => {
     const section = sectionRef.current;
-    if (!section || typeof window === "undefined") return undefined;
+
+    if (!section || typeof window === "undefined") {
+      return undefined;
+    }
 
     const timers = [];
 
@@ -65,14 +67,26 @@ export default function TeamSection() {
         return;
       }
 
-      timers.push(window.setTimeout(() => setAnimateName(true), 100));
-      timers.push(window.setTimeout(() => setAnimateImage(true), 300));
-      timers.push(window.setTimeout(() => setAnimateBio(true), 500));
+      timers.push(
+        window.setTimeout(() => setAnimateName(true), 100)
+      );
+
+      timers.push(
+        window.setTimeout(() => setAnimateImage(true), 300)
+      );
+
+      timers.push(
+        window.setTimeout(() => setAnimateBio(true), 500)
+      );
     };
 
     const observer = new IntersectionObserver(
-      ([entry]) => setAnimationState(entry.isIntersecting),
-      { threshold: 0.3 }
+      ([entry]) => {
+        setAnimationState(entry.isIntersecting);
+      },
+      {
+        threshold: 0.3,
+      }
     );
 
     observer.observe(section);
@@ -87,21 +101,40 @@ export default function TeamSection() {
     <section className="team-section" ref={sectionRef}>
       <div className="container">
 
-        {/* ── Section heading ── */}
-        <div className="team-section-header" data-aos="fade-up" data-aos-delay="100">
-          <span className="team-sub-heading">Our Team Members</span>
+        {/* ==================================================
+            TEAM SECTION HEADER
+            ================================================== */}
+        <div
+          className="team-section-header"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <span className="team-section-badge">
+            <span className="team-badge-dot"></span>
+            OUR TEAM MEMBERS
+          </span>
+
           <h2 className="team-section-title">
-            Meet the <span className="team-title-highlight">Creative Minds</span>
+            Meet the{" "}
+            <span className="team-title-highlight">
+              Creative Minds
+            </span>
           </h2>
+
+          <div className="team-title-line"></div>
+
           <p className="team-section-desc">
-            The leadership team behind Projenius combines product thinking, engineering depth,
-            and practical execution. We are keeping this section focused on the core faces of
-            the company for now.
+            The leadership team behind Projenius combines product thinking,
+            engineering depth, and practical execution. We are keeping this
+            section focused on the core faces of the company for now.
           </p>
         </div>
 
-        {/* ── First two cards side by side ── */}
+        {/* ==================================================
+            FIRST TWO TEAM MEMBERS
+            ================================================== */}
         <div className="team-grid-top">
+
           {teamMembers.slice(0, 2).map((member, index) => (
             <article
               className="team-card"
@@ -109,56 +142,140 @@ export default function TeamSection() {
               data-aos="fade-up"
               data-aos-delay={200 + index * 150}
             >
-              {/* Text — left */}
+
+              {/* TEXT */}
               <div className="team-card-body">
-                <h3 className={`team-member-name ${animateName ? "team-name-in" : ""}`}>{member.name}</h3>
-                <p className={`team-member-role ${animateName ? "team-role-in" : ""}`}>{member.position}</p>
-                {member.bio && <p className={`team-member-bio ${animateBio ? "team-bio-in" : ""}`}>{member.bio}</p>}
+
+                <h3
+                  className={`team-member-name ${
+                    animateName ? "team-name-in" : ""
+                  }`}
+                >
+                  {member.name}
+                </h3>
+
+                <p
+                  className={`team-member-role ${
+                    animateName ? "team-role-in" : ""
+                  }`}
+                >
+                  {member.position}
+                </p>
+
+                {member.bio && (
+                  <p
+                    className={`team-member-bio ${
+                      animateBio ? "team-bio-in" : ""
+                    }`}
+                  >
+                    {member.bio}
+                  </p>
+                )}
+
               </div>
 
-              {/* Photo — right, image overflows above card */}
+              {/* IMAGE */}
               <div className="team-card-photo">
-                <img className={animateImage ? "team-image-in" : ""} src={member.image} alt={member.name} />
+
+                <img
+                  className={
+                    animateImage ? "team-image-in" : ""
+                  }
+                  src={member.image}
+                  alt={member.name}
+                />
+
+                {/* SOCIAL ICONS */}
                 <div className="team-card-socials">
+
                   {member.socials.map((platform) => (
-                    <a href="#" key={platform} aria-label={`${member.name} ${platform}`}>
+                    <a
+                      href="#"
+                      key={platform}
+                      aria-label={`${member.name} ${platform}`}
+                    >
                       <i className={`bi bi-${platform}`}></i>
                     </a>
                   ))}
+
                 </div>
+
               </div>
+
             </article>
           ))}
+
         </div>
 
-        {/* ── Third card centered below ── */}
+        {/* ==================================================
+            THIRD TEAM MEMBER
+            ================================================== */}
         <div className="team-grid-bottom">
+
           <article
             className="team-card"
             data-aos="fade-up"
             data-aos-delay="500"
           >
+
             <div className="team-card-body">
-              <h3 className={`team-member-name ${animateName ? "team-name-in" : ""}`}>{teamMembers[2].name}</h3>
-              <p className={`team-member-role ${animateName ? "team-role-in" : ""}`}>{teamMembers[2].position}</p>
+
+              <h3
+                className={`team-member-name ${
+                  animateName ? "team-name-in" : ""
+                }`}
+              >
+                {teamMembers[2].name}
+              </h3>
+
+              <p
+                className={`team-member-role ${
+                  animateName ? "team-role-in" : ""
+                }`}
+              >
+                {teamMembers[2].position}
+              </p>
+
               {teamMembers[2].bio && (
-                <p className={`team-member-bio ${animateBio ? "team-bio-in" : ""}`}>
-                    {teamMembers[2].bio}
+                <p
+                  className={`team-member-bio ${
+                    animateBio ? "team-bio-in" : ""
+                  }`}
+                >
+                  {teamMembers[2].bio}
                 </p>
-  )}
+              )}
+
             </div>
 
             <div className="team-card-photo">
-              <img className={animateImage ? "team-image-in" : ""} src={teamMembers[2].image} alt={teamMembers[2].name} />
+
+              <img
+                className={
+                  animateImage ? "team-image-in" : ""
+                }
+                src={teamMembers[2].image}
+                alt={teamMembers[2].name}
+              />
+
               <div className="team-card-socials">
+
                 {teamMembers[2].socials.map((platform) => (
-                  <a href="#" key={platform} aria-label={`Brian ${platform}`}>
+                  <a
+                    href="#"
+                    key={platform}
+                    aria-label={`Brian ${platform}`}
+                  >
                     <i className={`bi bi-${platform}`}></i>
                   </a>
                 ))}
+
               </div>
+
             </div>
+
           </article>
+
         </div>
 
       </div>

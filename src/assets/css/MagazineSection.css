@@ -5,207 +5,554 @@
 
 .magazine-sec-main-wrapper {
   background:
-    radial-gradient(circle at 80% 20%, rgba(102, 199, 221, 0.18), transparent 36%),
-    radial-gradient(circle at 12% 85%, rgba(37, 99, 235, 0.08), transparent 32%),
-    linear-gradient(160deg, #f7fbfc 0%, #ffffff 100%);
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(102, 199, 221, 0.18),
+      transparent 36%
+    ),
+    radial-gradient(
+      circle at 12% 85%,
+      rgba(37, 99, 235, 0.08),
+      transparent 32%
+    ),
+    linear-gradient(
+      160deg,
+      #f7fbfc 0%,
+      #ffffff 100%
+    );
+
   padding: 56px 5%;
+
   overflow: hidden;
 }
 
-/* 3 columns: copy | mascot | book
-   copy gets equal space to book, mascot auto-sizes to its content */
+
+/* =============================================
+   MAIN 3-COLUMN CONTAINER
+
+   IMPORTANT:
+   Alignment is unchanged.
+   ============================================= */
+
 .magazine-viewer-container {
   width: min(1320px, 100%);
+
   margin: 0 auto;
+
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  align-items: end;   /* bottom-align so mascot feet line up with book base */
+
+  grid-template-columns:
+    1fr auto 1fr;
+
+  align-items: end;
+
   gap: 0 8px;
 }
 
-/* ── Col 1 copy ── */
+
+/* =============================================
+   COL 1 — COPY
+   ============================================= */
+
 .magazine-copy-col {
   min-width: 0;
+
   padding-right: 8px;
-  /* push copy up so it aligns with the top of the section visually */
+
   align-self: center;
 }
 
+
+/* =============================================
+   MAGAZINE BADGE
+
+   Radio button + dot
+   ============================================= */
+
 .mag-sub-label {
-  display: block;
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
   margin-bottom: 12px;
+
+  padding: 9px 18px;
+
+  border: 1px solid
+    rgba(102, 199, 221, 0.45);
+
+  border-radius: 999px;
+
+  background:
+    rgba(102, 199, 221, 0.05);
+
+  color: #5fc4dc;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: 0.08em;
+
+  text-transform: uppercase;
+
+  box-sizing: border-box;
 }
 
-.mag-heading {
-  font-size: clamp(26px, 3vw, 44px);
-  line-height: 1.1;
-  margin-bottom: 16px;
-  max-width: 460px;
+
+/* =============================================
+   DOT INSIDE RADIO BUTTON
+   ============================================= */
+
+.magazine-badge-dot {
+  width: 8px;
+
+  height: 8px;
+
+  min-width: 8px;
+
+  border-radius: 50%;
+
+  background: #66c7dd;
+
+  box-shadow:
+    0 0 0 4px
+      rgba(102, 199, 221, 0.10),
+
+    0 0 10px
+      rgba(102, 199, 221, 0.35);
 }
+
+
+/* =============================================
+   MAIN HEADING
+
+   Existing alignment preserved
+   ============================================= */
+
+.mag-heading {
+  font-size:
+    clamp(
+      26px,
+      3vw,
+      44px
+    );
+
+  line-height: 1.1;
+
+  margin-bottom: 0;
+
+  max-width: 460px;
+
+  color: #121929;
+}
+
+
+/* =============================================
+   "PROJENIUS MAGAZINE"
+
+   Cyan gradient
+   ============================================= */
+
+.magazine-heading-highlight {
+  background:
+    linear-gradient(
+      90deg,
+      #66c7dd 0%,
+      #22acc9 55%,
+      #087b98 100%
+    );
+
+  -webkit-background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+
+  color: transparent;
+}
+
+
+/* =============================================
+   LINE AFTER HEADING
+   ============================================= */
+
+.magazine-heading-line {
+  width: 82px;
+
+  height: 5px;
+
+  margin-top: 13px;
+
+  margin-bottom: 16px;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #66c7dd 0%,
+      #21a9c6 100%
+    );
+
+  box-shadow:
+    0 3px 12px
+      rgba(102, 199, 221, 0.30);
+}
+
+
+/* =============================================
+   DESCRIPTION
+   ============================================= */
 
 .mag-desc {
   max-width: 400px;
+
   font-size: 16px;
+
   line-height: 1.75;
+
   color: #4b5563;
+
   margin-bottom: 22px;
 }
 
-/* Tags */
+
+/* =============================================
+   TAGS
+   ============================================= */
+
 .mag-panel-tags {
   display: flex;
+
   flex-wrap: wrap;
+
   gap: 10px;
+
   margin-bottom: 28px;
 }
 
+
 .mag-panel-tags span {
   display: inline-flex;
+
   align-items: center;
+
   min-height: 38px;
+
   padding: 8px 17px;
+
   border-radius: 999px;
+
   background: #ffffff;
+
   color: #121929;
+
   font-size: 14px;
+
   font-weight: 800;
-  border: 1px solid rgba(102, 199, 221, 0.35);
-  box-shadow: 0 6px 16px rgba(18, 25, 41, 0.07);
-  transition: box-shadow 0.2s ease, transform 0.2s ease;
+
+  border:
+    1px solid
+    rgba(102, 199, 221, 0.35);
+
+  box-shadow:
+    0 6px 16px
+      rgba(18, 25, 41, 0.07);
+
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
 }
+
 
 .mag-panel-tags span:hover {
-  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.14);
-  transform: translateY(-1px);
+  box-shadow:
+    0 10px 24px
+      rgba(37, 99, 235, 0.14);
+
+  transform:
+    translateY(-1px);
 }
 
-/* Download button */
+
+/* =============================================
+   DOWNLOAD BUTTON
+   ============================================= */
+
 .magazine-download-btn {
   display: inline-flex;
+
   align-items: center;
+
   justify-content: center;
+
   gap: 10px;
+
   padding: 13px 24px;
+
   border-radius: 8px;
+
   background: #66c7dd;
+
   color: #121929;
+
   font-weight: 800;
+
   text-decoration: none;
-  transition: background 0.2s ease, transform 0.2s ease;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
 }
+
 
 .magazine-download-btn:hover {
   background: #4bb8d1;
+
   color: #121929;
-  transform: translateY(-2px);
+
+  transform:
+    translateY(-2px);
+
   text-decoration: none;
 }
 
-/* ── Col 2 mascot — scroll-driven entrance ── */
+
+/* =============================================
+   COL 2 — MASCOT
+   ============================================= */
+
 .magazine-mascot-col {
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
+
   justify-content: flex-end;
+
   align-self: stretch;
-  /* pad bottom = controls pill (~68px) so mascot feet sit at book bottom */
+
   padding-bottom: 52px;
+
   flex: 0 0 auto;
 
-  /* scroll CSS vars — JS sets these; defaults = off-screen left */
-  --m-x:  -160px;
-  --m-y:   80px;
-  --m-r:  -18deg;
-  --m-s:   0.72;
-  --m-op:  0.25;
+  --m-x: -160px;
+
+  --m-y: 80px;
+
+  --m-r: -18deg;
+
+  --m-s: 0.72;
+
+  --m-op: 0.25;
 }
 
-/* wrapper carries the scroll transform */
+
+/* =============================================
+   MASCOT INNER
+   ============================================= */
+
 .mag-mascot-inner {
   position: relative;
+
   display: inline-flex;
+
   flex-direction: column;
+
   align-items: center;
+
   transform:
-    translate3d(var(--m-x), var(--m-y), 0)
+    translate3d(
+      var(--m-x),
+      var(--m-y),
+      0
+    )
     rotate(var(--m-r))
     scale(var(--m-s));
+
   opacity: var(--m-op);
-  transform-origin: center bottom;
-  will-change: transform, opacity;
+
+  transform-origin:
+    center bottom;
+
+  will-change:
+    transform,
+    opacity;
 }
+
+
+/* =============================================
+   MASCOT IMAGE
+   ============================================= */
 
 .mag-mascot-img {
   display: block;
-  /* prominent: roughly matches the book height visually */
-  width: clamp(240px, 22vw, 380px);
+
+  width:
+    clamp(
+      240px,
+      22vw,
+      380px
+    );
+
   height: auto;
-  filter: drop-shadow(0 24px 40px rgba(18, 25, 41, 0.22));
-  animation: mascotIdle 3.8s ease-in-out infinite;
-  transform-origin: center bottom;
+
+  filter:
+    drop-shadow(
+      0 24px 40px
+      rgba(18, 25, 41, 0.22)
+    );
+
+  animation:
+    mascotIdle 3.8s
+    ease-in-out
+    infinite;
+
+  transform-origin:
+    center bottom;
 }
+
 
 @keyframes mascotIdle {
-  0%,100% { transform: translateY(0px);  }
-  50%      { transform: translateY(-10px); }
+
+  0%,
+  100% {
+    transform:
+      translateY(0px);
+  }
+
+  50% {
+    transform:
+      translateY(-10px);
+  }
 }
 
-/* Speech bubble sits above the mascot head */
+
+/* =============================================
+   SPEECH BUBBLE
+   ============================================= */
+
 .mag-mascot-bubble {
   position: absolute;
+
   bottom: calc(100% + 8px);
+
   left: 50%;
-  transform: translateX(-50%);
+
+  transform:
+    translateX(-50%);
+
   white-space: nowrap;
+
   padding: 10px 18px;
+
   border-radius: 20px;
+
   background: #ffffff;
+
   color: #121929;
+
   font-size: 14px;
+
   font-weight: 700;
-  box-shadow: 0 10px 28px rgba(18, 25, 41, 0.14);
+
+  box-shadow:
+    0 10px 28px
+      rgba(18, 25, 41, 0.14);
+
   pointer-events: none;
-  animation: bubbleIdle 3.8s ease-in-out infinite;
+
+  animation:
+    bubbleIdle 3.8s
+    ease-in-out
+    infinite;
 }
+
 
 @keyframes bubbleIdle {
-  0%,100% { transform: translateX(-50%) translateY(0px);  }
-  50%      { transform: translateX(-50%) translateY(-9px); }
+
+  0%,
+  100% {
+    transform:
+      translateX(-50%)
+      translateY(0px);
+  }
+
+  50% {
+    transform:
+      translateX(-50%)
+      translateY(-9px);
+  }
 }
 
-/* bubble tail pointing down */
+
 .mag-mascot-bubble::after {
   content: "";
+
   position: absolute;
+
   top: 100%;
+
   left: 50%;
-  transform: translateX(-50%);
-  border: 9px solid transparent;
-  border-top-color: #ffffff;
+
+  transform:
+    translateX(-50%);
+
+  border:
+    9px solid transparent;
+
+  border-top-color:
+    #ffffff;
 }
 
-/* ── Col 3 flipbook area ── */
+
+/* =============================================
+   COL 3 — FLIPBOOK
+   ============================================= */
+
 .magazine-sec-book-area {
   min-width: 0;
+
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
+
   justify-content: center;
+
   gap: 22px;
 }
 
+
 .magazine-sec-book-shadow {
-  /* contain exactly the flipbook width so shadow is clean */
   display: flex;
+
   justify-content: center;
-  filter: drop-shadow(0 28px 52px rgba(18, 25, 41, 0.22));
+
+  filter:
+    drop-shadow(
+      0 28px 52px
+      rgba(18, 25, 41, 0.22)
+    );
 }
+
 
 .magazine-sec-flip-book {
   background: transparent;
 }
 
-/* force the internal stf divs to never exceed the set size */
+
+/* =============================================
+   FLIPBOOK INTERNAL
+   ============================================= */
+
 .magazine-sec-flip-book,
 .magazine-sec-flip-book .stf__parent,
 .magazine-sec-flip-book .stf__wrapper,
@@ -213,147 +560,297 @@
   overflow: visible !important;
 }
 
+
 .magazine-sec-page-wrap {
-  /* exact dimensions driven by JS — never clip the page */
   overflow: hidden;
+
   background: transparent;
+
   line-height: 0;
 }
 
-/* Make the PDF canvas fill the page cell exactly */
+
 .magazine-sec-page-wrap .react-pdf__Page {
   width: 100% !important;
+
   height: 100% !important;
 }
 
-.magazine-sec-page-wrap .react-pdf__Page__canvas {
+
+.magazine-sec-page-wrap
+.react-pdf__Page__canvas {
   width: 100% !important;
+
   height: 100% !important;
+
   display: block !important;
+
   object-fit: cover;
 }
 
+
 .magazine-page-placeholder {
   width: 100%;
+
   height: 100%;
+
   background:
-    linear-gradient(135deg, rgba(102, 199, 221, 0.14), rgba(18, 25, 41, 0.06)),
+    linear-gradient(
+      135deg,
+      rgba(102, 199, 221, 0.14),
+      rgba(18, 25, 41, 0.06)
+    ),
     #f7fbfc;
 }
 
-/* Arrow controls pill */
+
+/* =============================================
+   ARROW CONTROLS
+   ============================================= */
+
 .magazine-controls-pill {
   display: inline-flex;
+
   align-items: center;
+
   justify-content: center;
+
   gap: 24px;
+
   padding: 10px 28px;
+
   border-radius: 999px;
+
   background: #f1f5f9;
-  box-shadow: 0 8px 22px rgba(18, 25, 41, 0.08);
+
+  box-shadow:
+    0 8px 22px
+      rgba(18, 25, 41, 0.08);
 }
+
 
 .magazine-nav-button {
   width: 44px;
+
   height: 44px;
-  border: 2px solid #121929;
+
+  border:
+    2px solid #121929;
+
   border-radius: 50%;
+
   background: #ffffff;
+
   color: #121929;
+
   display: inline-flex;
+
   align-items: center;
+
   justify-content: center;
+
   font-size: 30px;
+
   font-weight: 800;
+
   line-height: 1;
+
   cursor: pointer;
-  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
 }
+
 
 .magazine-nav-button:hover {
   background: #121929;
+
   color: #ffffff;
-  transform: translateY(-1px);
+
+  transform:
+    translateY(-1px);
 }
+
 
 .magazine-page-number {
   min-width: 84px;
+
   color: #121929;
+
   font-size: 18px;
+
   font-weight: 800;
+
   text-align: center;
 }
 
-/* ── Tablet ── */
+
+/* =============================================
+   TABLET
+   ============================================= */
+
 @media (max-width: 1100px) {
+
   .magazine-viewer-container {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:
+      1fr 1fr;
+
     grid-template-areas:
-      "copy   copy"
+      "copy copy"
       "mascot book";
+
     gap: 32px 16px;
+
     align-items: end;
   }
 
-  .magazine-copy-col   { grid-area: copy;   padding-right: 0; }
-  .magazine-mascot-col { grid-area: mascot; align-self: flex-end; padding-bottom: 60px; }
-  .magazine-sec-book-area { grid-area: book; }
+  .magazine-copy-col {
+    grid-area: copy;
+
+    padding-right: 0;
+  }
+
+  .magazine-mascot-col {
+    grid-area: mascot;
+
+    align-self: flex-end;
+
+    padding-bottom: 60px;
+  }
+
+  .magazine-sec-book-area {
+    grid-area: book;
+  }
 }
 
-/* ── Mobile ── */
+
+/* =============================================
+   MOBILE
+   ============================================= */
+
 @media (max-width: 767px) {
-  .magazine-sec-main-wrapper { padding: 52px 16px; }
+
+  .magazine-sec-main-wrapper {
+    padding: 52px 16px;
+  }
+
 
   .magazine-viewer-container {
     grid-template-columns: 1fr;
+
     grid-template-areas:
       "copy"
       "mascot"
       "book";
+
     gap: 28px;
+
     text-align: center;
   }
 
-  .magazine-copy-col { padding-right: 0; }
-  .mag-heading       { font-size: 24px; }
-  .mag-panel-tags    { justify-content: center; }
 
+  .magazine-copy-col {
+    padding-right: 0;
+  }
+
+
+  /* Keep badge visually centered on mobile */
+  .mag-sub-label {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  /* Heading */
+  .mag-heading {
+    font-size: 24px;
+
+    max-width: 100%;
+  }
+
+
+  /* Line */
+  .magazine-heading-line {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+  .mag-panel-tags {
+    justify-content: center;
+  }
+
+
+  /* Mascot */
   .magazine-mascot-col {
     align-self: auto;
-    /* Reserve room for the speech bubble so it cannot cover the download CTA. */
+
     margin-top: 52px;
+
     padding-bottom: 0;
-    /* reset scroll transform — always fully visible on mobile */
-    --m-x:  0px;
-    --m-y:  0px;
-    --m-r:  0deg;
-    --m-s:  1;
+
+    --m-x: 0px;
+    --m-y: 0px;
+    --m-r: 0deg;
+    --m-s: 1;
     --m-op: 1;
   }
 
+
   .mag-mascot-img {
-    width: clamp(140px, 40vw, 220px);
+    width:
+      clamp(
+        140px,
+        40vw,
+        220px
+      );
+
     margin: 0 auto;
   }
 
+
   .mag-mascot-bubble {
     position: absolute;
+
     bottom: calc(100% + 8px);
+
     left: 50%;
-    transform: translateX(-50%);
+
+    transform:
+      translateX(-50%);
   }
+
 
   .magazine-sec-book-shadow {
-    filter: drop-shadow(0 16px 32px rgba(18, 25, 41, 0.18));
+    filter:
+      drop-shadow(
+        0 16px 32px
+        rgba(18, 25, 41, 0.18)
+      );
   }
 
-  .magazine-controls-pill { gap: 16px; padding: 9px 18px; }
+
+  .magazine-controls-pill {
+    gap: 16px;
+
+    padding: 9px 18px;
+  }
+
 
   .magazine-nav-button {
     width: 38px;
+
     height: 38px;
+
     font-size: 26px;
   }
 
-  .magazine-page-number { min-width: 72px; font-size: 16px; }
+
+  .magazine-page-number {
+    min-width: 72px;
+
+    font-size: 16px;
+  }
 }

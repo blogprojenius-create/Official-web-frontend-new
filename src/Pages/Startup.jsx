@@ -205,14 +205,26 @@ export default function Startup() {
             {/* MINI TITLE */}
             <div className="startup-mini-title">
 
-              <span>STARTUP SUPPORT PLATFORM</span>
+              <span className="startup-mini-badge">
+                <span className="startup-badge-dot"></span>
+                <span>STARTUP SUPPORT PLATFORM</span>
+              </span>
 
             </div>
 
             {/* HEADING */}
-            <h2>
-              Building Smart Digital Solutions For Modern Startups.
+            <h2 className="startup-main-heading">
+              Building Smart Digital
+              <br />
+              Solutions For Modern
+              <br />
+              <span className="startup-heading-highlight">
+                Startups.
+              </span>
             </h2>
+
+            {/* HEADING UNDERLINE */}
+            <div className="startup-heading-line"></div>
 
             {/* DESCRIPTION */}
             <p>
@@ -249,15 +261,18 @@ export default function Startup() {
         <div className="container">
 
           {/* TOP */}
-          <div className="process-top">
+          <div className="process-top services-startup-heading">
 
-            <div className="process-mini-title">
-              <span id="sub-heading">Services for Startups</span>
+            <div className="services-startup-badge">
+              <span className="services-startup-dot"></span>
+              <span>SERVICES FOR STARTUPS</span>
             </div>
 
-            <h2 id="title">
-              Empowering startups with smart solutions
+            <h2 className="services-startup-title">
+              Empowering startups with <span>smart solutions</span>
             </h2>
+
+            <div className="services-startup-line"></div>
 
             <p className="process-subtitle">
               Our structured approach takes your idea from initial concept through production to a polished, market-ready product.
@@ -310,23 +325,28 @@ export default function Startup() {
       </section>
       <section className="startup-process-section">
 
-        {/* BACKGROUND IMAGE */}
+        {/* BACKGROUND IMAGE — KEEP EXISTING BACKGROUND */}
         <div className="startup-process-bg">
 
-          {/* OVERLAY BOX */}
           <div className="container">
 
             <div className="startup-process-content">
 
               {/* MINI TITLE */}
               <div className="startup-process-mini">
-                <span id="sub-heading">STARTUP PROCESS</span>
+                <span id="sub-heading" className="startup-process-badge">
+                  <span className="startup-process-dot"></span>
+                  STARTUP PROCESS
+                </span>
               </div>
 
               {/* TITLE */}
-              <h2>
-                Startup Development Process
+              <h2 className="startup-process-title">
+                Startup <span>Development Process</span>
               </h2>
+
+              {/* LINE */}
+              <div className="startup-process-line"></div>
 
               {/* PROCESS GRID */}
               <div className="row g-4">
@@ -343,11 +363,8 @@ export default function Startup() {
 
                       {/* TEXT */}
                       <div className="startup-process-text">
-
                         <h4>{item.title}</h4>
-
                         <p>{item.desc}</p>
-
                       </div>
 
                     </div>
@@ -451,15 +468,20 @@ export default function Startup() {
 
             <div className="portfolio-mini-title">
 
-              <span id="sub-heading">OUR PORTFOLIO</span>
+              <span className="portfolio-heading-badge">
+                <span className="portfolio-heading-dot"></span>
+                OUR PORTFOLIO
+              </span>
 
             </div>
 
-            <h2 id="title">
+            <h2 className="portfolio-heading-title">
               Startup Projects &
               <br />
-              Success Stories
+              <span>Success Stories</span>
             </h2>
+
+            <div className="portfolio-heading-line"></div>
 
           </div>
 

@@ -93,7 +93,29 @@ export default function About() {
       </div>
       <section className="about-1 py-5">
   <div className="container">
-    <div className="row align-items-center">
+
+    {/* =========================
+        WHO WE ARE - FULL WIDTH HEADING
+        ========================= */}
+    <div className="about-heading-fullwidth">
+
+      <span className="about-section-badge">
+        <span className="about-badge-dot"></span>
+        WHO WE ARE
+      </span>
+
+      <h2 className="about-main-title">
+        Innovating Ideas Into <span>Smart Solutions</span>
+      </h2>
+
+      <div className="about-title-line"></div>
+
+    </div>
+
+    {/* =========================
+        ALL ABOUT CONTENT BELOW
+        ========================= */}
+    <div className="row align-items-center about-content-row">
 
       {/* Left Circle Design */}
       <div className="col-lg-6 col-md-12" data-aos="fade-right" data-aos-delay="100">
@@ -131,12 +153,6 @@ export default function About() {
       {/* Right Content */}
       <div className="col-lg-6 col-md-12" data-aos="fade-left" data-aos-delay="150">
 
-        <span id="sub-heading">Who we are</span>
-
-        <h2 className="section-title" id="title">
-          Innovating Ideas Into Smart Solutions
-        </h2>
-
         <p className="desc">
           Projenius is a technology-driven startup dedicated to building innovative
           solutions in software development, artificial intelligence, IoT, and
@@ -145,9 +161,9 @@ export default function About() {
           through creativity, technology, and innovation.
         </p>
 
-        <div className="row">
+        <div className="row about-features-stack">
 
-          <div className="col-md-6 col-12">
+          <div className="col-12">
 
             <ul className="icon-list">
 
@@ -165,7 +181,7 @@ export default function About() {
 
           </div>
 
-          <div className="col-md-6 col-12">
+          <div className="col-12">
 
             <ul className="icon-list">
 
@@ -211,13 +227,16 @@ export default function About() {
 
           {/* Section Header */}
           <div className="achieve-header" data-aos="fade-up">
-            <span className="achieve-badge">
-              <span className="achieve-badge-dot"></span>
-              Milestones
+            <span className="about-section-badge">
+              <span className="about-badge-dot"></span>
+              MILESTONES
             </span>
-            <h2 className="achieve-title">
-              Our <span className="achieve-title-accent">Achievements</span>
+
+            <h2 className="about-main-title achievement-main-title">
+              Our <span>Achievements</span>
             </h2>
+
+            <div className="about-title-line"></div>
             <p className="achieve-subtitle">
               Numbers that reflect our commitment to innovation, learning, and real-world impact.
             </p>
@@ -270,17 +289,43 @@ export default function About() {
       </section>
       <TeamSection />
       <section className="about-3 container py-5">
-        <div className="row">
+
+        {/* =========================
+            WHY CHOOSE US - FULL WIDTH HEADING
+            ========================= */}
+        <div className="about-section-heading why-heading-fullwidth">
+
+          <span className="about-section-badge">
+            <span className="about-badge-dot"></span>
+            WHY CHOOSE US?
+          </span>
+
+          <h2 className="about-main-title">
+            Why Projenius Stands Out in <span>Innovation</span>
+          </h2>
+
+          <div className="about-title-line"></div>
+
+          <p className="section-desc why-centered-description">
+            We combine innovation, technology, and practical expertise to deliver reliable solutions,<br className="desktop-break" />
+            quality services, and impactful learning experiences for everyone.
+          </p>
+
+        </div>
+
+        {/* =========================
+            ALL CONTENT BELOW HEADING
+            ========================= */}
+        <div className="row why-content-row">
+
           <div className="col-lg-6 col-12">
-            <span id="sub-heading">Why Choose us?</span>
-            <h2 className="section-title" id="title">Why Projenius Stands Out in Innovation</h2>
-            <p className="section-desc">We combine innovation, technology, and practical expertise to deliver reliable solutions, quality services, and impactful learning experiences for everyone.</p>
+
             <div
-  className="why-img-slider"
-  aria-label="Projenius company achievements"
-  data-aos="zoom-in"
-  data-aos-duration="1000"
->
+              className="why-img-slider"
+              aria-label="Projenius company achievements"
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+            >
               <img
                 src="/images/iot-course.webp"
                 alt="Projenius IoT course"
@@ -288,6 +333,7 @@ export default function About() {
                 loading="lazy"
                 decoding="async"
               />
+
               <img
                 src="/images/software-developement-training.png"
                 alt="Projenius software development training"
@@ -296,56 +342,92 @@ export default function About() {
                 decoding="async"
               />
             </div>
+
           </div>
+
           <div className="col-lg-6 col-12 why-right">
+
             <div
-  className="icon-box"
-  data-aos="fade-left"
-  data-aos-delay="100"
->
+              className="icon-box"
+              data-aos="fade-left"
+              data-aos-delay="100"
+            >
               <div className="row">
+
                 <div className="col-3 col-sm-2">
                   <div className="icon">
                     <i className="bi bi-lightbulb"></i>
                   </div>
                 </div>
+
                 <div className="col-9 col-sm-10">
-                  <h3 className="icon-box-heading">Innovative Technology Solutions</h3>
-                  <p className="icon-box-desc">We build smart and scalable solutions using AI, IoT, web, and mobile technologies for real-world applications.</p>
+                  <h3 className="icon-box-heading">
+                    Innovative Technology Solutions
+                  </h3>
+
+                  <p className="icon-box-desc">
+                    We build smart and scalable solutions using AI, IoT, web,
+                    and mobile technologies for real-world applications.
+                  </p>
                 </div>
+
               </div>
             </div>
+
             <div
-  className="icon-box mt-3"
-  data-aos="fade-left"
-  data-aos-delay="300"
->
+              className="icon-box mt-3"
+              data-aos="fade-left"
+              data-aos-delay="300"
+            >
               <div className="row">
+
                 <div className="col-3 col-sm-2">
                   <div className="icon">
                     <i className="bi bi-people"></i>
                   </div>
                 </div>
+
                 <div className="col-9 col-sm-10">
-                  <h3 className="icon-box-heading">Learning & Mentorship Support</h3>
-                  <p className="icon-box-desc">We empower students through workshops, training programs, academic guidance, and hands-on technical learning experiences.</p>
+                  <h3 className="icon-box-heading">
+                    Learning & Mentorship Support
+                  </h3>
+
+                  <p className="icon-box-desc">
+                    We empower students through workshops, training programs,
+                    academic guidance, and hands-on technical learning experiences.
+                  </p>
                 </div>
+
               </div>
             </div>
+
             <div className="icon-box mt-3">
+
               <div className="row">
+
                 <div className="col-3 col-sm-2">
                   <div className="icon">
                     <i className="bi bi-diagram-3"></i>
                   </div>
                 </div>
+
                 <div className="col-9 col-sm-10">
-                  <h3 className="icon-box-heading">Industry-Focused Development</h3>
-                  <p className="icon-box-desc">Our team develops practical digital products and hardware systems tailored for businesses, startups, and industries.</p>
+                  <h3 className="icon-box-heading">
+                    Industry-Focused Development
+                  </h3>
+
+                  <p className="icon-box-desc">
+                    Our team develops practical digital products and hardware
+                    systems tailored for businesses, startups, and industries.
+                  </p>
                 </div>
+
               </div>
+
             </div>
+
           </div>
+
         </div>
       </section>
       <section className="magazine-load-section">
@@ -356,13 +438,32 @@ export default function About() {
       <section className="awards-section py-5" data-aos="zoom-in-up" data-aos-duration="700">
         <div className="container">
 
-          <div className="text-center mb-5">
-            <span id="sub-heading" data-aos="fade-up" data-aos-delay="150">Achievements</span>
-            <h2 className="section-title" id="title" data-aos="fade-up" data-aos-delay="200">Awards & Recognition</h2>
+          <div className="awards-heading text-center">
+
+            <span
+              className="awards-section-badge"
+              data-aos="fade-up"
+              data-aos-delay="150"
+            >
+              <span className="awards-badge-dot"></span>
+              ACHIEVEMENTS
+            </span>
+
+            <h2
+              className="section-title"
+              id="title"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              Awards & <span>Recognition</span>
+            </h2>
+
+            <div className="awards-title-line"></div>
 
             <p className="section-desc awards-desc">
               Celebrating achievements, innovation, creativity, and milestones that showcase our passion for technology, design, and impactful digital solutions.
             </p>
+
           </div>
 
           <div className="awards-masonry">
