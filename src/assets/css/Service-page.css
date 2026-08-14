@@ -3780,3 +3780,304 @@
     text-align: right;
   }
 }
+
+
+/* =========================================================
+   WORKSHOP SKILL INTRO — MATCH REFERENCE HEADING STYLE
+   Only this heading block is changed.
+   ========================================================= */
+
+.workshop-skill-intro .workshop-skill-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 40px;
+  padding: 9px 18px;
+  box-sizing: border-box;
+  border: 1px solid rgba(102, 199, 221, 0.38);
+  border-radius: 999px;
+  background: rgba(102, 199, 221, 0.08);
+  color: #52bfdc;
+  font-family: 'Outfit', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.workshop-skill-dot {
+  width: 8px;
+  height: 8px;
+  min-width: 8px;
+  min-height: 8px;
+  border-radius: 50%;
+  background: #52bfdc;
+  box-shadow: 0 0 0 4px rgba(82, 191, 220, 0.10);
+  display: inline-block;
+}
+
+.workshop-skill-intro h2 {
+  margin: 20px 0 0;
+}
+
+.workshop-skill-highlight {
+  color: #159fc5;
+}
+
+.workshop-skill-line {
+  width: 78px;
+  height: 5px;
+  margin: 18px 0 0;
+  border-radius: 999px;
+  background: #66c7dd;
+  box-shadow: 0 0 10px rgba(102, 199, 221, 0.30);
+}
+
+@media (max-width: 991px) {
+  .workshop-skill-intro .workshop-skill-badge {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .workshop-skill-line {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .workshop-skill-intro .workshop-skill-badge {
+    min-height: 40px;
+    padding: 8px 16px;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
+
+  .workshop-skill-dot {
+    width: 7px;
+    height: 7px;
+    min-width: 7px;
+    min-height: 7px;
+  }
+}
+
+
+/* =========================================================
+   FEATURED EVENT HEADING — MATCH PREVIOUS HEADING STYLE
+   Only this heading block is changed.
+   ========================================================= */
+
+.workshop-showcase-heading {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.workshop-showcase-heading .workshop-showcase-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 40px;
+  padding: 9px 18px;
+  box-sizing: border-box;
+  border: 1px solid rgba(117, 214, 232, 0.45);
+  border-radius: 999px;
+  background: rgba(117, 214, 232, 0.08);
+  color: #66c7dd;
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.workshop-showcase-dot {
+  width: 8px;
+  height: 8px;
+  min-width: 8px;
+  min-height: 8px;
+  border-radius: 50%;
+  background: #66c7dd;
+  box-shadow: 0 0 0 4px rgba(102, 199, 221, 0.10);
+  display: inline-block;
+}
+
+.workshop-showcase-heading .workshop-showcase-title {
+  margin: 18px 0 0 !important;
+  color: #ffffff !important;
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(40px, 4.5vw, 58px);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -1.2px;
+  text-align: center;
+}
+
+.workshop-showcase-line {
+  width: 78px;
+  height: 5px;
+  margin: 18px auto 0;
+  border-radius: 999px;
+  background: #66c7dd;
+  box-shadow: 0 0 10px rgba(102, 199, 221, 0.30);
+}
+
+@media (max-width: 767px) {
+  .workshop-showcase-heading {
+    margin-bottom: 45px;
+  }
+
+  .workshop-showcase-heading .workshop-showcase-badge {
+    min-height: 40px;
+    padding: 8px 16px;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+  }
+
+  .workshop-showcase-dot {
+    width: 7px;
+    height: 7px;
+    min-width: 7px;
+    min-height: 7px;
+  }
+
+  .workshop-showcase-heading .workshop-showcase-title {
+    font-size: 38px;
+    line-height: 1.14;
+  }
+
+  .workshop-showcase-line {
+    width: 70px;
+    height: 4px;
+    margin-top: 16px;
+  }
+}
+
+
+/* Only the word "Event" is highlighted */
+.workshop-showcase-title .workshop-event-highlight {
+  color: #18bce8 !important;
+}
+
+
+/* =========================================================
+   ACHIEVEMENTS HEADING — MATCH PREVIOUS STYLE
+   Only this heading block is changed.
+   ========================================================= */
+
+.workshop-achievements-heading {
+  text-align: center;
+  margin-bottom: 44px;
+}
+
+.workshop-achievements-heading .workshop-achievements-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 40px;
+  padding: 9px 18px;
+  box-sizing: border-box;
+  border: 1px solid rgba(117, 214, 232, 0.45);
+  border-radius: 999px;
+  background: rgba(117, 214, 232, 0.08);
+  color: #66c7dd;
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.workshop-achievements-dot {
+  width: 8px;
+  height: 8px;
+  min-width: 8px;
+  min-height: 8px;
+  border-radius: 50%;
+  background: #66c7dd;
+  box-shadow: 0 0 0 4px rgba(102, 199, 221, 0.10);
+  display: inline-block;
+}
+
+.workshop-achievements-heading .workshop-achievements-title {
+  margin: 18px 0 0 !important;
+  color: #ffffff !important;
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(40px, 4.5vw, 58px);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -1.2px;
+  text-align: center;
+}
+
+.workshop-achievements-highlight {
+  color: #18bce8 !important;
+}
+
+.workshop-achievements-line {
+  width: 78px;
+  height: 5px;
+  margin: 18px auto 0;
+  border-radius: 999px;
+  background: #66c7dd;
+  box-shadow: 0 0 10px rgba(102, 199, 221, 0.30);
+}
+
+.workshop-achievements-heading .workshop-achievements-desc {
+  margin: 20px auto 0;
+  color: #ffffff;
+  font-size: 17px;
+  line-height: 1.8;
+  max-width: 820px;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .workshop-achievements-heading {
+    margin-bottom: 36px;
+  }
+
+  .workshop-achievements-heading .workshop-achievements-badge {
+    min-height: 40px;
+    padding: 8px 16px;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+  }
+
+  .workshop-achievements-dot {
+    width: 7px;
+    height: 7px;
+    min-width: 7px;
+    min-height: 7px;
+  }
+
+  .workshop-achievements-heading .workshop-achievements-title {
+    font-size: 38px;
+    line-height: 1.14;
+  }
+
+  .workshop-achievements-line {
+    width: 70px;
+    height: 4px;
+    margin-top: 16px;
+  }
+
+  .workshop-achievements-heading .workshop-achievements-desc {
+    font-size: 15px;
+  }
+}
+
+
+/* Achievements description — exactly two lines */
+.workshop-achievements-heading .workshop-achievements-desc span {
+  display: block;
+  white-space: nowrap;
+}

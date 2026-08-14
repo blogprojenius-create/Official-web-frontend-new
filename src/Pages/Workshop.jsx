@@ -154,14 +154,27 @@ export default function Workshop() {
         <div className="container">
           <div className="workshop-skill-split">
             <div className="workshop-skill-intro">
-              <span className="workshop-card-label">For Schools & Colleges</span>
-              <h2>Enhance Your Students' Skills With Practical Workshops</h2>
+              <span className="workshop-skill-badge">
+                <span className="workshop-skill-dot"></span>
+                FOR SCHOOLS &amp; COLLEGES
+              </span>
+
+              <h2>
+                Enhance Your Students' Skills With{" "}
+                <span className="workshop-skill-highlight">
+                  Practical Workshops
+                </span>
+              </h2>
+
+              <div className="workshop-skill-line"></div>
+
               <p>
                 If you want to strengthen your school or college students'
                 technical skills, creativity, and career readiness, ProJenius
                 delivers structured workshops that combine hands-on learning,
                 expert guidance, and real-world project exposure.
               </p>
+
               <a
                 href={workshopWhatsAppLink}
                 className="workshop-whatsapp-btn"
@@ -186,9 +199,17 @@ export default function Workshop() {
 
       <section className="workshop-showcase-section">
         <div className="container">
-          <div className="section-heading text-center">
-            <span id="sub-heading">Explore Our Workshops</span>
-            <h2 id="title">Featured Event</h2>
+          <div className="section-heading text-center workshop-showcase-heading">
+            <span id="sub-heading" className="workshop-showcase-badge">
+              <span className="workshop-showcase-dot"></span>
+              Explore Our Workshops
+            </span>
+
+            <h2 id="title" className="workshop-showcase-title">
+              Featured <span className="workshop-event-highlight">Event</span>
+            </h2>
+
+            <div className="workshop-showcase-line"></div>
           </div>
 
           <div className="workshop-event-grid">
@@ -205,22 +226,30 @@ export default function Workshop() {
                   <img src={event.image} alt={event.imageAlt} />
                   <span>{event.imageAlt}</span>
                 </div>
+
                 <div className="workshop-event-content">
                   <span className="workshop-card-label">{event.label}</span>
                   <h3>{event.title}</h3>
+
                   <div className="workshop-badges">
                     {event.badges.map((badge) => (
                       <span key={badge}>{badge}</span>
                     ))}
                   </div>
+
                   <h4>{event.heading}</h4>
                   <p>{event.description}</p>
+
                   <div className="workshop-details">
                     {event.details.map((detail) => (
                       <span key={detail}>{detail}</span>
                     ))}
                   </div>
-                  <a href="#workshop-gallery" className="workshop-gallery-link">
+
+                  <a
+                    href="#workshop-gallery"
+                    className="workshop-gallery-link"
+                  >
                     View Gallery
                   </a>
                 </div>
@@ -237,12 +266,24 @@ export default function Workshop() {
         data-aos-duration="700"
       >
         <div className="container">
-          <div className="section-heading text-center">
-            <span id="sub-heading">Achievements</span>
-            <h2 id="title">Awards & Recognition</h2>
+          <div className="section-heading text-center workshop-achievements-heading">
+            <span id="sub-heading" className="workshop-achievements-badge">
+              <span className="workshop-achievements-dot"></span>
+              Achievements
+            </span>
+
+            <h2 id="title" className="workshop-achievements-title">
+              Awards &amp; <span className="workshop-achievements-highlight">Recognition</span>
+            </h2>
+
+            <div className="workshop-achievements-line"></div>
+
             <p className="section-desc workshop-achievements-desc">
-              Celebrating workshop milestones, student participation, and the
-              moments that reflect practical learning in action.
+              <span>
+                Celebrating workshop milestones, student participation, and the
+                moments 
+              </span>
+              <span>that reflect practical learning in action.</span>
             </p>
           </div>
 
@@ -252,13 +293,24 @@ export default function Workshop() {
                 className="workshop-award-item"
                 key={item.title}
                 data-aos={
-                  ["fade-right", "fade-down", "fade-left", "zoom-in", "flip-left", "fade-up-left"][
-                    index % 6
-                  ]
+                  [
+                    "fade-right",
+                    "fade-down",
+                    "fade-left",
+                    "zoom-in",
+                    "flip-left",
+                    "fade-up-left",
+                  ][index % 6]
                 }
                 data-aos-delay={50 + index * 50}
               >
-                <img src={item.image} alt={item.alt} loading="lazy" decoding="async" />
+                <img
+                  src={item.image}
+                  alt={item.alt}
+                  loading="lazy"
+                  decoding="async"
+                />
+
                 <div className="workshop-award-content">
                   <h3>{item.title}</h3>
                   <p>{item.subtitle}</p>
@@ -271,5 +323,3 @@ export default function Workshop() {
     </>
   );
 }
-
-
