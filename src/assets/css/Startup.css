@@ -817,6 +817,154 @@
     padding-right: 20px;
 }
 
+/* FAQ heading is above BOTH columns */
+/* =========================================================
+   FAQ HEADING — FULL WIDTH ABOVE LEFT + RIGHT CONTENT
+   ========================================================= */
+
+.startup-faq-title-row {
+    width: 100%;
+    margin: 0 0 42px 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.startup-faq-title-col {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center !important;
+}
+
+.startup-faq-title-col .startup-faq-mini {
+    width: 100%;
+    margin: 0 0 16px 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center !important;
+}
+
+/* Startup FAQ badge — same rounded radio style as OUR PORTFOLIO */
+.startup-faq-title-col .startup-faq-mini #sub-heading {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 9px 18px;
+    min-height: 40px;
+    box-sizing: border-box;
+    border-radius: 999px;
+    background: rgba(102, 199, 221, 0.08);
+    border: 1px solid rgba(102, 199, 221, 0.38);
+    color: #52bfdc;
+    font-family: 'Outfit', sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1.7px;
+    line-height: 1;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/* Round radio button */
+.startup-faq-radio-dot {
+    width: 8px;
+    height: 8px;
+    min-width: 8px;
+    min-height: 8px;
+    border-radius: 50%;
+    background: #52bfdc;
+    box-shadow: 0 0 0 4px rgba(82, 191, 220, 0.10);
+    display: inline-block;
+}
+
+/* FAQ main heading */
+.startup-faq-main-title {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(24px, 3.2vw, 42px) !important;
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -1px;
+    color: #0f172a;
+}
+
+/* Highlight only "scalable digital products" */
+.startup-faq-highlight {
+    color: #159fc5;
+}
+
+/* Heading underline */
+.startup-faq-title-line {
+    width: 78px;
+    height: 5px;
+    margin: 18px auto 0;
+    border-radius: 999px;
+    background: #66c7dd;
+    box-shadow: 0 0 10px rgba(102, 199, 221, 0.30);
+}
+
+@media (max-width: 768px) {
+    .startup-faq-title-col .startup-faq-mini #sub-heading {
+        min-height: 40px;
+        padding: 8px 16px;
+        font-size: 11px;
+        letter-spacing: 1.5px;
+    }
+
+    .startup-faq-radio-dot {
+        width: 7px;
+        height: 7px;
+        min-width: 7px;
+        min-height: 7px;
+    }
+}
+
+@media (max-width: 992px) {
+    .startup-faq-title-row {
+        margin-bottom: 35px;
+    }
+
+    .startup-faq-main-title {
+        font-size: clamp(22px, 4vw, 36px) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .startup-faq-title-row {
+        margin-bottom: 30px;
+    }
+
+    .startup-faq-title-col {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .startup-faq-main-title {
+        font-size: clamp(20px, 5vw, 30px) !important;
+        letter-spacing: -0.6px;
+    }
+
+    .startup-faq-title-line {
+        width: 64px;
+        height: 4px;
+        margin-top: 16px;
+    }
+}
+
 .startup-faq-images {
     display: flex;
     gap: 16px;
@@ -906,187 +1054,289 @@
 .startup-cta-section {
     width: 100%;
     background: #ffffff;
-    padding: 64px 0;
+    padding: 70px 0;
     overflow: hidden;
     position: relative;
 }
 
-/* Floating glow orbs */
+/* Floating background glow */
+
 .cta-glow {
     position: absolute;
     border-radius: 50%;
     filter: blur(100px);
-    opacity: 0.25;
+    opacity: 0.22;
     pointer-events: none;
 }
 
 .cta-glow-1 {
-    width: 300px;
-    height: 300px;
+    width: 320px;
+    height: 320px;
     background: radial-gradient(circle, #0e7490, transparent 70%);
-    top: -100px;
-    right: -60px;
+    top: -120px;
+    right: -70px;
 }
 
 .cta-glow-2 {
-    width: 260px;
-    height: 260px;
+    width: 280px;
+    height: 280px;
     background: radial-gradient(circle, #66c7dd, transparent 70%);
-    bottom: -80px;
-    left: -40px;
+    bottom: -100px;
+    left: -50px;
 }
 
-/* Card container box — Dark Blue/Slate */
+/* CTA card */
+
 .startup-cta-card-box {
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 24px;
-    padding: 50px 36px;
+    width: 100%;
+    background: linear-gradient(
+        135deg,
+        #0b1220 0%,
+        #111c30 55%,
+        #17263a 100%
+    );
+    border: 1px solid rgba(102, 199, 221, 0.18);
+    border-radius: 28px;
+    padding: 65px 40px;
     position: relative;
     z-index: 2;
-    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.22);
+    overflow: hidden;
+    box-shadow: 0 25px 60px rgba(15, 23, 42, 0.22);
 }
 
-/* Inner container */
+/* Subtle card glow */
+
+.startup-cta-card-box::before {
+    content: "";
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    top: -240px;
+    right: -180px;
+    background: radial-gradient(
+        circle,
+        rgba(102, 199, 221, 0.16),
+        transparent 70%
+    );
+    pointer-events: none;
+}
+
+/* Inner content */
+
 .startup-cta-inner {
-    max-width: 720px;
+    max-width: 780px;
     margin: 0 auto;
     text-align: center;
     position: relative;
-    z-index: 2;
+    z-index: 3;
 }
 
 /* Badge */
+
 .cta-badge {
-    display: inline-block;
-    padding: 4px 16px;
-    border-radius: 40px;
-    background: rgba(102, 199, 221, 0.12);
-    border: 1px solid rgba(102, 199, 221, 0.28);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 20px;
+    min-height: 38px;
+    border-radius: 999px;
+    background: rgba(102, 199, 221, 0.08);
+    border: 1px solid rgba(102, 199, 221, 0.35);
     color: #66c7dd;
-    font-size: 11px;
-    font-weight: 700;
-    letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+    line-height: 1;
     text-transform: uppercase;
-    margin-bottom: 14px;
+    margin-bottom: 24px;
     font-family: 'Outfit', sans-serif;
 }
 
 /* Heading */
+
 .startup-cta-section h2 {
-    font-size: clamp(24px, 3.2vw, 36px);
-    font-weight: 800;
-    line-height: 1.2;
+    margin: 0 0 20px;
     color: #ffffff;
-    margin-bottom: 12px;
     font-family: 'Outfit', sans-serif;
-    letter-spacing: -0.5px;
+    font-size: clamp(24px, 3.8vw, 58px);
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -1.5px;
+    white-space: nowrap;
 }
 
+/* Highlight */
+
 .cta-highlight {
-    background: linear-gradient(135deg, #0e7490, #66c7dd);
+    background: linear-gradient(135deg, #159fc5, #66c7dd);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    white-space: nowrap;
 }
 
-/* Subtitle */
+/* Description */
+
 .startup-cta-section p {
-    font-size: 15px;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.7);
-    max-width: 540px;
-    margin: 0 auto 22px;
+    max-width: 600px;
+    margin: 0 auto 30px;
+    color: rgba(255, 255, 255, 0.70);
     font-family: 'Outfit', sans-serif;
+    font-size: 16px;
+    line-height: 1.75;
 }
 
-/* Buttons row */
+/* Buttons */
+
 .cta-actions {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 16px;
+    gap: 14px;
     flex-wrap: wrap;
 }
 
-/* Primary solid button */
+/* Primary button */
+
 .startup-cta-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    padding: 15px 34px;
-    border-radius: 50px;
+    gap: 9px;
+    padding: 14px 28px;
+    border-radius: 999px;
     background: linear-gradient(135deg, #0e7490, #66c7dd);
     color: #ffffff !important;
-    font-weight: 700;
-    font-size: 15px;
     font-family: 'Outfit', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
     text-decoration: none;
     border: none;
     cursor: pointer;
-    box-shadow: 0 8px 28px rgba(14, 116, 144, 0.4);
-    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    box-shadow: 0 10px 30px rgba(14, 116, 144, 0.35);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .startup-cta-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 14px 36px rgba(14, 116, 144, 0.55);
+    box-shadow: 0 15px 35px rgba(14, 116, 144, 0.50);
     color: #ffffff !important;
     text-decoration: none;
 }
 
 .startup-cta-btn i {
-    font-size: 18px;
+    font-size: 17px;
 }
 
 /* Secondary outline button */
+
 .startup-cta-btn-outline {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    padding: 15px 34px;
-    border-radius: 50px;
-    background: transparent;
-    color: #ffffff !important;
-    font-weight: 700;
-    font-size: 15px;
+    gap: 9px;
+    padding: 13px 28px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(102, 199, 221, 0.45);
+    color: #66c7dd !important;
     font-family: 'Outfit', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
     text-decoration: none;
-    border: 2px solid rgba(255, 255, 255, 0.2);
     cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
 }
 
 .startup-cta-btn-outline:hover {
     transform: translateY(-3px);
-    border-color: rgba(102, 199, 221, 0.5);
-    background: rgba(102, 199, 221, 0.08);
-    box-shadow: 0 8px 24px rgba(102, 199, 221, 0.15);
-    text-decoration: none;
+    background: rgba(102, 199, 221, 0.10);
+    border-color: #66c7dd;
     color: #ffffff !important;
+    text-decoration: none;
+    box-shadow: 0 8px 24px rgba(102, 199, 221, 0.15);
 }
 
 .startup-cta-btn-outline i {
-    font-size: 18px;
+    font-size: 17px;
     color: #66c7dd;
 }
 
-.startup-cta-btn-outline:hover {
-    transform: translateY(-3px);
-    border-color: rgba(102, 199, 221, 0.5);
-    background: rgba(102, 199, 221, 0.08);
-    box-shadow: 0 8px 24px rgba(102, 199, 221, 0.15);
-    text-decoration: none;
-    color: #ffffff !important;
+/* CTA responsive */
+
+@media (max-width: 992px) {
+    .startup-cta-card-box {
+        padding: 55px 30px;
+    }
+
+    .startup-cta-section h2 {
+        font-size: clamp(22px, 4vw, 50px);
+        white-space: nowrap;
+    }
 }
 
-.startup-cta-btn-outline i {
-    font-size: 18px;
-    color: #66c7dd;
+@media (max-width: 768px) {
+    .startup-cta-section {
+        padding: 60px 0;
+    }
+
+    .startup-cta-card-box {
+        border-radius: 22px;
+        padding: 45px 22px;
+    }
+
+    .cta-badge {
+        font-size: 10px;
+        letter-spacing: 1.4px;
+        padding: 8px 16px;
+        margin-bottom: 20px;
+    }
+
+    .startup-cta-section h2 {
+        font-size: 26px;
+        line-height: 1.15;
+        letter-spacing: -0.8px;
+        white-space: nowrap;
+    }
+
+    .startup-cta-section p {
+        font-size: 14px;
+        line-height: 1.7;
+        margin-bottom: 25px;
+    }
+
+    .cta-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .startup-cta-btn,
+    .startup-cta-btn-outline {
+        width: 100%;
+        max-width: 300px;
+    }
 }
 
+@media (max-width: 576px) {
+    .startup-cta-card-box {
+        padding: 40px 18px;
+    }
+
+    .startup-cta-section h2 {
+        font-size: 21px;
+        line-height: 1.15;
+        white-space: nowrap;
+    }
+
+    .startup-cta-section p {
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================
+   8. RESPONSIVE
+========================================= */
 /* =========================================
    RESPONSIVE
 ========================================= */
@@ -1925,5 +2175,145 @@
         width: 64px;
         height: 4px;
         margin-top: 15px;
+    }
+}
+
+/* =========================================================
+   CTA BADGE DOT + HEADING LINE
+   Matches the OUR PORTFOLIO badge style
+========================================================= */
+
+.startup-cta-section .cta-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+}
+
+.startup-cta-section .cta-badge-dot {
+    width: 8px;
+    height: 8px;
+    min-width: 8px;
+    border-radius: 50%;
+    background: #66c7dd;
+    box-shadow: 0 0 0 4px rgba(102, 199, 221, 0.10);
+}
+
+.startup-cta-section .cta-heading-line {
+    width: 78px;
+    height: 5px;
+    margin: 0 auto 24px;
+    border-radius: 999px;
+    background: #66c7dd;
+    box-shadow: 0 0 10px rgba(102, 199, 221, 0.30);
+}
+
+@media (max-width: 768px) {
+    .startup-cta-section .cta-badge-dot {
+        width: 7px;
+        height: 7px;
+        min-width: 7px;
+    }
+
+    .startup-cta-section .cta-heading-line {
+        width: 70px;
+        height: 4px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .startup-cta-section .cta-heading-line {
+        width: 64px;
+        height: 4px;
+    }
+}
+
+/* =========================================================
+   DECORATIVE DOTS & LINES — BLINK ANIMATION
+   Applies only to the existing decorative dots and lines.
+   No layout, spacing, size, or alignment is changed.
+   ========================================================= */
+
+@keyframes decorativeBlink {
+    0%, 100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.28;
+    }
+}
+
+/* All decorative dots */
+.startup-badge-dot,
+.services-startup-dot,
+.startup-process-dot,
+.why-choose-dot,
+.portfolio-heading-dot,
+.startup-faq-radio-dot {
+    animation: decorativeBlink 1.4s ease-in-out infinite;
+}
+
+/* All decorative lines */
+.startup-heading-line,
+.services-startup-line,
+.startup-process-line,
+.why-choose-line,
+.portfolio-heading-line,
+.startup-faq-title-line,
+.process-arrow-line {
+    animation: decorativeBlink 1.4s ease-in-out infinite;
+}
+
+/* CTA decorative dot/line use inline styles, so animate the badge children */
+.cta-badge > span:first-child {
+    animation: decorativeBlink 1.4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .startup-badge-dot,
+    .services-startup-dot,
+    .startup-process-dot,
+    .why-choose-dot,
+    .portfolio-heading-dot,
+    .startup-faq-radio-dot,
+    .startup-heading-line,
+    .services-startup-line,
+    .startup-process-line,
+    .why-choose-line,
+    .portfolio-heading-line,
+    .startup-faq-title-line,
+    .process-arrow-line,
+    .cta-badge > span:first-child {
+        animation: none;
+    }
+}
+
+
+/* =========================================================
+   FINAL CTA HEADING — KEEP ORIGINAL LOOK, FIX RIGHT CLIPPING
+   ========================================================= */
+
+@media (min-width: 992px) {
+    .startup-cta-section h2 {
+        width: max-content;
+        max-width: none;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 991px) {
+    .startup-cta-section h2 {
+        width: 100%;
+        max-width: 100%;
+        position: static;
+        transform: none;
+        white-space: normal;
     }
 }

@@ -48,6 +48,7 @@ export default function Startup() {
     },
   ];
 
+
   const processSteps = [
     {
       icon: "bi-chat-dots",
@@ -81,6 +82,7 @@ export default function Startup() {
     },
   ];
 
+
   const chooseData = [
     {
       icon: "bi-lightning-charge",
@@ -113,6 +115,7 @@ export default function Startup() {
       desc: "Continuous maintenance updates and technical assistance for long-term growth.",
     },
   ];
+
 
   const portfolioData = [
     {
@@ -156,10 +159,12 @@ export default function Startup() {
     },
   ];
 
+
   return (
     <>
 
       {/* HEADER */}
+
       <div
         className="header-wrap"
         style={{
@@ -167,85 +172,146 @@ export default function Startup() {
             "linear-gradient(160deg, rgba(10,15,29,0.88), rgba(14,116,144,0.35), rgba(10,15,29,0.85)), url(/images/projenius-banner.webp)",
         }}
       >
-        <div className="container title-section" style={{ position: 'relative', zIndex: 2 }}>
-          <h1 className="page-title">Startup Supporter</h1>
-          <p style={{ color: 'rgba(255,255,255,0.78)', fontSize: '16px', marginTop: '10px', fontWeight: 400 }}>
+
+        <div
+          className="container title-section"
+          style={{
+            position: "relative",
+            zIndex: 2
+          }}
+        >
+
+          <h1 className="page-title">
+            Startup Supporter
+          </h1>
+
+          <p
+            style={{
+              color: "rgba(255,255,255,0.78)",
+              fontSize: "16px",
+              marginTop: "10px",
+              fontWeight: 400
+            }}
+          >
             Comprehensive technology support &amp; scale-up services for founders
           </p>
+
         </div>
+
       </div>
 
+
       {/* STARTUP SECTION */}
+
       <section className="startup-section">
 
         <div className="startup-container">
 
           {/* LEFT SIDE */}
+
           <div className="startup-images">
 
             <div className="startup-img-one">
+
               <img
                 src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop"
                 alt=""
               />
+
             </div>
 
+
             <div className="startup-img-two">
+
               <img
                 src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop"
                 alt=""
               />
+
             </div>
 
           </div>
 
+
           {/* RIGHT SIDE */}
+
           <div className="startup-content">
 
             {/* MINI TITLE */}
+
             <div className="startup-mini-title">
 
               <span className="startup-mini-badge">
+
                 <span className="startup-badge-dot"></span>
-                <span>STARTUP SUPPORT PLATFORM</span>
+
+                <span>
+                  STARTUP SUPPORT PLATFORM
+                </span>
+
               </span>
 
             </div>
 
+
             {/* HEADING */}
+
             <h2 className="startup-main-heading">
+
               Building Smart Digital
+
               <br />
+
               Solutions For Modern
+
               <br />
+
               <span className="startup-heading-highlight">
                 Startups.
               </span>
+
             </h2>
 
+
             {/* HEADING UNDERLINE */}
+
             <div className="startup-heading-line"></div>
 
+
             {/* DESCRIPTION */}
+
             <p>
+
               We help startups transform innovative ideas into scalable
               digital products with powerful technology solutions,
               modern UI/UX experiences, and long-term technical support.
+
             </p>
 
+
             {/* SERVICES */}
+
             <div className="startup-services">
 
               {services.map((item, index) => (
-                <div className="startup-service-card" key={index}>
+
+                <div
+                  className="startup-service-card"
+                  key={index}
+                >
 
                   <div className="startup-icon">
+
                     <i className={`bi ${item.icon}`}></i>
+
                   </div>
 
-                  <h4>{item.title}</h4>
+                  <h4>
+                    {item.title}
+                  </h4>
 
                 </div>
+
               ))}
 
             </div>
@@ -255,67 +321,113 @@ export default function Startup() {
         </div>
 
       </section>
+
+
       {/* PROCESS SECTION */}
+
       <section className="process-section">
 
         <div className="container">
 
           {/* TOP */}
+
           <div className="process-top services-startup-heading">
 
             <div className="services-startup-badge">
+
               <span className="services-startup-dot"></span>
-              <span>SERVICES FOR STARTUPS</span>
+
+              <span>
+                SERVICES FOR STARTUPS
+              </span>
+
             </div>
 
+
             <h2 className="services-startup-title">
-              Empowering startups with <span>smart solutions</span>
+
+              Empowering startups with{" "}
+
+              <span>
+                smart solutions
+              </span>
+
             </h2>
+
 
             <div className="services-startup-line"></div>
 
+
             <p className="process-subtitle">
-              Our structured approach takes your idea from initial concept through production to a polished, market-ready product.
+
+              Our structured approach takes your idea from initial concept
+              through production to a polished, market-ready product.
+
             </p>
 
           </div>
 
+
           {/* STEP FLOW */}
+
           <div className="process-flow">
 
             {processData.slice(0, 3).map((item, index) => (
+
               <React.Fragment key={index}>
 
                 {/* STEP CARD */}
+
                 <div className="process-step">
 
                   <div className="process-step-number">
-                    <span>{String(index + 1).padStart(2, '0')}</span>
+
+                    <span>
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+
                   </div>
+
 
                   <div className="process-card">
 
                     <div className="process-icon">
+
                       <i className={`bi ${item.icon}`}></i>
+
                     </div>
 
-                    <h3>{item.title}</h3>
 
-                    <p>{item.desc}</p>
+                    <h3>
+                      {item.title}
+                    </h3>
+
+
+                    <p>
+                      {item.desc}
+                    </p>
 
                   </div>
 
                 </div>
 
-                {/* ARROW CONNECTOR (not after last card) */}
+
+                {/* ARROW CONNECTOR */}
+
                 {index < 2 && (
+
                   <div className="process-arrow">
+
                     <div className="process-arrow-line"></div>
+
                     <i className="bi bi-chevron-right"></i>
+
                   </div>
+
                 )}
 
               </React.Fragment>
+
             ))}
 
           </div>
@@ -323,9 +435,12 @@ export default function Startup() {
         </div>
 
       </section>
+
+
+      {/* STARTUP PROCESS */}
+
       <section className="startup-process-section">
 
-        {/* BACKGROUND IMAGE — KEEP EXISTING BACKGROUND */}
         <div className="startup-process-bg">
 
           <div className="container">
@@ -333,43 +448,81 @@ export default function Startup() {
             <div className="startup-process-content">
 
               {/* MINI TITLE */}
+
               <div className="startup-process-mini">
-                <span id="sub-heading" className="startup-process-badge">
+
+                <span
+                  id="sub-heading"
+                  className="startup-process-badge"
+                >
+
                   <span className="startup-process-dot"></span>
+
                   STARTUP PROCESS
+
                 </span>
+
               </div>
 
+
               {/* TITLE */}
+
               <h2 className="startup-process-title">
-                Startup <span>Development Process</span>
+
+                Startup{" "}
+
+                <span>
+                  Development Process
+                </span>
+
               </h2>
 
+
               {/* LINE */}
+
               <div className="startup-process-line"></div>
 
+
               {/* PROCESS GRID */}
+
               <div className="row g-4">
 
                 {processSteps.map((item, index) => (
-                  <div className="col-lg-6" key={index}>
+
+                  <div
+                    className="col-lg-6"
+                    key={index}
+                  >
 
                     <div className="startup-process-card">
 
                       {/* ICON */}
+
                       <div className="startup-process-icon">
+
                         <i className={`bi ${item.icon}`}></i>
+
                       </div>
 
+
                       {/* TEXT */}
+
                       <div className="startup-process-text">
-                        <h4>{item.title}</h4>
-                        <p>{item.desc}</p>
+
+                        <h4>
+                          {item.title}
+                        </h4>
+
+                        <p>
+                          {item.desc}
+                        </p>
+
                       </div>
 
                     </div>
 
                   </div>
+
                 ))}
 
               </div>
@@ -381,43 +534,74 @@ export default function Startup() {
         </div>
 
       </section>
+
+
+      {/* WHY CHOOSE US */}
+
       <section className="why-choose-section">
 
         <div className="container">
 
           {/* TOP AREA */}
+
           <div className="row align-items-center why-choose-top">
 
             {/* LEFT CONTENT */}
+
             <div className="col-lg-5">
 
               <div className="why-choose-content">
 
-                <span id="sub-heading">
-                  Why Choose Us
-                </span>
+                <div className="why-choose-mini-title">
 
-                <h2 id="title">
+                  <span className="why-choose-badge">
+
+                    <span className="why-choose-dot"></span>
+
+                    <span>
+                      WHY CHOOSE US
+                    </span>
+
+                  </span>
+
+                </div>
+
+
+                <h2 className="why-choose-main-title">
+
                   Smart Startup
+
                   <br />
+
                   Solutions With
+
                   <br />
-                  Expert Support
+
+                  <span>
+                    Expert Support
+                  </span>
+
                 </h2>
 
-                <div className="why-line"></div>
+
+                <div className="why-choose-line"></div>
+
 
                 <p>
+
                   We help startups build scalable digital products with
                   modern technologies, dedicated teams, and long-term
                   technical support for sustainable business growth.
+
                 </p>
 
               </div>
 
             </div>
 
+
             {/* RIGHT IMAGE */}
+
             <div className="col-lg-7">
 
               <div className="why-choose-image">
@@ -433,25 +617,40 @@ export default function Startup() {
 
           </div>
 
+
           {/* CARD AREA */}
+
           <div className="row g-4">
 
             {chooseData.map((item, index) => (
-              <div className="col-lg-4 col-md-6" key={index}>
+
+              <div
+                className="col-lg-4 col-md-6"
+                key={index}
+              >
 
                 <div className="why-card">
 
                   <div className="why-card-icon">
+
                     <i className={`bi ${item.icon}`}></i>
+
                   </div>
 
-                  <h4>{item.title}</h4>
 
-                  <p>{item.desc}</p>
+                  <h4>
+                    {item.title}
+                  </h4>
+
+
+                  <p>
+                    {item.desc}
+                  </p>
 
                 </div>
 
               </div>
+
             ))}
 
           </div>
@@ -459,33 +658,49 @@ export default function Startup() {
         </div>
 
       </section>
+
+
+      {/* PORTFOLIO */}
+
       <section className="startup-portfolio-section">
 
         <div className="container">
 
           {/* TOP */}
+
           <div className="startup-portfolio-top">
 
             <div className="portfolio-mini-title">
 
               <span className="portfolio-heading-badge">
+
                 <span className="portfolio-heading-dot"></span>
+
                 OUR PORTFOLIO
+
               </span>
 
             </div>
 
+
             <h2 className="portfolio-heading-title">
+
               Startup Projects &
-              <br />
-              <span>Success Stories</span>
+
+              <span>
+                Success Stories
+              </span>
+
             </h2>
+
 
             <div className="portfolio-heading-line"></div>
 
           </div>
 
+
           {/* CAROUSEL */}
+
           <div
             id="portfolioCarousel"
             className="carousel slide"
@@ -496,17 +711,17 @@ export default function Startup() {
             <div className="carousel-inner">
 
               {portfolioData.map((item, index) => (
+
                 <div
                   className={`carousel-item ${index === 0 ? "active" : ""
                     }`}
                   key={index}
                 >
 
-                  {/* IMAGE ROW */}
                   <div className="portfolio-images-row">
 
-                    {/* LEFT IMAGE */}
                     <div className="portfolio-small-image">
+
                       <img
                         src={
                           portfolioData[
@@ -516,10 +731,12 @@ export default function Startup() {
                         }
                         alt=""
                       />
+
                     </div>
 
-                    {/* LEFT IMAGE */}
+
                     <div className="portfolio-small-image">
+
                       <img
                         src={
                           portfolioData[
@@ -529,55 +746,79 @@ export default function Startup() {
                         }
                         alt=""
                       />
+
                     </div>
 
-                    {/* ACTIVE CENTER IMAGE */}
+
                     <div className="portfolio-small-image active-image">
-                      <img src={item.image} alt="" />
+
+                      <img
+                        src={item.image}
+                        alt=""
+                      />
+
                     </div>
 
-                    {/* RIGHT IMAGE */}
+
                     <div className="portfolio-small-image">
+
                       <img
                         src={
                           portfolioData[
-                            (index + 1) % portfolioData.length
+                            (index + 1) %
+                            portfolioData.length
                           ].image
                         }
                         alt=""
                       />
+
                     </div>
 
-                    {/* RIGHT IMAGE */}
+
                     <div className="portfolio-small-image">
+
                       <img
                         src={
                           portfolioData[
-                            (index + 2) % portfolioData.length
+                            (index + 2) %
+                            portfolioData.length
                           ].image
                         }
                         alt=""
                       />
+
                     </div>
 
                   </div>
 
-                  {/* CONTENT */}
+
                   <div className="portfolio-main-content">
 
-                    <h3>{item.title}</h3>
+                    <h3>
+                      {item.title}
+                    </h3>
 
-                    <span>{item.tech}</span>
 
-                    <p>{item.desc}</p>
+                    <span>
+                      {item.tech}
+                    </span>
 
-                    {/* STARS */}
+
+                    <p>
+                      {item.desc}
+                    </p>
+
+
                     <div className="portfolio-stars">
 
                       <i className="bi bi-star-fill"></i>
+
                       <i className="bi bi-star-fill"></i>
+
                       <i className="bi bi-star-fill"></i>
+
                       <i className="bi bi-star-fill"></i>
+
                       <i className="bi bi-star-fill"></i>
 
                     </div>
@@ -585,11 +826,11 @@ export default function Startup() {
                   </div>
 
                 </div>
+
               ))}
 
             </div>
 
-            {/* BUTTONS */}
 
             <button
               className="carousel-control-prev"
@@ -597,8 +838,11 @@ export default function Startup() {
               data-bs-target="#portfolioCarousel"
               data-bs-slide="prev"
             >
+
               <i className="bi bi-arrow-left"></i>
+
             </button>
+
 
             <button
               className="carousel-control-next"
@@ -606,7 +850,9 @@ export default function Startup() {
               data-bs-target="#portfolioCarousel"
               data-bs-slide="next"
             >
+
               <i className="bi bi-arrow-right"></i>
+
             </button>
 
           </div>
@@ -614,86 +860,124 @@ export default function Startup() {
         </div>
 
       </section>
+
+
+      {/* FAQ */}
+
       <section className="startup-faq-section">
 
         <div className="container">
 
+          {/* FAQ HEADING — FULL WIDTH ABOVE BOTH COLUMNS */}
+
+          <div className="row startup-faq-title-row">
+
+            <div className="col-12 startup-faq-title-col">
+
+              <div className="startup-faq-mini">
+
+                <span id="sub-heading">
+                  <span className="startup-faq-radio-dot"></span>
+                  Startup FAQ
+                </span>
+
+              </div>
+
+              <h2 className="startup-faq-main-title">
+                We help startups build{" "}
+                <span className="startup-faq-highlight">
+                  scalable digital products
+                </span>
+              </h2>
+
+              <div className="startup-faq-title-line"></div>
+
+            </div>
+
+          </div>
+
+
           <div className="row align-items-start">
 
             {/* LEFT SIDE */}
+
             <div className="col-lg-6">
 
               <div className="startup-faq-left">
 
-                {/* MINI TITLE */}
-                <div className="startup-faq-mini">
-
-                  <span id="sub-heading">Startup FAQ</span>
-
-                </div>
-
-                {/* TITLE */}
-                <h2 id="title ">
-                  We help startups
-                  <br />
-                  build scalable
-                  <br />
-                  digital products
-                </h2>
-
-                {/* IMAGES */}
                 <div className="startup-faq-images">
 
                   <div className="startup-faq-image">
+
                     <img
                       src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop"
                       alt=""
                     />
+
                   </div>
 
+
                   <div className="startup-faq-image">
+
                     <img
                       src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop"
                       alt=""
                     />
+
                   </div>
 
                 </div>
 
-                {/* FEATURE */}
+
                 <div className="startup-feature-box">
 
                   <div className="startup-feature-icon">
+
                     <i className="bi bi-display"></i>
+
                   </div>
+
 
                   <div className="startup-feature-content">
 
-                    <h4>Modern UI/UX Design</h4>
+                    <h4>
+                      Modern UI/UX Design
+                    </h4>
+
 
                     <p>
+
                       We create startup-focused digital experiences
                       with scalable and modern user interface systems.
+
                     </p>
 
                   </div>
 
                 </div>
 
-                {/* FEATURE */}
+
                 <div className="startup-feature-box border-0">
 
                   <div className="startup-feature-icon">
+
                     <i className="bi bi-code-slash"></i>
+
                   </div>
+
 
                   <div className="startup-feature-content">
 
-                    <h4>Startup Development</h4>
+                    <h4>
+                      Startup Development
+                    </h4>
+
 
                     <p>
+
                       Fast and reliable product development process
                       designed specifically for startup businesses.
+
                     </p>
 
                   </div>
@@ -704,24 +988,27 @@ export default function Startup() {
 
             </div>
 
+
             {/* RIGHT SIDE */}
+
             <div className="col-lg-6">
 
               <div className="startup-faq-right">
 
                 <p className="startup-faq-desc">
+
                   We provide complete startup support including MVP
                   development, UI/UX design, product scaling, and
                   long-term technical maintenance solutions.
+
                 </p>
 
-                {/* ACCORDION */}
+
                 <div
                   className="accordion startup-accordion"
                   id="startupAccordion"
                 >
 
-                  {/* ITEM */}
                   <div className="accordion-item">
 
                     <h2 className="accordion-header">
@@ -732,10 +1019,13 @@ export default function Startup() {
                         data-bs-toggle="collapse"
                         data-bs-target="#faq1"
                       >
+
                         How long does MVP development take?
+
                       </button>
 
                     </h2>
+
 
                     <div
                       id="faq1"
@@ -755,7 +1045,7 @@ export default function Startup() {
 
                   </div>
 
-                  {/* ITEM */}
+
                   <div className="accordion-item">
 
                     <h2 className="accordion-header">
@@ -766,10 +1056,13 @@ export default function Startup() {
                         data-bs-toggle="collapse"
                         data-bs-target="#faq2"
                       >
+
                         Do you provide post-launch support?
+
                       </button>
 
                     </h2>
+
 
                     <div
                       id="faq2"
@@ -788,7 +1081,7 @@ export default function Startup() {
 
                   </div>
 
-                  {/* ITEM */}
+
                   <div className="accordion-item">
 
                     <h2 className="accordion-header">
@@ -799,10 +1092,13 @@ export default function Startup() {
                         data-bs-toggle="collapse"
                         data-bs-target="#faq3"
                       >
+
                         Can you help with UI/UX design?
+
                       </button>
 
                     </h2>
+
 
                     <div
                       id="faq3"
@@ -821,7 +1117,7 @@ export default function Startup() {
 
                   </div>
 
-                  {/* ITEM */}
+
                   <div className="accordion-item">
 
                     <h2 className="accordion-header">
@@ -832,10 +1128,13 @@ export default function Startup() {
                         data-bs-toggle="collapse"
                         data-bs-target="#faq4"
                       >
+
                         Do you work with early-stage startups?
+
                       </button>
 
                     </h2>
+
 
                     <div
                       id="faq4"
@@ -865,32 +1164,68 @@ export default function Startup() {
         </div>
 
       </section>
+
+
+      {/* CTA */}
+
       <section className="startup-cta-section">
 
         {/* Decorative background orbs */}
+
         <div className="cta-glow cta-glow-1"></div>
+
         <div className="cta-glow cta-glow-2"></div>
-
         <div className="container">
-
           <div className="startup-cta-card-box">
-
             <div className="startup-cta-inner">
-
-              <span className="cta-badge">GET STARTED TODAY</span>
-
+              {/* CTA BADGE — ONLY DOT ADDED */}
+              <span
+                className="cta-badge"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: "9px"
+                }}
+              >
+                <span
+                  style={{
+                    width: "8px",
+                    height: "8px",
+                    minWidth: "8px",
+                    borderRadius: "50%",
+                    background: "#66c7dd",
+                    boxShadow:
+                      "0 0 0 4px rgba(102, 199, 221, 0.12)"
+                  }}
+                ></span>
+                <span>
+                  GET STARTED TODAY
+                </span>
+              </span>
               <h2>
-                Ready to Turn Your <br />
-                <span className="cta-highlight">Startup Vision</span> Into Reality?
+                Ready to Turn Your{" "}
+                <span className="cta-highlight">
+                  Startup Vision Into Reality?
+                </span>
               </h2>
-
+              {/* CTA LINE — ONLY LINE ADDED */}
+              <div
+                style={{
+                  width: "78px",
+                  height: "5px",
+                  margin: "0 auto 22px",
+                  borderRadius: "999px",
+                  background: "#66c7dd",
+                  boxShadow:
+                    "0 0 10px rgba(102, 199, 221, 0.30)"
+                }}
+              ></div>
               <p>
                 Partner with our expert team to build scalable, modern digital products.
                 From ideation to deployment — we've got you covered.
               </p>
-
               <div className="cta-actions">
-
                 <a
                   href="https://wa.me/918925450473?text=Hello%20ProJenius%2C%20I%20would%20like%20to%20book%20a%20free%20consultation%20for%20my%20startup."
                   target="_blank"
@@ -900,7 +1235,6 @@ export default function Startup() {
                   <i className="bi bi-rocket-takeoff"></i>
                   Book Free Consultation
                 </a>
-
                 <a
                   href="https://wa.me/918925450473?text=Hello%20ProJenius%2C%20I%20need%20quick%20support%20for%20my%20project."
                   target="_blank"
@@ -910,17 +1244,11 @@ export default function Startup() {
                   <i className="bi bi-chat-dots"></i>
                   Contact Us
                 </a>
-
               </div>
-
             </div>
-
           </div>
-
         </div>
-
       </section>
-
     </>
   );
 }

@@ -48,6 +48,11 @@
   font-weight: 800;
 }
 
+/* Requested heading highlights only */
+.join-team-highlight {
+  color: #18bce8;
+}
+
 .join-team-value {
   box-shadow: 0 1px 0 rgba(16, 36, 67, 0.02);
   transition: border-color 220ms ease, box-shadow 220ms ease, transform 220ms ease;
@@ -250,4 +255,392 @@
 
   box-shadow:
     0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Highlight for "next chapter?" in the final CTA heading */
+.join-team-final-box .join-team-highlight {
+  color: #18bce8;
+}
+
+/* =========================================================
+   COLLABORATION HEADING — FULL WIDTH / CENTERED
+   ========================================================= */
+
+.join-team-collab-heading {
+  width: 100%;
+  margin: 0 0 3.4rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.join-team-collab-kicker {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 9px 18px;
+  min-height: 40px;
+  box-sizing: border-box;
+  border: 1px solid rgba(117, 214, 232, 0.45);
+  border-radius: 999px;
+  background: rgba(117, 214, 232, 0.08);
+  white-space: nowrap;
+}
+
+.join-team-radio-dot {
+  width: 8px;
+  height: 8px;
+  min-width: 8px;
+  min-height: 8px;
+  border-radius: 50%;
+  background: #75d6e8;
+  box-shadow: 0 0 0 4px rgba(117, 214, 232, 0.10);
+  display: inline-block;
+}
+
+.join-team-collab-heading .join-team-collab-title {
+  width: 100%;
+  margin: 18px 0 0 !important;
+  padding: 0;
+  text-align: center;
+  white-space: nowrap;
+  font-size: clamp(2.6rem, 5vw, 4.5rem) !important;
+  line-height: 1.05;
+}
+
+.join-team-collab-title-line {
+  width: 78px;
+  height: 5px;
+  margin: 18px auto 0;
+  border-radius: 999px;
+  background: #75d6e8;
+}
+
+.join-team-collab-heading > p {
+  max-width: 1100px;
+  margin: 22px auto 0;
+  color: #c5d7e2;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.join-team-collab-heading > p span {
+  display: block;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .join-team-collab-heading {
+    margin-bottom: 2.8rem;
+  }
+
+  .join-team-collab-heading .join-team-collab-title {
+    white-space: normal;
+  }
+
+  .join-team-collab-heading > p {
+    max-width: 680px;
+  }
+}
+
+
+/* =========================================================
+   COLLABORATION HEADING — ONLY "OPPORTUNITIES TOGETHER" BLUE
+   ========================================================= */
+
+.join-team-collab-heading .join-team-collab-title {
+  color: #ffffff !important;
+}
+
+.join-team-collab-heading .join-team-highlight {
+  color: #18bce8 !important;
+}
+
+
+/* =========================================================
+   OPEN OPPORTUNITIES — CENTERED
+   ========================================================= */
+
+.join-team-open-head {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: none !important;
+  gap: 18px !important;
+  text-align: center;
+}
+
+.join-team-open-head > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.join-team-open-head .join-team-kicker {
+  justify-content: center;
+}
+
+.join-team-open-head h2 {
+  margin-top: 18px !important;
+  text-align: center !important;
+  white-space: nowrap;
+}
+
+.join-team-open-head > p {
+  max-width: 850px;
+  margin: 0 auto !important;
+  text-align: center !important;
+}
+
+@media (max-width: 900px) {
+  .join-team-open-head h2 {
+    white-space: normal;
+  }
+}
+
+/* =========================================================
+   OUR CULTURE — CENTERED / RADIO DOT / LINE
+   ========================================================= */
+
+.join-team-culture-head {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 18px !important;
+  text-align: center !important;
+}
+
+.join-team-culture-head > div {
+  width: 100%;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+.join-team-culture-kicker {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  font-size: 16px !important;
+  padding: 9px 18px;
+  min-height: 40px;
+  box-sizing: border-box;
+  border: 1px solid rgba(117, 214, 232, 0.45);
+  border-radius: 999px;
+  background: rgba(117, 214, 232, 0.08);
+  white-space: nowrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.join-team-culture-kicker .join-team-radio-dot {
+  width: 8px;
+  height: 8px;
+  min-width: 8px;
+  min-height: 8px;
+  border-radius: 50%;
+  background: #75d6e8;
+  box-shadow: 0 0 0 4px rgba(117, 214, 232, 0.10);
+  display: inline-block;
+}
+
+.join-team-culture-head .join-team-culture-title {
+  width: 100%;
+  max-width: 1150px;
+  margin: 18px auto 0 !important;
+  text-align: center !important;
+  white-space: nowrap;
+}
+
+.join-team-culture-title-line {
+  width: 78px;
+  height: 5px;
+  margin: 18px auto 0;
+  border-radius: 999px;
+  background: #75d6e8;
+}
+
+.join-team-culture-head > p {
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto !important;
+  text-align: center !important;
+}
+
+@media (max-width: 900px) {
+  .join-team-culture-head .join-team-culture-title {
+    white-space: normal;
+  }
+}
+
+
+/* =========================================================
+   OPEN OPPORTUNITIES — MATCH OUR CULTURE STYLE
+   ========================================================= */
+
+.join-team-open-head {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 18px !important;
+  text-align: center !important;
+}
+
+.join-team-open-head > div {
+  width: 100%;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+.join-team-open-kicker {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  padding: 9px 18px;
+  min-height: 40px;
+  box-sizing: border-box;
+  border: 1px solid rgba(117, 214, 232, 0.45);
+  border-radius: 999px;
+  background: rgba(117, 214, 232, 0.08);
+  font-size: 16px !important;
+  white-space: nowrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.join-team-open-kicker .join-team-radio-dot {
+  width: 8px;
+  height: 8px;
+  min-width: 8px;
+  min-height: 8px;
+  border-radius: 50%;
+  background: #75d6e8;
+  box-shadow: 0 0 0 4px rgba(117, 214, 232, 0.10);
+  display: inline-block;
+}
+
+.join-team-open-head .join-team-open-title {
+  width: 100%;
+  max-width: 1150px;
+  margin: 18px auto 0 !important;
+  text-align: center !important;
+  white-space: nowrap;
+}
+
+.join-team-open-title-line {
+  width: 78px;
+  height: 5px;
+  margin: 18px auto 0;
+  border-radius: 999px;
+  background: #75d6e8;
+}
+
+.join-team-open-head > p {
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto !important;
+  text-align: center !important;
+}
+
+@media (max-width: 900px) {
+  .join-team-open-head .join-team-open-title {
+    white-space: normal;
+  }
+}
+
+
+/* Final CTA heading underline */
+.join-team-final-title-line {
+  width: 78px;
+  height: 5px;
+  margin: 18px auto 0;
+  border-radius: 999px;
+  background: #75d6e8;
+}
+
+
+/* =========================================================
+   DECORATIVE DOTS & LINES — BLINK ANIMATION
+   ========================================================= */
+
+@keyframes joinTeamBlinkDecor {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.25;
+  }
+}
+
+/* All existing decorative dots */
+.join-team-radio-dot,
+.join-team-kicker::before {
+  animation: joinTeamBlinkDecor 1.4s ease-in-out infinite;
+}
+
+/* All existing decorative underline/short lines */
+.join-team-title-line,
+.join-team-open-title-line,
+.join-team-culture-title-line,
+.join-team-final-title-line,
+.join-team-section-line,
+.join-team-heading-line {
+  animation: joinTeamBlinkDecor 1.4s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   CONSISTENT SECTION SPACING
+   Reduced unnecessary top/bottom whitespace while keeping
+   all existing alignments and content unchanged.
+   ========================================================= */
+
+.join-team-page > section.section-pad {
+  padding-top: clamp(3.5rem, 5vw, 5rem) !important;
+  padding-bottom: clamp(3.5rem, 5vw, 5rem) !important;
+}
+
+/* Keep the final CTA at the same vertical rhythm as the
+   other sections instead of using the old zero top padding. */
+.join-team-page > .join-team-final.section-pad {
+  padding-top: clamp(3.5rem, 5vw, 5rem) !important;
+  padding-bottom: clamp(3.5rem, 5vw, 5rem) !important;
+}
+
+/* Same spacing between section headings and their content grids. */
+.join-team-value-grid,
+.join-team-role-grid,
+.join-team-collab-grid {
+  margin-top: 2.5rem !important;
+}
+
+/* Same spacing below the collaboration heading. */
+.join-team-collab-heading {
+  margin-bottom: 2.5rem !important;
+}
+
+/* Keep the existing CTA internal spacing compact and consistent. */
+.join-team-final-box p {
+  margin-top: 16px !important;
+  margin-bottom: 22px !important;
 }
