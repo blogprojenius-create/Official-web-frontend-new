@@ -33,14 +33,7 @@
 }
 
 .about-hero-wrap::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 8px;
-    background: linear-gradient(90deg, #66c7dd, #2563eb, #66c7dd);
-    z-index: 1;
+    display: none !important;
 }
 
 .about-hero-content {

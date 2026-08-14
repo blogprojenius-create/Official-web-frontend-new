@@ -89,7 +89,6 @@ export default function About() {
             <span>Training &amp; Mentorship</span>
           </div>
         </div>
-        <div className="header-accent-bar" />
       </div>
       <section className="about-1 py-5">
   <div className="container">

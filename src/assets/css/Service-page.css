@@ -4081,3 +4081,30 @@
   display: block;
   white-space: nowrap;
 }
+
+/* =========================================
+   SLOW BLINKING DOTS & LINES
+   Only the workshop dots and lines are animated.
+   Existing layout, spacing, colors and alignment remain unchanged.
+   ========================================= */
+
+@keyframes workshopSlowBlink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.45;
+  }
+}
+
+.workshop-skill-dot,
+.workshop-showcase-dot,
+.workshop-achievements-dot,
+.workshop-skill-line,
+.workshop-showcase-line,
+.workshop-achievements-line {
+  animation: workshopSlowBlink 3.2s ease-in-out infinite;
+  will-change: opacity;
+}
