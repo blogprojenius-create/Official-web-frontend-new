@@ -1,5 +1,5 @@
 /* =========================================================
-   PROJENIUS HEADER - FINAL
+   PROJENIUS GLASS HEADER
    ========================================================= */
 
 .glass-header {
@@ -7,13 +7,9 @@
   top: 0;
   left: 0;
   right: 0;
-
   width: 100%;
-
   padding: 0;
-
   z-index: 1000;
-
   pointer-events: none;
 }
 
@@ -60,19 +56,14 @@
 
 /* =========================================================
    LOGO
-   ========================================================= */
+========================================================= */
 
 .glass-logo {
   display: inline-flex;
-
   align-items: center;
-
   flex: 0 0 auto;
-
   margin: 0;
-
   padding: 0;
-
   text-decoration: none;
 }
 
@@ -80,15 +71,10 @@
 .glass-logo img,
 .shiny-logo-img {
   display: block;
-
   width: 220px;
-
   max-width: 220px;
-
   height: auto;
-
   margin: 0;
-
   padding: 0;
 }
 
@@ -99,19 +85,12 @@
 
 .glass-nav-links {
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
-
   flex: 1 1 auto;
-
   min-width: 0;
-
   gap: 8px;
-
   margin: 0;
-
   padding: 0;
 }
 
@@ -219,8 +198,7 @@
   background: #66c7dd;
 
   transform:
-    translateX(-50%)
-    scaleX(0);
+    translateX(-50%) scaleX(0);
 
   transform-origin: center;
 
@@ -232,8 +210,7 @@
 .glass-nav-link:hover::after,
 .glass-nav-item.active .glass-nav-link::after {
   transform:
-    translateX(-50%)
-    scaleX(1);
+    translateX(-50%) scaleX(1);
 }
 
 
@@ -336,6 +313,8 @@
   color: #ffffff;
 
   cursor: pointer;
+
+  box-sizing: border-box;
 }
 
 
@@ -475,7 +454,7 @@
 
 
 /* =========================================================
-   MOBILE / TABLET
+   TABLET
    ========================================================= */
 
 @media (max-width: 1150px) {
@@ -508,6 +487,10 @@
 }
 
 
+/* =========================================================
+   MOBILE / TABLET
+   ========================================================= */
+
 @media (max-width: 980px) {
 
   .glass-navbar-inner {
@@ -515,59 +498,165 @@
 
     width: calc(100% - 24px);
 
-    padding: 0 20px;
+    padding: 0 16px;
 
     border-radius: 0 0 28px 28px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 0;
   }
+
+
+  /* Hide desktop navigation */
 
   .glass-nav-links {
     display: none;
   }
 
-  .glass-hamburger {
-    display: flex;
+
+  /* =======================================================
+     LOGO - LEFT
+     ======================================================= */
+
+  .glass-logo {
+    margin: 0;
+
+    padding: 0;
+
+    flex: 0 0 auto;
+
+    display: inline-flex;
+
+    align-items: center;
   }
+
 
   .glass-logo img,
   .shiny-logo-img {
     width: 175px;
 
     max-width: 175px;
+
+    height: auto;
+  }
+
+
+  /* =======================================================
+     HAMBURGER - RIGHT
+     ======================================================= */
+
+  .glass-hamburger {
+    display: flex;
+
+    margin-left: auto;
+
+    margin-right: 0;
+
+    flex: 0 0 44px;
+
+    width: 44px;
+
+    height: 44px;
+
+    align-items: center;
+
+    justify-content: center;
   }
 }
 
 
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
 @media (max-width: 560px) {
+
+  .glass-header {
+    padding: 0;
+  }
+
 
   .glass-navbar-inner {
     min-height: 66px;
 
     width: calc(100% - 16px);
 
-    padding: 0 14px;
+    padding: 0 12px;
 
     border-bottom-width: 4px;
 
     border-radius: 0 0 22px 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 0;
   }
+
+
+  /* =======================================================
+     LOGO - LEFT
+     ======================================================= */
+
+  .glass-logo {
+    margin: 0;
+
+    padding: 0;
+
+    flex: 0 0 auto;
+  }
+
 
   .glass-logo img,
   .shiny-logo-img {
     width: 150px;
 
     max-width: 150px;
+
+    height: auto;
   }
 
+
+  /* =======================================================
+     3 BAR - RIGHT
+     ======================================================= */
+
   .glass-hamburger {
+    display: flex;
+
+    margin-left: auto;
+
+    margin-right: 0;
+
     width: 42px;
 
     height: 42px;
+
+    flex: 0 0 42px;
+
+    align-items: center;
+
+    justify-content: center;
   }
+
+
+  /* =======================================================
+     MOBILE DRAWER
+     ======================================================= */
 
   .glass-mobile-drawer {
     top: 78px;
 
     left: 8px;
+
     right: 8px;
 
     max-height: calc(100dvh - 88px);
@@ -575,17 +664,47 @@
 }
 
 
+/* =========================================================
+   VERY SMALL MOBILE
+   ========================================================= */
+
 @media (max-width: 380px) {
 
   .glass-navbar-inner {
-    padding: 0 11px;
+    padding: 0 10px;
   }
+
 
   .glass-logo img,
   .shiny-logo-img {
     width: 135px;
 
     max-width: 135px;
+  }
+
+
+  .glass-hamburger {
+    width: 40px;
+
+    height: 40px;
+
+    flex: 0 0 40px;
+
+    margin-left: auto;
+
+    margin-right: 0;
+  }
+}
+
+
+/* =========================================================
+   MOBILE DROPDOWN SAFETY
+   ========================================================= */
+
+@media (max-width: 980px) {
+
+  .glass-dropdown {
+    display: none;
   }
 }
 
