@@ -94,6 +94,41 @@
     background: #66c7dd;
 
     display: inline-block;
+
+    animation:
+        svcDotBlink
+        2.8s
+        ease-in-out
+        infinite;
+}
+
+
+/* =========================================================
+   DOT BLINK
+========================================================= */
+
+@keyframes svcDotBlink {
+
+    0%,
+    100% {
+        opacity: 1;
+
+        transform: scale(1);
+
+        box-shadow:
+            0 0 0
+            rgba(102, 199, 221, 0);
+    }
+
+    50% {
+        opacity: 0.35;
+
+        transform: scale(0.72);
+
+        box-shadow:
+            0 0 9px
+            rgba(102, 199, 221, 0.7);
+    }
 }
 
 
@@ -149,20 +184,24 @@
     transform-origin: left center;
 
     animation:
-        svcTitleLine
+        svcTitleLineBlink
         2.8s
         ease-in-out
         infinite;
 }
 
 
-@keyframes svcTitleLine {
+/* =========================================================
+   TITLE LINE BLINK
+========================================================= */
+
+@keyframes svcTitleLineBlink {
 
     0%,
     100% {
-        opacity: 0.35;
+        opacity: 0.45;
 
-        transform: scaleX(0.75);
+        transform: scaleX(0.78);
 
         box-shadow:
             0 0 0
@@ -175,14 +214,15 @@
         transform: scaleX(1);
 
         box-shadow:
-            0 0 10px
-            rgba(22, 184, 229, 0.6);
+            0 0 12px
+            rgba(22, 184, 229, 0.65);
     }
 }
 
 
 /* =========================================================
    DESCRIPTION
+   Increased from 15px to 18px
 ========================================================= */
 
 .svc-para {
@@ -190,7 +230,7 @@
 
     line-height: 1.65;
 
-    font-size: 15px;
+    font-size: 18px;
 
     margin: 0 0 18px 0;
 
@@ -385,9 +425,15 @@
    HEADING ANIMATION
 ========================================================= */
 
+/*
+   IMPORTANT:
+   .svc-title-line is NOT included here.
+
+   Its own animation must remain active continuously.
+*/
+
 .svc-sub,
 .svc-title,
-.svc-title-line,
 .svc-para,
 .btn {
     opacity: 0;
@@ -408,10 +454,6 @@
 
 .svc-title {
     animation-delay: 0.3s;
-}
-
-.svc-title-line {
-    animation-delay: 0.4s;
 }
 
 .svc-para {
@@ -551,6 +593,10 @@
     /* DESCRIPTION */
 
     .svc-para {
+        font-size: 18px;
+
+        line-height: 1.65;
+
         margin-left: auto;
 
         margin-right: auto;
@@ -668,7 +714,7 @@
     /* PARAGRAPH */
 
     .svc-para {
-        font-size: 14px;
+        font-size: 16px;
 
         line-height: 1.6;
 
@@ -761,8 +807,10 @@
     }
 
 
+    /* PARAGRAPH */
+
     .svc-para {
-        font-size: 13px;
+        font-size: 15px;
 
         line-height: 1.55;
 
@@ -810,6 +858,7 @@
 
 @media (prefers-reduced-motion: reduce) {
 
+    .svc-sub-dot,
     .svc-title-line {
         animation: none;
     }

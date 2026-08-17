@@ -559,6 +559,7 @@
 
 /* =========================================
    NAVIGATION BUTTONS
+   BLACK CIRCLE + SMALL WHITE ARROW
 ========================================= */
 
 .nv-work-showcase .swiper-button-next,
@@ -571,14 +572,15 @@
 
     border-radius: 50%;
 
-    background: #ffffff;
+    background: #000000;
 
     box-shadow:
-        0 10px 25px rgba(0, 0, 0, 0.08);
+        0 10px 25px rgba(0, 0, 0, 0.18);
 
     transition:
         transform 0.3s ease,
-        box-shadow 0.3s ease;
+        box-shadow 0.3s ease,
+        background 0.3s ease;
 }
 
 
@@ -586,23 +588,89 @@
 .nv-work-showcase .swiper-button-prev:hover {
     transform: translateY(-3px);
 
+    background: #111111;
+
     box-shadow:
-        0 14px 30px rgba(0, 0, 0, 0.14);
+        0 14px 30px rgba(0, 0, 0, 0.25);
 }
 
 
+/* =========================================
+   SWIPER ARROWS
+   BLACK CIRCLE + SINGLE SMALL WHITE ARROW
+========================================= */
+
+.nv-work-showcase .swiper-button-next,
+.nv-work-showcase .swiper-button-prev {
+    --swiper-navigation-color: #ffffff !important;
+
+    color: #ffffff !important;
+}
+
+
+/* Remove all large/default arrow shapes */
 .nv-work-showcase .swiper-button-next::after,
 .nv-work-showcase .swiper-button-prev::after {
-    font-size: 18px;
+    display: flex !important;
 
-    font-weight: 700;
+    width: auto !important;
+    height: auto !important;
 
-    color: #111827;
+    position: absolute !important;
+
+    top: 50% !important;
+    left: 50% !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    background: none !important;
+
+    border: 0 !important;
+
+    box-shadow: none !important;
+
+    font-family: Arial, sans-serif !important;
+    font-size: 30px !important;
+    font-weight: 400 !important;
+
+    line-height: 1 !important;
+
+    color: #ffffff !important;
+
+    opacity: 1 !important;
+}
+
+
+/* Single slightly larger arrow */
+.nv-work-showcase .swiper-button-next::after {
+    content: "›" !important;
+
+    transform:
+        translate(-58%, -53%) !important;
+}
+
+
+/* Previous arrow */
+.nv-work-showcase .swiper-button-prev::after {
+    content: "‹" !important;
+
+    transform:
+        translate(-42%, -53%) !important;
 }
 
 
 /* =========================================
    TABLET
+========================================= */
+
+
+========================================= */
+
+
+========================================= */
+
+
 ========================================= */
 
 @media (max-width: 991px) {
@@ -668,7 +736,7 @@
 
     .nv-work-showcase .swiper-button-next::after,
     .nv-work-showcase .swiper-button-prev::after {
-        font-size: 16px;
+        font-size: 21px !important;
     }
 }
 
@@ -819,7 +887,7 @@
 
     .nv-work-showcase .swiper-button-next::after,
     .nv-work-showcase .swiper-button-prev::after {
-        font-size: 15px;
+        font-size: 24px !important;
     }
 }
 
@@ -951,7 +1019,7 @@
 
     .nv-work-showcase .swiper-button-next::after,
     .nv-work-showcase .swiper-button-prev::after {
-        font-size: 13px;
+        font-size: 27px !important;
     }
 }
 
@@ -1019,5 +1087,241 @@
 
     .nv-flip-front img {
         transition: none;
+    }
+}
+
+
+/* =========================================================
+   FINAL ARROW FIX
+   Do NOT use Swiper's arrow pseudo-element.
+   Black circle + ONE small white chevron only.
+   ========================================================= */
+
+.nv-work-showcase .swiper-button-next,
+.nv-work-showcase .swiper-button-prev {
+    background-color: #000000 !important;
+    color: transparent !important;
+
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: 14px 22px !important;
+}
+
+/* Completely remove Swiper's default/old arrow */
+.nv-work-showcase .swiper-button-next::before,
+.nv-work-showcase .swiper-button-next::after,
+.nv-work-showcase .swiper-button-prev::before,
+.nv-work-showcase .swiper-button-prev::after {
+    content: none !important;
+    display: none !important;
+    border: 0 !important;
+    background: none !important;
+    box-shadow: none !important;
+}
+
+/* Small WHITE right arrow */
+.nv-work-showcase .swiper-button-next {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='22' viewBox='0 0 14 22'%3E%3Cpath d='M2 1 L12 11 L2 21' fill='none' stroke='%23ffffff' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") !important;
+}
+
+/* Small WHITE left arrow */
+.nv-work-showcase .swiper-button-prev {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='22' viewBox='0 0 14 22'%3E%3Cpath d='M12 1 L2 11 L12 21' fill='none' stroke='%23ffffff' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") !important;
+}
+
+
+/* =========================================================
+   PROJECT SECTION HEADER
+   MATCHES THE ABOUT SECTION HEADER STYLE
+   Only header styling is changed.
+   ========================================================= */
+
+/* OUR PROJECTS badge */
+.nv-work-showcase .nv-sub-heading {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(236, 72, 153, 0.06);
+
+    border: 1px solid rgba(236, 72, 153, 0.28);
+
+    border-radius: 999px;
+
+    color: #ec4899;
+
+    font-family: 'Outfit', sans-serif;
+
+    font-size: 18px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    line-height: 1;
+
+    padding: 12px 22px;
+
+    box-shadow: 0 6px 20px rgba(236, 72, 153, 0.06);
+}
+
+
+/* Badge dot */
+.nv-work-showcase .nv-sub-heading-dot {
+    width: 8px;
+    height: 8px;
+
+    flex: 0 0 8px;
+
+    margin-right: 9px;
+
+    border-radius: 50%;
+
+    background: #67cce3;
+
+    box-shadow: 0 0 8px rgba(103, 204, 227, 0.28);
+}
+
+
+/* Main project title */
+.nv-work-showcase .nv-title {
+    color: #0b1328;
+
+    font-family: 'Outfit', sans-serif;
+
+    font-weight: 800;
+
+    line-height: 1.12;
+
+    letter-spacing: -1.2px;
+}
+
+
+/* "Showcase" — same gradient as About "Smart Solutions" */
+.nv-work-showcase .nv-title-accent {
+    background: linear-gradient(
+        90deg,
+        #22c7e8 0%,
+        #8b78d1 50%,
+        #ec4899 100%
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    background-clip: text;
+}
+
+
+/* Heading underline */
+.nv-work-showcase .nv-title-line {
+    width: 78px;
+    height: 5px;
+
+    margin: 20px auto 22px;
+
+    border-radius: 999px;
+
+    background: linear-gradient(
+        90deg,
+        #57cfe5 0%,
+        #ec8bc2 52%,
+        #f59e72 100%
+    );
+
+    box-shadow: none;
+}
+
+
+/* Description — same readability as About */
+.nv-work-showcase .nv-work-header > p {
+    color: #475569;
+
+    font-family: 'Outfit', sans-serif;
+
+    font-size: 18px;
+
+    font-weight: 500;
+
+    line-height: 1.7;
+
+    max-width: 980px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Desktop title sizing */
+@media (min-width: 992px) {
+    .nv-work-showcase .nv-title {
+        font-size: 58px;
+    }
+
+    .nv-work-showcase .nv-work-header > p {
+        font-size: 18px;
+        line-height: 1.7;
+    }
+}
+
+
+/* Tablet */
+@media (max-width: 991px) {
+    .nv-work-showcase .nv-title {
+        font-size: 48px;
+    }
+
+    .nv-work-showcase .nv-sub-heading {
+        font-size: 17px;
+    }
+
+    .nv-work-showcase .nv-work-header > p {
+        font-size: 17px;
+        line-height: 1.7;
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 767px) {
+    .nv-work-showcase .nv-title {
+        font-size: 40px;
+        letter-spacing: -0.7px;
+    }
+
+    .nv-work-showcase .nv-sub-heading {
+        font-size: 15px;
+        padding: 11px 18px;
+    }
+
+    .nv-work-showcase .nv-work-header > p {
+        font-size: 16px;
+        line-height: 1.65;
+    }
+
+    .nv-work-showcase .nv-title-line {
+        width: 68px;
+        height: 4px;
+
+        margin-top: 17px;
+        margin-bottom: 19px;
+    }
+}
+
+
+/* Small mobile */
+@media (max-width: 480px) {
+    .nv-work-showcase .nv-title {
+        font-size: 34px;
+    }
+
+    .nv-work-showcase .nv-sub-heading {
+        font-size: 14px;
+        padding: 10px 16px;
+    }
+
+    .nv-work-showcase .nv-work-header > p {
+        font-size: 15px;
+        line-height: 1.65;
     }
 }
