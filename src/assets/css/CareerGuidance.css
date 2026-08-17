@@ -1636,3 +1636,183 @@ th.col-us {
     min-width: 480px;
   }
 }
+
+
+/* =========================================================
+   CAREER GUIDANCE — REFERENCE HEADING STYLE
+   Only section-heading visuals are changed.
+   Existing layout, cards, content, spacing and animations stay intact.
+   ========================================================= */
+
+.career-guidance-section .section-heading,
+.career-guidance-process .section-heading,
+.career-deliverables .section-heading,
+.who-is-it-for .section-heading,
+.career-comparison .section-heading,
+.career-outcomes .section-heading {
+  position: relative;
+}
+
+/* Small rounded heading badge with blinking dot */
+.career-guidance-section .cg-reference-subheading,
+.career-guidance-process .cg-reference-subheading,
+.career-deliverables .cg-reference-subheading,
+.who-is-it-for .cg-reference-subheading,
+.career-comparison .cg-reference-subheading,
+.career-outcomes .cg-reference-subheading {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 34px;
+  padding: 7px 15px;
+  border: 1px solid rgba(102, 199, 221, 0.35);
+  border-radius: 999px;
+  background: rgba(102, 199, 221, 0.08);
+  color: #159fc5 !important;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+/* Dot inside the badge */
+.career-guidance-section .cg-reference-subheading::before,
+.career-guidance-process .cg-reference-subheading::before,
+.career-deliverables .cg-reference-subheading::before,
+.who-is-it-for .cg-reference-subheading::before,
+.career-comparison .cg-reference-subheading::before,
+.career-outcomes .cg-reference-subheading::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  min-width: 8px;
+  border-radius: 50%;
+  background: #66c7dd;
+  box-shadow: 0 0 0 4px rgba(102, 199, 221, 0.12);
+  display: inline-block;
+  animation: cgHeadingBlink 3s ease-in-out infinite;
+}
+
+/* Main heading */
+.career-guidance-section .cg-reference-title,
+.career-guidance-process .cg-reference-title,
+.career-deliverables .cg-reference-title,
+.who-is-it-for .cg-reference-title,
+.career-comparison .cg-reference-title,
+.career-outcomes .cg-reference-title {
+  position: relative;
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin: 10px auto 0 !important;
+  padding-bottom: 24px;
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+}
+
+/* Dark sections keep the first half white */
+.career-guidance-section .cg-reference-title,
+.career-deliverables .cg-reference-title,
+.career-comparison .cg-reference-title {
+  color: #f8fafc !important;
+}
+
+/* Light sections */
+.career-guidance-process .cg-reference-title,
+.who-is-it-for .cg-reference-title,
+.career-outcomes .cg-reference-title {
+  color: #07142f !important;
+}
+
+/* Cyan/blue second half */
+.career-guidance-section .cg-heading-gradient,
+.career-guidance-process .cg-heading-gradient,
+.career-deliverables .cg-heading-gradient,
+.who-is-it-for .cg-heading-gradient,
+.career-comparison .cg-heading-gradient,
+.career-outcomes .cg-heading-gradient {
+  display: inline;
+  background: linear-gradient(135deg, #38bdf8 0%, #2563eb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Short centered underline */
+.career-guidance-section .cg-reference-title::after,
+.career-guidance-process .cg-reference-title::after,
+.career-deliverables .cg-reference-title::after,
+.who-is-it-for .cg-reference-title::after,
+.career-comparison .cg-reference-title::after,
+.career-outcomes .cg-reference-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 3px;
+  width: 78px;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #66c7dd, #2563eb);
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px rgba(102, 199, 221, 0.25);
+  animation: cgHeadingBlink 3s ease-in-out infinite;
+}
+
+@keyframes cgHeadingBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
+}
+
+@media (max-width: 767px) {
+  .career-guidance-section .cg-reference-subheading,
+  .career-guidance-process .cg-reference-subheading,
+  .career-deliverables .cg-reference-subheading,
+  .who-is-it-for .cg-reference-subheading,
+  .career-comparison .cg-reference-subheading,
+  .career-outcomes .cg-reference-subheading {
+    min-height: 32px;
+    padding: 7px 13px;
+    font-size: 10px;
+    letter-spacing: 1.2px;
+  }
+
+  .career-guidance-section .cg-reference-title,
+  .career-guidance-process .cg-reference-title,
+  .career-deliverables .cg-reference-title,
+  .who-is-it-for .cg-reference-title,
+  .career-comparison .cg-reference-title,
+  .career-outcomes .cg-reference-title {
+    width: 100%;
+    padding-bottom: 21px;
+  }
+
+  .career-guidance-section .cg-reference-title::after,
+  .career-guidance-process .cg-reference-title::after,
+  .career-deliverables .cg-reference-title::after,
+  .who-is-it-for .cg-reference-title::after,
+  .career-comparison .cg-reference-title::after,
+  .career-outcomes .cg-reference-title::after {
+    width: 68px;
+    height: 3px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .career-guidance-section .cg-reference-subheading::before,
+  .career-guidance-process .cg-reference-subheading::before,
+  .career-deliverables .cg-reference-subheading::before,
+  .who-is-it-for .cg-reference-subheading::before,
+  .career-comparison .cg-reference-subheading::before,
+  .career-outcomes .cg-reference-subheading::before,
+  .career-guidance-section .cg-reference-title::after,
+  .career-guidance-process .cg-reference-title::after,
+  .career-deliverables .cg-reference-title::after,
+  .who-is-it-for .cg-reference-title::after,
+  .career-comparison .cg-reference-title::after,
+  .career-outcomes .cg-reference-title::after {
+    animation: none;
+  }
+}

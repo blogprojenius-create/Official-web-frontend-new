@@ -1,7 +1,0 @@
-.disabled-slot {
-  opacity: 0.4;
-  pointer-events: none;
-  background: #f1f5f9 !important;
-  color: #64748b !important;
-  border: 1px solid #cbd5e1 !important;
-}

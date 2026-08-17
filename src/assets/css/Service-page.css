@@ -799,10 +799,14 @@
 =========================== */
 
 .development-hero {
-  padding: 100px 0 110px;
+  padding: 25px 0 70px;
   background: #ffffff;
   overflow: hidden;
   position: relative;
+}
+
+.development-hero .row {
+  align-items: flex-start !important;
 }
 
 /* Background glow orbs */
@@ -855,6 +859,24 @@
   font-family: 'Outfit', sans-serif;
 }
 
+/* Replace the CPU icon with a small dot */
+.development-hero .hero-tag i {
+  display: none !important;
+}
+
+.development-hero .hero-tag::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  min-width: 8px;
+  border-radius: 50%;
+  background: #66c7dd;
+  box-shadow: 0 0 0 4px rgba(102, 199, 221, 0.12);
+  display: inline-block;
+  margin-right: 10px;
+  animation: enterpriseHeadingBlink 3s ease-in-out infinite;
+}
+
 .hero-content h1 {
   font-size: clamp(34px, 4.8vw, 54px);
   font-weight: 800;
@@ -863,6 +885,30 @@
   color: #0f172a;
   letter-spacing: -0.5px;
   font-family: 'Outfit', sans-serif;
+}
+
+/* Enterprise hero heading — blinking dot + line */
+.development-hero .hero-content h1 {
+  position: relative;
+  padding-bottom: 24px;
+}
+
+.development-hero .hero-content h1::after {
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  width: 96px;
+  height: 4px;
+  border-radius: 999px;
+  background: #66c7dd;
+  transform: none;
+  animation: enterpriseHeadingBlink 3s ease-in-out infinite;
+}
+
+@keyframes enterpriseHeadingBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.35; }
 }
 
 .hero-title-gradient {
@@ -1091,7 +1137,7 @@
 
   .development-hero {
     text-align: center;
-    padding: 80px 0;
+    padding: 35px 0 70px;
   }
 
   .hero-content h1 {
@@ -2871,7 +2917,7 @@
 
 @media (max-width: 991px) {
   .development-hero {
-    padding: 76px 0;
+    padding: 35px 0 70px;
   }
 
   .service-1 .box {
@@ -2889,7 +2935,7 @@
 
 @media (max-width: 767px) {
   .development-hero {
-    padding: 60px 0;
+    padding: 25px 0 55px;
   }
 
   .hero-buttons,
@@ -4107,4 +4153,187 @@
 .workshop-achievements-line {
   animation: workshopSlowBlink 3.2s ease-in-out infinite;
   will-change: opacity;
+}
+
+/* =========================================================
+   INTERNSHIP HEADINGS — MATCH "WHO WE ARE" REFERENCE STYLE
+   ========================================================= */
+
+.internship-page-heading,
+.internship-domains-heading,
+.internship-tech-section .section-heading,
+.internship-capabilities-section .section-heading,
+.internship-metrics-section .section-heading {
+  position: relative;
+}
+
+/* Small pill + blinking dot */
+.internship-domains-heading .reference-section-subheading,
+.internship-tech-section .reference-section-subheading,
+.internship-capabilities-section .reference-section-subheading,
+.internship-metrics-section .reference-section-subheading,
+.reference-about-subheading {
+  align-items: center;
+  display: inline-flex;
+  gap: 9px;
+}
+
+/* Dot */
+.internship-domains-heading .reference-section-subheading::before,
+.internship-tech-section .reference-section-subheading::before,
+.internship-capabilities-section .reference-section-subheading::before,
+.internship-metrics-section .reference-section-subheading::before,
+.reference-about-subheading::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  min-width: 8px;
+  border-radius: 50%;
+  background: #66c7dd;
+  box-shadow: 0 0 0 4px rgba(102, 199, 221, 0.12);
+  display: inline-block;
+  animation: internshipHeadingBlink 3s ease-in-out infinite;
+}
+
+/* Reference-style heading */
+.reference-section-title {
+  position: relative;
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin: 10px auto 0 !important;
+  padding-bottom: 24px;
+  color: #07142f;
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+}
+
+/* Exact blue gradient used by the reference heading */
+.reference-section-title .heading-gradient,
+.reference-about-title .heading-gradient {
+  display: inline;
+  background: linear-gradient(135deg, #38bdf8 0%, #2563eb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Centered underline */
+.reference-section-title::after,
+.reference-about-title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 3px;
+  width: 96px;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #66c7dd, #2563eb);
+  transform: translateX(-50%);
+  animation: internshipHeadingBlink 3s ease-in-out infinite;
+}
+
+/* About section: preserve its original left-aligned layout */
+.reference-about-title {
+  position: relative;
+  padding-bottom: 24px;
+}
+
+.reference-about-title::after {
+  left: 0;
+  transform: none;
+}
+
+.reference-about-subheading {
+  position: relative;
+}
+
+/* The About label already has a pill; only add the reference dot. */
+.reference-about-subheading::before {
+  margin-right: 1px;
+}
+
+@keyframes internshipHeadingBlink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+/* Keep the headings centered and prevent long titles from breaking the layout. */
+.internship-domains-heading .reference-section-title,
+.internship-tech-section .reference-section-title,
+.internship-capabilities-section .reference-section-title,
+.internship-metrics-section .reference-section-title {
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .reference-section-title {
+    width: 100%;
+    padding-bottom: 21px;
+  }
+
+  .reference-section-title::after,
+  .reference-about-title::after {
+    width: 72px;
+    height: 3px;
+  }
+
+  .reference-about-title {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .internship-domains-heading .reference-section-subheading::before,
+  .internship-tech-section .reference-section-subheading::before,
+  .internship-capabilities-section .reference-section-subheading::before,
+  .internship-metrics-section .reference-section-subheading::before,
+  .reference-about-subheading::before,
+  .reference-section-title::after,
+  .reference-about-title::after {
+    animation: none;
+  }
+}
+
+/* =========================================
+   INTERNSHIP DOMAINS - DOT ONLY
+========================================= */
+
+.internship-domains-section
+.reference-section-subheading::before {
+  content: "" !important;
+
+  width: 9px !important;
+  height: 9px !important;
+  min-width: 9px !important;
+
+  border-radius: 50% !important;
+
+  background: #66c7dd !important;
+
+  box-shadow: 0 0 0 4px rgba(102, 199, 221, 0.12) !important;
+
+  display: inline-block !important;
+}
+
+/* Remove both horizontal lines */
+.internship-domains-section
+.reference-section-subheading::after {
+  content: none !important;
+  display: none !important;
+}
+
+/* Make sure no background line is added by global styles */
+.internship-domains-section
+.reference-section-subheading {
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
 }
