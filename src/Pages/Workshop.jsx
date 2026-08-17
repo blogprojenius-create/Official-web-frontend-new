@@ -200,12 +200,12 @@ export default function Workshop() {
       <section className="workshop-showcase-section">
         <div className="container">
           <div className="section-heading text-center workshop-showcase-heading">
-            <span id="sub-heading" className="workshop-showcase-badge">
+            <span className="workshop-showcase-badge">
               <span className="workshop-showcase-dot"></span>
               Explore Our Workshops
             </span>
 
-            <h2 id="title" className="workshop-showcase-title">
+            <h2 className="workshop-showcase-title">
               Featured <span className="workshop-event-highlight">Event</span>
             </h2>
 
@@ -267,12 +267,12 @@ export default function Workshop() {
       >
         <div className="container">
           <div className="section-heading text-center workshop-achievements-heading">
-            <span id="sub-heading" className="workshop-achievements-badge">
+            <span className="workshop-achievements-badge">
               <span className="workshop-achievements-dot"></span>
               Achievements
             </span>
 
-            <h2 id="title" className="workshop-achievements-title">
+            <h2 className="workshop-achievements-title">
               Awards &amp; <span className="workshop-achievements-highlight">Recognition</span>
             </h2>
 
@@ -281,7 +281,7 @@ export default function Workshop() {
             <p className="section-desc workshop-achievements-desc">
               <span>
                 Celebrating workshop milestones, student participation, and the
-                moments 
+                moments
               </span>
               <span>that reflect practical learning in action.</span>
             </p>

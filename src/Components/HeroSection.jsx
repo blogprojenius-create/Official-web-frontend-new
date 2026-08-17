@@ -129,7 +129,7 @@ function DotIndicators({ total, active, onDotClick }) {
                         border: "none",
                         background:
                             i === active
-                                ? "#66C7DD"
+                                ? "#A78BFA"
                                 : "rgba(255,255,255,0.4)",
                         cursor: "pointer",
                         padding: 0,
@@ -238,7 +238,6 @@ export default function HeroSection() {
                                     Smart Solutions
                                 </span>
                             </span>
-
                             <span className="hero-heading-line hero-heading-line-2">
                                 with AI, IoT &amp; Innovation
                             </span>
