@@ -21,14 +21,6 @@ const teamMembers = [
     accent: "core",
     socials: ["facebook", "twitter-x", "linkedin", "instagram"],
   },
-  {
-    image: "images/team-member-3.webp",
-    name: "Brian",
-    position: "COO & Co-Founder",
-    bio: "A visionary mentor promoting entrepreneurship and innovation, supporting students from exploration to impactful execution.",
-    accent: "placeholder",
-    socials: ["facebook", "twitter-x", "linkedin", "instagram"],
-  },
 ];
 
 export default function TeamSection() {
@@ -131,11 +123,11 @@ export default function TeamSection() {
         </div>
 
         {/* ==================================================
-            FIRST TWO TEAM MEMBERS
+            TEAM MEMBERS
             ================================================== */}
         <div className="team-grid-top">
 
-          {teamMembers.slice(0, 2).map((member, index) => (
+          {teamMembers.map((member, index) => (
             <article
               className="team-card"
               key={member.name}
@@ -204,77 +196,6 @@ export default function TeamSection() {
 
             </article>
           ))}
-
-        </div>
-
-        {/* ==================================================
-            THIRD TEAM MEMBER
-            ================================================== */}
-        <div className="team-grid-bottom">
-
-          <article
-            className="team-card"
-            data-aos="fade-up"
-            data-aos-delay="500"
-          >
-
-            <div className="team-card-body">
-
-              <h3
-                className={`team-member-name ${
-                  animateName ? "team-name-in" : ""
-                }`}
-              >
-                {teamMembers[2].name}
-              </h3>
-
-              <p
-                className={`team-member-role ${
-                  animateName ? "team-role-in" : ""
-                }`}
-              >
-                {teamMembers[2].position}
-              </p>
-
-              {teamMembers[2].bio && (
-                <p
-                  className={`team-member-bio ${
-                    animateBio ? "team-bio-in" : ""
-                  }`}
-                >
-                  {teamMembers[2].bio}
-                </p>
-              )}
-
-            </div>
-
-            <div className="team-card-photo">
-
-              <img
-                className={
-                  animateImage ? "team-image-in" : ""
-                }
-                src={teamMembers[2].image}
-                alt={teamMembers[2].name}
-              />
-
-              <div className="team-card-socials">
-
-                {teamMembers[2].socials.map((platform) => (
-                  <a
-                    href="#"
-                    key={platform}
-                    aria-label={`Brian ${platform}`}
-                  >
-                    <i className={`bi bi-${platform}`}></i>
-                  </a>
-                ))}
-
-              </div>
-
-            </div>
-
-          </article>
 
         </div>
 
