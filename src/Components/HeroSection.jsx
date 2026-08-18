@@ -29,11 +29,7 @@ const slides = [
     },
 ];
 
-
-/* =========================================
-   DECORATIVE FLOATING PARTICLES
-   ========================================= */
-
+/* Decorative floating particles */
 const PARTICLES = [
     {
         size: 10,
@@ -79,11 +75,7 @@ const PARTICLES = [
     },
 ];
 
-
-/* =========================================
-   SCROLL REVEAL
-   ========================================= */
-
+/* Scroll reveal */
 function useScrollReveal(
     selector = ".reveal, .reveal-left, .reveal-right"
 ) {
@@ -112,11 +104,7 @@ function useScrollReveal(
     }, [selector]);
 }
 
-
-/* =========================================
-   MOBILE DOTS
-   ========================================= */
-
+/* Mobile dots */
 function DotIndicators({ total, active, onDotClick }) {
     return (
         <div
@@ -154,22 +142,13 @@ function DotIndicators({ total, active, onDotClick }) {
     );
 }
 
-
-/* =========================================
-   HERO SECTION
-   ========================================= */
-
 export default function HeroSection() {
     const [activeSlide, setActiveSlide] = useState(0);
     const [isMobile, setIsMobile] = useState(false);
 
     useScrollReveal();
 
-
-    /* =========================================
-       MOBILE DETECTION
-       ========================================= */
-
+    /* Mobile detection */
     useEffect(() => {
         const mq = window.matchMedia("(max-width: 991px)");
 
@@ -184,11 +163,7 @@ export default function HeroSection() {
         return () => mq.removeEventListener("change", handler);
     }, []);
 
-
-    /* =========================================
-       PRELOAD IMAGES
-       ========================================= */
-
+    /* Preload images */
     useEffect(() => {
         slides.forEach((slide) => {
             const bgImage = new Image();
@@ -196,11 +171,7 @@ export default function HeroSection() {
         });
     }, []);
 
-
-    /* =========================================
-       AUTO PLAY
-       ========================================= */
-
+    /* Auto play */
     useEffect(() => {
         const interval = setInterval(() => {
             setActiveSlide((prev) =>
@@ -211,23 +182,12 @@ export default function HeroSection() {
         return () => clearInterval(interval);
     }, []);
 
-
-    /* =========================================
-       THUMB CLICK
-       ========================================= */
-
     const handleThumbClick = (index) => {
         setActiveSlide(index);
     };
 
-
-    /* =========================================
-       THUMB POSITION
-       ========================================= */
-
     const getThumbOffset = (index) =>
         (index - activeSlide + slides.length) % slides.length;
-
 
     return (
         <div
@@ -243,11 +203,7 @@ export default function HeroSection() {
                 `,
             }}
         >
-
-            {/* =========================================
-                FLOATING PARTICLES
-               ========================================= */}
-
+            {/* Floating particles */}
             {PARTICLES.map((p, i) => (
                 <span
                     key={i}
@@ -263,53 +219,30 @@ export default function HeroSection() {
                 />
             ))}
 
-
-            {/* =========================================
-                HERO CONTENT
-               ========================================= */}
-
             <section className="hero container">
-
                 <div className="row align-items-center">
 
-                    {/* =========================================
-                        LEFT CONTENT
-                       ========================================= */}
-
+                    {/* LEFT CONTENT */}
                     <div className="col-lg-7 col-12">
-
-                        {/* SUBHEADING */}
 
                         <h3 className="subheading">
                             We Design, Develop &amp; Deliver Impactful Technology
                         </h3>
 
-
-                        {/* =========================================
-                            MAIN HEADING
-                           ========================================= */}
-
+                        {/* EXACTLY TWO LINES */}
                         <h1 className="heading">
 
                             <span className="hero-heading-line hero-heading-line-1">
                                 Building{" "}
-
                                 <span className="smart-solutions">
                                     Smart Solutions
                                 </span>
                             </span>
-
-
                             <span className="hero-heading-line hero-heading-line-2">
                                 with AI, IoT &amp; Innovation
                             </span>
 
                         </h1>
-
-
-                        {/* =========================================
-                            DESCRIPTION
-                           ========================================= */}
 
                         <p className="description mt-3">
                             Projenius is a technology-driven startup focused on
@@ -317,143 +250,19 @@ export default function HeroSection() {
                             Development, and Product Engineering.
                         </p>
 
-
-                        {/* =========================================
-                            EXPLORE BUTTON
-
-                            INLINE STYLES ARE INTENTIONAL HERE.
-                            This guarantees the button is visible
-                            even if another global .btn rule exists.
-                           ========================================= */}
-
-                        <div
-                            className="hero-buttons"
-                            style={{
-                                display: "flex",
-                                alignItems: "center",
-                                justifyContent: "center",
-                                width: "100%",
-                                marginTop: "30px",
-
-                                /* Prevent any CSS animation from
-                                   keeping the container invisible */
-                                opacity: 1,
-                                visibility: "visible",
-                                transform: "none",
-                                animation: "none",
-                            }}
-                        >
-
-                            <a
-                                href="#"
-                                className="btn hero-explore-btn"
-                                style={{
-                                    display: "inline-flex",
-                                    alignItems: "center",
-                                    justifyContent: "center",
-
-                                    /* REQUESTED BUTTON COLOR */
-                                    backgroundColor: "rgb(0, 224, 211)",
-                                    background: "rgb(0, 224, 211)",
-                                    backgroundImage: "none",
-
-                                    /* REQUESTED TEXT COLOR */
-                                    color: "#000000",
-
-                                    /* SIZE */
-                                    padding: "15px 32px",
-                                    minWidth: "240px",
-                                    minHeight: "54px",
-
-                                    borderRadius: "999px",
-                                    border: "none",
-
-                                    /* FONT */
-                                    fontFamily:
-                                        '"Segoe UI", sans-serif',
-                                    fontSize: "18px",
-                                    fontWeight: 700,
-
-                                    textAlign: "center",
-                                    textDecoration: "none",
-
-                                    cursor: "pointer",
-
-                                    /* IMPORTANT */
-                                    opacity: 1,
-                                    visibility: "visible",
-                                    transform: "none",
-                                    animation: "none",
-
-                                    boxSizing: "border-box",
-
-                                    transition:
-                                        "transform 0.3s ease, box-shadow 0.3s ease",
-                                }}
-                                onMouseEnter={(e) => {
-                                    e.currentTarget.style.backgroundColor =
-                                        "rgb(0, 224, 211)";
-
-                                    e.currentTarget.style.color =
-                                        "#000000";
-
-                                    e.currentTarget.style.transform =
-                                        "translateY(-2px)";
-
-                                    e.currentTarget.style.boxShadow =
-                                        "0 0 14px rgba(0, 224, 211, 0.45), 0 0 28px rgba(0, 224, 211, 0.30)";
-                                }}
-                                onMouseLeave={(e) => {
-                                    e.currentTarget.style.backgroundColor =
-                                        "rgb(0, 224, 211)";
-
-                                    e.currentTarget.style.color =
-                                        "#000000";
-
-                                    e.currentTarget.style.transform =
-                                        "translateY(0)";
-
-                                    e.currentTarget.style.boxShadow =
-                                        "none";
-                                }}
-                            >
-
+                        {/* CENTERED BUTTON */}
+                        <div className="hero-buttons">
+                            <a href="#" className="btn">
                                 <span
                                     className="btn-content"
                                     key={activeSlide}
-                                    style={{
-                                        display: "inline-block",
-
-                                        color: "#000000",
-
-                                        fontFamily:
-                                            '"Segoe UI", sans-serif',
-
-                                        fontSize: "18px",
-
-                                        fontWeight: 700,
-
-                                        opacity: 1,
-
-                                        visibility: "visible",
-
-                                        transform: "none",
-
-                                        animation: "none",
-                                    }}
                                 >
                                     {slides[activeSlide].buttonText}
                                 </span>
-
                             </a>
-
                         </div>
 
-
-                        {/* =========================================
-                            MOBILE DOTS
-                           ========================================= */}
-
+                        {/* MOBILE DOTS */}
                         {isMobile && (
                             <DotIndicators
                                 total={slides.length}
@@ -461,20 +270,13 @@ export default function HeroSection() {
                                 onDotClick={handleThumbClick}
                             />
                         )}
-
                     </div>
 
-
-                    {/* =========================================
-                        RIGHT CIRCLES
-                       ========================================= */}
-
-                    <div className="col-lg-5 col-12 hero-thumb-column">
-
+                    {/* RIGHT CIRCLES */}
+                    <div className="col-lg-5 d-none d-lg-flex justify-content-center">
                         <div className="thumb-wrapper">
 
                             {slides.map((slide, realIndex) => {
-
                                 const offset =
                                     getThumbOffset(realIndex);
 
@@ -510,13 +312,10 @@ export default function HeroSection() {
                             })}
 
                         </div>
-
                     </div>
 
                 </div>
-
             </section>
-
         </div>
     );
 }
