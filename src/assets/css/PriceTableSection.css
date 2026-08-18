@@ -1,7 +1,25 @@
+/* =========================================================
+   PRICING SECTION
+========================================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap");
+
+
+/* =========================================================
+   MAIN SECTION
+========================================================= */
+
 .pricing-main-section {
     padding: 60px 20px;
     overflow: hidden;
+
+    font-family: "Outfit", sans-serif;
 }
+
+
+/* =========================================================
+   LEFT IMAGE CARD
+========================================================= */
 
 .pricing-image-card {
     position: relative;
@@ -12,412 +30,1059 @@
     background: #0d1122;
 }
 
-/* ── Ken Burns Slideshow ── */
+
+/* =========================================================
+   KEN BURNS SLIDESHOW
+========================================================= */
+
 @keyframes kenBurns {
-    0%   { transform: scale(1)    translateX(0%)    translateY(0%); }
-    25%  { transform: scale(1.08) translateX(-1%)   translateY(-1%); }
-    50%  { transform: scale(1.05) translateX(1%)    translateY(1%); }
-    75%  { transform: scale(1.1)  translateX(-0.5%) translateY(0.5%); }
-    100% { transform: scale(1)    translateX(0%)    translateY(0%); }
+
+    0% {
+        transform:
+            scale(1)
+            translateX(0%)
+            translateY(0%);
+    }
+
+    25% {
+        transform:
+            scale(1.08)
+            translateX(-1%)
+            translateY(-1%);
+    }
+
+    50% {
+        transform:
+            scale(1.05)
+            translateX(1%)
+            translateY(1%);
+    }
+
+    75% {
+        transform:
+            scale(1.1)
+            translateX(-0.5%)
+            translateY(0.5%);
+    }
+
+    100% {
+        transform:
+            scale(1)
+            translateX(0%)
+            translateY(0%);
+    }
 }
+
 
 .pricing-slide-bg {
     position: absolute;
     inset: 0;
+
     opacity: 0;
-    transition: opacity 1.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+    transition:
+        opacity 1.4s cubic-bezier(0.4, 0, 0.2, 1);
+
     z-index: 0;
 }
+
 
 .pricing-slide-bg img {
     width: 100%;
     height: 100%;
+
     object-fit: cover;
+
     display: block;
+
     transform: scale(1);
 }
+
 
 .pricing-slide-bg.active {
     opacity: 1;
     z-index: 1;
 }
 
+
 .pricing-slide-bg.active img {
-    animation: kenBurns 8s ease-in-out infinite;
+    animation:
+        kenBurns
+        8s
+        ease-in-out
+        infinite;
 }
+
 
 .pricing-slide-bg.prev {
     opacity: 0;
     z-index: 0;
 }
 
-/* Dark overlay */
+
+/* =========================================================
+   DARK OVERLAY
+========================================================= */
+
 .pricing-slide-overlay {
     position: absolute;
+
     inset: 0;
-    background: rgba(0, 0, 0, 0.45);
+
+    background:
+        rgba(0, 0, 0, 0.45);
+
     z-index: 2;
+
     pointer-events: none;
 }
 
-/* Dot indicators */
+
+/* =========================================================
+   DOT INDICATORS
+========================================================= */
+
 .pricing-slide-dots {
     position: absolute;
+
     bottom: 20px;
     right: 20px;
+
     display: flex;
+
     gap: 6px;
+
     z-index: 5;
 }
 
+
 .pricing-slide-dot {
+
     display: block;
+
     width: 6px;
     height: 6px;
+
     border-radius: 50%;
-    background: rgba(255,255,255,0.4);
-    transition: width 0.35s ease, background 0.35s ease, border-radius 0.35s ease;
+
+    background:
+        rgba(255, 255, 255, 0.4);
+
+    transition:
+        width 0.35s ease,
+        background 0.35s ease,
+        border-radius 0.35s ease;
 }
+
 
 .pricing-slide-dot.active {
+
     width: 20px;
+
     border-radius: 3px;
-    background: #66C7DD;
+
+    background:
+        rgb(0, 170, 162);
 }
 
-/* Overlay content — must be above slideshow layers */
+
+/* =========================================================
+   IMAGE OVERLAY CONTENT
+========================================================= */
+
 .pricing-overlay-content {
+
     position: absolute;
+
     top: 50px;
     left: 40px;
+
     z-index: 6;
+
+    font-family:
+        "Outfit",
+        sans-serif;
 }
 
 
+/* =========================================================
+   SMALL TEXT
+========================================================= */
 
-.pricing-overlay-content .small-text {
-    color: #fff;
-    font-size: 15px;
-    font-weight: 500;
+.pricing-overlay-content .small-text,
+.pricing-overlay-content #sub-heading {
+
+    color:
+        #ffffff;
+
+    font-family:
+        "Outfit",
+        sans-serif;
+
+    font-size:
+        15px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        0.04em;
+
+    text-transform:
+        uppercase;
 }
+
+
+/* =========================================================
+   IMAGE MAIN HEADING
+========================================================= */
 
 .pricing-overlay-content h1 {
-    color: #fff;
-    font-size: 48px;
-    line-height: 56px;
-    font-weight: 700;
-    margin-top: 12px;
+
+    color:
+        #ffffff;
+
+    font-family:
+        "Outfit",
+        sans-serif;
+
+    font-size:
+        48px;
+
+    line-height:
+        56px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        -1px;
+
+    margin-top:
+        12px;
+
+    margin-bottom:
+        0;
 }
+
+
+/* =========================================================
+   ARROW CIRCLE
+========================================================= */
 
 .arrow-circle {
-    width: 65px;
-    height: 65px;
-    border: 1px solid #fff;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    margin-top: 35px;
-    font-size: 24px;
-    cursor: pointer;
-    transition: 0.4s;
+
+    width:
+        65px;
+
+    height:
+        65px;
+
+    border:
+        1px solid
+        rgb(0, 170, 162);
+
+    border-radius:
+        50%;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    color:
+        rgb(0, 170, 162);
+
+    margin-top:
+        35px;
+
+    font-size:
+        24px;
+
+    cursor:
+        pointer;
+
+    transition:
+        0.4s;
+
+    font-family:
+        "Outfit",
+        sans-serif;
 }
+
+
+/* =========================================================
+   ARROW HOVER
+========================================================= */
 
 .arrow-circle:hover {
-    background: #66c7dd;
-    border-color: #66c7dd;
-    color: #000;
+
+    background:
+        rgb(0, 170, 162);
+
+    border-color:
+        rgb(0, 170, 162);
+
+    color:
+        #000000;
+
+    box-shadow:
+        0 8px 22px
+        rgba(0, 170, 162, 0.28);
+
+    transform:
+        translateY(-2px);
 }
 
-/* =========================
+
+/* =========================================================
    PACKAGE CARD
-========================= */
+========================================================= */
 
 .package-card {
-    background: #071122;
-    border-radius: 16px;
-    padding: 28px 30px;
-    position: relative;
-    overflow: hidden;
-    border: 1px solid rgba(255,255,255,0.08);
 
-    /* Compact card height */
-    min-height: 520px;
+    background:
+        #071122;
+
+    border-radius:
+        16px;
+
+    padding:
+        28px 30px;
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+    border:
+        1px solid
+        rgba(0, 170, 162, 0.30);
+
+    min-height:
+        520px;
+
+    font-family:
+        "Outfit",
+        sans-serif;
+
+    transition:
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
 }
+
+
+/* =========================================================
+   PACKAGE CARD HOVER
+========================================================= */
+
+.package-card:hover {
+
+    border-color:
+        rgb(0, 170, 162);
+
+    box-shadow:
+        0 10px 30px
+        rgba(0, 170, 162, 0.12);
+}
+
+
+/* =========================================================
+   CARD TEXTURE
+========================================================= */
 
 .package-card::before {
+
     content: "";
-    position: absolute;
-    inset: 0;
-    background-image: url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
-    opacity: 0.2;
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background-image:
+        url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
+
+    opacity:
+        0.2;
 }
+
 
 .package-card > * {
-    position: relative;
-    z-index: 2;
+
+    position:
+        relative;
+
+    z-index:
+        2;
 }
+
+
+/* =========================================================
+   PACKAGE TOP
+========================================================= */
 
 .package-top {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    margin-bottom: 18px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        14px;
+
+    margin-bottom:
+        18px;
 }
+
+
+/* =========================================================
+   THUNDER ICON
+========================================================= */
 
 .thunder-icon {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: #66c7dd;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-    color: #000;
-    flex-shrink: 0;
+
+    width:
+        50px;
+
+    height:
+        50px;
+
+    border-radius:
+        50%;
+
+    background:
+        rgb(0, 170, 162);
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    font-size:
+        22px;
+
+    color:
+        #000000;
+
+    flex-shrink:
+        0;
+
+    box-shadow:
+        0 5px 18px
+        rgba(0, 170, 162, 0.18);
 }
 
-.package-top h3 {
-    color: #fff;
-    font-size: 26px;
-    font-weight: 700;
-    margin: 0;
+
+/* =========================================================
+   PACKAGE TITLE
+========================================================= */
+
+.package-top h3,
+.package-top .card-title {
+
+    color:
+        #ffffff;
+
+    font-family:
+        "Outfit",
+        sans-serif;
+
+    font-size:
+        26px;
+
+    font-weight:
+        800;
+
+    line-height:
+        1.2;
+
+    margin:
+        0;
+
+    letter-spacing:
+        -0.3px;
 }
+
+
+/* =========================================================
+   PACKAGE DESCRIPTION
+========================================================= */
 
 .package-text {
-    color: #d8d8d8;
-    font-size: 15px;
-    line-height: 26px;
-    margin-bottom: 20px;
+
+    color:
+        #d8d8d8;
+
+    font-family:
+        "Outfit",
+        sans-serif;
+
+    font-size:
+        15px;
+
+    line-height:
+        26px;
+
+    font-weight:
+        400;
+
+    margin-bottom:
+        20px;
 }
+
+
+/* =========================================================
+   PACKAGE LIST
+========================================================= */
 
 .package-list {
-    padding: 0;
-    margin: 0;
-    list-style: none;
+
+    padding:
+        0;
+
+    margin:
+        0;
+
+    list-style:
+        none;
 }
+
 
 .package-list li {
-    color: #fff;
-    font-size: 16px;
-    margin-bottom: 14px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
+
+    color:
+        #ffffff;
+
+    font-family:
+        "Outfit",
+        sans-serif;
+
+    font-size:
+        16px;
+
+    font-weight:
+        500;
+
+    margin-bottom:
+        14px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        12px;
 }
+
+
+/* =========================================================
+   CHECK ICON
+========================================================= */
 
 .package-list li i {
-    color: #66c7dd;
-    font-size: 18px;
+
+    color:
+        rgb(0, 170, 162);
+
+    font-size:
+        18px;
+
+    flex-shrink:
+        0;
 }
 
-/* =========================
+
+/* =========================================================
    PRICE AREA
-========================= */
+========================================================= */
 
 .price-box {
-    margin-top: 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+
+    margin-top:
+        24px;
+
+    display:
+        flex;
+
+    justify-content:
+        space-between;
+
+    align-items:
+        center;
+
+    flex-wrap:
+        wrap;
 }
+
+
+/* =========================================================
+   RUPEE SYMBOL
+========================================================= */
 
 .dollar {
-    color: #fff;
-    font-size: 24px;
-    font-weight: 600;
+
+    color:
+        #ffffff;
+
+    font-family:
+        "Outfit",
+        sans-serif;
+
+    font-size:
+        24px;
+
+    font-weight:
+        600;
 }
+
+
+/* =========================================================
+   PRICE
+========================================================= */
 
 .price {
-    color: #fff;
-    font-size: 46px;
-    font-weight: 700;
+
+    color:
+        #ffffff;
+
+    font-family:
+        "Outfit",
+        sans-serif;
+
+    font-size:
+        46px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        -1px;
 }
+
+
+/* =========================================================
+   SAVE BOX
+========================================================= */
 
 .save-box {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        10px;
 }
+
 
 .save-box img {
-    width: 55px;
+
+    width:
+        55px;
 }
+
 
 .save-box span {
-    color: #00e5ff;
-    font-size: 22px;
-    font-weight: 600;
-    text-transform: lowercase;
+
+    color:
+        rgb(0, 170, 162);
+
+    font-family:
+        "Outfit",
+        sans-serif;
+
+    font-size:
+        22px;
+
+    font-weight:
+        700;
+
+    text-transform:
+        lowercase;
 }
 
-/* =========================
-   BUTTON
-========================= */
+
+/* =========================================================
+   CHOOSE PACKAGE BUTTON
+========================================================= */
 
 .choose-btn {
-    width: 100%;
-    margin-top: 22px;
-    height: 54px;
-    border: none;
-    border-radius: 50px;
-    background: #002D62;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 700;
-    transition: 0.4s;
-    cursor: pointer;
+
+    width:
+        100%;
+
+    margin-top:
+        22px;
+
+    height:
+        54px;
+
+    border:
+        1px solid
+        rgb(0, 170, 162);
+
+    border-radius:
+        50px;
+
+    background:
+        rgb(0, 170, 162);
+
+    color:
+        #000000;
+
+    font-family:
+        "Outfit",
+        sans-serif;
+
+    font-size:
+        18px;
+
+    font-weight:
+        800;
+
+    transition:
+        0.4s;
+
+    cursor:
+        pointer;
+
+    box-shadow:
+        0 8px 22px
+        rgba(0, 170, 162, 0.18);
 }
+
+
+/* =========================================================
+   BUTTON HOVER
+========================================================= */
 
 .choose-btn:hover {
-    background: #66c7dd; /* Light blue */
-    color: #000;
+
+    background:
+        transparent;
+
+    border-color:
+        rgb(0, 170, 162);
+
+    color:
+        rgb(0, 170, 162);
+
+    box-shadow:
+        0 10px 28px
+        rgba(0, 170, 162, 0.25);
+
+    transform:
+        translateY(-2px);
 }
+
+
+/* =========================================================
+   BUTTON ARROW
+========================================================= */
+
+.choose-btn i {
+
+    color:
+        inherit;
+
+    margin-left:
+        4px;
+}
+
+
+/* =========================================================
+   OUTLINE BUTTON
+========================================================= */
 
 .outline-btn {
-    background: transparent;
-    border: 1px solid rgba(255,255,255,0.15);
-    color: #fff;
+
+    background:
+        transparent;
+
+    border:
+        1px solid
+        rgba(0, 170, 162, 0.45);
+
+    color:
+        #ffffff;
 }
+
 
 .outline-btn:hover {
-     background: linear-gradient(135deg, #00bfff, #52d6ff);
-    color: #000;
-    border: 1px solid transparent;
-    outline: none;
 
+    background:
+        rgb(0, 170, 162);
+
+    color:
+        #000000;
+
+    border:
+        1px solid
+        rgb(0, 170, 162);
+
+    outline:
+        none;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
 
-@media(max-width: 1399px){
+/* =========================================================
+   RESPONSIVE — 1399px
+========================================================= */
+
+@media (max-width: 1399px) {
 
     .pricing-overlay-content h1 {
-        font-size: 52px;
-        line-height: 58px;
+
+        font-size:
+            52px;
+
+        line-height:
+            58px;
     }
+
 
     .package-top h3 {
-        font-size: 28px;
+
+        font-size:
+            28px;
     }
+
 
     .package-list li {
-        font-size: 17px;
+
+        font-size:
+            17px;
     }
+
 
     .price {
-        font-size: 50px;
+
+        font-size:
+            50px;
     }
+
 }
 
-@media(max-width: 991px){
+
+/* =========================================================
+   RESPONSIVE — 991px
+========================================================= */
+
+@media (max-width: 991px) {
 
     .pricing-main-section {
-        padding: 60px 20px;
+
+        padding:
+            60px 20px;
     }
+
 
     .pricing-image-card {
-        min-height: 500px;
+
+        min-height:
+            500px;
     }
+
 
     .pricing-image-card img {
-        min-height: 500px;
+
+        min-height:
+            500px;
     }
+
 
     .pricing-overlay-content h1 {
-        font-size: 42px;
-        line-height: 50px;
+
+        font-size:
+            42px;
+
+        line-height:
+            50px;
     }
+
 
     .package-card {
-        min-height: auto;
-        padding: 30px;
+
+        min-height:
+            auto;
+
+        padding:
+            30px;
     }
+
 
     .package-top h3 {
-        font-size: 25px;
+
+        font-size:
+            25px;
     }
+
 
     .package-list li {
-        font-size: 16px;
+
+        font-size:
+            16px;
     }
+
 
     .price {
-        font-size: 45px;
+
+        font-size:
+            45px;
     }
+
 
     .choose-btn {
-        height: 60px;
-        font-size: 18px;
+
+        height:
+            60px;
+
+        font-size:
+            18px;
     }
+
 }
 
-@media(max-width: 575px){
+
+/* =========================================================
+   RESPONSIVE — 575px
+========================================================= */
+
+@media (max-width: 575px) {
 
     .pricing-overlay-content {
-        left: 25px;
-        top: 30px;
+
+        left:
+            25px;
+
+        top:
+            30px;
     }
+
 
     .pricing-image-card,
     .pricing-image-card img {
-        min-height: 380px !important;
+
+        min-height:
+            380px !important;
     }
+
 
     .pricing-overlay-content h1 {
-        font-size: 34px;
-        line-height: 42px;
+
+        font-size:
+            34px;
+
+        line-height:
+            42px;
     }
+
 
     .arrow-circle {
-        width: 55px;
-        height: 55px;
-        font-size: 20px;
+
+        width:
+            55px;
+
+        height:
+            55px;
+
+        font-size:
+            20px;
     }
+
 
     .package-card {
-        padding: 25px;
+
+        padding:
+            25px;
     }
+
 
     .package-top {
-        flex-direction: column;
-        align-items: flex-start;
+
+        flex-direction:
+            column;
+
+        align-items:
+            flex-start;
     }
+
 
     .package-top h3 {
-        font-size: 22px;
+
+        font-size:
+            22px;
     }
+
 
     .package-text {
-        font-size: 15px;
-        line-height: 26px;
+
+        font-size:
+            15px;
+
+        line-height:
+            26px;
     }
+
 
     .package-list li {
-        font-size: 15px;
-        line-height: 26px;
+
+        font-size:
+            15px;
+
+        line-height:
+            26px;
     }
+
 
     .price-box {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 18px;
+
+        flex-direction:
+            column;
+
+        align-items:
+            flex-start;
+
+        gap:
+            18px;
     }
+
 
     .price {
-        font-size: 40px;
+
+        font-size:
+            40px;
     }
+
 
     .save-box span {
-        font-size: 18px;
+
+        font-size:
+            18px;
     }
 
+
     .choose-btn {
-        font-size: 17px;
+
+        font-size:
+            17px;
     }
+
 }

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import "../assets/css/ProjectSection.css";
 import "../index.css";
 
@@ -12,6 +12,9 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 export default function ProjectSection() {
+
+  const prevButtonRef = useRef(null);
+  const nextButtonRef = useRef(null);
 
   useEffect(() => {
     AOS.init({
@@ -74,9 +77,9 @@ export default function ProjectSection() {
 
       <div className="nv-work-container">
 
-        {/* =========================================
-                    SECTION HEADER
-                ========================================= */}
+        {/* =====================================================
+            SECTION HEADER
+        ===================================================== */}
 
         <div className="nv-work-header">
 
@@ -89,6 +92,7 @@ export default function ProjectSection() {
             data-aos-delay="150"
           >
             <span className="nv-sub-heading-dot"></span>
+
             Our Projects
           </span>
 
@@ -102,6 +106,7 @@ export default function ProjectSection() {
             data-aos-delay="300"
           >
             Work{" "}
+
             <span className="nv-title-accent">
               Showcase
             </span>
@@ -130,112 +135,156 @@ export default function ProjectSection() {
         </div>
 
 
-        {/* =========================================
-                    PROJECT SWIPER
-                ========================================= */}
+        {/* =====================================================
+            PROJECT AREA
+        ===================================================== */}
 
-        <Swiper
-          modules={[Navigation, Autoplay]}
-          spaceBetween={25}
-          slidesPerView={3}
-          centeredSlides={true}
-          loop={true}
-          navigation={true}
+        <div className="nv-project-slider-area">
 
-          autoplay={{
-            delay: 4000,
-            disableOnInteraction: false,
-          }}
+          {/* =================================================
+              LEFT ARROW
+          ================================================= */}
 
-          breakpoints={{
-            0: {
-              slidesPerView: 1,
-            },
-
-            768: {
-              slidesPerView: 1,
-            },
-
-            992: {
-              slidesPerView: 3,
-            },
-
-            1200: {
-              slidesPerView: 3,
-            },
-          }}
-        >
-
-          {projects.map((item, index) => (
-
-            <SwiperSlide key={index}>
-
-              <div className="nv-work-card">
-
-                <div className="nv-flip-box">
-
-                  {/* =========================
-                                        FRONT
-                                    ========================= */}
-
-                  <div className="nv-flip-front">
-
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                    />
-
-                  </div>
+          <button
+            ref={prevButtonRef}
+            type="button"
+            className="nv-project-arrow nv-project-prev"
+            aria-label="Previous project"
+          >
+            <span>‹</span>
+          </button>
 
 
-                  {/* =========================
-                                        BACK
-                                    ========================= */}
+          {/* =================================================
+              SWIPER
+          ================================================= */}
 
-                  <div className="nv-flip-back">
+          <Swiper
+            modules={[Navigation, Autoplay]}
 
-                    <h3 className="nv-project-title">
-                      {item.title}
-                    </h3>
+            spaceBetween={25}
+
+            slidesPerView={3}
+
+            centeredSlides={true}
+
+            loop={true}
+
+            navigation={{
+              prevEl: prevButtonRef.current,
+              nextEl: nextButtonRef.current,
+            }}
+
+            onBeforeInit={(swiper) => {
+              swiper.params.navigation.prevEl =
+                prevButtonRef.current;
+
+              swiper.params.navigation.nextEl =
+                nextButtonRef.current;
+            }}
+
+            autoplay={{
+              delay: 4000,
+              disableOnInteraction: false,
+            }}
+
+            breakpoints={{
+              0: {
+                slidesPerView: 1,
+              },
+
+              768: {
+                slidesPerView: 1,
+              },
+
+              992: {
+                slidesPerView: 3,
+              },
+
+              1200: {
+                slidesPerView: 3,
+              },
+            }}
+          >
+
+            {projects.map((item, index) => (
+
+              <SwiperSlide key={index}>
+
+                <div className="nv-work-card">
+
+                  <div className="nv-flip-box">
+
+                    {/* =================================================
+                        FRONT
+                    ================================================= */}
+
+                    <div className="nv-flip-front">
+
+                      <img
+                        src={item.image}
+                        alt={item.title}
+                      />
+
+                    </div>
 
 
-                    <span className="nv-subtitle">
-                      {item.subtitle}
-                    </span>
+                    {/* =================================================
+                        BACK
+                    ================================================= */}
+
+                    <div className="nv-flip-back">
+
+                      {/* PROJECT TITLE */}
+
+                      <h3 className="nv-project-title">
+                        {item.title}
+                      </h3>
 
 
-                    <p className="nv-desc">
-                      {item.description}
-                    </p>
+                      {/* PROJECT TYPE */}
+
+                      <span className="nv-subtitle">
+                        {item.subtitle}
+                      </span>
 
 
-                    {/* RATING */}
+                      {/* DESCRIPTION */}
 
-                    <div className="nv-rating">
+                      <p className="nv-desc">
+                        {item.description}
+                      </p>
 
-                      <div className="nv-rating-stars">
 
-                        {[...Array(5)].map(
-                          (_, i) => (
+                      {/* RATING */}
 
-                            <i
-                              key={i}
-                              className={
-                                i < item.rating
-                                  ? "bi bi-star-fill"
-                                  : "bi bi-star"
-                              }
-                            ></i>
+                      <div className="nv-rating">
 
-                          )
-                        )}
+                        <div className="nv-rating-stars">
+
+                          {[...Array(5)].map(
+                            (_, i) => (
+
+                              <i
+                                key={i}
+                                className={
+                                  i < item.rating
+                                    ? "bi bi-star-fill"
+                                    : "bi bi-star"
+                                }
+                              ></i>
+
+                            )
+                          )}
+
+                        </div>
+
+
+                        <span className="nv-rating-text">
+                          {item.rating}/5
+                        </span>
 
                       </div>
-
-
-                      <span className="nv-rating-text">
-                        {item.rating}/5
-                      </span>
 
                     </div>
 
@@ -243,13 +292,27 @@ export default function ProjectSection() {
 
                 </div>
 
-              </div>
+              </SwiperSlide>
 
-            </SwiperSlide>
+            ))}
 
-          ))}
+          </Swiper>
 
-        </Swiper>
+
+          {/* =================================================
+              RIGHT ARROW
+          ================================================= */}
+
+          <button
+            ref={nextButtonRef}
+            type="button"
+            className="nv-project-arrow nv-project-next"
+            aria-label="Next project"
+          >
+            <span>›</span>
+          </button>
+
+        </div>
 
       </div>
 

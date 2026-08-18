@@ -1,13 +1,14 @@
-/* =========================================
+/* =========================================================
    PROJECT / WORK SHOWCASE
-   UNIQUE PREFIX: nv-
-========================================= */
+   FINAL VERSION
+========================================================= */
 
 
-/* =========================================
-   RESET SAFETY
-========================================= */
+/* =========================================================
+   RESET
+========================================================= */
 
+.nv-work-showcase,
 .nv-work-showcase *,
 .nv-work-showcase *::before,
 .nv-work-showcase *::after {
@@ -15,127 +16,205 @@
 }
 
 
-/* =========================================
+/* =========================================================
    MAIN SECTION
-========================================= */
+   TOP GAP ADDED
+========================================================= */
 
 .nv-work-showcase {
+    position: relative;
+
     width: 100%;
-    padding-top: 10px;
-    padding: 30px 0;
+
+    /* IMPORTANT:
+       Creates proper gap from previous section */
+    padding-top: 55px;
+
+    padding-bottom: 30px;
+
     background: #ffffff;
-    overflow: hidden;
+
+    overflow: visible !important;
+
+    font-family:
+        "Outfit",
+        "Segoe UI",
+        Arial,
+        sans-serif;
 }
 
 
-/* =========================================
-   CONTAINER
-========================================= */
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
 
 .nv-work-container {
+    position: relative;
+
     width: 1400px;
+
     max-width: 95%;
+
     margin: 0 auto;
+
+    overflow: visible !important;
 }
 
 
-/* =========================================
+/* =========================================================
    HEADER
-========================================= */
+========================================================= */
 
 .nv-work-header {
-    text-align: center;
-    margin-bottom: 10px;
     position: relative;
-    z-index: 2;
+
+    z-index: 5;
+
+    text-align: center;
+
+    margin-bottom: 20px;
 }
 
 
-/* =========================================
-   OUR PROJECTS — BADGE
-   SAME STYLE AS WHO WE ARE
-========================================= */
+/* =========================================================
+   OUR PROJECTS BADGE
+========================================================= */
 
-.nv-sub-heading {
-    display: inline-flex;
+.nv-work-showcase .nv-sub-heading {
+    display: inline-flex !important;
+
     align-items: center;
+
     justify-content: center;
-    gap: 8px;
 
-    padding: 8px 18px;
+    gap: 9px;
 
-    margin-bottom: 18px;
+    padding: 12px 22px;
+
+    margin: 0 0 18px 0;
+
+    width: auto;
+
+    height: auto;
 
     border-radius: 999px;
 
-    background: rgba(22, 184, 229, 0.06);
+    background:
+        rgba(0, 170, 162, 0.06) !important;
 
-    border: 1px solid rgba(22, 184, 229, 0.22);
+    border:
+        1px solid
+        rgba(0, 170, 162, 0.40) !important;
 
-    color: #5fc4df;
+    color:
+        rgb(0, 170, 162) !important;
 
-    font-size: 13px;
-    font-weight: 700;
+    font-family:
+        "Outfit",
+        "Segoe UI",
+        Arial,
+        sans-serif !important;
 
-    letter-spacing: 0.08em;
+    font-size: 18px;
+
+    font-weight: 800;
+
+    line-height: 1;
+
+    letter-spacing: 1px;
+
     text-transform: uppercase;
 
     white-space: nowrap;
+
+    box-shadow:
+        0 6px 20px
+        rgba(0, 170, 162, 0.06);
 }
 
 
-/* =========================================
+/* =========================================================
    BADGE DOT
-========================================= */
+========================================================= */
 
-.nv-sub-heading-dot {
-    width: 7px;
-    height: 7px;
+.nv-work-showcase .nv-sub-heading-dot {
+    display: inline-block !important;
 
-    flex-shrink: 0;
+    width: 8px !important;
 
-    border-radius: 50%;
+    height: 8px !important;
 
-    background: #5fc4df;
+    min-width: 8px !important;
 
-    animation: nvDotPulse 2.8s ease-in-out infinite;
+    min-height: 8px !important;
+
+    flex: 0 0 8px !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    border: none !important;
+
+    border-radius: 50% !important;
+
+    background:
+        rgb(0, 170, 162) !important;
+
+    box-shadow:
+        0 0 8px
+        rgba(0, 170, 162, 0.45);
+
+    animation:
+        nvProjectDotPulse
+        2.8s
+        ease-in-out
+        infinite;
 }
 
 
-@keyframes nvDotPulse {
+@keyframes nvProjectDotPulse {
 
     0%,
     100% {
         opacity: 1;
+
         transform: scale(1);
     }
 
     50% {
         opacity: 0.45;
+
         transform: scale(0.7);
     }
 }
 
 
-/* =========================================
+/* =========================================================
    MAIN TITLE
-========================================= */
+========================================================= */
 
-.nv-title {
+.nv-work-showcase .nv-title {
     position: relative;
 
     margin: 0 auto;
 
-    color: #0b1328;
+    color:
+        #0b1328 !important;
 
-    font-family: inherit;
+    font-family:
+        "Outfit",
+        "Segoe UI",
+        Arial,
+        sans-serif !important;
 
-    font-size: 48px;
-    font-weight: 700;
+    font-size: 58px;
 
-    line-height: 1.2;
+    font-weight: 800;
 
-    letter-spacing: -0.035em;
+    line-height: 1.12;
+
+    letter-spacing: -1.2px;
 
     text-align: center;
 
@@ -143,52 +222,71 @@
 }
 
 
-/* =========================================
+/* =========================================================
    TITLE ACCENT
-========================================= */
+========================================================= */
 
-.nv-title-accent {
-    color: #16a9cf;
+.nv-work-showcase .nv-title-accent {
+    color:
+        rgb(0, 170, 162) !important;
 
-    font-family: inherit;
+    background: none !important;
 
-    font-weight: inherit;
+    background-image: none !important;
+
+    -webkit-background-clip: initial !important;
+
+    -webkit-text-fill-color:
+        rgb(0, 170, 162) !important;
+
+    background-clip: initial !important;
+
+    font-family:
+        "Outfit",
+        "Segoe UI",
+        Arial,
+        sans-serif !important;
+
+    font-weight: 800;
 }
 
 
-/* =========================================
-   TITLE UNDERLINE
-   75px
-   CENTERED
-   SLOW ANIMATION
-========================================= */
+/* =========================================================
+   TITLE LINE
+========================================================= */
 
-.nv-title-line {
-    width: 75px;
+.nv-work-showcase .nv-title-line {
+    width: 78px;
+
     height: 5px;
 
-    margin: 14px auto 18px;
+    margin:
+        20px auto 22px;
 
     border-radius: 999px;
 
-    background: #16b8e5;
+    background:
+        rgb(0, 170, 162) !important;
 
-    transform-origin: center;
+    box-shadow:
+        0 0 12px
+        rgba(0, 170, 162, 0.45);
 
-    animation: nvTitleLine 2.8s ease-in-out infinite;
+    animation:
+        nvProjectTitleLine
+        2.8s
+        ease-in-out
+        infinite;
 }
 
 
-@keyframes nvTitleLine {
+@keyframes nvProjectTitleLine {
 
     0%,
     100% {
-        opacity: 0.3;
+        opacity: 0.45;
 
-        transform: scaleX(0.75);
-
-        box-shadow:
-            0 0 0 rgba(22, 184, 229, 0);
+        transform: scaleX(0.8);
     }
 
     50% {
@@ -197,77 +295,107 @@
         transform: scaleX(1);
 
         box-shadow:
-            0 0 12px rgba(22, 184, 229, 0.65);
+            0 0 14px
+            rgba(0, 170, 162, 0.65);
     }
 }
 
 
-/* =========================================
+/* =========================================================
    HEADER DESCRIPTION
-========================================= */
+========================================================= */
 
-.nv-work-header p {
-    max-width: 760px;
+.nv-work-showcase .nv-work-header > p {
+    max-width: 980px;
 
-    margin: 0 auto;
+    margin:
+        0 auto;
 
-    color: #6b7280;
+    color:
+        #475569;
 
-    font-size: 16px;
+    font-family:
+        "Outfit",
+        "Segoe UI",
+        Arial,
+        sans-serif !important;
 
-    line-height: 30px;
+    font-size: 18px;
+
+    font-weight: 500;
+
+    line-height: 1.7;
+
+    text-align: center;
 }
 
 
-/* =========================================
+/* =========================================================
+   PROJECT SLIDER AREA
+   THIS CONTROLS ARROW POSITION
+========================================================= */
+
+.nv-project-slider-area {
+    position: relative;
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: visible !important;
+}
+
+
+/* =========================================================
    SWIPER
-========================================= */
+========================================================= */
 
 .nv-work-showcase .swiper {
+    position: relative;
+
     width: 100%;
 
     padding: 0;
 
-    overflow: visible;
+    overflow: visible !important;
 }
 
 
-/* =========================================
+/* =========================================================
    SWIPER SLIDES
-========================================= */
+========================================================= */
 
 .nv-work-showcase .swiper-slide {
+    display: flex;
+
+    justify-content: center;
+
     opacity: 1 !important;
 
     filter: none !important;
 
     transform: none;
-
-    display: flex;
-
-    justify-content: center;
 }
 
 
-/* Remove Swiper effects */
+/* =========================================================
+   REMOVE SWIPER SHADOWS
+========================================================= */
 
-.nv-work-showcase .swiper-slide-prev,
-.nv-work-showcase .swiper-slide-next {
-    opacity: 1 !important;
+.nv-work-showcase
+.swiper-slide-shadow-left,
 
-    filter: none !important;
-}
-
-
-.nv-work-showcase .swiper-slide-shadow-left,
-.nv-work-showcase .swiper-slide-shadow-right {
+.nv-work-showcase
+.swiper-slide-shadow-right {
     display: none !important;
 }
 
 
-/* =========================================
+/* =========================================================
    WORK CARD
-========================================= */
+========================================================= */
 
 .nv-work-card {
     position: relative;
@@ -280,37 +408,44 @@
 
     perspective: 1200px;
 
-    transition: transform 0.4s ease;
+    transition:
+        transform 0.4s ease;
 }
 
 
-/* =========================================
+/* =========================================================
    CARD SCALE
-========================================= */
+========================================================= */
 
-.nv-work-showcase .swiper-slide .nv-work-card {
+.nv-work-showcase
+.swiper-slide
+.nv-work-card {
     transform: scale(0.95);
 }
 
 
-.nv-work-showcase .swiper-slide-active .nv-work-card {
+.nv-work-showcase
+.swiper-slide-active
+.nv-work-card {
     transform: scale(1);
 
     z-index: 10;
 }
 
 
-/* =========================================
+/* =========================================================
    FLIP BOX
-========================================= */
+========================================================= */
 
 .nv-flip-box {
     position: relative;
 
     width: 100%;
+
     height: 100%;
 
-    transition: transform 0.8s ease;
+    transition:
+        transform 0.8s ease;
 
     transition-delay: 0s;
 
@@ -318,28 +453,32 @@
 }
 
 
-/* =========================================
+/* =========================================================
    ACTIVE FLIP
-========================================= */
+========================================================= */
 
-.nv-work-showcase .swiper-slide-active .nv-flip-box {
+.nv-work-showcase
+.swiper-slide-active
+.nv-flip-box {
     transform: rotateY(180deg);
 
     transition-delay: 1s;
 }
 
 
-/* =========================================
+/* =========================================================
    FRONT + BACK
-========================================= */
+========================================================= */
 
 .nv-flip-front,
+
 .nv-flip-back {
     position: absolute;
 
     inset: 0;
 
     width: 100%;
+
     height: 100%;
 
     border-radius: 28px;
@@ -350,25 +489,31 @@
 
     -webkit-backface-visibility: hidden;
 
-    transition: box-shadow 0.4s ease;
+    transition:
+        box-shadow 0.4s ease;
 }
 
 
-/* =========================================
+/* =========================================================
    FRONT
-========================================= */
+========================================================= */
 
 .nv-flip-front {
-    background: #000;
+    background: #000000;
+
+    border:
+        2px solid
+        transparent;
 
     box-shadow:
-        0 15px 45px rgba(0, 0, 0, 0.18);
+        0 15px 45px
+        rgba(0, 0, 0, 0.18);
 }
 
 
-/* =========================================
+/* =========================================================
    FRONT IMAGE
-========================================= */
+========================================================= */
 
 .nv-flip-front img {
     width: 100% !important;
@@ -383,23 +528,30 @@
 
     transform: scale(1.8);
 
-    transition: transform 0.8s ease;
+    transition:
+        transform 0.8s ease;
 }
 
 
-/* =========================================
+/* =========================================================
    ACTIVE FRONT GLOW
-========================================= */
+========================================================= */
 
-.nv-work-showcase .swiper-slide-active .nv-flip-front {
+.nv-work-showcase
+.swiper-slide-active
+.nv-flip-front {
+    border-color:
+        rgb(0, 170, 162);
+
     box-shadow:
-        0 0 30px rgba(0, 191, 255, 0.5);
+        0 0 30px
+        rgba(0, 170, 162, 0.50);
 }
 
 
-/* =========================================
+/* =========================================================
    BACK CARD
-========================================= */
+========================================================= */
 
 .nv-flip-back {
     background:
@@ -426,47 +578,69 @@
 
     text-align: left;
 
-    border: 3px solid rgba(102, 199, 221, 0.3);
+    border:
+        3px solid
+        rgb(0, 170, 162) !important;
 
     box-shadow:
-        0 0 15px rgba(102, 199, 221, 0.15),
-        inset 0 0 15px rgba(102, 199, 221, 0.1);
+        0 0 18px
+        rgba(0, 170, 162, 0.35),
+
+        inset 0 0 15px
+        rgba(0, 170, 162, 0.12);
 }
 
 
-/* =========================================
+/* =========================================================
    ACTIVE BACK GLOW
-========================================= */
+========================================================= */
 
-.nv-work-showcase .swiper-slide-active .nv-flip-back {
-    border-color: #00bfff;
+.nv-work-showcase
+.swiper-slide-active
+.nv-flip-back {
+
+    border-color:
+        rgb(0, 170, 162) !important;
 
     box-shadow:
-        0 0 30px rgba(0, 191, 255, 0.5),
-        inset 0 0 20px rgba(0, 191, 255, 0.3);
+        0 0 32px
+        rgba(0, 170, 162, 0.55),
+
+        inset 0 0 20px
+        rgba(0, 170, 162, 0.20);
 }
 
 
-/* =========================================
+/* =========================================================
    PROJECT TITLE
-========================================= */
+========================================================= */
 
 .nv-project-title {
+    margin:
+        0 0 18px;
+
+    color:
+        #ffffff !important;
+
+    font-family:
+        "Outfit",
+        "Segoe UI",
+        Arial,
+        sans-serif !important;
+
     font-size: 30px;
 
     font-weight: 800;
 
     line-height: 1.3;
 
-    color: #ffffff;
-
-    margin: 0 0 18px;
+    letter-spacing: -0.2px;
 }
 
 
-/* =========================================
-   PROJECT TYPE
-========================================= */
+/* =========================================================
+   PROJECT TYPE BUTTON
+========================================================= */
 
 .nv-subtitle {
     display: inline-flex;
@@ -477,18 +651,28 @@
 
     width: fit-content;
 
-    padding: 10px 22px;
+    padding:
+        10px 22px;
+
+    margin-bottom: 20px;
+
+    border:
+        1px solid
+        rgb(0, 170, 162);
 
     border-radius: 40px;
 
     background:
-        linear-gradient(
-            135deg,
-            #00bfff,
-            #52d6ff
-        );
+        rgb(0, 170, 162) !important;
 
-    color: #000000;
+    color:
+        #000000 !important;
+
+    font-family:
+        "Outfit",
+        "Segoe UI",
+        Arial,
+        sans-serif !important;
 
     font-size: 14px;
 
@@ -496,28 +680,67 @@
 
     letter-spacing: 0.5px;
 
-    margin-bottom: 20px;
+    line-height: 1;
+
+    box-shadow:
+        0 8px 20px
+        rgba(0, 170, 162, 0.30);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 
-/* =========================================
+/* =========================================================
+   BUTTON HOVER
+========================================================= */
+
+.nv-subtitle:hover {
+
+    background:
+        rgb(0, 170, 162) !important;
+
+    color:
+        #000000 !important;
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(0, 170, 162, 0.45);
+}
+
+
+/* =========================================================
    DESCRIPTION
-========================================= */
+========================================================= */
 
 .nv-desc {
-    color: rgba(255, 255, 255, 0.88);
+    margin:
+        0 0 25px;
+
+    color:
+        rgba(255, 255, 255, 0.88) !important;
+
+    font-family:
+        "Outfit",
+        "Segoe UI",
+        Arial,
+        sans-serif !important;
 
     font-size: 16px;
 
-    line-height: 28px;
+    font-weight: 400;
 
-    margin: 0 0 25px;
+    line-height: 28px;
 }
 
 
-/* =========================================
+/* =========================================================
    RATING
-========================================= */
+========================================================= */
 
 .nv-rating {
     display: flex;
@@ -530,6 +753,10 @@
 }
 
 
+/* =========================================================
+   STARS
+========================================================= */
+
 .nv-rating-stars {
     display: flex;
 
@@ -540,7 +767,8 @@
 
 
 .nv-rating-stars i {
-    color: #FFD700;
+    color:
+        #FFD700;
 
     font-size: 18px;
 
@@ -548,8 +776,19 @@
 }
 
 
+/* =========================================================
+   RATING TEXT
+========================================================= */
+
 .nv-rating-text {
-    color: #FFD700;
+    color:
+        #FFD700;
+
+    font-family:
+        "Outfit",
+        "Segoe UI",
+        Arial,
+        sans-serif !important;
 
     font-size: 18px;
 
@@ -557,25 +796,52 @@
 }
 
 
-/* =========================================
-   NAVIGATION BUTTONS
-   BLACK CIRCLE + SMALL WHITE ARROW
-========================================= */
+/* =========================================================
+   LEFT + RIGHT ARROW BUTTONS
+   CENTERED VERTICALLY
+========================================================= */
 
-.nv-work-showcase .swiper-button-next,
-.nv-work-showcase .swiper-button-prev {
-    width: 50px;
+.nv-project-arrow {
+    position: absolute;
 
-    height: 50px;
+    top: 50%;
 
-    margin-top: -25px;
+    z-index: 100;
+
+    width: 52px;
+
+    height: 52px;
+
+    padding: 0;
+
+    margin: 0;
+
+    border:
+        2px solid
+        rgb(0, 170, 162);
 
     border-radius: 50%;
 
-    background: #000000;
+    background:
+        rgb(0, 170, 162);
+
+    color:
+        #000000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    transform:
+        translateY(-50%);
 
     box-shadow:
-        0 10px 25px rgba(0, 0, 0, 0.18);
+        0 0 20px
+        rgba(0, 170, 162, 0.45);
 
     transition:
         transform 0.3s ease,
@@ -584,99 +850,138 @@
 }
 
 
-.nv-work-showcase .swiper-button-next:hover,
-.nv-work-showcase .swiper-button-prev:hover {
-    transform: translateY(-3px);
+/* =========================================================
+   LEFT POSITION
+========================================================= */
 
-    background: #111111;
+.nv-project-prev {
+    left: -25px;
+}
+
+
+/* =========================================================
+   RIGHT POSITION
+========================================================= */
+
+.nv-project-next {
+    right: -25px;
+}
+
+
+/* =========================================================
+   ARROW SYMBOL
+========================================================= */
+
+.nv-project-arrow span {
+    display: block;
+
+    color:
+        #000000 !important;
+
+    font-family:
+        Arial,
+        sans-serif;
+
+    font-size: 38px;
+
+    font-weight: 400;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   LEFT ARROW SMALL POSITION FIX
+========================================================= */
+
+.nv-project-prev span {
+    margin-top: -5px;
+
+    margin-left: -2px;
+}
+
+
+/* =========================================================
+   RIGHT ARROW SMALL POSITION FIX
+========================================================= */
+
+.nv-project-next span {
+    margin-top: -5px;
+
+    margin-left: 2px;
+}
+
+
+/* =========================================================
+   ARROW HOVER
+========================================================= */
+
+.nv-project-arrow:hover {
+
+    background:
+        rgb(0, 170, 162);
+
+    color:
+        #000000;
+
+    transform:
+        translateY(-50%)
+        scale(1.06);
 
     box-shadow:
-        0 14px 30px rgba(0, 0, 0, 0.25);
+        0 0 28px
+        rgba(0, 170, 162, 0.65);
 }
 
 
-/* =========================================
-   SWIPER ARROWS
-   BLACK CIRCLE + SINGLE SMALL WHITE ARROW
-========================================= */
+/* =========================================================
+   ARROW ACTIVE
+========================================================= */
 
-.nv-work-showcase .swiper-button-next,
-.nv-work-showcase .swiper-button-prev {
-    --swiper-navigation-color: #ffffff !important;
-
-    color: #ffffff !important;
-}
-
-
-/* Remove all large/default arrow shapes */
-.nv-work-showcase .swiper-button-next::after,
-.nv-work-showcase .swiper-button-prev::after {
-    display: flex !important;
-
-    width: auto !important;
-    height: auto !important;
-
-    position: absolute !important;
-
-    top: 50% !important;
-    left: 50% !important;
-
-    margin: 0 !important;
-    padding: 0 !important;
-
-    background: none !important;
-
-    border: 0 !important;
-
-    box-shadow: none !important;
-
-    font-family: Arial, sans-serif !important;
-    font-size: 30px !important;
-    font-weight: 400 !important;
-
-    line-height: 1 !important;
-
-    color: #ffffff !important;
-
-    opacity: 1 !important;
-}
-
-
-/* Single slightly larger arrow */
-.nv-work-showcase .swiper-button-next::after {
-    content: "›" !important;
+.nv-project-arrow:active {
 
     transform:
-        translate(-58%, -53%) !important;
+        translateY(-50%)
+        scale(0.96);
 }
 
 
-/* Previous arrow */
-.nv-work-showcase .swiper-button-prev::after {
-    content: "‹" !important;
+/* =========================================================
+   DISABLED ARROW
+========================================================= */
 
-    transform:
-        translate(-42%, -53%) !important;
+.nv-project-arrow.swiper-button-disabled {
+    opacity: 0.5;
+
+    pointer-events: none;
 }
 
 
-/* =========================================
+/* =========================================================
+   IMPORTANT:
+   REMOVE SWIPER'S DEFAULT ARROWS
+========================================================= */
+
+.nv-work-showcase
+.swiper-button-next,
+
+.nv-work-showcase
+.swiper-button-prev {
+
+    display: none !important;
+}
+
+
+/* =========================================================
    TABLET
-========================================= */
-
-
-========================================= */
-
-
-========================================= */
-
-
-========================================= */
+========================================================= */
 
 @media (max-width: 991px) {
 
     .nv-work-showcase {
-        padding: 60px 0;
+        padding-top: 50px;
+
+        padding-bottom: 60px;
     }
 
 
@@ -686,21 +991,28 @@
 
 
     .nv-work-header {
-        margin-bottom: 15px;
+        margin-bottom: 20px;
     }
 
 
-    .nv-title {
-        font-size: 42px;
+    .nv-work-showcase .nv-title {
+        font-size: 48px;
     }
 
 
-    .nv-work-header p {
+    .nv-work-showcase
+    .nv-sub-heading {
+        font-size: 17px;
+    }
+
+
+    .nv-work-showcase
+    .nv-work-header > p {
         max-width: 680px;
 
-        font-size: 15px;
+        font-size: 17px;
 
-        line-height: 28px;
+        line-height: 1.7;
     }
 
 
@@ -726,34 +1038,44 @@
     }
 
 
-    .nv-work-showcase .swiper-button-next,
-    .nv-work-showcase .swiper-button-prev {
+    .nv-project-arrow {
         width: 46px;
 
         height: 46px;
     }
 
 
-    .nv-work-showcase .swiper-button-next::after,
-    .nv-work-showcase .swiper-button-prev::after {
-        font-size: 21px !important;
+    .nv-project-prev {
+        left: -18px;
+    }
+
+
+    .nv-project-next {
+        right: -18px;
+    }
+
+
+    .nv-project-arrow span {
+        font-size: 34px;
     }
 }
 
 
-/* =========================================
+/* =========================================================
    MOBILE
-========================================= */
+========================================================= */
 
 @media (max-width: 767px) {
 
     .nv-work-showcase {
-        padding: 50px 0;
+        padding-top: 45px;
+
+        padding-bottom: 50px;
     }
 
 
     .nv-work-container {
-        max-width: 92%;
+        max-width: 88%;
     }
 
 
@@ -762,51 +1084,50 @@
     }
 
 
-    /* Our Projects badge */
-
+    .nv-work-showcase
     .nv-sub-heading {
-        font-size: 11px;
+        font-size: 15px;
 
-        letter-spacing: 2px;
+        letter-spacing: 1px;
 
-        padding: 8px 16px;
+        padding:
+            11px 18px;
 
         margin-bottom: 16px;
     }
 
 
-    /* Title */
-
+    .nv-work-showcase
     .nv-title {
-        font-size: 30px;
+        font-size: 40px;
 
         line-height: 1.3;
 
-        white-space: normal;
+        letter-spacing: -0.7px;
     }
 
 
-    /* Keep line centered */
-
+    .nv-work-showcase
     .nv-title-line {
-        width: 75px;
+        width: 68px;
 
-        height: 5px;
+        height: 4px;
 
-        margin: 12px auto 16px;
+        margin-top: 17px;
+
+        margin-bottom: 19px;
     }
 
 
-    .nv-work-header p {
-        font-size: 14px;
+    .nv-work-showcase
+    .nv-work-header > p {
+        font-size: 16px;
 
-        line-height: 26px;
+        line-height: 1.65;
 
         max-width: 95%;
     }
 
-
-    /* Card */
 
     .nv-work-card {
         height: 380px;
@@ -816,6 +1137,7 @@
 
 
     .nv-flip-front,
+
     .nv-flip-back {
         border-radius: 22px;
     }
@@ -838,7 +1160,8 @@
     .nv-subtitle {
         font-size: 12px;
 
-        padding: 8px 16px;
+        padding:
+            8px 16px;
 
         margin-bottom: 16px;
     }
@@ -873,38 +1196,46 @@
     }
 
 
-    /* Navigation */
+    /* Mobile arrow positions */
 
-    .nv-work-showcase .swiper-button-next,
-    .nv-work-showcase .swiper-button-prev {
+    .nv-project-arrow {
         width: 42px;
 
         height: 42px;
-
-        margin-top: -21px;
     }
 
 
-    .nv-work-showcase .swiper-button-next::after,
-    .nv-work-showcase .swiper-button-prev::after {
-        font-size: 24px !important;
+    .nv-project-prev {
+        left: -16px;
+    }
+
+
+    .nv-project-next {
+        right: -16px;
+    }
+
+
+    .nv-project-arrow span {
+        font-size: 31px;
     }
 }
 
 
-/* =========================================
+/* =========================================================
    SMALL MOBILE
-========================================= */
+========================================================= */
 
 @media (max-width: 480px) {
 
     .nv-work-showcase {
-        padding: 45px 0;
+        padding-top: 40px;
+
+        padding-bottom: 45px;
     }
 
 
     .nv-work-container {
-        max-width: 92%;
+        max-width: 86%;
     }
 
 
@@ -913,42 +1244,55 @@
     }
 
 
+    .nv-work-showcase
     .nv-sub-heading {
-        font-size: 10px;
+        font-size: 14px;
 
-        letter-spacing: 1.8px;
+        letter-spacing: 1px;
 
-        padding: 7px 15px;
+        padding:
+            10px 16px;
     }
 
 
+    .nv-work-showcase
     .nv-sub-heading-dot {
-        width: 6px;
+        width: 7px !important;
 
-        height: 6px;
+        height: 7px !important;
+
+        min-width: 7px !important;
+
+        min-height: 7px !important;
+
+        flex-basis: 7px !important;
     }
 
 
+    .nv-work-showcase
     .nv-title {
-        font-size: 27px;
+        font-size: 34px;
 
         line-height: 1.3;
     }
 
 
+    .nv-work-showcase
     .nv-title-line {
         width: 75px;
 
         height: 5px;
 
-        margin: 11px auto 14px;
+        margin:
+            11px auto 14px;
     }
 
 
-    .nv-work-header p {
-        font-size: 13px;
+    .nv-work-showcase
+    .nv-work-header > p {
+        font-size: 15px;
 
-        line-height: 24px;
+        line-height: 1.65;
     }
 
 
@@ -960,6 +1304,7 @@
 
 
     .nv-flip-front,
+
     .nv-flip-back {
         border-radius: 18px;
     }
@@ -982,7 +1327,8 @@
     .nv-subtitle {
         font-size: 11px;
 
-        padding: 7px 14px;
+        padding:
+            7px 14px;
 
         margin-bottom: 14px;
     }
@@ -1007,41 +1353,49 @@
     }
 
 
-    .nv-work-showcase .swiper-button-next,
-    .nv-work-showcase .swiper-button-prev {
+    .nv-project-arrow {
         width: 38px;
 
         height: 38px;
-
-        margin-top: -19px;
     }
 
 
-    .nv-work-showcase .swiper-button-next::after,
-    .nv-work-showcase .swiper-button-prev::after {
-        font-size: 27px !important;
+    .nv-project-prev {
+        left: -13px;
+    }
+
+
+    .nv-project-next {
+        right: -13px;
+    }
+
+
+    .nv-project-arrow span {
+        font-size: 28px;
     }
 }
 
 
-/* =========================================
+/* =========================================================
    VERY SMALL MOBILE
-========================================= */
+========================================================= */
 
 @media (max-width: 380px) {
 
     .nv-work-showcase {
-        padding: 40px 0;
+        padding-top: 35px;
     }
 
 
+    .nv-work-showcase
     .nv-title {
-        font-size: 25px;
+        font-size: 29px;
     }
 
 
-    .nv-work-header p {
-        font-size: 12px;
+    .nv-work-showcase
+    .nv-work-header > p {
+        font-size: 13px;
 
         line-height: 22px;
     }
@@ -1067,261 +1421,48 @@
 
         line-height: 21px;
     }
+
+
+    .nv-project-arrow {
+        width: 36px;
+
+        height: 36px;
+    }
+
+
+    .nv-project-prev {
+        left: -10px;
+    }
+
+
+    .nv-project-next {
+        right: -10px;
+    }
+
+
+    .nv-project-arrow span {
+        font-size: 26px;
+    }
 }
 
 
-/* =========================================
+/* =========================================================
    ACCESSIBILITY
-========================================= */
+========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
 
     .nv-sub-heading-dot,
-    .nv-title-line {
-        animation: none;
-    }
 
-    .nv-flip-box {
-        transition: none;
-    }
+    .nv-title-line,
 
-    .nv-flip-front img {
-        transition: none;
-    }
-}
+    .nv-flip-box,
 
+    .nv-flip-front img,
 
-/* =========================================================
-   FINAL ARROW FIX
-   Do NOT use Swiper's arrow pseudo-element.
-   Black circle + ONE small white chevron only.
-   ========================================================= */
+    .nv-project-arrow {
+        animation: none !important;
 
-.nv-work-showcase .swiper-button-next,
-.nv-work-showcase .swiper-button-prev {
-    background-color: #000000 !important;
-    color: transparent !important;
-
-    background-repeat: no-repeat !important;
-    background-position: center !important;
-    background-size: 14px 22px !important;
-}
-
-/* Completely remove Swiper's default/old arrow */
-.nv-work-showcase .swiper-button-next::before,
-.nv-work-showcase .swiper-button-next::after,
-.nv-work-showcase .swiper-button-prev::before,
-.nv-work-showcase .swiper-button-prev::after {
-    content: none !important;
-    display: none !important;
-    border: 0 !important;
-    background: none !important;
-    box-shadow: none !important;
-}
-
-/* Small WHITE right arrow */
-.nv-work-showcase .swiper-button-next {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='22' viewBox='0 0 14 22'%3E%3Cpath d='M2 1 L12 11 L2 21' fill='none' stroke='%23ffffff' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") !important;
-}
-
-/* Small WHITE left arrow */
-.nv-work-showcase .swiper-button-prev {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='22' viewBox='0 0 14 22'%3E%3Cpath d='M12 1 L2 11 L12 21' fill='none' stroke='%23ffffff' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") !important;
-}
-
-
-/* =========================================================
-   PROJECT SECTION HEADER
-   MATCHES THE ABOUT SECTION HEADER STYLE
-   Only header styling is changed.
-   ========================================================= */
-
-/* OUR PROJECTS badge */
-.nv-work-showcase .nv-sub-heading {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    background: rgba(236, 72, 153, 0.06);
-
-    border: 1px solid rgba(236, 72, 153, 0.28);
-
-    border-radius: 999px;
-
-    color: #ec4899;
-
-    font-family: 'Outfit', sans-serif;
-
-    font-size: 18px;
-
-    font-weight: 800;
-
-    letter-spacing: 1px;
-
-    line-height: 1;
-
-    padding: 12px 22px;
-
-    box-shadow: 0 6px 20px rgba(236, 72, 153, 0.06);
-}
-
-
-/* Badge dot */
-.nv-work-showcase .nv-sub-heading-dot {
-    width: 8px;
-    height: 8px;
-
-    flex: 0 0 8px;
-
-    margin-right: 9px;
-
-    border-radius: 50%;
-
-    background: #67cce3;
-
-    box-shadow: 0 0 8px rgba(103, 204, 227, 0.28);
-}
-
-
-/* Main project title */
-.nv-work-showcase .nv-title {
-    color: #0b1328;
-
-    font-family: 'Outfit', sans-serif;
-
-    font-weight: 800;
-
-    line-height: 1.12;
-
-    letter-spacing: -1.2px;
-}
-
-
-/* "Showcase" — same gradient as About "Smart Solutions" */
-.nv-work-showcase .nv-title-accent {
-    background: linear-gradient(
-        90deg,
-        #22c7e8 0%,
-        #8b78d1 50%,
-        #ec4899 100%
-    );
-
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    background-clip: text;
-}
-
-
-/* Heading underline */
-.nv-work-showcase .nv-title-line {
-    width: 78px;
-    height: 5px;
-
-    margin: 20px auto 22px;
-
-    border-radius: 999px;
-
-    background: linear-gradient(
-        90deg,
-        #57cfe5 0%,
-        #ec8bc2 52%,
-        #f59e72 100%
-    );
-
-    box-shadow: none;
-}
-
-
-/* Description — same readability as About */
-.nv-work-showcase .nv-work-header > p {
-    color: #475569;
-
-    font-family: 'Outfit', sans-serif;
-
-    font-size: 18px;
-
-    font-weight: 500;
-
-    line-height: 1.7;
-
-    max-width: 980px;
-
-    margin-left: auto;
-    margin-right: auto;
-}
-
-
-/* Desktop title sizing */
-@media (min-width: 992px) {
-    .nv-work-showcase .nv-title {
-        font-size: 58px;
-    }
-
-    .nv-work-showcase .nv-work-header > p {
-        font-size: 18px;
-        line-height: 1.7;
-    }
-}
-
-
-/* Tablet */
-@media (max-width: 991px) {
-    .nv-work-showcase .nv-title {
-        font-size: 48px;
-    }
-
-    .nv-work-showcase .nv-sub-heading {
-        font-size: 17px;
-    }
-
-    .nv-work-showcase .nv-work-header > p {
-        font-size: 17px;
-        line-height: 1.7;
-    }
-}
-
-
-/* Mobile */
-@media (max-width: 767px) {
-    .nv-work-showcase .nv-title {
-        font-size: 40px;
-        letter-spacing: -0.7px;
-    }
-
-    .nv-work-showcase .nv-sub-heading {
-        font-size: 15px;
-        padding: 11px 18px;
-    }
-
-    .nv-work-showcase .nv-work-header > p {
-        font-size: 16px;
-        line-height: 1.65;
-    }
-
-    .nv-work-showcase .nv-title-line {
-        width: 68px;
-        height: 4px;
-
-        margin-top: 17px;
-        margin-bottom: 19px;
-    }
-}
-
-
-/* Small mobile */
-@media (max-width: 480px) {
-    .nv-work-showcase .nv-title {
-        font-size: 34px;
-    }
-
-    .nv-work-showcase .nv-sub-heading {
-        font-size: 14px;
-        padding: 10px 16px;
-    }
-
-    .nv-work-showcase .nv-work-header > p {
-        font-size: 15px;
-        line-height: 1.65;
+        transition: none !important;
     }
 }

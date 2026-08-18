@@ -9,39 +9,44 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 export default function TrainingSection() {
-
   const [imgIndex1, setImgIndex1] = useState(0);
   const [imgIndex2, setImgIndex2] = useState(0);
   const [imgIndex3, setImgIndex3] = useState(0);
   const [imgIndex4, setImgIndex4] = useState(0);
 
+  /* =========================================================
+     IMAGE POOLS
+  ========================================================= */
+
   const imgPool1 = [
     "/images/iot-workshop.png",
     "/images/gallery-1.webp",
-    "/images/gallery-2.webp"
+    "/images/gallery-2.webp",
   ];
 
   const imgPool2 = [
     "/images/software-developement-training.png",
     "/images/gallery-3.webp",
-    "/images/gallery-4.webp"
+    "/images/gallery-4.webp",
   ];
 
   const imgPool3 = [
     "/images/software-developement-training.png",
     "/images/iot-course.webp",
-    "/images/gallery-5.webp"
+    "/images/gallery-5.webp",
   ];
 
   const imgPool4 = [
     "/images/iot-workshop.png",
     "/images/project-image-1.webp",
-    "/images/gallery-6.webp"
+    "/images/gallery-6.webp",
   ];
 
+  /* =========================================================
+     AOS + IMAGE AUTO ROTATION
+  ========================================================= */
 
   useEffect(() => {
-
     AOS.init({
       duration: 1000,
       once: true,
@@ -49,77 +54,63 @@ export default function TrainingSection() {
       easing: "ease-in-out",
     });
 
-
     const timers = [];
 
-
+    /* FIRST IMAGE */
     timers.push(
       setInterval(() => {
         setImgIndex1((prev) => prev + 1);
       }, 6000)
     );
 
-
+    /* SECOND IMAGE */
     const timeout1 = setTimeout(() => {
-
       timers.push(
         setInterval(() => {
           setImgIndex2((prev) => prev + 1);
         }, 6000)
       );
-
     }, 1500);
 
-
+    /* THIRD IMAGE */
     const timeout2 = setTimeout(() => {
-
       timers.push(
         setInterval(() => {
           setImgIndex3((prev) => prev + 1);
         }, 6000)
       );
-
     }, 3000);
 
-
+    /* FOURTH IMAGE */
     const timeout3 = setTimeout(() => {
-
       timers.push(
         setInterval(() => {
           setImgIndex4((prev) => prev + 1);
         }, 6000)
       );
-
     }, 4500);
 
-
     return () => {
-
       timers.forEach(clearInterval);
 
       clearTimeout(timeout1);
       clearTimeout(timeout2);
       clearTimeout(timeout3);
-
     };
-
   }, []);
 
-
   return (
-
     <section className="training-section">
-
       <div className="container">
 
-
-        {/* =================================================
-                    SECTION HEADER
-                ================================================= */}
+        {/* =====================================================
+            SECTION HEADER
+        ===================================================== */}
 
         <div className="training-heading">
 
           {/* BADGE */}
+
           <span
             className="training-sub-heading"
             id="sub-heading"
@@ -127,13 +118,12 @@ export default function TrainingSection() {
             data-aos-delay="150"
           >
             <span className="training-sub-dot"></span>
-
             Our Training Program
-
           </span>
 
 
           {/* MAIN TITLE */}
+
           <h2
             className="train-section-title"
             id="title"
@@ -142,26 +132,25 @@ export default function TrainingSection() {
           >
             Industry-Focused{" "}
             <span className="training-title-accent">
-              Training & Workshops
+              Training &amp; Workshops
             </span>
           </h2>
 
         </div>
 
 
+        {/* =====================================================
+            MAIN CONTENT
+        ===================================================== */}
 
-        {/* =================================================
-                    MAIN CONTENT
-                ================================================= */}
+        <div className="main">
 
-        <div className="main mt-5">
-
-          <div className="row g-4">
+          <div className="row">
 
 
             {/* =================================================
-                            LEFT COLUMN
-                        ================================================= */}
+                LEFT COLUMN
+            ================================================= */}
 
             <div
               className="col-lg-6"
@@ -169,8 +158,9 @@ export default function TrainingSection() {
               data-aos-delay="200"
             >
 
-
-              {/* CAREER GUIDANCE */}
+              {/* ================================
+                  CAREER GUIDANCE
+              ================================= */}
 
               <Link
                 to="/career-guidance"
@@ -179,37 +169,37 @@ export default function TrainingSection() {
 
                 <div className="training-card big-card">
 
-                  <AnimatePresence>
+                  <AnimatePresence mode="wait">
 
                     <motion.img
                       key={imgIndex1}
                       src={
                         imgPool1[
-                        imgIndex1 %
-                        imgPool1.length
+                        imgIndex1 % imgPool1.length
                         ]
                       }
                       alt="Career Guidance"
-
                       initial={{
-                        opacity: 0
+                        opacity: 0,
+                        scale: 1.04,
                       }}
-
                       animate={{
-                        opacity: 1
+                        opacity: 1,
+                        scale: 1,
                       }}
-
                       exit={{
-                        opacity: 0
+                        opacity: 0,
                       }}
-
                       transition={{
                         duration: 1.5,
-                        ease: "easeInOut"
+                        ease: "easeInOut",
                       }}
                     />
 
                   </AnimatePresence>
+
+
+                  <div className="training-image-overlay"></div>
 
 
                   <div className="training-content">
@@ -229,8 +219,9 @@ export default function TrainingSection() {
               </Link>
 
 
-
-              {/* MENTORING */}
+              {/* ================================
+                  MENTORING
+              ================================= */}
 
               <Link
                 to="/services"
@@ -238,42 +229,42 @@ export default function TrainingSection() {
               >
 
                 <div
-                  className="training-card small-card mt-4"
+                  className="training-card small-card"
                   data-aos="zoom-in"
                   data-aos-delay="350"
                 >
 
-                  <AnimatePresence>
+                  <AnimatePresence mode="wait">
 
                     <motion.img
                       key={imgIndex2}
                       src={
                         imgPool2[
-                        imgIndex2 %
-                        imgPool2.length
+                        imgIndex2 % imgPool2.length
                         ]
                       }
                       alt="Mentoring Program"
-
                       initial={{
-                        opacity: 0
+                        opacity: 0,
+                        scale: 1.04,
                       }}
-
                       animate={{
-                        opacity: 1
+                        opacity: 1,
+                        scale: 1,
                       }}
-
                       exit={{
-                        opacity: 0
+                        opacity: 0,
                       }}
-
                       transition={{
                         duration: 1.5,
-                        ease: "easeInOut"
+                        ease: "easeInOut",
                       }}
                     />
 
                   </AnimatePresence>
+
+
+                  <div className="training-image-overlay"></div>
 
 
                   <div className="training-content">
@@ -295,10 +286,9 @@ export default function TrainingSection() {
             </div>
 
 
-
             {/* =================================================
-                            RIGHT COLUMN
-                        ================================================= */}
+                RIGHT COLUMN
+            ================================================= */}
 
             <div
               className="col-lg-6 right-column"
@@ -306,8 +296,9 @@ export default function TrainingSection() {
               data-aos-delay="250"
             >
 
-
-              {/* IOT WORKSHOP */}
+              {/* ================================
+                  IOT WORKSHOP
+              ================================= */}
 
               <Link
                 to="/workshop"
@@ -320,37 +311,37 @@ export default function TrainingSection() {
                   data-aos-delay="300"
                 >
 
-                  <AnimatePresence>
+                  <AnimatePresence mode="wait">
 
                     <motion.img
                       key={imgIndex3}
                       src={
                         imgPool3[
-                        imgIndex3 %
-                        imgPool3.length
+                        imgIndex3 % imgPool3.length
                         ]
                       }
                       alt="IoT Workshop"
-
                       initial={{
-                        opacity: 0
+                        opacity: 0,
+                        scale: 1.04,
                       }}
-
                       animate={{
-                        opacity: 1
+                        opacity: 1,
+                        scale: 1,
                       }}
-
                       exit={{
-                        opacity: 0
+                        opacity: 0,
                       }}
-
                       transition={{
                         duration: 1.5,
-                        ease: "easeInOut"
+                        ease: "easeInOut",
                       }}
                     />
 
                   </AnimatePresence>
+
+
+                  <div className="training-image-overlay"></div>
 
 
                   <div className="training-content">
@@ -370,8 +361,9 @@ export default function TrainingSection() {
               </Link>
 
 
-
-              {/* PROGRAMMING WORKSHOP */}
+              {/* ================================
+                  PROGRAMMING WORKSHOP
+              ================================= */}
 
               <Link
                 to="/workshop"
@@ -379,42 +371,42 @@ export default function TrainingSection() {
               >
 
                 <div
-                  className="training-card big-card mt-4"
+                  className="training-card big-card"
                   data-aos="flip-left"
                   data-aos-delay="450"
                 >
 
-                  <AnimatePresence>
+                  <AnimatePresence mode="wait">
 
                     <motion.img
                       key={imgIndex4}
                       src={
                         imgPool4[
-                        imgIndex4 %
-                        imgPool4.length
+                        imgIndex4 % imgPool4.length
                         ]
                       }
                       alt="Programming Workshop"
-
                       initial={{
-                        opacity: 0
+                        opacity: 0,
+                        scale: 1.04,
                       }}
-
                       animate={{
-                        opacity: 1
+                        opacity: 1,
+                        scale: 1,
                       }}
-
                       exit={{
-                        opacity: 0
+                        opacity: 0,
                       }}
-
                       transition={{
                         duration: 1.5,
-                        ease: "easeInOut"
+                        ease: "easeInOut",
                       }}
                     />
 
                   </AnimatePresence>
+
+
+                  <div className="training-image-overlay"></div>
 
 
                   <div className="training-content">
@@ -440,7 +432,6 @@ export default function TrainingSection() {
         </div>
 
       </div>
-
     </section>
   );
 }

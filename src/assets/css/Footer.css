@@ -1,29 +1,57 @@
+/* =========================================================
+   MAIN FOOTER
+========================================================= */
+
 .main-footer {
-    background: #0B0E14; /* near black */
-    color: #fff;
-    font-family: 'Poppins', sans-serif;
+    background: #0B0E14;
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
     position: relative;
+    width: 100%;
 }
 
-/* Container for consistent max-width and alignment */
+
+/* =========================================================
+   FOOTER CONTAINER
+========================================================= */
+
 .footer-container {
+    width: 100%;
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 4%;
 }
 
-/* -----------------------------
+
+/* =========================================================
+   BRAND COLOR
+========================================================= */
+
+:root {
+    --footer-teal: rgb(0, 170, 162);
+    --footer-teal-dark: rgb(0, 145, 138);
+    --footer-teal-light: rgba(0, 170, 162, 0.12);
+    --footer-teal-border: rgba(0, 170, 162, 0.35);
+}
+
+
+/* =========================================================
    TOP BAR
------------------------------- */
+========================================================= */
+
 .footer-topbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     padding: 35px 0;
+
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
     flex-wrap: wrap;
     gap: 20px;
 }
+
 
 .footer-call,
 .footer-newsletter {
@@ -32,416 +60,917 @@
     gap: 15px;
 }
 
+
+/* =========================================================
+   CALL ICON
+========================================================= */
+
 .footer-call-icon {
     width: 48px;
     height: 48px;
+
     border-radius: 50%;
-    background: rgba(61, 169, 252, 0.1);
-    color: #3DA9FC;
+
+    background: rgba(0, 170, 162, 0.1);
+
+    color: rgb(0, 170, 162);
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     font-size: 20px;
-    border: 1px solid rgba(61, 169, 252, 0.3);
+
+    border: 1px solid rgba(0, 170, 162, 0.3);
+
+    flex-shrink: 0;
 }
+
+
+/* =========================================================
+   CALL TEXT
+========================================================= */
 
 .footer-small-title {
     font-size: 12px;
-    color: #3DA9FC;
+
+    color: rgb(0, 170, 162);
+
     text-transform: uppercase;
+
     letter-spacing: 0.1em;
+
     font-weight: 600;
 }
 
+
 .footer-phone {
     font-size: 18px;
+
     font-weight: 700;
+
     color: #ffffff;
 }
+
+
+/* =========================================================
+   NEWSLETTER TEXT
+========================================================= */
 
 .footer-news-text {
     font-size: 18px;
     line-height: 1.2;
 }
 
+
 .footer-news-text-light {
     color: rgba(255, 255, 255, 0.6);
     font-weight: 400;
 }
+
 
 .footer-news-text-bold {
     font-weight: 700;
     color: #ffffff;
 }
 
+
+/* =========================================================
+   NEWSLETTER FORM
+========================================================= */
+
 .footer-news-form {
     display: flex;
     align-items: center;
+    min-width: 0;
 }
 
+
 .footer-news-status {
-    color: #9ee8ff;
+    color: rgb(0, 170, 162);
+
     display: block;
+
     font-size: 12px;
+
     font-weight: 600;
+
     margin-top: 8px;
 }
 
+
+/* =========================================================
+   NEWSLETTER INPUT
+========================================================= */
+
 .footer-input {
     background: #161B22;
+
     border: 1px solid rgba(255, 255, 255, 0.15);
+
     border-right: none;
+
     padding: 12px 18px;
+
     color: #ffffff;
+
     width: 240px;
+
     outline: none;
+
     font-size: 14px;
+
     border-radius: 6px 0 0 6px;
+
     transition: 0.3s ease;
+
+    box-sizing: border-box;
 }
+
 
 .footer-input::placeholder {
     color: rgba(255, 255, 255, 0.4);
 }
 
+
 .footer-input:focus {
-    border-color: #3DA9FC;
+    border-color: rgb(0, 170, 162);
+
     background: #1c232c;
 }
 
+
+/* =========================================================
+   SUBSCRIBE BUTTON
+========================================================= */
+
 .footer-submit-btn {
-    background: #3DA9FC;
+    background: rgb(0, 170, 162);
+
     color: #ffffff;
-    border: 1px solid #3DA9FC;
+
+    border: 1px solid rgb(0, 170, 162);
+
     padding: 12px 22px;
+
     font-weight: 600;
+
     font-size: 14px;
+
     cursor: pointer;
+
     border-radius: 0 6px 6px 0;
+
     transition: all 0.2s ease;
+
+    flex: 0 0 auto;
+
+    min-width: 108px;
+
+    white-space: nowrap;
 }
 
+
 .footer-submit-btn:hover {
-    background: #2b8edb;
-    border-color: #2b8edb;
+    background: rgb(0, 145, 138);
+
+    border-color: rgb(0, 145, 138);
 }
+
 
 .footer-submit-btn:active {
     transform: scale(0.97);
 }
 
 
-/* -----------------------------
+/* =========================================================
    MAIN GRID
------------------------------- */
+========================================================= */
+
 .footer-main-grid {
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr 1fr 1fr;
+
+    grid-template-columns:
+        1.2fr
+        0.8fr
+        1fr
+        1fr;
+
     gap: 40px;
+
     padding: 50px 0;
+
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
+
 
 .footer-col {
     display: flex;
     flex-direction: column;
 }
 
-.footer-column-title {
-    font-size: 20px;
-    font-weight: 700;
-    margin-bottom: 25px;
-    color: #ffffff;
-    position: relative;
-    padding-bottom: 10px;
-}
 
-.footer-column-title::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 40px;
-    height: 3px;
-    background: #3DA9FC;
-    border-radius: 2px;
-}
+/* =========================================================
+   PROJENIUS LOGO
+========================================================= */
 
-/* BRAND COLUMN */
 .footer-logo-wrap {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+
+    display: flex;
+    align-items: center;
+
+    width: fit-content;
 }
 
-.footer-logo {
-    height: 50px;
-    width: auto;
-    object-fit: contain;
+
+/* =========================================================
+   LOGO ROW
+========================================================= */
+
+.footer-brand-logo {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    height: 64px;
+
+    width: fit-content;
+
+    text-decoration: none;
 }
+
+
+/* =========================================================
+   CIRCULAR P/J ICON
+   SAME STYLE AS HEADER
+========================================================= */
+
+.footer-brand-icon {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    position: relative;
+
+    width: 58px;
+
+    height: 58px;
+
+    min-width: 58px;
+
+    min-height: 58px;
+
+    flex: 0 0 58px;
+
+    overflow: hidden;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    border: 2px solid rgba(255, 255, 255, 0.95);
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 0 0 2px rgba(0, 170, 162, 0.12),
+        0 4px 12px rgba(0, 0, 0, 0.25);
+
+    line-height: 0;
+}
+
+
+/* =========================================================
+   P/J IMAGE INSIDE CIRCLE
+========================================================= */
+
+.footer-brand-icon img {
+    display: block;
+
+    width: 90% !important;
+
+    height: 90% !important;
+
+    max-width: 90% !important;
+
+    max-height: 90% !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    border: 0 !important;
+
+    border-radius: 50% !important;
+
+    object-fit: contain !important;
+
+    object-position: center !important;
+
+    box-sizing: border-box;
+
+    transform: none !important;
+}
+
+
+/* =========================================================
+   PROJENIUS TEXT
+========================================================= */
+
+.footer-brand-text {
+    font-family:
+        "Segoe UI Black",
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size: 40px;
+
+    line-height: 1;
+
+    font-weight: 900;
+
+    letter-spacing: -1.5px;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   PRO
+========================================================= */
+
+.brand-pro {
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   JENIUS
+========================================================= */
+
+.brand-jenius {
+    color: rgb(0, 170, 162);
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
 
 .footer-description {
     font-size: 15px;
+
     color: rgba(255, 255, 255, 0.6);
+
     line-height: 1.7;
+
     margin-bottom: 25px;
 }
 
+
+/* =========================================================
+   SOCIAL ICONS
+========================================================= */
+
 .footer-socials {
     display: flex;
+
     align-items: center;
+
     gap: 12px;
 }
 
+
 .footer-social {
     width: 40px;
+
     height: 40px;
+
     border-radius: 50%;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     color: #ffffff;
+
     font-size: 18px;
+
     text-decoration: none;
+
     transition: all 0.3s ease;
-    background: rgba(255,255,255,0.05);
+
+    background: rgba(255, 255, 255, 0.05);
 }
+
 
 .footer-social:hover {
     transform: scale(1.1);
-    color: #fff;
+
+    color: #ffffff;
 }
 
-.whatsapp:hover { background: #25D366; }
-.instagram:hover { background: linear-gradient(45deg, #f09433, #dc2743, #bc1888); }
-.facebook:hover { background: #1877F2; }
-.linkedin:hover { background: #0A66C2; }
+
+/* =========================================================
+   ALL SOCIAL HOVER COLORS
+========================================================= */
+
+.whatsapp:hover,
+.instagram:hover,
+.facebook:hover,
+.linkedin:hover {
+    background: rgb(0, 170, 162);
+}
 
 
-/* QUICK LINKS */
+/* =========================================================
+   QUICK LINKS
+========================================================= */
+
 .footer-links {
     list-style: none;
+
     padding: 0;
+
     margin: 0;
+
     display: flex;
+
     flex-direction: column;
+
     gap: 15px;
 }
+
 
 .footer-link {
     text-decoration: none;
+
     color: rgba(255, 255, 255, 0.6);
+
     font-size: 15px;
+
     display: flex;
+
     align-items: center;
+
     gap: 10px;
+
     transition: all 0.2s ease;
 }
 
+
 .footer-arrow {
-    color: #3DA9FC;
+    color: rgb(0, 170, 162);
+
     display: inline-flex;
+
     align-items: center;
+
     justify-content: center;
+
     transition: transform 0.2s ease;
 }
 
+
 .footer-link:hover {
-    color: #3DA9FC;
+    color: rgb(0, 170, 162);
+
     transform: translateX(4px);
 }
 
-/* CONTACT */
+
+/* =========================================================
+   COLUMN TITLE
+========================================================= */
+
+.footer-column-title {
+    font-size: 20px;
+
+    font-weight: 700;
+
+    margin-bottom: 25px;
+
+    color: #ffffff;
+
+    position: relative;
+
+    padding-bottom: 10px;
+}
+
+
+.footer-column-title::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    width: 40px;
+
+    height: 3px;
+
+    background: rgb(0, 170, 162);
+
+    border-radius: 2px;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
 .footer-contact-wrap {
     display: flex;
+
     flex-direction: column;
+
     gap: 20px;
 }
 
+
 .footer-contact-item {
     display: flex;
+
     align-items: flex-start;
+
     gap: 15px;
 }
 
+
 .footer-contact-icon {
     width: 36px;
+
     height: 36px;
+
     min-width: 36px;
+
     border-radius: 50%;
-    background: rgba(61, 169, 252, 0.1);
-    color: #3DA9FC;
+
+    background: rgba(0, 170, 162, 0.1);
+
+    color: rgb(0, 170, 162);
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     font-size: 16px;
+
     margin-top: 2px;
 }
+
 
 .footer-contact-text,
 .footer-contact-text a {
     color: rgba(255, 255, 255, 0.6);
+
     font-size: 15px;
+
     line-height: 1.6;
+
     text-decoration: none;
+
     transition: color 0.2s ease;
 }
 
+
 .footer-contact-text a:hover {
-    color: #3DA9FC;
+    color: rgb(0, 170, 162);
 }
 
 
-/* MAP & FIND US */
+/* =========================================================
+   MAP
+========================================================= */
+
 .footer-map-wrap {
     display: flex;
+
     flex-direction: column;
+
     gap: 15px;
 }
 
+
 .footer-map {
     overflow: hidden;
+
     border-radius: 12px;
+
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
+
 
 .footer-map iframe {
     display: block;
 }
 
+
 .footer-map-address p {
     margin: 0;
+
     font-size: 14px;
+
     color: rgba(255, 255, 255, 0.6);
 }
 
+
+/* =========================================================
+   DIRECTIONS BUTTON
+========================================================= */
+
 .btn-get-directions {
     display: inline-flex;
+
     align-items: center;
+
     justify-content: center;
+
     gap: 8px;
+
     background: transparent;
-    color: #3DA9FC;
-    border: 1px solid #3DA9FC;
+
+    color: rgb(0, 170, 162);
+
+    border: 1px solid rgb(0, 170, 162);
+
     padding: 10px 20px;
+
     border-radius: 6px;
+
     font-size: 14px;
+
     font-weight: 600;
+
     text-decoration: none;
+
     transition: all 0.2s ease;
+
     width: fit-content;
 }
 
+
 .btn-get-directions:hover {
-    background: #3DA9FC;
+    background: rgb(0, 170, 162);
+
     color: #ffffff;
 }
 
-/* -----------------------------
+
+/* =========================================================
    BOTTOM BAR
------------------------------- */
+========================================================= */
+
 .footer-bottom {
-    padding: 25px 0 100px; /* 100px bottom padding protects from chat widget overlap */
+    padding: 25px 0 100px;
+
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
+
     flex-wrap: wrap;
+
     gap: 15px;
 }
 
+
 .footer-copy {
     font-size: 14px;
+
     color: rgba(255, 255, 255, 0.5);
 }
+
 
 .footer-bottom-links {
     display: flex;
+
     align-items: center;
+
     gap: 25px;
+
     flex-wrap: wrap;
 }
 
+
 .footer-bottom-links a {
     color: rgba(255, 255, 255, 0.5);
+
     text-decoration: none;
+
     font-size: 14px;
+
     transition: all 0.2s ease;
 }
 
+
 .footer-bottom-links a:hover {
-    color: #3DA9FC;
+    color: rgb(0, 170, 162);
 }
 
 
-/* -----------------------------
-   RESPONSIVE DESIGN
------------------------------- */
-@media(max-width: 1024px) {
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+
     .footer-main-grid {
         grid-template-columns: 1fr 1fr;
+
         gap: 50px 30px;
+    }
+
+    .footer-brand-icon {
+        width: 54px;
+        height: 54px;
+
+        min-width: 54px;
+        min-height: 54px;
+
+        flex-basis: 54px;
+    }
+
+    .footer-brand-icon img {
+        width: 90% !important;
+        height: 90% !important;
+    }
+
+    .footer-brand-text {
+        font-size: 38px;
     }
 }
 
-@media(max-width: 768px) {
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
     .footer-topbar {
         flex-direction: column;
+
         align-items: flex-start;
+
         gap: 25px;
     }
 
+
     .footer-newsletter {
         width: 100%;
+
         flex-direction: column;
+
         align-items: flex-start;
+
         gap: 15px;
     }
+
 
     .footer-news-form {
         width: 100%;
     }
 
+
     .footer-input {
         flex: 1 1 auto;
+
         min-width: 0;
+
         width: auto;
     }
 
+
     .footer-main-grid {
         grid-template-columns: 1fr;
+
         gap: 45px;
     }
 
+
     .footer-bottom {
         flex-direction: column;
+
         align-items: flex-start;
+
         text-align: left;
     }
 }
 
-/* Keep the newsletter control usable at every width. */
-.footer-news-form {
-    min-width: 0;
+
+/* =========================================================
+   MOBILE LOGO
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .footer-brand-logo {
+        gap: 8px;
+
+        height: 56px;
+    }
+
+
+    .footer-brand-icon {
+        width: 48px;
+
+        height: 48px;
+
+        min-width: 48px;
+
+        min-height: 48px;
+
+        flex-basis: 48px;
+
+        border-width: 2px;
+    }
+
+
+    .footer-brand-icon img {
+        width: 90% !important;
+
+        height: 90% !important;
+    }
+
+
+    .footer-brand-text {
+        font-size: 32px;
+
+        letter-spacing: -1px;
+    }
 }
 
-.footer-submit-btn {
-    flex: 0 0 auto;
-    min-width: 108px;
-    white-space: nowrap;
-}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
 
 @media (max-width: 480px) {
+
     .footer-news-form {
         align-items: stretch;
+
         flex-direction: column;
+
         gap: 10px;
     }
+
 
     .footer-input,
     .footer-submit-btn {
         border-radius: 6px;
+
         width: 100%;
     }
 
+
     .footer-input {
         border-right: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+
+    .footer-brand-logo {
+        gap: 7px;
+    }
+
+
+    .footer-brand-icon {
+        width: 44px;
+
+        height: 44px;
+
+        min-width: 44px;
+
+        min-height: 44px;
+
+        flex-basis: 44px;
+    }
+
+
+    .footer-brand-icon img {
+        width: 90% !important;
+
+        height: 90% !important;
+    }
+
+
+    .footer-brand-text {
+        font-size: 29px;
+
+        letter-spacing: -0.8px;
     }
 }

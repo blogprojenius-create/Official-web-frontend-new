@@ -1,15 +1,17 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Bot, Boxes, Code2, Rocket } from "lucide-react";
 import "../index.css";
 import "../assets/css/AboutSection.css";
 import CountUp from "./CountUp";
 
 export default function AboutSection() {
+    const [isAboutVisible, setIsAboutVisible] = useState(false);
+    const [counterCycle, setCounterCycle] = useState(0);
 
     useEffect(() => {
-        const elements = document.querySelectorAll(".reveal");
+        const elements = document.querySelectorAll(".about-v2 .reveal");
 
-        const observer = new IntersectionObserver(
+        const revealObserver = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
@@ -20,10 +22,38 @@ export default function AboutSection() {
             { threshold: 0.2 }
         );
 
-        elements.forEach((el) => observer.observe(el));
+        elements.forEach((el) => revealObserver.observe(el));
 
-        return () => observer.disconnect();
+        const aboutSection = document.querySelector(".about-v2");
+
+        if (!aboutSection) {
+            return () => revealObserver.disconnect();
+        }
+
+        const sectionObserver = new IntersectionObserver(
+            ([entry]) => {
+                setIsAboutVisible(entry.isIntersecting);
+            },
+            { threshold: 0.2 }
+        );
+
+        sectionObserver.observe(aboutSection);
+
+        return () => {
+            revealObserver.disconnect();
+            sectionObserver.disconnect();
+        };
     }, []);
+
+    useEffect(() => {
+        if (!isAboutVisible) return;
+
+        const interval = setInterval(() => {
+            setCounterCycle((prev) => prev + 1);
+        }, 7000);
+
+        return () => clearInterval(interval);
+    }, [isAboutVisible]);
 
     return (
         <section className="about-section about-v2">
@@ -105,6 +135,7 @@ export default function AboutSection() {
                                 <div className="about-stat-item">
                                     <div className="about-stat-number">
                                         <CountUp
+                                            key={`clients-${counterCycle}`}
                                             to={2200}
                                             suffix="+"
                                         />
@@ -122,6 +153,7 @@ export default function AboutSection() {
                                 <div className="about-stat-item">
                                     <div className="about-stat-number">
                                         <CountUp
+                                            key={`projects-${counterCycle}`}
                                             to={150}
                                             suffix="+"
                                         />
@@ -139,6 +171,7 @@ export default function AboutSection() {
                                 <div className="about-stat-item">
                                     <div className="about-stat-number">
                                         <CountUp
+                                            key={`years-${counterCycle}`}
                                             to={5}
                                             suffix="+"
                                         />

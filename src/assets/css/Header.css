@@ -13,50 +13,25 @@
   pointer-events: none;
 }
 
-
-/* =========================================================
-   MAIN NAVBAR
-   ========================================================= */
-
 .glass-navbar-inner {
   position: relative;
-
   width: min(1245px, calc(100% - 170px));
-
   min-height: 82px;
-
   margin: 0 auto;
-
   padding: 0 50px;
-
   display: flex;
   align-items: center;
-
   gap: 28px;
-
   background: rgba(8, 17, 32, 0.94);
-
   border: 1px solid rgba(255, 255, 255, 0.04);
-
-  border-bottom: 5px solid #66c7dd;
-
+  border-bottom: 5px solid rgb(0, 255, 242);
   border-radius: 0 0 38px 38px;
-
-  box-shadow:
-    0 15px 35px rgba(0, 0, 0, 0.28);
-
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.28);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-
   box-sizing: border-box;
-
   pointer-events: all;
 }
-
-
-/* =========================================================
-   LOGO
-========================================================= */
 
 .glass-logo {
   display: inline-flex;
@@ -65,23 +40,66 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
+  gap: 7px;
+  white-space: nowrap;
+  height: 54px;
 }
 
+.glass-logo-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  min-height: 44px;
+  flex: 0 0 44px;
+  overflow: hidden;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  box-sizing: border-box;
+  box-shadow: 0 0 0 2px rgba(0, 255, 242, 0.1);
+  line-height: 0;
+}
 
-.glass-logo img,
-.shiny-logo-img {
+.glass-logo-mark .logo-icon-crop {
   display: block;
-  width: 220px;
-  max-width: 220px;
-  height: auto;
-  margin: 0;
-  padding: 0;
+  width: 90% !important;
+  height: 90% !important;
+  max-width: 90% !important;
+  max-height: 90% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 50% !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  box-sizing: border-box;
+  transform: none !important;
 }
 
+.logo-pro {
+  color: rgb(255, 255, 255) !important;
+  font-family: "Segoe UI Black", "Segoe UI", sans-serif !important;
+  font-size: 34px !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+  letter-spacing: -1.2px;
+  display: inline-block;
+}
 
-/* =========================================================
-   NAVIGATION
-   ========================================================= */
+.logo-jenius {
+  color: rgb(0, 255, 242) !important;
+  font-family: "Segoe UI Black", "Segoe UI", sans-serif !important;
+  font-size: 34px !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+  letter-spacing: -1.2px;
+  display: inline-block;
+  margin-left: -4px;
+}
 
 .glass-nav-links {
   display: flex;
@@ -94,384 +112,214 @@
   padding: 0;
 }
 
-
 .glass-nav-item {
   position: relative;
-
   display: flex;
-
   align-items: center;
-
   min-height: 82px;
-
   margin: 0;
-
   padding: 0;
 }
 
-
-/* =========================================================
-   NAV TEXT
-   ========================================================= */
-
 .glass-nav-link {
   position: relative;
-
   display: inline-flex;
-
   align-items: center;
   justify-content: center;
-
   gap: 6px;
-
   padding: 10px 9px;
-
   margin: 0;
-
   min-height: 42px;
-
   border: 0;
-
   border-radius: 999px;
-
   background: transparent;
-
-  color: #ffffff !important;
-
+  color: rgb(187, 187, 187) !important;
   font-family: "Outfit", "Inter", sans-serif;
-
   font-size: 17px;
-
   font-weight: 800;
-
   line-height: 1;
-
   text-decoration: none !important;
-
   white-space: nowrap;
-
   cursor: pointer;
-
-  transition:
-    color 0.2s ease,
-    background 0.2s ease;
+  transition: color 0.2s ease, background 0.2s ease;
 }
-
-
-/* =========================================================
-   HOVER / ACTIVE
-   ========================================================= */
 
 .glass-nav-link:hover {
-  color: #ffffff !important;
-
-  background: rgba(102, 199, 221, 0.08);
+  color: #fff !important;
+  background: rgba(0, 255, 242, 0.08);
 }
-
 
 .glass-nav-item.active .glass-nav-link {
-  color: #ffffff !important;
-
+  color: #fff !important;
   background: transparent;
 }
-
-
-/* =========================================================
-   CYAN ACTIVE LINE
-   ========================================================= */
 
 .glass-nav-link::after {
   content: "";
-
   position: absolute;
-
   left: 50%;
-
   bottom: 2px;
-
   width: 68%;
-
   height: 3px;
-
   border-radius: 999px;
-
-  background: #66c7dd;
-
-  transform:
-    translateX(-50%) scaleX(0);
-
+  background: rgb(0, 255, 242);
+  transform: translateX(-50%) scaleX(0);
   transform-origin: center;
-
-  transition:
-    transform 0.25s ease;
+  transition: transform 0.25s ease;
 }
-
 
 .glass-nav-link:hover::after,
 .glass-nav-item.active .glass-nav-link::after {
-  transform:
-    translateX(-50%) scaleX(1);
+  transform: translateX(-50%) scaleX(1);
 }
-
-
-/* =========================================================
-   SERVICES DROPDOWN
-   ========================================================= */
 
 .glass-dropdown {
   position: absolute;
-
   top: calc(100% - 8px);
-
   left: 50%;
-
   min-width: 200px;
-
   padding: 9px;
-
   background: rgba(8, 17, 32, 0.97);
-
-  border: 1px solid rgba(102, 199, 221, 0.18);
-
+  border: 1px solid rgba(0, 255, 242, 0.18);
   border-radius: 15px;
-
-  box-shadow:
-    0 18px 46px rgba(0, 0, 0, 0.38);
-
+  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.38);
   transform: translateX(-50%);
-
   pointer-events: all;
-
   z-index: 2000;
-
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
 }
 
-
 .glass-dropdown-item {
   display: block;
-
   width: 100%;
-
   padding: 11px 14px;
-
   margin: 0;
-
   border-radius: 9px;
-
-  color: #ffffff !important;
-
+  color: rgb(187, 187, 187) !important;
   font-size: 15px;
-
   font-weight: 700;
-
   line-height: 1.2;
-
   text-decoration: none !important;
-
   box-sizing: border-box;
-
-  transition:
-    background 0.2s ease,
-    color 0.2s ease;
+  transition: background 0.2s ease, color 0.2s ease;
 }
-
 
 .glass-dropdown-item:hover,
 .glass-dropdown-item.active {
-  background: rgba(102, 199, 221, 0.14);
-
-  color: #66c7dd !important;
+  background: rgba(0, 255, 242, 0.14);
+  color: rgb(0, 255, 242) !important;
 }
-
-
-/* =========================================================
-   HAMBURGER
-   ========================================================= */
 
 .glass-hamburger {
   display: none;
-
   align-items: center;
   justify-content: center;
-
   flex: 0 0 auto;
-
   width: 44px;
   height: 44px;
-
   margin: 0;
   padding: 0;
-
   background: rgba(255, 255, 255, 0.08);
-
   border: 1px solid rgba(255, 255, 255, 0.15);
-
   border-radius: 12px;
-
-  color: #ffffff;
-
+  color: #fff;
   cursor: pointer;
-
   box-sizing: border-box;
 }
-
-
-/* =========================================================
-   MOBILE DRAWER
-   ========================================================= */
 
 .glass-mobile-drawer {
   position: fixed;
-
   top: 94px;
-
   left: 12px;
   right: 12px;
-
   width: auto;
-
   max-height: calc(100dvh - 106px);
-
   overflow-y: auto;
-
   padding: 14px;
-
   background: rgba(8, 17, 32, 0.98);
-
-  border: 1px solid rgba(255, 255, 255, 0.10);
-
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 18px;
-
-  box-shadow:
-    0 20px 50px rgba(0, 0, 0, 0.40);
-
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
   pointer-events: all;
-
   z-index: 999;
-
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-
   box-sizing: border-box;
 }
-
 
 .glass-mobile-drawer nav {
   display: flex;
-
   flex-direction: column;
-
   gap: 4px;
-
   width: 100%;
-
   margin: 0;
 }
 
-
-/* =========================================================
-   MOBILE LINKS
-   ========================================================= */
-
 .glass-mobile-link {
   display: flex;
-
   align-items: center;
   justify-content: space-between;
-
   width: 100%;
-
   min-height: 52px;
-
   padding: 0 8px;
-
   background: transparent;
-
   border: 0;
-
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-
-  color: #ffffff !important;
-
+  color: rgb(187, 187, 187) !important;
   font-size: 20px;
-
   font-weight: 800;
-
   text-decoration: none !important;
-
   box-sizing: border-box;
-
   cursor: pointer;
 }
 
-
 .glass-mobile-link:hover,
 .glass-mobile-link.active {
-  color: #66c7dd !important;
+  color: rgb(0, 255, 242) !important;
 }
-
 
 .glass-mobile-sub {
   overflow: hidden;
-
   padding-left: 12px;
 }
 
-
 .glass-mobile-link.sub {
   min-height: 44px;
-
-  color: rgba(255, 255, 255, 0.72) !important;
-
+  color: rgba(187, 187, 187, 0.82) !important;
   font-size: 16px;
 }
 
-
-/* =========================================================
-   HEADER SHOW / HIDE
-   ========================================================= */
-
 .header-visible {
   opacity: 1;
-
   transform: translateY(0);
-
-  transition:
-    opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1),
-    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: opacity 0.5s cubic-bezier(0.22, 1, 0.36, 1), transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
-
 
 .header-hidden {
   opacity: 0 !important;
-
   pointer-events: none !important;
-
   transform: translateY(-14px) !important;
 }
 
-
-/* =========================================================
-   TABLET
-   ========================================================= */
-
 @media (max-width: 1150px) {
-
   .glass-navbar-inner {
     width: calc(100% - 40px);
-
     padding: 0 28px;
-
     gap: 18px;
   }
 
-  .glass-logo img,
-  .shiny-logo-img {
-    width: 190px;
+  .glass-logo-mark {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    min-height: 45px;
+    flex-basis: 45px;
+  }
 
-    max-width: 190px;
+  .logo-pro,
+  .logo-jenius {
+    font-size: 30px !important;
   }
 
   .glass-nav-links {
@@ -480,238 +328,136 @@
 
   .glass-nav-link {
     font-size: 15px;
-
     padding-left: 7px;
     padding-right: 7px;
   }
 }
 
-
-/* =========================================================
-   MOBILE / TABLET
-   ========================================================= */
-
 @media (max-width: 980px) {
-
   .glass-navbar-inner {
     min-height: 72px;
-
     width: calc(100% - 24px);
-
     padding: 0 16px;
-
     border-radius: 0 0 28px 28px;
-
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
-
     gap: 0;
   }
-
-
-  /* Hide desktop navigation */
 
   .glass-nav-links {
     display: none;
   }
 
-
-  /* =======================================================
-     LOGO - LEFT
-     ======================================================= */
-
   .glass-logo {
     margin: 0;
-
     padding: 0;
-
     flex: 0 0 auto;
-
     display: inline-flex;
-
     align-items: center;
   }
 
-
-  .glass-logo img,
-  .shiny-logo-img {
-    width: 175px;
-
-    max-width: 175px;
-
-    height: auto;
+  .glass-logo-mark {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    flex-basis: 40px;
   }
 
-
-  /* =======================================================
-     HAMBURGER - RIGHT
-     ======================================================= */
+  .logo-pro,
+  .logo-jenius {
+    font-size: 28px !important;
+  }
 
   .glass-hamburger {
     display: flex;
-
     margin-left: auto;
-
     margin-right: 0;
-
     flex: 0 0 44px;
-
     width: 44px;
-
     height: 44px;
-
-    align-items: center;
-
-    justify-content: center;
   }
 }
 
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
 @media (max-width: 560px) {
-
-  .glass-header {
-    padding: 0;
-  }
-
-
   .glass-navbar-inner {
     min-height: 66px;
-
     width: calc(100% - 16px);
-
     padding: 0 12px;
-
     border-bottom-width: 4px;
-
     border-radius: 0 0 22px 22px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    gap: 0;
   }
-
-
-  /* =======================================================
-     LOGO - LEFT
-     ======================================================= */
 
   .glass-logo {
     margin: 0;
-
     padding: 0;
-
-    flex: 0 0 auto;
   }
 
-
-  .glass-logo img,
-  .shiny-logo-img {
-    width: 150px;
-
-    max-width: 150px;
-
-    height: auto;
+  .glass-logo-mark {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    min-height: 36px;
+    flex-basis: 36px;
+    border-width: 1.5px;
   }
 
-
-  /* =======================================================
-     3 BAR - RIGHT
-     ======================================================= */
+  .logo-pro,
+  .logo-jenius {
+    font-size: 24px !important;
+    letter-spacing: -0.8px;
+  }
 
   .glass-hamburger {
-    display: flex;
-
-    margin-left: auto;
-
-    margin-right: 0;
-
     width: 42px;
-
     height: 42px;
-
     flex: 0 0 42px;
-
-    align-items: center;
-
-    justify-content: center;
+    margin-left: auto;
+    margin-right: 0;
   }
-
-
-  /* =======================================================
-     MOBILE DRAWER
-     ======================================================= */
 
   .glass-mobile-drawer {
     top: 78px;
-
     left: 8px;
-
     right: 8px;
-
     max-height: calc(100dvh - 88px);
   }
 }
 
-
-/* =========================================================
-   VERY SMALL MOBILE
-   ========================================================= */
-
 @media (max-width: 380px) {
-
   .glass-navbar-inner {
     padding: 0 10px;
   }
 
-
-  .glass-logo img,
-  .shiny-logo-img {
-    width: 135px;
-
-    max-width: 135px;
+  .glass-logo-mark {
+    width: 33px;
+    height: 33px;
+    min-width: 33px;
+    min-height: 33px;
+    flex-basis: 33px;
   }
 
+  .logo-pro,
+  .logo-jenius {
+    font-size: 22px !important;
+    letter-spacing: -0.7px;
+  }
 
   .glass-hamburger {
     width: 40px;
-
     height: 40px;
-
     flex: 0 0 40px;
-
     margin-left: auto;
-
     margin-right: 0;
   }
 }
 
-
-/* =========================================================
-   MOBILE DROPDOWN SAFETY
-   ========================================================= */
-
 @media (max-width: 980px) {
-
   .glass-dropdown {
     display: none;
   }
 }
-
-
-/* =========================================================
-   BODY LOCK
-   ========================================================= */
 
 body.nav-open {
   overflow: hidden;

@@ -2,19 +2,34 @@
    CONTACT SECTION
 ========================================================= */
 
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap");
+
+
 .contact-section {
+
     overflow: hidden;
-    background: #111827;
+
+    background:
+        #111827;
+
+    font-family:
+        "Outfit",
+        sans-serif;
 }
 
 
 /* =========================================================
-   TOP SECTION
+   TOP DARK SECTION
 ========================================================= */
 
 .contact-section .section-1 {
-    background: #121929;
-    padding: 25px 0 85px;
+
+    background:
+        #121929;
+
+    padding:
+        25px 0 82px;
+
     position: relative;
 }
 
@@ -24,47 +39,79 @@
 ========================================================= */
 
 .contact-heading {
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     flex-direction: column;
+
     text-align: center;
+
     margin-bottom: 0;
 }
 
 
 /* =========================================================
-   LET'S GET STARTED
-   WHO WE ARE STYLE
+   LET'S GET STARTED BADGE
 ========================================================= */
 
 .contact-sub-heading {
+
     display: inline-flex;
+
     align-items: center;
+
     justify-content: center;
 
-    gap: 8px;
+    gap: 9px;
 
-    padding: 7px 17px;
+    padding:
+        9px 20px;
 
-    margin-bottom: 10px;
+    margin-bottom:
+        12px;
 
-    border-radius: 999px;
+    border-radius:
+        999px;
 
-    background: rgba(22, 184, 229, 0.06);
+    background:
+        rgba(0, 170, 162, 0.06);
 
-    border: 1px solid rgba(22, 184, 229, 0.22);
+    border:
+        1px solid
+        rgba(0, 170, 162, 0.35);
 
-    color: #5fc4df;
+    color:
+        rgb(0, 170, 162);
 
-    font-size: 12px;
-    font-weight: 700;
+    font-family:
+        "Outfit",
+        sans-serif;
 
-    letter-spacing: 0.08em;
+    font-size:
+        15px;
 
-    text-transform: uppercase;
+    font-weight:
+        800;
 
-    white-space: nowrap;
+    letter-spacing:
+        0.08em;
+
+    line-height:
+        1;
+
+    text-transform:
+        uppercase;
+
+    white-space:
+        nowrap;
+
+    box-shadow:
+        0 0 18px
+        rgba(0, 170, 162, 0.06);
 }
 
 
@@ -73,16 +120,26 @@
 ========================================================= */
 
 .contact-sub-dot {
-    width: 7px;
-    height: 7px;
 
-    flex-shrink: 0;
+    width:
+        8px;
 
-    border-radius: 50%;
+    height:
+        8px;
 
-    background: #5fc4df;
+    flex-shrink:
+        0;
 
-    /* SLOW BLINK */
+    border-radius:
+        50%;
+
+    background:
+        rgb(0, 170, 162);
+
+    box-shadow:
+        0 0 8px
+        rgba(0, 170, 162, 0.55);
+
     animation:
         contactDotPulse
         2.8s
@@ -91,18 +148,33 @@
 }
 
 
+/* =========================================================
+   DOT ANIMATION
+========================================================= */
+
 @keyframes contactDotPulse {
 
     0%,
     100% {
-        opacity: 1;
-        transform: scale(1);
+
+        opacity:
+            1;
+
+        transform:
+            scale(1);
+
     }
 
     50% {
-        opacity: 0.45;
-        transform: scale(0.7);
+
+        opacity:
+            0.45;
+
+        transform:
+            scale(0.7);
+
     }
+
 }
 
 
@@ -110,40 +182,66 @@
    MAIN TITLE
 ========================================================= */
 
-.contact-section .contact-section-title {
-    position: relative;
+.contact-section
+.contact-section-title {
 
-    display: inline-block;
+    position:
+        relative;
 
-    width: auto;
+    display:
+        inline-block;
 
-    margin: 0;
+    width:
+        auto;
 
-    padding: 0 0 20px;
+    margin:
+        0;
 
-    color: #ffffff;
+    padding:
+        0 0 20px;
 
-    font-size: clamp(28px, 4vw, 48px);
+    color:
+        #ffffff;
 
-    font-weight: 700;
+    font-family:
+        "Outfit",
+        sans-serif;
 
-    line-height: 1.15;
+    font-size:
+        clamp(38px, 4vw, 58px);
 
-    letter-spacing: -0.035em;
+    font-weight:
+        800;
 
-    text-align: center;
+    line-height:
+        1.05;
 
-    white-space: nowrap;
+    letter-spacing:
+        -1.8px;
+
+    text-align:
+        center;
+
+    white-space:
+        nowrap;
 }
 
 
 /* =========================================================
-   WORK TOGETHER ACCENT
+   TITLE ACCENT
 ========================================================= */
 
 .contact-title-accent {
-    color: #16a9cf;
-    font-weight: inherit;
+
+    color:
+        rgb(0, 170, 162);
+
+    font-family:
+        "Outfit",
+        sans-serif;
+
+    font-weight:
+        800;
 }
 
 
@@ -151,26 +249,41 @@
    TITLE UNDERLINE
 ========================================================= */
 
-.contact-section .contact-section-title::after {
-    content: "";
+.contact-section
+.contact-section-title::after {
 
-    position: absolute;
+    content:
+        "";
 
-    left: 50%;
-    bottom: 0;
+    position:
+        absolute;
 
-    width: 75px;
-    height: 5px;
+    left:
+        50%;
 
-    border-radius: 999px;
+    bottom:
+        0;
 
-    background: #16b8e5;
+    width:
+        78px;
+
+    height:
+        5px;
+
+    border-radius:
+        999px;
+
+    background:
+        rgb(0, 170, 162);
 
     transform:
         translateX(-50%)
         scaleX(0.75);
 
-    /* SLOW BLINK */
+    box-shadow:
+        0 0 12px
+        rgba(0, 170, 162, 0.45);
+
     animation:
         contactTitleLine
         2.8s
@@ -179,12 +292,17 @@
 }
 
 
+/* =========================================================
+   TITLE LINE ANIMATION
+========================================================= */
+
 @keyframes contactTitleLine {
 
     0%,
     100% {
 
-        opacity: 0.3;
+        opacity:
+            0.35;
 
         transform:
             translateX(-50%)
@@ -192,12 +310,14 @@
 
         box-shadow:
             0 0 0
-            rgba(22, 184, 229, 0);
+            rgba(0, 170, 162, 0);
+
     }
 
     50% {
 
-        opacity: 1;
+        opacity:
+            1;
 
         transform:
             translateX(-50%)
@@ -205,8 +325,10 @@
 
         box-shadow:
             0 0 12px
-            rgba(22, 184, 229, 0.65);
+            rgba(0, 170, 162, 0.65);
+
     }
+
 }
 
 
@@ -215,11 +337,15 @@
 ========================================================= */
 
 .contact-section .section-2 {
-    margin-top: -55px;
 
-    position: relative;
+    margin-top:
+        -55px;
 
-    z-index: 2;
+    position:
+        relative;
+
+    z-index:
+        2;
 }
 
 
@@ -228,13 +354,22 @@
 ========================================================= */
 
 .contact-card {
-    position: relative;
 
-    overflow: hidden;
+    position:
+        relative;
 
-    border-radius: 28px;
+    overflow:
+        hidden;
 
-    height: 400px;
+    border-radius:
+        28px;
+
+    height:
+        400px;
+
+    box-shadow:
+        0 12px 35px
+        rgba(0, 0, 0, 0.20);
 }
 
 
@@ -243,12 +378,18 @@
 ========================================================= */
 
 .contact-card img {
-    width: 100%;
-    height: 100%;
 
-    object-fit: cover;
+    width:
+        100%;
 
-    display: block;
+    height:
+        100%;
+
+    object-fit:
+        cover;
+
+    display:
+        block;
 }
 
 
@@ -257,15 +398,18 @@
 ========================================================= */
 
 .contact-card .overlay {
-    position: absolute;
 
-    inset: 0;
+    position:
+        absolute;
+
+    inset:
+        0;
 
     background:
         linear-gradient(
             180deg,
-            rgba(15, 23, 42, 0.4) 0%,
-            rgba(17, 24, 39, 0.85) 100%
+            rgba(15, 23, 42, 0.35) 0%,
+            rgba(17, 24, 39, 0.86) 100%
         );
 }
 
@@ -275,16 +419,27 @@
 ========================================================= */
 
 .contact-card .card-content {
-    position: absolute;
 
-    left: 40px;
-    bottom: 35px;
+    position:
+        absolute;
 
-    z-index: 2;
+    left:
+        40px;
 
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    bottom:
+        35px;
+
+    z-index:
+        2;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        flex-start;
 }
 
 
@@ -292,16 +447,31 @@
    CARD HEADING
 ========================================================= */
 
-.contact-card .card-content h3 {
-    color: #fff;
+.contact-card
+.card-content
+h3 {
 
-    font-size: clamp(26px, 4vw, 48px);
+    color:
+        #ffffff;
 
-    line-height: 1.1;
+    font-family:
+        "Outfit",
+        sans-serif;
 
-    font-weight: 700;
+    font-size:
+        clamp(30px, 4vw, 50px);
 
-    margin-bottom: 18px;
+    line-height:
+        1.08;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        -1px;
+
+    margin:
+        0 0 20px;
 }
 
 
@@ -310,43 +480,69 @@
 ========================================================= */
 
 .contact-section .btn {
-    position: relative;
 
-    overflow: hidden;
+    position:
+        relative;
 
-    height: 2.8rem;
+    overflow:
+        hidden;
 
-    padding: 8px 20px;
+    height:
+        2.8rem;
 
-    border-radius: 1.5rem;
+    padding:
+        8px 22px;
 
-    background: #2563EB;
+    border-radius:
+        1.5rem;
 
-    color: #fff;
+    background:
+        rgb(0, 170, 162);
 
-    border: none;
+    color:
+        #000000;
 
-    cursor: pointer;
+    border:
+        none;
 
-    font-weight: 500;
+    cursor:
+        pointer;
+
+    font-family:
+        "Outfit",
+        sans-serif;
+
+    font-weight:
+        700;
 
     box-shadow:
         0 10px 24px
-        rgba(37, 99, 235, 0.28);
+        rgba(0, 170, 162, 0.28);
 
     transition:
         transform 0.2s ease,
         box-shadow 0.2s ease,
         background 0.2s ease;
 
-    white-space: nowrap;
+    white-space:
+        nowrap;
+
+    text-decoration:
+        none;
 }
 
 
-.contact-section .btn:hover {
-    background: #162b34;
+/* =========================================================
+   BUTTON HOVER
+========================================================= */
 
-    color: #2563EB;
+.contact-section .btn:hover {
+
+    background:
+        rgb(0, 170, 162);
+
+    color:
+        #000000;
 
     transform:
         translateY(-2px)
@@ -354,23 +550,48 @@
 
     box-shadow:
         0 14px 30px
-        rgba(37, 99, 235, 0.34);
+        rgba(0, 170, 162, 0.38);
 }
 
 
+/* =========================================================
+   BUTTON ACTIVE
+========================================================= */
+
 .contact-section .btn:active {
+
     transform:
         translateY(0)
         scale(0.98);
 }
 
 
-.contact-section .btn .btn-content {
-    position: relative;
+/* =========================================================
+   BUTTON TEXT
+========================================================= */
 
-    z-index: 1;
+.contact-section
+.btn
+.btn-content {
 
-    font-size: 17px;
+    position:
+        relative;
+
+    z-index:
+        1;
+
+    font-family:
+        "Outfit",
+        sans-serif;
+
+    font-size:
+        16px;
+
+    font-weight:
+        700;
+
+    color:
+        #000000;
 }
 
 
@@ -379,24 +600,32 @@
 ========================================================= */
 
 .counter-section {
+
     background:
+
         linear-gradient(
             to bottom,
             #111827 0%,
-            rgba(17, 24, 39, 0.7) 50%,
-            rgba(17, 24, 39, 0.4) 100%
+            rgba(17, 24, 39, 0.72) 50%,
+            rgba(17, 24, 39, 0.42) 100%
         ),
+
         url('/images/contact-section-bg.png');
 
-    background-position: center;
+    background-position:
+        center;
 
-    background-size: cover;
+    background-size:
+        cover;
 
-    background-repeat: no-repeat;
+    background-repeat:
+        no-repeat;
 
-    padding: 85px 0 45px;
+    padding:
+        78px 0 45px;
 
-    margin-top: -45px;
+    margin-top:
+        -45px;
 }
 
 
@@ -405,13 +634,21 @@
 ========================================================= */
 
 .counter-wrapper {
-    display: flex;
 
-    justify-content: space-between;
+    display:
+        flex;
 
-    gap: 20px;
+    justify-content:
+        space-between;
 
-    flex-wrap: wrap;
+    align-items:
+        center;
+
+    gap:
+        25px;
+
+    flex-wrap:
+        wrap;
 }
 
 
@@ -420,11 +657,19 @@
 ========================================================= */
 
 .counter-box {
-    text-align: center;
 
-    flex: 1;
+    text-align:
+        center;
 
-    min-width: 140px;
+    flex:
+        1;
+
+    min-width:
+        140px;
+
+    font-family:
+        "Outfit",
+        sans-serif;
 }
 
 
@@ -433,15 +678,38 @@
 ========================================================= */
 
 .counter-box h2 {
-    color: #fff;
 
-    font-size: clamp(32px, 6vw, 58px);
+    color:
+        rgb(0, 170, 162);
 
-    font-weight: 700;
+    font-family:
+        "Outfit",
+        sans-serif;
 
-    margin-bottom: 6px;
+    font-size:
+        clamp(40px, 5vw, 60px);
 
-    position: relative;
+    font-weight:
+        800;
+
+    line-height:
+        1;
+
+    margin:
+        0 0 8px;
+
+    position:
+        relative;
+
+    letter-spacing:
+        -1px;
+
+    font-variant-numeric:
+        tabular-nums;
+
+    text-shadow:
+        0 0 18px
+        rgba(0, 170, 162, 0.16);
 }
 
 
@@ -450,15 +718,31 @@
 ========================================================= */
 
 .counter-box p {
-    color: #fff;
 
-    font-size: 12px;
+    color:
+        #ffffff;
 
-    font-weight: 600;
+    font-family:
+        "Outfit",
+        sans-serif;
 
-    letter-spacing: 1px;
+    font-size:
+        13px;
 
-    margin-bottom: 0;
+    font-weight:
+        700;
+
+    letter-spacing:
+        0.06em;
+
+    line-height:
+        1.3;
+
+    margin:
+        0;
+
+    text-transform:
+        uppercase;
 }
 
 
@@ -467,28 +751,45 @@
 ========================================================= */
 
 .image-slider {
-    position: relative;
 
-    width: 100%;
+    position:
+        relative;
 
-    height: 100%;
+    width:
+        100%;
 
-    overflow: hidden;
+    height:
+        100%;
+
+    overflow:
+        hidden;
 }
 
 
-.image-slider .contact-img {
-    position: absolute;
+/* =========================================================
+   SLIDER IMAGES
+========================================================= */
 
-    inset: 0;
+.image-slider
+.contact-img {
 
-    width: 100%;
+    position:
+        absolute;
 
-    height: 100%;
+    inset:
+        0;
 
-    object-fit: cover;
+    width:
+        100%;
 
-    opacity: 0;
+    height:
+        100%;
+
+    object-fit:
+        cover;
+
+    opacity:
+        0;
 
     animation:
         fadeSlider
@@ -497,17 +798,27 @@
 }
 
 
-/* IMAGE 1 */
+/* =========================================================
+   IMAGE 1
+========================================================= */
 
-.image-slider .contact-img:nth-child(1) {
-    animation-delay: 0s;
+.image-slider
+.contact-img:nth-child(1) {
+
+    animation-delay:
+        0s;
 }
 
 
-/* IMAGE 2 */
+/* =========================================================
+   IMAGE 2
+========================================================= */
 
-.image-slider .contact-img:nth-child(2) {
-    animation-delay: 4s;
+.image-slider
+.contact-img:nth-child(2) {
+
+    animation-delay:
+        4s;
 }
 
 
@@ -518,27 +829,45 @@
 @keyframes fadeSlider {
 
     0% {
-        opacity: 0;
-        transform: scale(1);
+
+        opacity:
+            0;
+
+        transform:
+            scale(1);
     }
 
     10% {
-        opacity: 1;
+
+        opacity:
+            1;
     }
 
     45% {
-        opacity: 1;
-        transform: scale(1.04);
+
+        opacity:
+            1;
+
+        transform:
+            scale(1.04);
     }
 
     55% {
-        opacity: 1;
-        transform: scale(1.05);
+
+        opacity:
+            1;
+
+        transform:
+            scale(1.05);
     }
 
     100% {
-        opacity: 0;
-        transform: scale(1.07);
+
+        opacity:
+            0;
+
+        transform:
+            scale(1.07);
     }
 }
 
@@ -549,46 +878,89 @@
 
 @media (max-width: 991px) {
 
-    .contact-section .section-1 {
-        padding: 25px 0 75px;
+    .contact-section
+    .section-1 {
+
+        padding:
+            25px 0 75px;
     }
 
-    .contact-section .contact-section-title {
-        font-size: 40px;
+
+    .contact-section
+    .contact-section-title {
+
+        font-size:
+            46px;
     }
 
-    .contact-section .section-2 {
-        margin-top: -45px;
+
+    .contact-section
+    .section-2 {
+
+        margin-top:
+            -45px;
     }
+
 
     .contact-card {
-        height: 330px;
-        border-radius: 24px;
+
+        height:
+            330px;
+
+        border-radius:
+            24px;
     }
 
-    .contact-card .card-content {
-        left: 30px;
-        bottom: 30px;
+
+    .contact-card
+    .card-content {
+
+        left:
+            30px;
+
+        bottom:
+            30px;
     }
 
-    .contact-card .card-content h3 {
-        font-size: 38px;
-        margin-bottom: 15px;
+
+    .contact-card
+    .card-content
+    h3 {
+
+        font-size:
+            38px;
+
+        margin-bottom:
+            15px;
     }
+
 
     .counter-section {
-        padding: 70px 0 40px;
-        margin-top: -35px;
+
+        padding:
+            70px 0 40px;
+
+        margin-top:
+            -35px;
     }
+
 
     .counter-wrapper {
-        gap: 30px;
-        justify-content: center;
+
+        gap:
+            30px;
+
+        justify-content:
+            center;
     }
 
+
     .counter-box h2 {
-        font-size: 48px;
+
+        font-size:
+            48px;
     }
+
 }
 
 
@@ -598,108 +970,180 @@
 
 @media (max-width: 767px) {
 
-    .contact-section .section-1 {
-        padding: 25px 0 70px;
+    .contact-section
+    .section-1 {
+
+        padding:
+            25px 0 70px;
     }
+
 
     .contact-sub-heading {
-        font-size: 11px;
-
-        padding: 7px 15px;
-
-        margin-bottom: 9px;
-    }
-
-    .contact-sub-dot {
-        width: 7px;
-        height: 7px;
-
-        animation:
-            contactDotPulse
-            2.8s
-            ease-in-out
-            infinite;
-    }
-
-    .contact-section .contact-section-title {
-
-        width: 100%;
-        max-width: 100%;
 
         font-size:
-            clamp(25px, 7vw, 34px);
+            12px;
 
-        line-height: 1.2;
+        padding:
+            8px 16px;
 
-        white-space: nowrap;
-
-        padding-bottom: 20px;
+        margin-bottom:
+            10px;
     }
 
-    .contact-section .contact-section-title::after {
 
-        width: 75px;
+    .contact-sub-dot {
 
-        height: 5px;
+        width:
+            7px;
 
-        animation:
-            contactTitleLine
-            2.8s
-            ease-in-out
-            infinite;
+        height:
+            7px;
     }
 
-    .contact-section .section-2 {
-        margin-top: -40px;
+
+    .contact-section
+    .contact-section-title {
+
+        width:
+            100%;
+
+        max-width:
+            100%;
+
+        font-size:
+            clamp(27px, 7vw, 38px);
+
+        line-height:
+            1.15;
+
+        white-space:
+            nowrap;
+
+        padding-bottom:
+            20px;
     }
+
+
+    .contact-section
+    .contact-section-title::after {
+
+        width:
+            70px;
+
+        height:
+            4px;
+    }
+
+
+    .contact-section
+    .section-2 {
+
+        margin-top:
+            -40px;
+    }
+
 
     .contact-card {
-        height: 300px;
-        border-radius: 22px;
+
+        height:
+            300px;
+
+        border-radius:
+            22px;
     }
 
-    .contact-card .card-content {
-        left: 22px;
-        bottom: 22px;
+
+    .contact-card
+    .card-content {
+
+        left:
+            22px;
+
+        bottom:
+            22px;
     }
 
-    .contact-card .card-content h3 {
-        font-size: 30px;
-        margin-bottom: 14px;
+
+    .contact-card
+    .card-content
+    h3 {
+
+        font-size:
+            30px;
+
+        line-height:
+            1.08;
+
+        margin-bottom:
+            14px;
     }
+
 
     .contact-section .btn {
-        height: 2.7rem;
-        padding: 7px 17px;
+
+        height:
+            2.7rem;
+
+        padding:
+            7px 18px;
     }
 
-    .contact-section .btn .btn-content {
-        font-size: 15px;
+
+    .contact-section
+    .btn
+    .btn-content {
+
+        font-size:
+            15px;
     }
+
 
     .counter-section {
-        padding: 70px 0 35px;
-        margin-top: -30px;
+
+        padding:
+            70px 0 35px;
+
+        margin-top:
+            -30px;
     }
+
 
     .counter-wrapper {
-        justify-content: center;
-        gap: 25px 18px;
+
+        justify-content:
+            center;
+
+        gap:
+            30px 18px;
     }
+
 
     .counter-box {
-        min-width: 120px;
+
+        min-width:
+            120px;
     }
+
 
     .counter-box h2 {
-        font-size: 38px;
-        margin-bottom: 5px;
+
+        font-size:
+            40px;
+
+        margin-bottom:
+            6px;
     }
 
+
     .counter-box p {
-        font-size: 10px;
-        letter-spacing: 0.7px;
+
+        font-size:
+            10px;
+
+        letter-spacing:
+            0.6px;
     }
+
 }
 
 
@@ -709,89 +1153,140 @@
 
 @media (max-width: 482px) {
 
-    .contact-section .section-1 {
-        padding: 22px 0 62px;
+    .contact-section
+    .section-1 {
+
+        padding:
+            22px 0 62px;
     }
+
 
     .contact-sub-heading {
-        font-size: 10px;
-        padding: 6px 14px;
+
+        font-size:
+            10px;
+
+        padding:
+            7px 14px;
     }
 
-    .contact-sub-dot {
-        width: 7px;
-        height: 7px;
 
-        animation:
-            contactDotPulse
-            2.8s
-            ease-in-out
-            infinite;
+    .contact-section
+    .contact-section-title {
+
+        font-size:
+            24px;
+
+        padding-bottom:
+            18px;
     }
 
-    .contact-section .contact-section-title {
-        font-size: 23px;
-        padding-bottom: 18px;
+
+    .contact-section
+    .contact-section-title::after {
+
+        width:
+            68px;
+
+        height:
+            4px;
     }
 
-    .contact-section .contact-section-title::after {
-        width: 75px;
-        height: 4px;
 
-        animation:
-            contactTitleLine
-            2.8s
-            ease-in-out
-            infinite;
+    .contact-section
+    .section-2 {
+
+        margin-top:
+            -35px;
     }
 
-    .contact-section .section-2 {
-        margin-top: -35px;
-    }
 
     .contact-card {
-        height: 240px !important;
-        border-radius: 18px;
+
+        height:
+            240px !important;
+
+        border-radius:
+            18px;
     }
 
-    .contact-card .card-content {
-        left: 18px !important;
-        bottom: 18px !important;
+
+    .contact-card
+    .card-content {
+
+        left:
+            18px !important;
+
+        bottom:
+            18px !important;
     }
 
-    .contact-card .card-content h3 {
-        font-size: 24px;
-        margin-bottom: 11px !important;
+
+    .contact-card
+    .card-content
+    h3 {
+
+        font-size:
+            24px;
+
+        margin-bottom:
+            11px !important;
     }
+
 
     .contact-section .btn {
-        height: 2.5rem !important;
-        padding: 6px 15px !important;
+
+        height:
+            2.5rem !important;
+
+        padding:
+            6px 15px !important;
     }
 
-    .contact-section .btn .btn-content {
-        font-size: 14px !important;
+
+    .contact-section
+    .btn
+    .btn-content {
+
+        font-size:
+            14px !important;
     }
+
 
     .counter-section {
-        padding: 65px 0 30px;
+
+        padding:
+            65px 0 30px;
     }
+
 
     .counter-wrapper {
-        gap: 20px 14px;
+
+        gap:
+            24px 14px;
     }
+
 
     .counter-box {
-        min-width: 105px;
+
+        min-width:
+            105px;
     }
+
 
     .counter-box h2 {
-        font-size: 32px;
+
+        font-size:
+            33px;
     }
 
+
     .counter-box p {
-        font-size: 9px;
+
+        font-size:
+            9px;
     }
+
 }
 
 
@@ -801,33 +1296,69 @@
 
 @media (max-width: 380px) {
 
-    .contact-section .contact-section-title {
-        font-size: 21px;
+    .contact-section
+    .contact-section-title {
+
+        font-size:
+            21px;
     }
+
 
     .contact-card {
-        height: 215px !important;
-        border-radius: 16px;
+
+        height:
+            215px !important;
+
+        border-radius:
+            16px;
     }
 
-    .contact-card .card-content {
-        left: 15px !important;
-        bottom: 15px !important;
+
+    .contact-card
+    .card-content {
+
+        left:
+            15px !important;
+
+        bottom:
+            15px !important;
     }
 
-    .contact-card .card-content h3 {
-        font-size: 21px;
+
+    .contact-card
+    .card-content
+    h3 {
+
+        font-size:
+            21px;
     }
+
 
     .counter-section {
-        padding: 55px 0 25px;
+
+        padding:
+            55px 0 25px;
     }
+
 
     .counter-box {
-        min-width: 100px;
+
+        min-width:
+            100px;
     }
 
+
     .counter-box h2 {
-        font-size: 28px;
+
+        font-size:
+            29px;
     }
+
+
+    .counter-box p {
+
+        font-size:
+            8px;
+    }
+
 }

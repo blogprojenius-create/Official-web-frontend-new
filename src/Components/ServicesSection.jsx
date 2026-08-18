@@ -125,20 +125,24 @@ export default function ServicesSection() {
             <section className="svc-section">
 
                 {/* =================================================
-                    LEFT
+                    LEFT CONTENT
                 ================================================= */}
 
                 <div className="svc-left">
 
-                    {/* OUR SERVICES + DOT */}
+                    {/* BADGE */}
 
                     <span className="svc-sub" id="sub-heading">
-                        <span className="svc-sub-dot"></span>
+                        <span
+                            className="svc-sub-dot"
+                            aria-hidden="true"
+                        />
+
                         Our Services
                     </span>
 
 
-                    {/* TITLE */}
+                    {/* MAIN HEADING */}
 
                     <h2
                         className="svc-title"
@@ -151,12 +155,12 @@ export default function ServicesSection() {
                     </h2>
 
 
-                    {/* TITLE LINE */}
+                    {/* HEADING LINE */}
 
                     <div
                         className="svc-title-line"
                         aria-hidden="true"
-                    ></div>
+                    />
 
 
                     {/* DESCRIPTION */}
@@ -172,7 +176,7 @@ export default function ServicesSection() {
 
                     <a
                         href={services[activeIndex].link}
-                        className="btn"
+                        className="btn svc-main-btn"
                     >
                         <span
                             className="svc-btn-content"
@@ -186,13 +190,12 @@ export default function ServicesSection() {
 
 
                 {/* =================================================
-                    RIGHT
+                    RIGHT CONTENT
                 ================================================= */}
 
                 <div className="svc-right">
 
                     {services.map((service, index) => (
-
                         <div
                             key={index}
                             className={`svc-card svc-card-${index + 1}`}
@@ -208,7 +211,10 @@ export default function ServicesSection() {
                                 className="svc-img"
                             />
 
-                            <div className="svc-overlay"></div>
+                            <div
+                                className="svc-overlay"
+                                aria-hidden="true"
+                            />
 
 
                             <div className="svc-content">
@@ -227,7 +233,6 @@ export default function ServicesSection() {
                             </div>
 
                         </div>
-
                     ))}
 
                 </div>

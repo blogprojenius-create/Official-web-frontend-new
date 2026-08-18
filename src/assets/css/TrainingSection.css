@@ -1,18 +1,22 @@
 /* =========================================================
    TRAINING SECTION
+   FINAL REPLACEMENT
 ========================================================= */
 
 .training-section {
     width: 100%;
-
-    /* REDUCED SECTION TOP / BOTTOM SPACE */
     padding: 45px 0 50px;
-
-    background: #66c7dd26;
-
+    background: #eefaff;
     overflow: hidden;
+    font-family: "Segoe UI", sans-serif;
+    box-sizing: border-box;
 }
 
+.training-section *,
+.training-section *::before,
+.training-section *::after {
+    box-sizing: border-box;
+}
 
 /* =========================================================
    CONTAINER
@@ -20,15 +24,12 @@
 
 .training-section .container {
     position: relative;
-
+    width: 100%;
     max-width: 1250px;
-
     margin: 0 auto;
-
     padding-left: 20px;
     padding-right: 20px;
 }
-
 
 /* =========================================================
    HEADER
@@ -36,76 +37,81 @@
 
 .training-heading {
     display: flex;
-
     flex-direction: column;
-
     align-items: center;
-
     justify-content: center;
-
     width: 100%;
-
-    /* REDUCED */
-    margin-bottom: 18px;
-
+    margin-bottom: 28px;
     text-align: center;
 }
 
-
 /* =========================================================
-   BADGE
+   OUR TRAINING PROGRAM BADGE
 ========================================================= */
 
-.training-sub-heading {
+.training-section .training-sub-heading {
     position: relative;
 
-    display: inline-flex;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 
-    align-items: center;
+    gap: 9px !important;
 
-    justify-content: center;
+    width: auto !important;
+    height: auto !important;
 
-    gap: 8px;
+    padding: 10px 22px !important;
+    margin: 0 0 18px 0 !important;
 
-    padding: 7px 17px;
+    border-radius: 999px !important;
 
-    /* REDUCED */
-    margin-bottom: 8px;
+    background: rgba(0, 170, 162, 0.06) !important;
 
-    border-radius: 999px;
+    border: 1px solid rgba(0, 170, 162, 0.40) !important;
 
-    background: rgba(22, 184, 229, 0.06);
+    color: rgb(0, 170, 162) !important;
 
-    border: 1px solid rgba(22, 184, 229, 0.22);
+    font-family: "Segoe UI", sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 800 !important;
+    line-height: 1 !important;
+    letter-spacing: 1.2px !important;
 
-    color: #5fc4df;
+    text-transform: uppercase !important;
+    white-space: nowrap !important;
 
-    font-size: 13px;
-
-    font-weight: 700;
-
-    letter-spacing: 0.08em;
-
-    text-transform: uppercase;
-
-    white-space: nowrap;
+    opacity: 1 !important;
+    box-shadow: none !important;
 }
-
 
 /* =========================================================
    BADGE DOT
 ========================================================= */
 
-.training-sub-dot {
-    width: 7px;
+.training-section .training-sub-heading .training-sub-dot {
+    display: inline-block !important;
 
-    height: 7px;
+    width: 9px !important;
+    height: 9px !important;
 
-    flex-shrink: 0;
+    min-width: 9px !important;
+    min-height: 9px !important;
 
-    border-radius: 50%;
+    flex: 0 0 9px !important;
 
-    background: #5fc4df;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    border: none !important;
+    border-radius: 50% !important;
+
+    background: rgb(0, 170, 162) !important;
+
+    opacity: 1 !important;
+
+    box-shadow:
+        0 0 8px rgba(0, 170, 162, 0.45) !important;
 
     animation:
         trainingDotPulse
@@ -114,23 +120,18 @@
         infinite;
 }
 
-
 @keyframes trainingDotPulse {
-
     0%,
     100% {
         opacity: 1;
-
         transform: scale(1);
     }
 
     50% {
         opacity: 0.45;
-
-        transform: scale(0.7);
+        transform: scale(0.72);
     }
 }
-
 
 /* =========================================================
    MAIN TITLE
@@ -142,48 +143,49 @@
     display: inline-block;
 
     width: auto;
-
     max-width: 100%;
 
     margin: 0;
 
-    /* REDUCED */
-    padding: 0 0 18px;
+    padding: 0 0 22px;
 
-    color: #0b1328;
+    color: rgb(11, 19, 40);
 
-    font-size: clamp(
-        30px,
-        4.2vw,
-        52px
-    );
+    font-family:
+        "Segoe UI Black",
+        "Segoe UI",
+        sans-serif;
 
-    font-weight: 700;
+    font-size: clamp(34px, 4.2vw, 56px);
+
+    font-weight: 900;
 
     line-height: 1.15;
 
-    letter-spacing: -0.035em;
+    letter-spacing: -1.5px;
 
     text-align: center;
 
     white-space: nowrap;
 }
 
-
 /* =========================================================
-   TRAINING & WORKSHOPS
-   CYAN ACCENT
+   TITLE ACCENT
 ========================================================= */
 
-.training-title-accent {
-    color: #16a9cf;
+.training-section .training-title-accent {
+    color: rgb(0, 170, 162);
 
-    font-weight: inherit;
+    font-family:
+        "Segoe UI Black",
+        "Segoe UI",
+        sans-serif;
+
+    font-weight: 900;
 }
 
-
 /* =========================================================
-   ANIMATED UNDERLINE
+   TITLE UNDERLINE
 ========================================================= */
 
 .training-section .train-section-title::after {
@@ -192,20 +194,21 @@
     position: absolute;
 
     left: 50%;
-
     bottom: 0;
 
-    width: 75px;
-
+    width: 105px;
     height: 5px;
 
     border-radius: 999px;
 
-    background: #16b8e5;
+    background: rgb(0, 170, 162);
 
     transform:
         translateX(-50%)
         scaleX(0.75);
+
+    box-shadow:
+        0 0 10px rgba(0, 170, 162, 0.28);
 
     animation:
         trainingTitleLine
@@ -214,25 +217,20 @@
         infinite;
 }
 
-
 @keyframes trainingTitleLine {
-
     0%,
     100% {
-
-        opacity: 0.3;
+        opacity: 0.45;
 
         transform:
             translateX(-50%)
             scaleX(0.75);
 
         box-shadow:
-            0 0 0
-            rgba(22, 184, 229, 0);
+            0 0 0 rgba(0, 170, 162, 0);
     }
 
     50% {
-
         opacity: 1;
 
         transform:
@@ -240,245 +238,278 @@
             scaleX(1);
 
         box-shadow:
-            0 0 12px
-            rgba(22, 184, 229, 0.65);
+            0 0 14px rgba(0, 170, 162, 0.45);
     }
 }
 
-
 /* =========================================================
    MAIN CONTENT
-   IMPORTANT:
-   Overrides Bootstrap mt-5
 ========================================================= */
 
 .training-section .main {
     margin-top: 18px !important;
-
     padding-top: 0 !important;
 }
 
-
 /* =========================================================
    BOOTSTRAP ROW
-   IMPORTANT:
-   Overrides g-4 spacing
 ========================================================= */
 
 .training-section .row {
     --bs-gutter-x: 20px;
-
     --bs-gutter-y: 18px;
 
     margin-top: 0;
 
-    margin-right: calc(var(--bs-gutter-x) * -0.5);
+    margin-right:
+        calc(var(--bs-gutter-x) * -0.5);
 
-    margin-left: calc(var(--bs-gutter-x) * -0.5);
+    margin-left:
+        calc(var(--bs-gutter-x) * -0.5);
 }
-
-
-/* =========================================================
-   COLUMNS
-========================================================= */
 
 .training-section .row > [class*="col-"] {
-    padding-right: calc(var(--bs-gutter-x) * 0.5);
+    padding-right:
+        calc(var(--bs-gutter-x) * 0.5);
 
-    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    padding-left:
+        calc(var(--bs-gutter-x) * 0.5);
 }
-
 
 /* =========================================================
    RIGHT COLUMN
 ========================================================= */
 
 .training-section .right-column {
-    /* REMOVE OLD TOP GAP */
     padding-top: 0 !important;
 }
 
-
 /* =========================================================
-   REMOVE BOOTSTRAP mt-4 FROM TRAINING CARDS
+   BOOTSTRAP EXTRA GAP
 ========================================================= */
 
 .training-section .mt-4 {
     margin-top: 18px !important;
 }
 
-
 /* =========================================================
-   TRAINING CARD
+   LINK
 ========================================================= */
 
-.training-card {
+.training-section .training-link {
+    display: block;
+
+    width: 100%;
+
+    color: inherit;
+
+    text-decoration: none;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.training-section .training-card {
     position: relative;
 
     overflow: hidden;
 
     width: 100%;
 
-    border-radius: 18px;
+    border-radius: 20px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 12px 32px rgba(11, 19, 40, 0.12);
+
+    isolation: isolate;
+
+    transform: translateZ(0);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
 }
 
+.training-section .training-link:hover .training-card {
+    transform: translateY(-4px);
 
-/* =========================================================
-   TRAINING LINK
-========================================================= */
-
-.training-link {
-    display: block;
-
-    width: 100%;
-
-    text-decoration: none;
+    box-shadow:
+        0 18px 42px rgba(11, 19, 40, 0.18);
 }
-
 
 /* =========================================================
    CARD IMAGE
 ========================================================= */
 
-.training-card img {
-    width: 100%;
+.training-section .training-card img {
+    position: absolute;
 
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
     height: 100%;
 
     object-fit: cover;
 
-    display: block;
-
-    position: absolute;
-
-    top: 0;
-
-    left: 0;
+    z-index: 0;
 
     transition:
-        transform
-        0.6s
-        cubic-bezier(
-            0.25,
-            1,
-            0.5,
-            1
-        );
+        transform 0.6s
+        cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-
-.training-card:hover img {
+.training-section .training-link:hover .training-card img {
     transform: scale(1.04);
 }
 
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
+
+.training-section .training-card::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(11, 19, 40, 0.02) 20%,
+            rgba(11, 19, 40, 0.08) 55%,
+            rgba(11, 19, 40, 0.42) 100%
+        );
+}
 
 /* =========================================================
    IMAGE HEIGHTS
 ========================================================= */
 
-.big-card {
+.training-section .big-card {
     height: 400px;
 }
 
-
-.small-card {
+.training-section .small-card {
     height: 250px;
 }
 
-
 /* =========================================================
-   FLOATING CONTENT
+   CARD SPACING
 ========================================================= */
 
-.training-content {
+.training-section .col-lg-6 > .training-link + .training-link {
+    margin-top: 18px;
+}
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.training-section .training-content {
     position: absolute;
 
     left: 18px;
-
     bottom: 18px;
 
+    z-index: 3;
+
+    min-width: 190px;
+    max-width: 76%;
+
+    padding: 11px 17px;
+
+    border-radius: 13px;
+
     background:
-        rgba(255, 255, 255, 0.78);
-
-    backdrop-filter: blur(12px);
-
-    -webkit-backdrop-filter: blur(12px);
+        rgba(255, 255, 255, 0.92);
 
     border:
-        1px solid
-        rgba(255, 255, 255, 0.6);
+        1px solid rgba(255, 255, 255, 0.8);
 
     border-left:
-        3px solid
-        #0891b2;
-
-    padding: 9px 15px;
-
-    border-radius: 11px;
-
-    max-width: 75%;
+        4px solid rgb(0, 170, 162);
 
     box-shadow:
-        0 10px 32px
-        rgba(0, 0, 0, 0.15);
+        0 10px 32px rgba(0, 0, 0, 0.16);
 
-    z-index: 2;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 
     transition:
-        all 0.3s ease;
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
+.training-section .training-link:hover .training-content {
+    transform: translateY(-3px);
 
-.training-card:hover .training-content {
     background:
-        rgba(255, 255, 255, 0.95);
-
-    transform:
-        translateY(-3px);
+        rgba(255, 255, 255, 0.97);
 
     box-shadow:
-        0 14px 40px
-        rgba(0, 0, 0, 0.2);
+        0 14px 38px rgba(0, 0, 0, 0.2);
 }
-
 
 /* =========================================================
    CARD LABEL
 ========================================================= */
 
-.training-content span {
+.training-section .training-content span {
     display: block;
 
-    font-size: 10px;
+    margin-bottom: 3px;
 
-    color: #0891b2;
+    color: rgb(0, 170, 162);
 
-    margin-bottom: 2px;
+    font-family:
+        "Segoe UI",
+        sans-serif;
+
+    font-size: 11px;
 
     font-weight: 800;
 
+    line-height: 1.25;
+
+    letter-spacing: 0.08em;
+
     text-transform: uppercase;
-
-    letter-spacing: 0.5px;
 }
-
 
 /* =========================================================
    CARD TITLE
 ========================================================= */
 
-.training-content h4 {
-    font-size: 16px;
-
-    font-weight: 800;
-
+.training-section .training-content h4 {
     margin: 0;
 
-    color: #0f172a;
+    color: rgb(11, 19, 40);
 
-    line-height: 1.3;
+    font-family:
+        "Segoe UI Black",
+        "Segoe UI",
+        sans-serif;
+
+    font-size: 20px;
+
+    font-weight: 900;
+
+    line-height: 1.25;
+
+    letter-spacing: -0.3px;
 }
-
 
 /* =========================================================
    TABLET
@@ -491,59 +522,45 @@
             40px 0 45px;
     }
 
-
     .training-section .container {
         padding-left: 20px;
-
         padding-right: 20px;
     }
 
-
     .training-heading {
-        margin-bottom: 16px;
+        margin-bottom: 22px;
     }
-
 
     .training-section .main {
         margin-top: 15px !important;
     }
 
-
     .training-section .row {
         --bs-gutter-x: 18px;
-
         --bs-gutter-y: 16px;
     }
-
 
     .training-section .mt-4 {
         margin-top: 16px !important;
     }
 
-
     .training-section .train-section-title {
-        font-size: 38px;
-
-        white-space: nowrap;
+        font-size: 42px;
     }
 
-
-    .big-card,
-    .small-card {
+    .training-section .big-card,
+    .training-section .small-card {
         height: 340px;
     }
-
 
     .training-section .right-column {
         padding-top: 0 !important;
     }
 
-
-    .training-content h4 {
-        font-size: 20px;
+    .training-section .training-content h4 {
+        font-size: 19px;
     }
 }
-
 
 /* =========================================================
    MOBILE
@@ -556,39 +573,44 @@
             35px 16px 40px;
     }
 
-
     .training-section .container {
         padding-left: 0;
-
         padding-right: 0;
     }
 
-
     .training-heading {
-        margin-bottom: 14px;
+        margin-bottom: 18px;
     }
 
+    /* BADGE */
 
-    .training-sub-heading {
-        font-size: 11px;
+    .training-section .training-sub-heading {
+        gap: 8px !important;
 
         padding:
-            7px 15px;
+            9px 18px !important;
 
-        gap: 7px;
+        margin-bottom:
+            15px !important;
 
-        margin-bottom: 7px;
+        font-size:
+            13px !important;
+
+        letter-spacing:
+            1px !important;
     }
 
+    .training-section .training-sub-heading .training-sub-dot {
+        width: 8px !important;
+        height: 8px !important;
 
-    .training-sub-dot {
-        width: 6px;
+        min-width: 8px !important;
+        min-height: 8px !important;
 
-        height: 6px;
+        flex-basis: 8px !important;
     }
 
-
-    /* MAIN TITLE */
+    /* TITLE */
 
     .training-section .train-section-title {
         width: 100%;
@@ -596,28 +618,21 @@
         max-width: 100%;
 
         font-size:
-            clamp(
-                20px,
-                5.4vw,
-                30px
-            );
+            clamp(28px, 7.5vw, 40px);
 
-        line-height: 1.2;
+        line-height: 1.18;
 
-        white-space: nowrap;
+        letter-spacing: -0.8px;
 
-        letter-spacing: -0.04em;
+        white-space: normal;
 
-        padding-bottom: 17px;
+        padding-bottom: 19px;
     }
-
 
     .training-section .train-section-title::after {
-        width: 70px;
-
+        width: 90px;
         height: 4px;
     }
-
 
     /* MAIN */
 
@@ -625,48 +640,45 @@
         margin-top: 14px !important;
     }
 
-
-    /* ROW */
-
     .training-section .row {
         --bs-gutter-x: 12px;
-
         --bs-gutter-y: 12px;
     }
-
-
-    /* REMOVE EXTRA mt-4 */
 
     .training-section .mt-4 {
         margin-top: 12px !important;
     }
 
-
     /* CARDS */
 
-    .big-card,
-    .small-card {
+    .training-section .big-card,
+    .training-section .small-card {
         height: 300px;
     }
 
+    /* CONTENT */
 
-    .training-content {
+    .training-section .training-content {
         left: 13px;
-
         bottom: 13px;
 
-        padding:
-            11px 15px;
+        min-width: 175px;
+        max-width: 84%;
 
-        min-width: 180px;
+        padding:
+            10px 14px;
+
+        border-left-width: 3px;
     }
 
+    .training-section .training-content span {
+        font-size: 10px;
+    }
 
-    .training-content h4 {
+    .training-section .training-content h4 {
         font-size: 18px;
     }
 }
-
 
 /* =========================================================
    SMALL MOBILE
@@ -679,82 +691,96 @@
             30px 14px 35px;
     }
 
-
     .training-heading {
-        margin-bottom: 12px;
+        margin-bottom: 16px;
     }
 
+    /* BADGE */
 
-    .training-sub-heading {
-        font-size: 10px;
+    .training-section .training-sub-heading {
+        gap: 7px !important;
 
         padding:
-            6px 14px;
+            8px 16px !important;
 
-        margin-bottom: 6px;
+        margin-bottom:
+            13px !important;
+
+        font-size:
+            12px !important;
+
+        letter-spacing:
+            0.9px !important;
     }
 
+    .training-section .training-sub-heading .training-sub-dot {
+        width: 7px !important;
+        height: 7px !important;
+
+        min-width: 7px !important;
+        min-height: 7px !important;
+
+        flex-basis: 7px !important;
+    }
+
+    /* TITLE */
 
     .training-section .train-section-title {
-        font-size: 20px;
+        font-size:
+            clamp(24px, 7.2vw, 32px);
 
-        line-height: 1.2;
+        line-height: 1.18;
 
-        white-space: nowrap;
+        letter-spacing: -0.5px;
 
-        letter-spacing: -0.045em;
-
-        padding-bottom: 15px;
+        padding-bottom: 17px;
     }
-
 
     .training-section .train-section-title::after {
-        width: 65px;
-
+        width: 78px;
         height: 4px;
     }
-
 
     .training-section .main {
         margin-top: 12px !important;
     }
 
-
     .training-section .row {
         --bs-gutter-x: 10px;
-
         --bs-gutter-y: 10px;
     }
-
 
     .training-section .mt-4 {
         margin-top: 10px !important;
     }
 
+    /* CARDS */
 
-    .big-card,
-    .small-card {
+    .training-section .big-card,
+    .training-section .small-card {
         height: 280px;
     }
 
+    /* CONTENT */
 
-    .training-content {
+    .training-section .training-content {
         left: 11px;
-
         bottom: 11px;
 
-        padding:
-            10px 13px;
+        min-width: 160px;
 
-        min-width: 170px;
+        padding:
+            9px 12px;
     }
 
+    .training-section .training-content span {
+        font-size: 9px;
+    }
 
-    .training-content h4 {
+    .training-section .training-content h4 {
         font-size: 16px;
     }
 }
-
 
 /* =========================================================
    VERY SMALL MOBILE
@@ -767,54 +793,57 @@
             25px 12px 30px;
     }
 
+    .training-section .training-sub-heading {
+        padding:
+            7px 14px !important;
 
-    .training-section .train-section-title {
-        font-size: 18px;
-
-        padding-bottom: 14px;
+        font-size:
+            11px !important;
     }
 
+    .training-section .train-section-title {
+        font-size: 22px;
+
+        padding-bottom: 15px;
+    }
+
+    .training-section .train-section-title::after {
+        width: 68px;
+        height: 3px;
+    }
 
     .training-section .main {
         margin-top: 10px !important;
     }
 
-
     .training-section .row {
         --bs-gutter-x: 8px;
-
         --bs-gutter-y: 8px;
     }
-
 
     .training-section .mt-4 {
         margin-top: 8px !important;
     }
 
-
-    .big-card,
-    .small-card {
+    .training-section .big-card,
+    .training-section .small-card {
         height: 250px;
     }
 
-
-    .training-content {
+    .training-section .training-content {
         left: 9px;
-
         bottom: 9px;
 
-        padding:
-            9px 12px;
+        min-width: 145px;
 
-        min-width: 155px;
+        padding:
+            8px 11px;
     }
 
-
-    .training-content h4 {
+    .training-section .training-content h4 {
         font-size: 15px;
     }
 }
-
 
 /* =========================================================
    REDUCED MOTION
@@ -822,16 +851,13 @@
 
 @media (prefers-reduced-motion: reduce) {
 
-    .training-sub-dot,
+    .training-section .training-sub-dot,
     .training-section .train-section-title::after {
         animation: none;
     }
 
-    .training-card img {
-        transition: none;
-    }
-
-    .training-content {
+    .training-section .training-card img,
+    .training-section .training-content {
         transition: none;
     }
 }

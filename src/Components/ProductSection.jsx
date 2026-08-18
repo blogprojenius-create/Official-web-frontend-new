@@ -40,24 +40,27 @@ const ProductSection = () => {
             offset: 50,
             easing: "ease-in-out",
         });
+
+        AOS.refresh();
     }, []);
+
+    const activeProduct = tabsData[activeTab];
 
     return (
         <section className="tabs-section">
 
-            <div className="container">
+            <div className="product-container">
 
-                {/* ================================
+                {/* =====================================================
                     SECTION HEADER
-                ================================= */}
+                ====================================================== */}
 
-                <div className="heading">
+                <div className="product-heading">
 
                     {/* OUR PRODUCT */}
 
                     <span
                         className="product-sub-heading"
-                        id="sub-heading"
                         data-aos="fade-up"
                         data-aos-delay="100"
                     >
@@ -70,7 +73,6 @@ const ProductSection = () => {
 
                     <h2
                         className="product-title"
-                        id="title"
                         data-aos="fade-up"
                         data-aos-delay="200"
                     >
@@ -81,9 +83,18 @@ const ProductSection = () => {
                     </h2>
 
 
+                    {/* TITLE LINE */}
+
+                    <div
+                        className="product-title-line"
+                        aria-hidden="true"
+                    ></div>
+
+
                     {/* DESCRIPTION */}
 
                     <p
+                        className="product-heading-description"
                         data-aos="fade-up"
                         data-aos-delay="300"
                     >
@@ -94,9 +105,9 @@ const ProductSection = () => {
                 </div>
 
 
-                {/* ================================
+                {/* =====================================================
                     PRODUCT TAB BUTTONS
-                ================================= */}
+                ====================================================== */}
 
                 <div
                     className="tabs-header"
@@ -122,11 +133,14 @@ const ProductSection = () => {
                 </div>
 
 
-                {/* ================================
+                {/* =====================================================
                     PRODUCT CONTENT
-                ================================= */}
+                ====================================================== */}
 
-                <div className="tabs-content">
+                <div
+                    className="tabs-content"
+                    key={activeProduct.title}
+                >
 
                     {/* IMAGE */}
 
@@ -135,11 +149,12 @@ const ProductSection = () => {
                         data-aos="fade-right"
                         data-aos-delay="450"
                     >
+
                         <img
-                            key={tabsData[activeTab].image}
-                            src={tabsData[activeTab].image}
-                            alt={tabsData[activeTab].title}
+                            src={activeProduct.image}
+                            alt={activeProduct.title}
                         />
+
                     </div>
 
 
@@ -152,18 +167,21 @@ const ProductSection = () => {
                     >
 
                         <h2>
-                            {tabsData[activeTab].title}
+                            {activeProduct.title}
                         </h2>
 
+
                         <p>
-                            {tabsData[activeTab].description}
+                            {activeProduct.description}
                         </p>
+
 
                         <button
                             type="button"
                             className="explore-btn"
                         >
-                            Explore More
+                            <span>Explore More</span>
+                            <span className="explore-arrow">→</span>
                         </button>
 
                     </div>
