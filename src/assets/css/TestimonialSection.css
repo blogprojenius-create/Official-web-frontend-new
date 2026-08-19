@@ -198,7 +198,7 @@
 .testi-title {
     position: relative;
 
-    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-size: clamp(2.4rem, 4.2vw, 3.6rem);
 
     font-weight: 800;
 
@@ -789,7 +789,7 @@
 
 
 .testi-dot:hover {
-    background: #94a3b8;
+    background: rgb(0, 170, 162);
 }
 
 
@@ -800,7 +800,7 @@
         linear-gradient(
             90deg,
             #66c7dd,
-            #1ca7c7
+            rgb(0, 170, 162)
         );
 }
 
@@ -1192,5 +1192,191 @@
 
     .testi-dot--active {
         width: 24px;
+    }
+}
+/* =========================================================
+   FINAL REQUESTED TESTIMONIAL CHANGES ONLY
+   1. Teal heading accent / badge / dot / line
+   2. Segoe UI Black for heading, Segoe UI for remaining content
+   3. Blinking animation for badge dot + heading line
+   ========================================================= */
+
+.testi-section {
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Heading typography */
+.testi-section .testi-title,
+.testi-section .testi-title-accent {
+    font-family: "Segoe UI Black", "Segoe UI", Arial, sans-serif !important;
+}
+
+/* Remaining testimonial content typography */
+.testi-section .testi-badge,
+.testi-section .testi-subtitle,
+.testi-section .testi-google-text,
+.testi-section .testi-review-text,
+.testi-section .testi-client-name,
+.testi-section .testi-client-role {
+    font-family: "Segoe UI", Arial, sans-serif !important;
+}
+
+/* Requested teal color */
+.testi-section .testi-badge,
+.testi-section .testi-badge-dot,
+.testi-section .testi-title-accent {
+    color: rgb(0, 170, 162) !important;
+}
+
+.testi-section .testi-title-accent {
+    background: none !important;
+    -webkit-background-clip: initial !important;
+    -webkit-text-fill-color: rgb(0, 170, 162) !important;
+    background-clip: initial !important;
+}
+
+/* Badge dot */
+.testi-section .testi-badge-dot {
+    background: rgb(0, 170, 162) !important;
+    box-shadow:
+        0 0 0 4px rgba(0, 170, 162, 0.10),
+        0 0 12px rgba(0, 170, 162, 0.42) !important;
+    animation: testiBadgeDotBlink 1.6s ease-in-out infinite !important;
+}
+
+/* Heading underline */
+.testi-section .testi-title::after {
+    background: rgb(0, 170, 162) !important;
+    box-shadow: 0 4px 14px rgba(0, 170, 162, 0.28) !important;
+    transform-origin: center !important;
+    animation: testiTitleLineBlink 1.8s ease-in-out infinite !important;
+}
+
+@keyframes testiBadgeDotBlink {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+        box-shadow:
+            0 0 0 4px rgba(0, 170, 162, 0.10),
+            0 0 12px rgba(0, 170, 162, 0.45);
+    }
+
+    50% {
+        opacity: 0.35;
+        transform: scale(0.72);
+        box-shadow:
+            0 0 0 2px rgba(0, 170, 162, 0.06),
+            0 0 5px rgba(0, 170, 162, 0.18);
+    }
+}
+
+@keyframes testiTitleLineBlink {
+    0%, 100% {
+        opacity: 0.4;
+        transform: scaleX(0.82);
+        box-shadow: 0 0 0 rgba(0, 170, 162, 0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scaleX(1);
+        box-shadow: 0 0 14px rgba(0, 170, 162, 0.58);
+    }
+}
+
+/* =========================================================
+   TESTIMONIAL TITLE — MATCH ABOUT PAGE HEADING SIZE ONLY
+   ========================================================= */
+
+.testi-section .testi-title {
+    font-size: 66px !important;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+    .testi-section .testi-title {
+        font-size: 52px !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .testi-section .testi-title {
+        font-size: 42px !important;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 576px) {
+    .testi-section .testi-title {
+        font-size: 36px !important;
+    }
+}
+
+/* =========================================================
+   FINAL TESTIMONIAL HEADING MATCH — ABOUT PAGE TYPOGRAPHY
+   Only typography is changed here. Existing layout/alignment
+   and all other testimonial styles remain untouched.
+   ========================================================= */
+.testi-section .testi-title {
+    font-family: "Segoe UI Black", "Segoe UI", Arial, sans-serif !important;
+    font-size: 72px !important;
+    font-weight: 900 !important;
+    line-height: 1.15 !important;
+    letter-spacing: 0 !important;
+    color: #0b1328 !important;
+}
+
+.testi-section .testi-title-accent {
+    font-family: "Segoe UI Black", "Segoe UI", Arial, sans-serif !important;
+    font-weight: 900 !important;
+    color: rgb(0, 170, 162) !important;
+    -webkit-text-fill-color: rgb(0, 170, 162) !important;
+}
+
+.testi-section .testi-subtitle {
+    font-family: "Segoe UI", Arial, sans-serif !important;
+    font-size: 21px !important;
+    font-weight: 400 !important;
+    line-height: 1.65 !important;
+}
+
+@media (max-width: 1199px) {
+    .testi-section .testi-title {
+        font-size: 60px !important;
+    }
+
+    .testi-section .testi-subtitle {
+        font-size: 20px !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .testi-section .testi-title {
+        font-size: 52px !important;
+    }
+
+    .testi-section .testi-subtitle {
+        font-size: 19px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .testi-section .testi-title {
+        font-size: 42px !important;
+    }
+
+    .testi-section .testi-subtitle {
+        font-size: 17px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .testi-section .testi-title {
+        font-size: 36px !important;
+    }
+
+    .testi-section .testi-subtitle {
+        font-size: 16px !important;
     }
 }

@@ -25,7 +25,8 @@ export default function FooterTopSection() {
 
         {/* HEADING */}
         <h2 className="fts-heading">
-          Let's Finalize Your Quote &amp; Start Building
+          Let's Finalize Your 
+          Quote &amp; <br />Start Building
         </h2>
 
 
@@ -41,7 +42,7 @@ export default function FooterTopSection() {
         {/* DESCRIPTION */}
         <p className="fts-sub">
           You're almost there. Share your final requirements, confirm your
-          quote, and let our team turn your vision into a powerful digital
+          quote, <br />and let our team turn your vision into a powerful digital
           experience.
         </p>
 
@@ -306,10 +307,7 @@ export default function FooterTopSection() {
           color: #ffffff;
 
           font-family:
-            "Poppins",
-            "Segoe UI",
-            Arial,
-            sans-serif;
+            "Segoe UI Black", "Segoe UI", sans-serif;
 
           font-size: clamp(
             42px,

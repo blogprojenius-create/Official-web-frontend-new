@@ -24,6 +24,9 @@
   padding: 56px 5%;
 
   overflow: hidden;
+
+  /* CHANGED: About-page font */
+  font-family: "Segoe UI", sans-serif;
 }
 
 
@@ -80,16 +83,19 @@
 
   padding: 9px 18px;
 
+  /* CHANGED */
   border: 1px solid
-    rgba(102, 199, 221, 0.45);
+    rgba(0, 170, 162, 0.45);
 
   border-radius: 999px;
 
   background:
-    rgba(102, 199, 221, 0.05);
+    rgba(0, 170, 162, 0.05);
 
-  color: #5fc4dc;
-
+  /* CHANGED */
+  color: rgb(0, 170, 162);
+  -webkit-text-fill-color: rgb(0, 170, 162);
+  
   font-size: 14px;
 
   font-weight: 800;
@@ -101,6 +107,9 @@
   text-transform: uppercase;
 
   box-sizing: border-box;
+
+  /* CHANGED: About-page font */
+  font-family: "Segoe UI", sans-serif;
 }
 
 
@@ -117,14 +126,41 @@
 
   border-radius: 50%;
 
-  background: #66c7dd;
+  /* CHANGED */
+  background: rgb(0, 170, 162);
 
   box-shadow:
     0 0 0 4px
-      rgba(102, 199, 221, 0.10),
+      rgba(0, 170, 162, 0.10),
 
     0 0 10px
-      rgba(102, 199, 221, 0.35);
+      rgba(0, 170, 162, 0.35);
+
+  /* CHANGED: About-page style blinking */
+  animation:
+    magazineBadgeDotPulse
+    2.8s
+    ease-in-out
+    infinite;
+}
+
+
+/* =============================================
+   MAGAZINE DOT ANIMATION
+   Same visual behavior as About page
+   ============================================= */
+
+@keyframes magazineBadgeDotPulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 0.45;
+    transform: scale(0.72);
+  }
 }
 
 
@@ -149,31 +185,36 @@
   max-width: 460px;
 
   color: #121929;
+
+  /* CHANGED: About-page heading font */
+  font-family:
+    "Segoe UI Black",
+    "Segoe UI",
+    sans-serif;
+
+  font-weight: 900;
 }
 
 
 /* =============================================
    "PROJENIUS MAGAZINE"
 
-   Cyan gradient
+   Accent color changed to requested RGB
    ============================================= */
 
 .magazine-heading-highlight {
-  background:
-    linear-gradient(
-      90deg,
-      #66c7dd 0%,
-      #22acc9 55%,
-      #087b98 100%
-    );
+  /* CHANGED: solid requested color */
+  background: none;
 
-  -webkit-background-clip: text;
+  -webkit-background-clip: initial;
 
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color:
+    rgb(0, 170, 162);
 
-  background-clip: text;
+  background-clip: initial;
 
-  color: transparent;
+  color:
+    rgb(0, 170, 162);
 }
 
 
@@ -192,16 +233,51 @@
 
   border-radius: 999px;
 
-  background:
-    linear-gradient(
-      90deg,
-      #66c7dd 0%,
-      #21a9c6 100%
-    );
+  /* CHANGED */
+  background: rgb(0, 170, 162);
 
   box-shadow:
     0 3px 12px
-      rgba(102, 199, 221, 0.30);
+      rgba(0, 170, 162, 0.30);
+
+  /* CHANGED: About-page line animation */
+  transform-origin: center;
+
+  animation:
+    magazineHeadingLinePulse
+    2.8s
+    ease-in-out
+    infinite;
+}
+
+
+/* =============================================
+   MAGAZINE HEADING LINE ANIMATION
+   ============================================= */
+
+@keyframes magazineHeadingLinePulse {
+  0%,
+  100% {
+    opacity: 0.35;
+
+    transform:
+      scaleX(0.75);
+
+    box-shadow:
+      0 0 0
+      rgba(0, 170, 162, 0);
+  }
+
+  50% {
+    opacity: 1;
+
+    transform:
+      scaleX(1);
+
+    box-shadow:
+      0 0 12px
+      rgba(0, 170, 162, 0.55);
+  }
 }
 
 
@@ -256,9 +332,10 @@
 
   font-weight: 800;
 
+  /* CHANGED */
   border:
     1px solid
-    rgba(102, 199, 221, 0.35);
+    rgba(0, 170, 162, 0.35);
 
   box-shadow:
     0 6px 16px
@@ -267,6 +344,11 @@
   transition:
     box-shadow 0.2s ease,
     transform 0.2s ease;
+
+  /* CHANGED: About-page font */
+  font-family:
+    "Segoe UI",
+    sans-serif;
 }
 
 
@@ -297,7 +379,8 @@
 
   border-radius: 8px;
 
-  background: #66c7dd;
+  /* CHANGED */
+  background: rgb(0, 170, 162);
 
   color: #121929;
 
@@ -308,11 +391,17 @@
   transition:
     background 0.2s ease,
     transform 0.2s ease;
+
+  /* CHANGED: About-page font */
+  font-family:
+    "Segoe UI",
+    sans-serif;
 }
 
 
 .magazine-download-btn:hover {
-  background: #4bb8d1;
+  /* CHANGED */
+  background: rgb(0, 170, 162);
 
   color: #121929;
 
@@ -578,7 +667,7 @@
 
 
 .magazine-sec-page-wrap
-.react-pdf__Page__canvas {
+.magazine-sec-page-wrap .react-pdf__Page__canvas {
   width: 100% !important;
 
   height: 100% !important;
