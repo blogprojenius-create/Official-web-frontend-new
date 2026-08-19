@@ -1,9 +1,9 @@
 .header-wrap {
-  background-image: linear-gradient(#1219297d), url('images/projenius-banner.webp');
+  background-image: linear-gradient(rgb(0, 170, 162)), url('images/projenius-banner.webp');
 }
 
 .header-wrap {
-  background-image: linear-gradient(#1219297d),
+  background-image: linear-gradient(rgb(0, 170, 162)),
     url("images/projenius-banner.webp");
 }
 
@@ -24,7 +24,7 @@
   background: #ffffff;
   border-radius: 28px;
   overflow: hidden;
-  border: 1px solid #e8edf5;
+  border: 1px solid rgb(0, 170, 162);
   transition: 0.4s;
   height: 100%;
 }
@@ -253,14 +253,14 @@
 }
 
 .workshop-title-section p {
-  color: rgba(255, 255, 255, 0.88);
+  color: white;
   font-size: 20px;
   line-height: 1.8;
   max-width: 720px;
 }
 
 .workshop-eyebrow {
-  color: #38bdf8;
+  color: white;
   display: inline-block;
   font-weight: 700;
   letter-spacing: 2px;
@@ -283,7 +283,7 @@
 }
 
 .workshop-showcase-section #sub-heading {
-  color: #66c7dd;
+  color: rgb(0, 170, 162);
 }
 
 .workshop-skill-section {
@@ -448,10 +448,11 @@
 }
 
 .workshop-event-image span {
-  background: rgba(18, 25, 41, 0.82);
+  background: rgb(170, 227, 225);
   border-radius: 999px;
   bottom: 22px;
-  color: #ffffff;
+  border: 1px solid #2ec3be;
+  color: black;
   font-weight: 700;
   left: 22px;
   padding: 10px 16px;
@@ -463,7 +464,7 @@
 }
 
 .workshop-card-label {
-  color: #38bdf8;
+  color: rgb(0, 170, 162);
   display: block;
   font-size: 13px;
   font-weight: 800;
@@ -488,7 +489,7 @@
 }
 
 .workshop-event-content p {
-  color: #5c6574;
+  color: #14171c;
   font-size: 16px;
   line-height: 1.85;
   margin-bottom: 22px;
@@ -502,8 +503,8 @@
 }
 
 .workshop-badges span {
-  background: #eef7ff;
-  border: 1px solid #d8ecff;
+  background: rgb(170, 227, 225);
+  border: 1px solid #2ec3be;
   border-radius: 999px;
   color: #121929;
   font-size: 13px;
@@ -512,9 +513,9 @@
 }
 
 .workshop-details span {
-  background: #f6f8fb;
+  background: rgb(170, 227, 225);
   border-radius: 10px;
-  color: #4e5969;
+  color: #010204;
   font-size: 14px;
   font-weight: 700;
   padding: 10px 14px;
@@ -533,7 +534,7 @@
 }
 
 .workshop-gallery-link:hover {
-  background: #38bdf8;
+  background: rgb(0, 170, 162);
   color: #121929;
 }
 
@@ -4153,4 +4154,193 @@
 .workshop-achievements-line {
   animation: workshopSlowBlink 3.2s ease-in-out infinite;
   will-change: opacity;
+}
+
+/* =========================================================
+   WORKSHOP PAGE - REQUESTED VISUAL CHANGES ONLY
+   ========================================================= */
+
+/* Font families */
+.workshop-hero,
+.workshop-hero * {
+  font-family: "Poppins", sans-serif;
+}
+
+.workshop-hero .page-title,
+.workshop-hero .workshop-eyebrow {
+  font-family: "Segoe UI Black", "Segoe UI", sans-serif;
+  font-weight: 900;
+}
+
+.workshop-skill-section,
+.workshop-showcase-section,
+.workshop-gallery-section,
+.workshop-skill-section *,
+.workshop-showcase-section *,
+.workshop-gallery-section * {
+  font-family: "Segoe UI", sans-serif;
+}
+
+.workshop-skill-section h1,
+.workshop-skill-section h2,
+.workshop-skill-section h3,
+.workshop-skill-section h4,
+.workshop-showcase-section h1,
+.workshop-showcase-section h2,
+.workshop-showcase-section h3,
+.workshop-showcase-section h4,
+.workshop-gallery-section h1,
+.workshop-gallery-section h2,
+.workshop-gallery-section h3,
+.workshop-gallery-section h4 {
+  font-family: "Segoe UI Black", "Segoe UI", sans-serif;
+  font-weight: 900;
+}
+
+.workshop-skill-section p,
+.workshop-showcase-section p,
+.workshop-gallery-section p,
+.workshop-skill-section a,
+.workshop-showcase-section a,
+.workshop-gallery-section a,
+.workshop-skill-section span,
+.workshop-showcase-section span,
+.workshop-gallery-section span,
+.workshop-skill-section .workshop-whatsapp-btn {
+  font-family: "Segoe UI", sans-serif;
+  font-weight: 700;
+}
+
+/* I. Hero - fill the viewport without changing its content/alignment */
+.workshop-hero {
+  min-height: 100vh !important;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.workshop-hero .page-title {
+  color: rgb(255, 255, 255) !important;
+}
+
+.workshop-hero .page-title,
+.workshop-hero .workshop-eyebrow {
+  color: rgb(255, 255, 255);
+}
+
+.workshop-hero .workshop-eyebrow {
+  color: rgb(0, 255, 242) !important;
+}
+
+/* Make the requested "Comes Alive" part cyan */
+.workshop-hero .page-title {
+  color: rgb(255, 255, 255) !important;
+}
+
+.workshop-hero .page-title .workshop-hero-highlight {
+  color: rgb(0, 255, 242) !important;
+  background: none !important;
+  -webkit-text-fill-color: rgb(0, 255, 242) !important;
+}
+
+.workshop-hero .workshop-title-section p {
+  color: rgb(187, 187, 187) !important;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+}
+
+/* II. Accent colour for all workshop sections */
+.workshop-skill-section .workshop-skill-highlight,
+.workshop-showcase-section .workshop-event-highlight,
+.workshop-gallery-section .workshop-achievements-highlight,
+.workshop-skill-section .workshop-skill-badge,
+.workshop-showcase-section .workshop-showcase-badge,
+.workshop-gallery-section .workshop-achievements-badge,
+.workshop-skill-section .workshop-card-label,
+.workshop-showcase-section .workshop-card-label,
+.workshop-gallery-section .workshop-gallery-card span {
+  color: rgb(0, 170, 162) !important;
+}
+
+/* Section headings and content */
+.workshop-skill-intro h2,
+.workshop-event-content h3,
+.workshop-event-content h4,
+.workshop-achievements-title,
+.workshop-award-content h3 {
+  font-family: "Segoe UI Black", "Segoe UI", sans-serif !important;
+  font-weight: 900 !important;
+}
+
+.workshop-skill-intro p,
+.workshop-event-content p,
+.workshop-achievements-desc,
+.workshop-award-content p,
+.workshop-badges span,
+.workshop-details span,
+.workshop-event-image span {
+  font-family: "Segoe UI", sans-serif !important;
+  font-weight: 700 !important;
+}
+
+/* Requested accent line colour */
+.workshop-skill-line,
+.workshop-showcase-line,
+.workshop-achievements-line {
+  background: rgb(0, 170, 162) !important;
+  animation: workshopDotLineBlink 2.8s ease-in-out infinite;
+}
+
+/* Requested animated radio/dot colour */
+.workshop-skill-dot,
+.workshop-showcase-dot,
+.workshop-achievements-dot {
+  background: rgb(0, 170, 162) !important;
+  box-shadow: 0 0 0 4px rgba(0, 170, 162, 0.12) !important;
+  animation: workshopDotLineBlink 2.8s ease-in-out infinite;
+}
+
+/* Button */
+.workshop-whatsapp-btn {
+  background: rgb(0, 170, 162) !important;
+  border-color: rgb(0, 170, 162) !important;
+  color: #000000 !important;
+  font-family: "Segoe UI", sans-serif !important;
+  font-weight: 900 !important;
+}
+
+.workshop-whatsapp-btn:hover {
+  background: rgb(0, 170, 162) !important;
+  border-color: rgb(0, 170, 162) !important;
+  color: #000000 !important;
+}
+
+/* Keep section body colours unchanged except requested accent text */
+.workshop-skill-intro h2,
+.workshop-event-content h3,
+.workshop-event-content h4 {
+  color: #07142f;
+}
+
+.workshop-achievements-title {
+  color: #ffffff;
+}
+
+@keyframes workshopDotLineBlink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+/* Mobile: preserve full-page hero while keeping existing responsive layout */
+@media (max-width: 767px) {
+  .workshop-hero {
+    min-height: 100vh !important;
+    height: 100vh;
+  }
 }

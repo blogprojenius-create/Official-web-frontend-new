@@ -140,7 +140,7 @@ export default function Workshop() {
           <h1 className="page-title">
             Where Learning
             <br />
-            Comes Alive
+            <span className="workshop-hero-highlight">Comes Alive</span>
           </h1>
           <p>
             We transform classrooms into innovation hubs through hands-on
