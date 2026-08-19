@@ -193,113 +193,18 @@
 }
 
 
-/* Only Smart Solutions gets flowing gradient */
 .hero .heading .smart-solutions {
     display: inline-block;
-
-    color: #22D3EE;
-
-    background-image:
-        linear-gradient(
-            90deg,
-            #22D3EE 0%,
-            #EC4899 25%,
-            #F97316 50%,
-            #EC4899 75%,
-            #22D3EE 100%
-        );
-
-    background-size: 300% 100%;
-    background-position: 0% 50%;
-
-    background-clip: text;
-    -webkit-background-clip: text;
-
-    -webkit-text-fill-color: transparent;
-
-    animation:
-        waterFlow
-        5s
-        linear
-        infinite;
-}
-
-
-@keyframes waterFlow {
-
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 150% 50%;
-    }
-
-    100% {
-        background-position: 300% 50%;
-    }
-}
-
-/* =========================================
-   ONLY SMART SOLUTIONS GETS GRADIENT
-   ========================================= */
-
-.hero .heading .smart-solutions {
-    display: inline-block;
-
     position: relative;
-
-    color: #22D3EE;
-
-    background-image:
-        linear-gradient(
-            90deg,
-            #22D3EE 0%,
-            #EC4899 25%,
-            #F97316 50%,
-            #EC4899 75%,
-            #22D3EE 100%
-        );
-
-    background-size: 300% 100%;
-
-    background-position: 0% 50%;
-
-    background-clip: text;
-
-    -webkit-background-clip: text;
-
-    -webkit-text-fill-color: transparent;
-
-    animation:
-        waterFlow
-        5s
-        linear
-        infinite;
-
-    will-change: background-position;
+    color: rgb(0, 255, 242) !important;
+    background: none !important;
+    background-image: none !important;
+    background-clip: border-box !important;
+    -webkit-background-clip: border-box !important;
+    -webkit-text-fill-color: rgb(0, 255, 242) !important;
+    animation: none !important;
+    will-change: auto;
 }
-
-
-/* =========================================
-   WATER FLOW
-   ========================================= */
-
-@keyframes waterFlow {
-
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 150% 50%;
-    }
-
-    100% {
-        background-position: 300% 50%;
-    }
-}
-
 
 /* =========================================
    DESCRIPTION
@@ -646,11 +551,7 @@
         0 0 20px rgba(34, 211, 238, 0.45),
         0 0 34px rgba(236, 72, 153, 0.25);
 
-    animation:
-        circleGlowFlow
-        4s
-        ease-in-out
-        infinite;
+    animation: none;
 }
 
 

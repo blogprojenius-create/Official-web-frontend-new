@@ -12,9 +12,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 export default function ProjectSection() {
-
-  const prevButtonRef = useRef(null);
-  const nextButtonRef = useRef(null);
+  const swiperRef = useRef(null);
 
   useEffect(() => {
     AOS.init({
@@ -146,10 +144,14 @@ export default function ProjectSection() {
           ================================================= */}
 
           <button
-            ref={prevButtonRef}
             type="button"
             className="nv-project-arrow nv-project-prev"
             aria-label="Previous project"
+            onClick={() => {
+              if (swiperRef.current) {
+                swiperRef.current.slidePrev();
+              }
+            }}
           >
             <span>‹</span>
           </button>
@@ -162,6 +164,10 @@ export default function ProjectSection() {
           <Swiper
             modules={[Navigation, Autoplay]}
 
+            onSwiper={(swiper) => {
+              swiperRef.current = swiper;
+            }}
+
             spaceBetween={25}
 
             slidesPerView={3}
@@ -169,19 +175,6 @@ export default function ProjectSection() {
             centeredSlides={true}
 
             loop={true}
-
-            navigation={{
-              prevEl: prevButtonRef.current,
-              nextEl: nextButtonRef.current,
-            }}
-
-            onBeforeInit={(swiper) => {
-              swiper.params.navigation.prevEl =
-                prevButtonRef.current;
-
-              swiper.params.navigation.nextEl =
-                nextButtonRef.current;
-            }}
 
             autoplay={{
               delay: 4000,
@@ -279,7 +272,6 @@ export default function ProjectSection() {
 
                         </div>
 
-
                         <span className="nv-rating-text">
                           {item.rating}/5
                         </span>
@@ -304,10 +296,14 @@ export default function ProjectSection() {
           ================================================= */}
 
           <button
-            ref={nextButtonRef}
             type="button"
             className="nv-project-arrow nv-project-next"
             aria-label="Next project"
+            onClick={() => {
+              if (swiperRef.current) {
+                swiperRef.current.slideNext();
+              }
+            }}
           >
             <span>›</span>
           </button>
