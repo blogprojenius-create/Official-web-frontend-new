@@ -46,7 +46,7 @@
 
   background: transparent;
 
-  color: #0788a8;
+  color: rgb(0, 170, 162);
 
   font-family: inherit;
 
@@ -55,11 +55,13 @@
   font-weight: 700;
 
   cursor: pointer;
+
+  transition: color 0.2s ease;
 }
 
 
 .job-application-back:hover {
-  color: #005f7a;
+  color: rgb(0, 145, 139);
 }
 
 
@@ -77,7 +79,7 @@
 
   margin-bottom: 12px;
 
-  color: #0b9fc4;
+  color: rgb(0, 170, 162);
 
   font-size: 13px;
 
@@ -154,7 +156,7 @@
 
   margin-bottom: 8px;
 
-  color: #142846;
+  color: rgb(0, 170, 162);
 
   font-size: 14px;
 
@@ -171,7 +173,7 @@
 
   padding: 13px 14px;
 
-  border: 1px solid #d6e2e8;
+  border: 1px solid rgb(0, 170, 162);
 
   border-radius: 10px;
 
@@ -204,14 +206,18 @@
 }
 
 
+/* =========================================================
+   INPUT FOCUS
+========================================================= */
+
 .job-form-group input:focus,
 .job-form-group select:focus,
 .job-form-group textarea:focus {
-  border-color: #18bce8;
+  border-color: rgb(0, 170, 162);
 
   box-shadow:
     0 0 0 3px
-    rgba(24, 188, 232, 0.12);
+    rgba(0, 170, 162, 0.12);
 }
 
 
@@ -221,7 +227,9 @@
 }
 
 
-/* File input */
+/* =========================================================
+   FILE INPUT
+========================================================= */
 
 .job-form-group input[type="file"] {
   height: auto;
@@ -279,9 +287,9 @@
 
   border-radius: 10px;
 
-  background: #18bce8;
+  background: rgb(0, 170, 162);
 
-  color: #07111f;
+  color: rgb(0, 0, 0);
 
   font-family: inherit;
 
@@ -294,16 +302,21 @@
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease,
+    background-color 0.2s ease,
     opacity 0.2s ease;
 }
 
 
 .job-application-submit:hover:not(:disabled) {
+  background: rgb(0, 150, 143);
+
+  color: rgb(0, 0, 0);
+
   transform: translateY(-2px);
 
   box-shadow:
     0 10px 25px
-    rgba(24, 188, 232, 0.25);
+    rgba(0, 170, 162, 0.22);
 }
 
 
@@ -344,7 +357,7 @@
 .job-success-icon {
   margin-bottom: 20px;
 
-  color: #13a67a;
+  color: rgb(0, 170, 162);
 }
 
 
@@ -375,7 +388,7 @@
 
 
 .job-application-success strong {
-  color: #142846;
+  color: rgb(0, 170, 162);
 }
 
 
@@ -388,9 +401,9 @@
 
   border-radius: 10px;
 
-  background: #18bce8;
+  background: rgb(0, 170, 162);
 
-  color: #07111f;
+  color: rgb(0, 0, 0);
 
   font-family: inherit;
 
@@ -399,6 +412,24 @@
   font-weight: 800;
 
   cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.job-application-success button:hover {
+  background: rgb(0, 150, 143);
+
+  color: rgb(0, 0, 0);
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 20px
+    rgba(0, 170, 162, 0.20);
 }
 
 
