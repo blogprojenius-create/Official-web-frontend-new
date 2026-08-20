@@ -29,10 +29,6 @@ export default function ServicesSection() {
     const cardRefs = useRef([]);
 
     useEffect(() => {
-        /* =====================================================
-           OVERFLOW FIX
-        ===================================================== */
-
         let el = cardRefs.current[0];
 
         while (el && el !== document.body) {
@@ -53,10 +49,6 @@ export default function ServicesSection() {
             }
         }
 
-        /* =====================================================
-           SCROLL REVEAL
-        ===================================================== */
-
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
@@ -73,10 +65,6 @@ export default function ServicesSection() {
         cardRefs.current.forEach((card) => {
             if (card) observer.observe(card);
         });
-
-        /* =====================================================
-           ACTIVE CARD DETECTION
-        ===================================================== */
 
         const handleScroll = () => {
             const scrollPos =
@@ -124,25 +112,18 @@ export default function ServicesSection() {
 
             <section className="svc-section">
 
-                {/* =================================================
-                    LEFT CONTENT
-                ================================================= */}
-
                 <div className="svc-left">
 
-                    {/* BADGE */}
-
-                    <span className="svc-sub" id="sub-heading">
+                    <span
+                        className="svc-sub"
+                        id="sub-heading"
+                    >
                         <span
                             className="svc-sub-dot"
                             aria-hidden="true"
                         />
-
                         Our Services
                     </span>
-
-
-                    {/* MAIN HEADING */}
 
                     <h2
                         className="svc-title"
@@ -154,25 +135,16 @@ export default function ServicesSection() {
                         </span>
                     </h2>
 
-
-                    {/* HEADING LINE */}
-
                     <div
                         className="svc-title-line"
                         aria-hidden="true"
                     />
-
-
-                    {/* DESCRIPTION */}
 
                     <p className="svc-para">
                         Innovative services in AI, IoT, web, mobile
                         apps, design, training, and smart product
                         development solutions.
                     </p>
-
-
-                    {/* BUTTON */}
 
                     <a
                         href={services[activeIndex].link}
@@ -188,11 +160,6 @@ export default function ServicesSection() {
 
                 </div>
 
-
-                {/* =================================================
-                    RIGHT CONTENT
-                ================================================= */}
-
                 <div className="svc-right">
 
                     {services.map((service, index) => (
@@ -204,7 +171,6 @@ export default function ServicesSection() {
                             }
                             data-index={index}
                         >
-
                             <img
                                 src={service.image}
                                 alt={service.title}
@@ -215,7 +181,6 @@ export default function ServicesSection() {
                                 className="svc-overlay"
                                 aria-hidden="true"
                             />
-
 
                             <div className="svc-content">
 

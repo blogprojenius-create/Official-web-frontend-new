@@ -72,17 +72,12 @@ export default function ProjectSection() {
 
   return (
     <section className="nv-work-showcase">
-
       <div className="nv-work-container">
 
-        {/* =====================================================
-            SECTION HEADER
-        ===================================================== */}
-
+        {/* SECTION HEADER */}
         <div className="nv-work-header">
 
           {/* OUR PROJECTS */}
-
           <span
             className="nv-sub-heading"
             id="sub-heading"
@@ -90,13 +85,10 @@ export default function ProjectSection() {
             data-aos-delay="150"
           >
             <span className="nv-sub-heading-dot"></span>
-
             Our Projects
           </span>
 
-
           {/* MAIN TITLE */}
-
           <h2
             className="nv-title"
             id="title"
@@ -104,23 +96,18 @@ export default function ProjectSection() {
             data-aos-delay="300"
           >
             Work{" "}
-
             <span className="nv-title-accent">
               Showcase
             </span>
           </h2>
 
-
           {/* UNDERLINE */}
-
           <div
             className="nv-title-line"
             aria-hidden="true"
           ></div>
 
-
           {/* DESCRIPTION */}
-
           <p
             data-aos="fade-up"
             data-aos-delay="450"
@@ -129,20 +116,12 @@ export default function ProjectSection() {
             modern design, innovative strategies and
             professional development solutions.
           </p>
-
         </div>
 
-
-        {/* =====================================================
-            PROJECT AREA
-        ===================================================== */}
-
+        {/* PROJECT AREA */}
         <div className="nv-project-slider-area">
 
-          {/* =================================================
-              LEFT ARROW
-          ================================================= */}
-
+          {/* LEFT ARROW */}
           <button
             type="button"
             className="nv-project-arrow nv-project-prev"
@@ -156,145 +135,95 @@ export default function ProjectSection() {
             <span>‹</span>
           </button>
 
-
-          {/* =================================================
-              SWIPER
-          ================================================= */}
-
+          {/* SWIPER */}
           <Swiper
             modules={[Navigation, Autoplay]}
-
             onSwiper={(swiper) => {
               swiperRef.current = swiper;
             }}
-
             spaceBetween={25}
-
             slidesPerView={3}
-
             centeredSlides={true}
-
             loop={true}
-
             autoplay={{
               delay: 4000,
               disableOnInteraction: false,
             }}
-
             breakpoints={{
               0: {
                 slidesPerView: 1,
               },
-
               768: {
                 slidesPerView: 1,
               },
-
               992: {
                 slidesPerView: 3,
               },
-
               1200: {
                 slidesPerView: 3,
               },
             }}
           >
-
             {projects.map((item, index) => (
-
               <SwiperSlide key={index}>
-
                 <div className="nv-work-card">
 
                   <div className="nv-flip-box">
 
-                    {/* =================================================
-                        FRONT
-                    ================================================= */}
-
+                    {/* FRONT */}
                     <div className="nv-flip-front">
-
                       <img
                         src={item.image}
                         alt={item.title}
                       />
-
                     </div>
 
-
-                    {/* =================================================
-                        BACK
-                    ================================================= */}
-
+                    {/* BACK */}
                     <div className="nv-flip-back">
 
                       {/* PROJECT TITLE */}
-
                       <h3 className="nv-project-title">
                         {item.title}
                       </h3>
 
-
                       {/* PROJECT TYPE */}
-
                       <span className="nv-subtitle">
                         {item.subtitle}
                       </span>
 
-
                       {/* DESCRIPTION */}
-
                       <p className="nv-desc">
                         {item.description}
                       </p>
 
-
                       {/* RATING */}
-
                       <div className="nv-rating">
-
                         <div className="nv-rating-stars">
-
-                          {[...Array(5)].map(
-                            (_, i) => (
-
-                              <i
-                                key={i}
-                                className={
-                                  i < item.rating
-                                    ? "bi bi-star-fill"
-                                    : "bi bi-star"
-                                }
-                              ></i>
-
-                            )
-                          )}
-
+                          {[...Array(5)].map((_, i) => (
+                            <i
+                              key={i}
+                              className={
+                                i < item.rating
+                                  ? "bi bi-star-fill"
+                                  : "bi bi-star"
+                              }
+                            ></i>
+                          ))}
                         </div>
 
                         <span className="nv-rating-text">
                           {item.rating}/5
                         </span>
-
                       </div>
 
                     </div>
-
                   </div>
-
                 </div>
-
               </SwiperSlide>
-
             ))}
-
           </Swiper>
 
-
-          {/* =================================================
-              RIGHT ARROW
-          ================================================= */}
-
+          {/* RIGHT ARROW */}
           <button
             type="button"
             className="nv-project-arrow nv-project-next"
@@ -309,9 +238,7 @@ export default function ProjectSection() {
           </button>
 
         </div>
-
       </div>
-
     </section>
   );
 }

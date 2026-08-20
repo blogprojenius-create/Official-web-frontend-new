@@ -77,20 +77,7 @@ export default function Contact() {
   return (
     <div className="contact-page">
 
-      {/* CONTACT HERO */}
-      <section
-        className="header-wrap contact-hero"
-        style={{
-          backgroundImage:
-            "linear-gradient(#1219297d), url(/images/projenius-banner.webp)"
-        }}
-      >
-        <div className="container title-section">
-          <h1 className="page-title contact-hero-title">
-            Contact Us
-          </h1>
-        </div>
-      </section>
+      
 
       {/* CONTACT / QUOTE SECTION */}
       <section className="contact-main-section">
@@ -149,7 +136,7 @@ export default function Contact() {
                         type="email"
                         name="user_email"
                         className="form-control custom-quote-input"
-                        placeholder="your.email@example.com"
+                        placeholder="Your email"
                         required
                       />
                     </div>

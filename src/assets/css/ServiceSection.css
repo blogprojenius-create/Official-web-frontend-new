@@ -1,73 +1,115 @@
 /* =========================================================
-   SERVICES SECTION — COMPLETE REPLACEMENT
-   Hero-matched typography and colors
+   SERVICES SECTION
+   Standardized Website Design System
 ========================================================= */
 
-/* TOP SPACER */
 .svc-spacer-top {
     width: 100%;
     height: 30px;
     background: #0b1628;
 }
 
-/* MAIN SECTION */
+
+/* =========================================================
+   MAIN SECTION
+========================================================= */
+
 .svc-section {
     display: flex;
     align-items: flex-start;
+    gap: clamp(35px, 5vw, 70px);
+
     width: 100%;
+    max-width: 1400px;
+
+    margin: 0 auto;
+    padding: clamp(55px, 6vw, 90px) 5%;
+
     box-sizing: border-box;
-    padding: 70px 5%;
+
     background: #0b1628;
-    color: #ffffff;
+    color: rgb(255, 255, 255);
+
+    overflow: visible;
 }
 
-/* LEFT SIDE */
-.svc-left {
-    width: 40%;
-    position: sticky;
-    top: 80px;
-    height: fit-content;
-    padding-right: 40px;
-    text-align: left;
-    box-sizing: border-box;
-}
 
 /* =========================================================
-   OUR SERVICES BADGE
+   LEFT CONTENT
 ========================================================= */
+
+.svc-left {
+    width: 40%;
+
+    position: sticky;
+    top: 90px;
+
+    height: fit-content;
+
+    padding-right: 20px;
+
+    box-sizing: border-box;
+
+    text-align: left;
+}
+
+
+/* =========================================================
+   SECTION BADGE
+========================================================= */
+
 .svc-sub {
     display: inline-flex !important;
+
     align-items: center !important;
     justify-content: center !important;
+
     gap: 9px !important;
 
-    padding: 10px 22px !important;
+    padding: 9px 20px !important;
+
     margin-bottom: 18px !important;
 
     border-radius: 999px !important;
 
     background: rgba(0, 170, 162, 0.08) !important;
+
     border: 1px solid rgba(0, 170, 162, 0.40) !important;
 
     color: rgb(0, 170, 162) !important;
 
-    font-family: "Segoe UI", sans-serif !important;
-    font-size: 16px !important;
-    font-weight: 800 !important;
-    letter-spacing: 1.2px !important;
+    font-family:
+        "Segoe UI",
+        sans-serif !important;
+
+    font-size: 15px !important;
+
+    font-weight: 700 !important;
+
+    letter-spacing: 1px !important;
+
     line-height: 1 !important;
 
     text-transform: uppercase !important;
+
     white-space: nowrap !important;
 
     opacity: 1 !important;
+
     transform: none !important;
+
+    box-sizing: border-box;
 }
 
-/* BADGE DOT */
+
+/* =========================================================
+   BADGE DOT
+========================================================= */
+
 .svc-sub-dot {
-    width: 9px !important;
-    height: 9px !important;
+    width: 8px !important;
+    height: 8px !important;
+
     flex-shrink: 0 !important;
 
     border-radius: 50% !important;
@@ -83,12 +125,14 @@
         infinite !important;
 }
 
-/* DOT BLINK */
+
 @keyframes svcDotBlink {
     0%,
     100% {
         opacity: 1;
+
         transform: scale(1);
+
         box-shadow:
             0 0 0
             rgba(0, 170, 162, 0);
@@ -96,37 +140,47 @@
 
     50% {
         opacity: 0.45;
+
         transform: scale(0.78);
+
         box-shadow:
             0 0 10px
             rgba(0, 170, 162, 0.65);
     }
 }
 
-/* =========================================================
-   MAIN TITLE
-========================================================= */
-.svc-title {
-    font-size: 66px !important;
-    line-height: 1.15 !important;
-    letter-spacing: 0 !important;
 
-    color: #ffffff !important;
+/* =========================================================
+   SECTION MAIN HEADING
+========================================================= */
+
+.svc-title {
+    margin: 0 !important;
+    padding: 0 !important;
+
+    max-width: 760px;
 
     font-family:
         "Segoe UI Black",
         "Segoe UI",
         sans-serif !important;
 
+    font-size: clamp(42px, 4.5vw, 64px) !important;
+
     font-weight: 900 !important;
 
-    margin: 0 !important;
-    padding: 0 !important;
+    line-height: 1.12 !important;
 
-    max-width: 850px;
+    letter-spacing: 0 !important;
+
+    color: rgb(255, 255, 255) !important;
 }
 
-/* TITLE ACCENT */
+
+/* =========================================================
+   HEADING ACCENT
+========================================================= */
+
 .svc-title-accent {
     color: rgb(0, 170, 162) !important;
 
@@ -138,12 +192,16 @@
     font-weight: 900 !important;
 }
 
-/* TITLE LINE */
-.svc-title-line {
-    width: 105px !important;
-    height: 5px !important;
 
-    margin-top: 18px !important;
+/* =========================================================
+   HEADING DECORATIVE LINE
+========================================================= */
+
+.svc-title-line {
+    width: 95px !important;
+    height: 4px !important;
+
+    margin-top: 17px !important;
     margin-bottom: 20px !important;
 
     border-radius: 999px !important;
@@ -159,12 +217,14 @@
         infinite;
 }
 
-/* TITLE LINE BLINK */
+
 @keyframes svcTitleLineBlink {
     0%,
     100% {
         opacity: 0.5;
+
         transform: scaleX(0.78);
+
         box-shadow:
             0 0 0
             rgba(0, 170, 162, 0);
@@ -172,15 +232,25 @@
 
     50% {
         opacity: 1;
+
         transform: scaleX(1);
+
         box-shadow:
             0 0 14px
             rgba(0, 170, 162, 0.65);
     }
 }
 
-/* DESCRIPTION */
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
 .svc-para {
+    max-width: 650px;
+
+    margin: 0 0 28px 0 !important;
+
     color: #bbbbbb !important;
 
     font-family:
@@ -188,31 +258,46 @@
         sans-serif !important;
 
     font-size: 18px !important;
+
     font-weight: 400 !important;
-    line-height: 1.7 !important;
 
-    margin: 0 0 30px 0 !important;
-
-    max-width: 650px;
+    line-height: 1.65 !important;
 }
 
-/* RIGHT SIDE */
+
+/* =========================================================
+   RIGHT CONTENT
+========================================================= */
+
 .svc-right {
     width: 60%;
+
     box-sizing: border-box;
+
+    min-width: 0;
 }
 
-/* SERVICE CARD */
+
+/* =========================================================
+   SERVICE CARD
+========================================================= */
+
 .svc-card {
-    height: 400px;
+    position: sticky;
 
-    margin-bottom: 55px;
+    width: 100%;
 
-    border-radius: 22px;
+    height: 390px;
+
+    margin-bottom: 50px;
+
+    border-radius: 20px;
 
     overflow: hidden;
 
-    position: sticky;
+    box-sizing: border-box;
+
+    background: #111b2d;
 
     box-shadow:
         0 18px 50px
@@ -229,38 +314,56 @@
         transform 0.7s ease;
 }
 
-/* CARD STACK */
+
+/* =========================================================
+   CARD STACK
+========================================================= */
+
 .svc-card-1 {
-    top: 80px;
+    top: 90px;
+
     z-index: 1;
 }
 
+
 .svc-card-2 {
-    top: 95px;
+    top: 105px;
+
     z-index: 2;
 }
 
+
 .svc-card-3 {
-    top: 110px;
+    top: 120px;
+
     z-index: 3;
 }
 
-/* IMAGE */
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
 .svc-img {
     width: 100%;
     height: 100%;
 
-    object-fit: cover;
-
     display: block;
+
+    object-fit: cover;
 
     transition:
         transform 0.7s ease;
 }
 
-/* OVERLAY */
+
+/* =========================================================
+   OVERLAY
+========================================================= */
+
 .svc-overlay {
     position: absolute;
+
     inset: 0;
 
     background:
@@ -272,7 +375,11 @@
         );
 }
 
-/* CARD CONTENT */
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
 .svc-content {
     position: absolute;
 
@@ -283,48 +390,65 @@
         transform 0.4s ease;
 }
 
-/* CARD TITLE */
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
 .svc-card-title {
+    margin: 0 0 8px 0 !important;
+
+    color: rgb(255, 255, 255) !important;
+
     font-family:
         "Segoe UI Black",
         "Segoe UI",
         sans-serif !important;
 
     font-size: 28px !important;
+
     font-weight: 900 !important;
 
     line-height: 1.2 !important;
-
-    color: #ffffff !important;
-
-    margin: 0 0 8px 0 !important;
 }
 
-/* READ MORE */
+
+/* =========================================================
+   READ MORE
+========================================================= */
+
 .svc-read-more {
-    color: rgb(0, 255, 242) !important;
+    color: rgb(0, 170, 162) !important;
 
     font-family:
         "Segoe UI",
         sans-serif !important;
 
-    text-decoration: none;
+    font-size: 15px !important;
 
     font-weight: 700 !important;
 
-    font-size: 15px !important;
+    line-height: 1.4;
+
+    text-decoration: none;
 
     transition:
         letter-spacing 0.3s ease,
         color 0.3s ease;
 }
 
+
 .svc-read-more:hover {
-    color: rgb(0, 255, 242) !important;
+    color: rgb(0, 224, 211) !important;
+
     letter-spacing: 1px;
 }
 
-/* CARD REVEAL */
+
+/* =========================================================
+   CARD REVEAL
+========================================================= */
+
 .svc-card.show-card {
     opacity: 1;
 
@@ -333,28 +457,37 @@
         scale(1);
 }
 
-/* CARD HOVER */
+
+/* =========================================================
+   CARD HOVER
+========================================================= */
+
 .svc-card:hover {
     transform:
         translateY(-8px)
         scale(1.01);
 }
 
+
 .svc-card:hover .svc-img {
     transform: scale(1.06);
 }
+
 
 .svc-card:hover .svc-content {
     transform: translateY(-4px);
 }
 
+
 /* =========================================================
-   HEADING ANIMATION
+   HEADING / CONTENT ANIMATION
 ========================================================= */
+
 .svc-title,
 .svc-para,
-.btn {
+.svc-main-btn {
     opacity: 0;
+
     transform: translateY(35px);
 
     animation:
@@ -364,47 +497,128 @@
         forwards;
 }
 
+
 .svc-title {
     animation-delay: 0.3s;
 }
+
 
 .svc-para {
     animation-delay: 0.5s;
 }
 
-.btn {
+
+.svc-main-btn {
     animation-delay: 0.65s;
 }
 
-/*
-   IMPORTANT:
-   The badge is intentionally NOT included in this animation.
-   It must remain visible and its color must not be overridden.
-*/
 
-/* FADE UP */
 @keyframes fadeUp {
     from {
         opacity: 0;
+
         transform: translateY(35px);
     }
 
     to {
         opacity: 1;
+
         transform: translateY(0);
     }
 }
 
-/* BUTTON TEXT */
+
+/* =========================================================
+   MAIN SECTION BUTTON
+========================================================= */
+
+.svc-main-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: auto;
+
+    min-width: 270px;
+
+    min-height: 52px;
+
+    padding: 14px 28px;
+
+    box-sizing: border-box;
+
+    border: none;
+
+    border-radius: 999px;
+
+    background: rgb(0, 170, 162);
+
+    color: rgb(0, 0, 0);
+
+    font-family:
+        "Segoe UI",
+        sans-serif;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 170, 162, 0.18);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+
+.svc-main-btn:hover {
+    background: rgb(0, 170, 162);
+
+    color: rgb(0, 0, 0);
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 30px
+        rgba(0, 170, 162, 0.30);
+}
+
+
+.svc-main-btn:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   BUTTON TEXT
+========================================================= */
+
 .svc-btn-content {
     display: inline-block;
 
     font-family:
-        "Segoe UI Black",
         "Segoe UI",
         sans-serif;
 
-    font-weight: 900;
+    font-size: 16px;
+
+    font-weight: 700;
+
+    line-height: 1.2;
 
     animation:
         svcBtnTextIn
@@ -418,89 +632,37 @@
         forwards;
 }
 
+
 @keyframes svcBtnTextIn {
     0% {
         opacity: 0;
+
         transform: translateY(8px);
     }
 
     100% {
         opacity: 1;
+
         transform: translateY(0);
     }
 }
 
-/* =========================================================
-   MAIN BUTTON
-========================================================= */
-.svc-main-btn {
-    display: inline-flex;
-
-    align-items: center;
-    justify-content: center;
-
-    min-width: 280px;
-
-    padding: 17px 32px;
-
-    box-sizing: border-box;
-
-    border: none;
-
-    border-radius: 999px;
-
-    background: rgb(0, 255, 242);
-
-    color: #000000;
-
-    font-family:
-        "Segoe UI Black",
-        "Segoe UI",
-        sans-serif;
-
-    font-size: 18px;
-    font-weight: 900;
-
-    line-height: 1.2;
-
-    text-align: center;
-    text-decoration: none;
-
-    cursor: pointer;
-
-    overflow: hidden;
-
-    box-shadow:
-        0 8px 25px
-        rgba(0, 255, 242, 0.18);
-
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease,
-        background 0.3s ease;
-}
-
-.svc-main-btn:hover {
-    background: rgb(0, 255, 242);
-    color: #000000;
-
-    transform: translateY(-3px);
-
-    box-shadow:
-        0 12px 30px
-        rgba(0, 255, 242, 0.3);
-}
-
-.svc-main-btn:active {
-    transform: translateY(0);
-}
 
 /* =========================================================
-   TABLET
+   LARGE LAPTOP
 ========================================================= */
+
 @media (max-width: 1199px) {
+
+    .svc-section {
+        gap: 40px;
+
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
     .svc-title {
-        font-size: 54px !important;
+        font-size: clamp(40px, 4.5vw, 54px) !important;
     }
 
     .svc-para {
@@ -508,25 +670,41 @@
     }
 
     .svc-main-btn {
-        min-width: 250px;
+        min-width: 245px;
+    }
+
+    .svc-card {
+        height: 360px;
     }
 }
 
+
+/* =========================================================
+   TABLET
+========================================================= */
+
 @media (max-width: 991px) {
+
     .svc-section {
         flex-direction: column;
-        padding: 55px 5%;
+
+        gap: 40px;
+
+        padding:
+            55px
+            5%;
     }
 
     .svc-left {
         width: 100%;
 
         position: relative;
-        top: unset;
+
+        top: auto;
 
         padding-right: 0;
 
-        margin-bottom: 40px;
+        margin-bottom: 0;
 
         text-align: center;
     }
@@ -534,14 +712,22 @@
     .svc-sub {
         margin-left: auto !important;
         margin-right: auto !important;
+
         margin-bottom: 15px !important;
 
         font-size: 15px !important;
     }
 
     .svc-title {
+        max-width: 760px;
+
+        margin-left: auto !important;
+        margin-right: auto !important;
+
         font-size: 48px !important;
+
         line-height: 1.15 !important;
+
         text-align: center;
     }
 
@@ -556,13 +742,16 @@
     }
 
     .svc-para {
-        font-size: 18px !important;
-        line-height: 1.65 !important;
+        max-width: 650px;
 
         margin-left: auto !important;
         margin-right: auto !important;
 
         margin-bottom: 25px !important;
+
+        font-size: 17px !important;
+
+        line-height: 1.65 !important;
 
         text-align: center;
     }
@@ -578,14 +767,16 @@
 
     .svc-card {
         height: 350px;
+
         margin-bottom: 35px;
     }
 
     .svc-card-1,
     .svc-card-2,
     .svc-card-3 {
-        top: unset;
         position: relative;
+
+        top: auto;
     }
 
     .svc-content {
@@ -598,20 +789,29 @@
     }
 }
 
+
 /* =========================================================
    MOBILE
 ========================================================= */
+
 @media (max-width: 767px) {
+
     .svc-spacer-top {
         height: 20px;
     }
 
     .svc-section {
-        padding: 45px 20px;
+        width: 100%;
+
+        padding:
+            45px
+            20px;
+
+        gap: 32px;
     }
 
     .svc-left {
-        margin-bottom: 32px;
+        margin-bottom: 0;
     }
 
     .svc-sub {
@@ -632,13 +832,18 @@
     }
 
     .svc-title {
+        max-width: 100%;
+
         font-size: 34px !important;
+
         line-height: 1.2 !important;
+
         text-align: center;
     }
 
     .svc-title-line {
         width: 80px !important;
+
         height: 4px !important;
 
         margin-top: 11px !important;
@@ -649,7 +854,10 @@
     }
 
     .svc-para {
+        max-width: 100%;
+
         font-size: 16px !important;
+
         line-height: 1.6 !important;
 
         margin-bottom: 20px !important;
@@ -659,13 +867,20 @@
 
     .svc-main-btn {
         width: 100%;
+
         min-width: 0;
 
-        padding: 16px 22px;
+        min-height: 50px;
 
-        font-size: 17px;
+        padding: 14px 20px;
+
+        font-size: 16px;
 
         justify-content: center;
+    }
+
+    .svc-btn-content {
+        font-size: 16px;
     }
 
     .svc-card {
@@ -683,6 +898,7 @@
 
     .svc-card-title {
         font-size: 22px !important;
+
         margin-bottom: 5px !important;
     }
 
@@ -691,16 +907,23 @@
     }
 }
 
+
 /* =========================================================
    SMALL MOBILE
 ========================================================= */
+
 @media (max-width: 480px) {
+
     .svc-section {
-        padding: 38px 16px;
+        padding:
+            38px
+            16px;
+
+        gap: 27px;
     }
 
     .svc-left {
-        margin-bottom: 27px;
+        margin-bottom: 0;
     }
 
     .svc-sub {
@@ -720,19 +943,23 @@
 
     .svc-title {
         font-size: 28px !important;
+
         line-height: 1.2 !important;
     }
 
     .svc-title-line {
         width: 70px !important;
+
         height: 4px !important;
 
         margin-top: 9px !important;
+
         margin-bottom: 11px !important;
     }
 
     .svc-para {
         font-size: 15px !important;
+
         line-height: 1.55 !important;
 
         margin-bottom: 17px !important;
@@ -741,9 +968,15 @@
     .svc-main-btn {
         width: 100%;
 
-        padding: 15px 18px;
+        min-height: 48px;
 
-        font-size: 16px;
+        padding: 13px 18px;
+
+        font-size: 15px;
+    }
+
+    .svc-btn-content {
+        font-size: 15px;
     }
 
     .svc-card {
@@ -768,10 +1001,13 @@
     }
 }
 
+
 /* =========================================================
    REDUCED MOTION
 ========================================================= */
+
 @media (prefers-reduced-motion: reduce) {
+
     .svc-sub-dot,
     .svc-title-line {
         animation: none !important;
@@ -785,38 +1021,43 @@
     }
 }
 
+
 /* =========================================================
    FINAL OVERRIDES
-   These are intentionally LAST so older declarations
-   cannot override the requested badge appearance.
 ========================================================= */
 
 .svc-section .svc-sub {
     color: rgb(0, 170, 162) !important;
+
     background: rgba(0, 170, 162, 0.08) !important;
+
     border: 1px solid rgba(0, 170, 162, 0.40) !important;
 
     font-family:
         "Segoe UI",
         sans-serif !important;
 
-    font-size: 16px !important;
-    font-weight: 800 !important;
+    font-size: 15px !important;
 
-    letter-spacing: 1.2px !important;
+    font-weight: 700 !important;
+
+    letter-spacing: 1px !important;
+
     line-height: 1 !important;
 
-    padding: 10px 22px !important;
+    padding: 9px 20px !important;
 
     border-radius: 999px !important;
 
     opacity: 1 !important;
+
     transform: none !important;
 }
 
+
 .svc-section .svc-sub .svc-sub-dot {
-    width: 9px !important;
-    height: 9px !important;
+    width: 8px !important;
+    height: 8px !important;
 
     background: rgb(0, 170, 162) !important;
 
@@ -825,10 +1066,14 @@
         rgba(0, 170, 162, 0.55) !important;
 }
 
+
 @media (max-width: 767px) {
+
     .svc-section .svc-sub {
         font-size: 12px !important;
+
         padding: 9px 18px !important;
+
         letter-spacing: 1.2px !important;
     }
 
@@ -838,9 +1083,12 @@
     }
 }
 
+
 @media (max-width: 480px) {
+
     .svc-section .svc-sub {
         font-size: 11px !important;
+
         padding: 8px 16px !important;
     }
 
@@ -848,4 +1096,22 @@
         width: 7px !important;
         height: 7px !important;
     }
+}
+
+
+/* =========================================================
+   SAFETY AGAINST HORIZONTAL OVERFLOW
+========================================================= */
+
+.svc-section,
+.svc-left,
+.svc-right,
+.svc-card {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+
+.svc-section * {
+    box-sizing: border-box;
 }

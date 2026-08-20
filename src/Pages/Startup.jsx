@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../assets/css/Startup.css";
-import "../assets/css/StartupFAQ.css";
 
 export default function Startup() {
-
   const services = [
     {
       icon: "bi-cpu",
@@ -47,6 +45,7 @@ export default function Startup() {
     },
   ];
 
+  /* STARTUP PROCESS DATA */
   const processSteps = [
     {
       icon: "bi-chat-dots",
@@ -151,12 +150,6 @@ export default function Startup() {
     },
   ];
 
-  /*
-   * FAQ DATA
-   *
-   * Added two relevant FAQ items so the FAQ area
-   * occupies the available space more naturally.
-   */
   const faqData = [
     {
       question: "How long does MVP development take?",
@@ -178,30 +171,58 @@ export default function Startup() {
       answer:
         "Yes, we specialize in helping early-stage startups validate ideas and launch scalable digital products.",
     },
-    {
-      question: "Can you help scale an existing product?",
-      answer:
-        "Yes. We can improve existing products by optimizing performance, upgrading architecture, adding new features, and preparing the platform for future growth.",
-    },
-    {
-      question: "Do you provide maintenance after deployment?",
-      answer:
-        "Yes. We provide ongoing maintenance, bug fixes, performance improvements, security updates, and technical assistance after launch.",
-    },
   ];
 
   const [openFaqIndex, setOpenFaqIndex] = useState(0);
 
-  const toggleFaq = (index) => {
-    setOpenFaqIndex((previousIndex) =>
-      previousIndex === index ? -1 : index
+  /* STARTUP SUPPORT PLATFORM IMAGE ROTATION */
+  const [startupImageSwap, setStartupImageSwap] = useState(false);
+
+  useEffect(() => {
+    const imageTimer = setInterval(() => {
+      setStartupImageSwap((prev) => !prev);
+    }, 3000);
+
+    return () => clearInterval(imageTimer);
+  }, []);
+
+  /* PORTFOLIO AUTO ROTATION */
+  const [activePortfolioIndex, setActivePortfolioIndex] = useState(0);
+
+  useEffect(() => {
+    const portfolioTimer = setInterval(() => {
+      setActivePortfolioIndex((prev) =>
+        prev === portfolioData.length - 1 ? 0 : prev + 1
+      );
+    }, 3000);
+
+    return () => clearInterval(portfolioTimer);
+  }, [portfolioData.length]);
+
+  const nextPortfolio = () => {
+    setActivePortfolioIndex((prev) =>
+      prev === portfolioData.length - 1 ? 0 : prev + 1
     );
   };
+
+  const previousPortfolio = () => {
+    setActivePortfolioIndex((prev) =>
+      prev === 0 ? portfolioData.length - 1 : prev - 1
+    );
+  };
+
+  const toggleFaq = (index) => {
+    setOpenFaqIndex((prev) => (prev === index ? -1 : index));
+  };
+
+  const activePortfolio = portfolioData[activePortfolioIndex];
 
   return (
     <div className="startup-page">
 
-      {/* HEADER */}
+      {/* =====================================================
+          HEADER
+      ====================================================== */}
       <div
         className="header-wrap"
         style={{
@@ -221,33 +242,45 @@ export default function Startup() {
           </h1>
 
           <p>
-            Comprehensive technology support &amp; scale-up services for founders
+            Comprehensive technology support &amp; scale-up services for
+            founders
           </p>
         </div>
       </div>
 
-      {/* STARTUP SECTION */}
+      {/* =====================================================
+          STARTUP SUPPORT PLATFORM
+      ====================================================== */}
       <section className="startup-section">
-
         <div className="startup-container">
 
-          {/* LEFT SIDE */}
-          <div className="startup-images">
-
+          {/* LEFT SIDE IMAGES */}
+          <div
+            className={`startup-images ${
+              startupImageSwap ? "startup-images-swapped" : ""
+            }`}
+          >
             <div className="startup-img-one">
               <img
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop"
-                alt=""
+                src={
+                  startupImageSwap
+                    ? "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop"
+                    : "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop"
+                }
+                alt="Startup collaboration"
               />
             </div>
 
             <div className="startup-img-two">
               <img
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop"
-                alt=""
+                src={
+                  startupImageSwap
+                    ? "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop"
+                    : "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop"
+                }
+                alt="Startup planning"
               />
             </div>
-
           </div>
 
           {/* RIGHT SIDE */}
@@ -276,12 +309,8 @@ export default function Startup() {
             </p>
 
             <div className="startup-services">
-
               {services.map((item, index) => (
-                <div
-                  className="startup-service-card"
-                  key={index}
-                >
+                <div className="startup-service-card" key={index}>
                   <div className="startup-icon">
                     <i className={`bi ${item.icon}`}></i>
                   </div>
@@ -289,18 +318,15 @@ export default function Startup() {
                   <h4>{item.title}</h4>
                 </div>
               ))}
-
             </div>
-
           </div>
-
         </div>
-
       </section>
 
-      {/* PROCESS SECTION */}
+      {/* =====================================================
+          SERVICES FOR STARTUPS
+      ====================================================== */}
       <section className="process-section">
-
         <div className="container">
 
           <div className="process-top services-heading-block">
@@ -318,24 +344,19 @@ export default function Startup() {
             </h2>
 
             <div className="services-heading-line"></div>
-
           </div>
 
           <div className="process-flow">
-
             {processData.slice(0, 3).map((item, index) => (
               <React.Fragment key={index}>
 
                 <div className="process-step">
 
                   <div className="process-step-number">
-                    <span>
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
+                    <span>{String(index + 1).padStart(2, "0")}</span>
                   </div>
 
                   <div className="process-card">
-
                     <div className="process-icon">
                       <i className={`bi ${item.icon}`}></i>
                     </div>
@@ -343,9 +364,7 @@ export default function Startup() {
                     <h3>{item.title}</h3>
 
                     <p>{item.desc}</p>
-
                   </div>
-
                 </div>
 
                 {index < 2 && (
@@ -354,17 +373,15 @@ export default function Startup() {
                     <i className="bi bi-chevron-right"></i>
                   </div>
                 )}
-
               </React.Fragment>
             ))}
-
           </div>
-
         </div>
-
       </section>
 
-      {/* STARTUP PROCESS */}
+      {/* =====================================================
+          STARTUP PROCESS — ANIMATED FLOW
+      ====================================================== */}
       <section className="startup-process-section">
 
         <div className="startup-process-bg">
@@ -374,12 +391,10 @@ export default function Startup() {
             <div className="startup-process-content">
 
               <div className="startup-process-mini">
-
                 <span className="startup-process-badge">
                   <span className="startup-process-dot"></span>
                   <span>STARTUP PROCESS</span>
                 </span>
-
               </div>
 
               <h2 className="startup-process-title">
@@ -391,23 +406,26 @@ export default function Startup() {
 
               <div className="startup-process-line"></div>
 
-              <div className="row g-4">
+              <div className="row g-4 startup-process-grid">
 
                 {processSteps.map((item, index) => (
                   <div className="col-lg-6" key={index}>
 
-                    <div className="startup-process-card">
+                    <div
+                      className="startup-process-card startup-process-card-animated"
+                      style={{
+                        "--process-delay": `${index * 0.18}s`,
+                      }}
+                    >
 
                       <div className="startup-process-icon">
                         <i className={`bi ${item.icon}`}></i>
                       </div>
 
                       <div className="startup-process-text">
-
                         <h4>{item.title}</h4>
 
                         <p>{item.desc}</p>
-
                       </div>
 
                     </div>
@@ -416,16 +434,14 @@ export default function Startup() {
                 ))}
 
               </div>
-
             </div>
-
           </div>
-
         </div>
-
       </section>
 
-      {/* WHY CHOOSE US */}
+      {/* =====================================================
+          WHY CHOOSE US
+      ====================================================== */}
       <section className="why-choose-section">
 
         <div className="container">
@@ -437,12 +453,10 @@ export default function Startup() {
               <div className="why-choose-content">
 
                 <div className="why-choose-mini-title">
-
                   <span className="why-choose-badge">
                     <span className="why-choose-dot"></span>
                     <span>WHY CHOOSE US</span>
                   </span>
-
                 </div>
 
                 <h2 className="why-choose-main-title">
@@ -468,12 +482,10 @@ export default function Startup() {
             <div className="col-lg-7">
 
               <div className="why-choose-image">
-
                 <img
                   src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop"
-                  alt=""
+                  alt="Startup team"
                 />
-
               </div>
 
             </div>
@@ -483,10 +495,7 @@ export default function Startup() {
           <div className="row g-4">
 
             {chooseData.map((item, index) => (
-              <div
-                className="col-lg-4 col-md-6"
-                key={index}
-              >
+              <div className="col-lg-4 col-md-6" key={index}>
 
                 <div className="why-card">
 
@@ -504,12 +513,12 @@ export default function Startup() {
             ))}
 
           </div>
-
         </div>
-
       </section>
 
-      {/* PORTFOLIO */}
+      {/* =====================================================
+          PORTFOLIO SHOWCASE
+      ====================================================== */}
       <section className="startup-portfolio-section">
 
         <div className="container">
@@ -517,12 +526,10 @@ export default function Startup() {
           <div className="startup-portfolio-top">
 
             <div className="portfolio-heading-mini">
-
               <span className="portfolio-heading-badge">
                 <span className="portfolio-heading-dot"></span>
                 <span>OUR PORTFOLIO</span>
               </span>
-
             </div>
 
             <h2 className="portfolio-heading-title">
@@ -531,144 +538,118 @@ export default function Startup() {
             </h2>
 
             <div className="portfolio-heading-line"></div>
-
           </div>
 
-          <div
-            id="portfolioCarousel"
-            className="carousel slide"
-            data-bs-ride="carousel"
-            data-bs-interval="3000"
-          >
+          <div className="startup-portfolio-carousel">
 
-            <div className="carousel-inner">
+            <div className="portfolio-images-row">
 
-              {portfolioData.map((item, index) => (
-                <div
-                  className={`carousel-item ${
-                    index === 0 ? "active" : ""
-                  }`}
-                  key={index}
-                >
+              <div className="portfolio-small-image">
+                <img
+                  src={
+                    portfolioData[
+                      (activePortfolioIndex - 2 + portfolioData.length) %
+                        portfolioData.length
+                    ].image
+                  }
+                  alt=""
+                />
+              </div>
 
-                  <div className="portfolio-images-row">
+              <div className="portfolio-small-image">
+                <img
+                  src={
+                    portfolioData[
+                      (activePortfolioIndex - 1 + portfolioData.length) %
+                        portfolioData.length
+                    ].image
+                  }
+                  alt=""
+                />
+              </div>
 
-                    <div className="portfolio-small-image">
-                      <img
-                        src={
-                          portfolioData[
-                            (index - 2 + portfolioData.length) %
-                              portfolioData.length
-                          ].image
-                        }
-                        alt=""
-                      />
-                    </div>
+              <div className="portfolio-small-image active-image">
+                <img src={activePortfolio.image} alt="" />
+              </div>
 
-                    <div className="portfolio-small-image">
-                      <img
-                        src={
-                          portfolioData[
-                            (index - 1 + portfolioData.length) %
-                              portfolioData.length
-                          ].image
-                        }
-                        alt=""
-                      />
-                    </div>
+              <div className="portfolio-small-image">
+                <img
+                  src={
+                    portfolioData[
+                      (activePortfolioIndex + 1) % portfolioData.length
+                    ].image
+                  }
+                  alt=""
+                />
+              </div>
 
-                    <div className="portfolio-small-image active-image">
-                      <img src={item.image} alt="" />
-                    </div>
+              <div className="portfolio-small-image">
+                <img
+                  src={
+                    portfolioData[
+                      (activePortfolioIndex + 2) % portfolioData.length
+                    ].image
+                  }
+                  alt=""
+                />
+              </div>
 
-                    <div className="portfolio-small-image">
-                      <img
-                        src={
-                          portfolioData[
-                            (index + 1) % portfolioData.length
-                          ].image
-                        }
-                        alt=""
-                      />
-                    </div>
+            </div>
 
-                    <div className="portfolio-small-image">
-                      <img
-                        src={
-                          portfolioData[
-                            (index + 2) % portfolioData.length
-                          ].image
-                        }
-                        alt=""
-                      />
-                    </div>
+            <div className="portfolio-main-content">
 
-                  </div>
+              <h3>{activePortfolio.title}</h3>
 
-                  <div className="portfolio-main-content">
+              <span>{activePortfolio.tech}</span>
 
-                    <h3>{item.title}</h3>
+              <p>{activePortfolio.desc}</p>
 
-                    <span>{item.tech}</span>
-
-                    <p>{item.desc}</p>
-
-                    <div className="portfolio-stars">
-                      <i className="bi bi-star-fill"></i>
-                      <i className="bi bi-star-fill"></i>
-                      <i className="bi bi-star-fill"></i>
-                      <i className="bi bi-star-fill"></i>
-                      <i className="bi bi-star-fill"></i>
-                    </div>
-
-                  </div>
-
-                </div>
-              ))}
+              <div className="portfolio-stars">
+                <i className="bi bi-star-fill"></i>
+                <i className="bi bi-star-fill"></i>
+                <i className="bi bi-star-fill"></i>
+                <i className="bi bi-star-fill"></i>
+                <i className="bi bi-star-fill"></i>
+              </div>
 
             </div>
 
             <button
-              className="carousel-control-prev"
+              className="portfolio-nav-button portfolio-prev"
               type="button"
-              data-bs-target="#portfolioCarousel"
-              data-bs-slide="prev"
+              onClick={previousPortfolio}
+              aria-label="Previous project"
             >
               <i className="bi bi-arrow-left"></i>
             </button>
 
             <button
-              className="carousel-control-next"
+              className="portfolio-nav-button portfolio-next"
               type="button"
-              data-bs-target="#portfolioCarousel"
-              data-bs-slide="next"
+              onClick={nextPortfolio}
+              aria-label="Next project"
             >
               <i className="bi bi-arrow-right"></i>
             </button>
 
           </div>
-
         </div>
-
       </section>
 
       {/* =====================================================
-          STARTUP FAQ SECTION
-          ===================================================== */}
+          FAQ SECTION
+      ====================================================== */}
       <section className="startup-faq-section">
 
         <div className="container">
 
-          {/* CENTERED FAQ HEADING */}
           <div className="startup-faq-top">
 
             <div className="startup-faq-mini">
-
               <span className="startup-faq-badge">
                 <span className="startup-faq-dot"></span>
                 <span>STARTUP FAQ</span>
               </span>
-
             </div>
 
             <h2 className="startup-faq-title">
@@ -686,10 +667,8 @@ export default function Startup() {
 
           </div>
 
-          {/* FAQ CONTENT */}
-          <div className="row align-items-start startup-faq-content-row">
+          <div className="row align-items-start">
 
-            {/* LEFT */}
             <div className="col-lg-6">
 
               <div className="startup-faq-left">
@@ -728,7 +707,6 @@ export default function Startup() {
                     </p>
 
                   </div>
-
                 </div>
 
                 <div className="startup-feature-box">
@@ -747,19 +725,16 @@ export default function Startup() {
                     </p>
 
                   </div>
-
                 </div>
 
               </div>
-
             </div>
 
-            {/* RIGHT — FAQ */}
             <div className="col-lg-6">
 
               <div className="startup-faq-right">
 
-                <div className="startup-accordion">
+                <div className="accordion startup-accordion">
 
                   {faqData.map((item, index) => {
 
@@ -767,65 +742,48 @@ export default function Startup() {
 
                     return (
                       <div
-                        className={`startup-faq-item ${
-                          isOpen ? "is-open" : ""
+                        className={`accordion-item ${
+                          isOpen ? "open" : ""
                         }`}
                         key={index}
                       >
 
                         <button
                           type="button"
-                          className="startup-faq-question"
+                          className="accordion-button"
                           onClick={() => toggleFaq(index)}
                           aria-expanded={isOpen}
                         >
+                          <span>{item.question}</span>
 
-                          <span className="startup-faq-question-text">
-                            {item.question}
-                          </span>
-
-                          {/* ONLY ONE ARROW */}
-                          <i
-                            className={`bi ${
-                              isOpen
-                                ? "bi-chevron-up"
-                                : "bi-chevron-down"
-                            } startup-faq-arrow`}
-                            aria-hidden="true"
-                          ></i>
-
+                          <i className="bi bi-chevron-down accordion-icon"></i>
                         </button>
 
                         <div
-                          className={`startup-faq-answer-wrap ${
-                            isOpen ? "is-open" : ""
+                          className={`accordion-body-wrap ${
+                            isOpen ? "show" : ""
                           }`}
                         >
-
-                          <div className="startup-faq-answer">
+                          <div className="accordion-body">
                             {item.answer}
                           </div>
-
                         </div>
 
                       </div>
                     );
-
                   })}
 
                 </div>
-
               </div>
-
             </div>
 
           </div>
-
         </div>
-
       </section>
 
-      {/* CTA */}
+      {/* =====================================================
+          CALL TO ACTION
+      ====================================================== */}
       <section className="startup-cta-section">
 
         <div className="cta-glow cta-glow-1"></div>
@@ -853,9 +811,9 @@ export default function Startup() {
               <div className="cta-heading-line"></div>
 
               <p>
-                Partner with our expert team to build scalable,
-                modern digital products. From ideation to deployment —
-                we've got you covered.
+                Partner with our expert team to build scalable, modern
+                digital products. From ideation to deployment — we've
+                got you covered.
               </p>
 
               <div className="cta-actions">
@@ -883,11 +841,8 @@ export default function Startup() {
               </div>
 
             </div>
-
           </div>
-
         </div>
-
       </section>
 
     </div>

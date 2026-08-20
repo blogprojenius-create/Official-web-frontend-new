@@ -360,7 +360,7 @@ export default function CareerGuidance() {
 
 
   return (
-    <>
+    <div className="career-guidance-page">
       <section className="header-wrap career-hero" style={{ backgroundImage: 'linear-gradient(rgba(10, 14, 26, 0.9), rgba(10, 14, 26, 0.9)), url(/images/about-main-image.png)' }}>
         <div className="container title-section text-center">
           <h1 className="page-title">Career Guidance</h1>
@@ -904,6 +904,6 @@ export default function CareerGuidance() {
           </button>
         </div>
       </section>
-    </>
+    </div>
   );
 }

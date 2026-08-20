@@ -84,7 +84,7 @@ export default function AboutSection() {
                         </span>
                     </h2>
 
-                    {/* SAME LINE AS PROJECT SECTION */}
+                    {/* SECTION LINE */}
                     <div className="about-title-line"></div>
 
                     {/* DESCRIPTION */}
@@ -95,7 +95,6 @@ export default function AboutSection() {
                     </p>
 
                 </div>
-
 
                 {/* =========================
                     MAIN ABOUT GRID
@@ -119,7 +118,6 @@ export default function AboutSection() {
                                 <div className="about-img-main-border"></div>
                             </div>
 
-
                             {/* SECONDARY IMAGE */}
                             <div className="about-img-secondary">
                                 <img
@@ -127,7 +125,6 @@ export default function AboutSection() {
                                     alt="Software development training session"
                                 />
                             </div>
-
 
                             {/* FLOATING STATS */}
                             <div className="about-stats-bar">
@@ -146,9 +143,7 @@ export default function AboutSection() {
                                     </div>
                                 </div>
 
-
                                 <div className="about-stat-divider"></div>
-
 
                                 <div className="about-stat-item">
                                     <div className="about-stat-number">
@@ -164,9 +159,7 @@ export default function AboutSection() {
                                     </div>
                                 </div>
 
-
                                 <div className="about-stat-divider"></div>
-
 
                                 <div className="about-stat-item">
                                     <div className="about-stat-number">
@@ -185,9 +178,7 @@ export default function AboutSection() {
                             </div>
 
                         </div>
-
                     </div>
-
 
                     {/* =========================
                         RIGHT — VIDEO + FEATURES
@@ -200,18 +191,15 @@ export default function AboutSection() {
                             <div className="about-video-glow"></div>
 
                             <div className="about-video-wrapper">
-
                                 <iframe
                                     src="https://www.youtube.com/embed/1adzVmNh078"
                                     title="Projenius Introduction"
                                     frameBorder="0"
                                     allowFullScreen
                                 ></iframe>
-
                             </div>
 
                         </div>
-
 
                         {/* FEATURES */}
                         <ul className="about-features">
@@ -238,7 +226,6 @@ export default function AboutSection() {
 
                             </li>
 
-
                             {/* IOT */}
                             <li className="about-feature-card">
 
@@ -261,7 +248,6 @@ export default function AboutSection() {
 
                             </li>
 
-
                             {/* TRAINING */}
                             <li className="about-feature-card">
 
@@ -283,7 +269,6 @@ export default function AboutSection() {
                                 </div>
 
                             </li>
-
 
                             {/* IMPACT */}
                             <li className="about-feature-card">
@@ -314,7 +299,6 @@ export default function AboutSection() {
                 </div>
 
             </div>
-
         </section>
     );
 }

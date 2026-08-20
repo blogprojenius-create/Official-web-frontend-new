@@ -1,27 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
+    /* Canonical ProJenius design system */
+    --primary-color: rgb(0, 224, 211);
+    --accent-color: rgb(0, 170, 162);
+    --heading-color: #06142d;
+    --text-color: #1f2937;
+    --muted-text-color: #64748b;
+    --font-hero-family: "Poppins", sans-serif;
+    --font-heading-family: "Segoe UI Black", "Segoe UI", sans-serif;
+    --font-body-family: "Segoe UI", sans-serif;
+    --container-width: 1200px;
+    --section-padding: 80px;
+    --section-padding-tablet: 64px;
+    --section-padding-mobile: 50px;
+    --section-gap: 40px;
+    --heading-gap: 16px;
+    --content-gap: 24px;
+    --card-gap: 24px;
+    --button-height: 48px;
+    --button-radius: 10px;
+    --button-padding-x: 28px;
+    --card-radius: 12px;
+    --card-padding: 24px;
     /* =====================================================
        GLOBAL FONT SYSTEM
        ===================================================== */
 
-    --font-family-base: "Outfit", sans-serif;
-    --font-family-heading: "Outfit", sans-serif;
+    --font-family-base: var(--font-body-family);
+    --font-family-heading: var(--font-heading-family);
 
     /* =====================================================
        GLOBAL TYPOGRAPHY
        ===================================================== */
 
-    --font-hero: clamp(2.5rem, 5vw, 4.75rem);
-    --font-section: clamp(2rem, 3.4vw, 3rem);
-    --font-subheading: 0.875rem;
-    --font-body: 1rem;
-    --font-small: 0.875rem;
+    --font-hero: clamp(36px, 5vw, 64px);
+    --font-section: clamp(30px, 3.4vw, 42px);
+    --font-subheading: 14px;
+    --font-body: 16px;
+    --font-small: 14px;
 
     --line-hero: 1.08;
     --line-heading: 1.12;
     --line-section: 1.16;
-    --line-body: 1.7;
+    --line-body: 1.65;
     --line-small: 1.5;
 
     /* =====================================================
@@ -48,11 +70,11 @@
 
     --color-navy: #081120;
 
-    --color-accent: #66c7dd;
-    --color-accent-start: #38bdf8;
-    --color-accent-end: #2563eb;
+    --color-accent: rgb(0, 170, 162);
+    --color-accent-start: rgb(0, 224, 211);
+    --color-accent-end: rgb(0, 170, 162);
 
-    --color-action: #2563eb;
+    --color-action: rgb(0, 224, 211);
 
     --color-border: rgba(16, 36, 67, 0.12);
 
@@ -60,14 +82,14 @@
        GLOBAL SPACING
        ===================================================== */
 
-    --section-gap-desktop: 72px;
-    --section-gap-tablet: 56px;
-    --section-gap-mobile: 42px;
+    --section-gap-desktop: 80px;
+    --section-gap-tablet: 64px;
+    --section-gap-mobile: 50px;
 
-    --heading-content-gap: 28px;
-    --heading-title-gap: 10px;
-    --title-line-gap: 10px;
-    --line-description-gap: 12px;
+    --heading-content-gap: 24px;
+    --heading-title-gap: 12px;
+    --title-line-gap: 12px;
+    --line-description-gap: 16px;
 
     --container-gutter: clamp(1rem, 3vw, 2rem);
     --container-max-width: 1200px;
@@ -76,7 +98,7 @@
        GLOBAL COMPONENT VALUES
        ===================================================== */
 
-    --radius-card: 8px;
+    --radius-card: 12px;
 
     --shadow-card:
         0 18px 48px rgba(17, 24, 39, 0.08);
@@ -107,16 +129,16 @@
     --pj-heading-accent-end:
         var(--color-accent-end);
 
-    --pj-cyan: var(--color-accent);
+    --pj-cyan: rgb(0, 170, 162);
 
     --pj-cyan-soft:
-        rgba(102, 199, 221, 0.10);
+        rgba(0, 170, 162, 0.10);
 
     --pj-cyan-border:
-        rgba(102, 199, 221, 0.38);
+        rgba(0, 170, 162, 0.38);
 
     --pj-cyan-glow:
-        rgba(102, 199, 221, 0.42);
+        rgba(0, 170, 162, 0.42);
 
     --pj-body-text:
         var(--color-body);
@@ -198,8 +220,8 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: var(--font-family-heading);
-    font-weight: var(--weight-extrabold);
+    font-family: "Segoe UI Black", "Segoe UI", sans-serif;
+    font-weight: 900;
     letter-spacing: 0;
 }
 
@@ -226,7 +248,7 @@ h6 {
     font-size: var(--font-section);
 }
 #sub-heading{
-    color: #66c7dd;
+    color: rgb(0, 170, 162);
     margin-bottom: 4px;
     font-size: var(--font-body);
     font-weight: 800;
@@ -235,7 +257,7 @@ h6 {
 }
 
 #sub-heading.about{
-    color: #66c7dd;
+    color: rgb(0, 170, 162);
     justify-content: center;
     margin-bottom: 4px;
     font-size: var(--font-body);
@@ -254,9 +276,10 @@ h6 {
 }
 
 h1.page-title {
-    color: white;
-    font-size: clamp(32px, 5vw, 62px);
-    font-weight: 800;
+    color: rgb(255, 255, 255);
+    font-family: "Segoe UI Black", "Segoe UI", sans-serif;
+    font-size: var(--font-hero);
+    font-weight: 900;
     line-height: 1.1;
     letter-spacing: -0.5px;
     text-shadow: 0 4px 24px rgba(0, 0, 0, 0.36);
@@ -306,8 +329,9 @@ h1.page-title {
 }
 
 .btn {
-    background: #2563EB;
-    color: #ffffff;
+    background: rgb(0, 170, 162);
+    color: rgb(0, 0, 0);
+    font-family: "Segoe UI", sans-serif;
     padding: 12px 24px;
     border-radius: 999px;
     font-weight: 600;
@@ -323,8 +347,8 @@ h1.page-title {
 }
 
 .btn:hover {
-    background: #1D4ED8;
-    color: #ffffff;
+    background: rgb(0, 150, 143);
+    color: rgb(0, 0, 0);
     transform: translateY(-2px) scale(1.03);
     box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
 }
@@ -583,7 +607,7 @@ p {
 
     border-radius: 50%;
 
-    background: var(--pj-cyan);
+    background: rgb(0, 170, 162);
 
     box-shadow:
         0 0 0 4px var(--pj-cyan-soft),
@@ -653,8 +677,8 @@ p {
     background:
         linear-gradient(
             135deg,
-            var(--pj-heading-accent-start) 0%,
-            var(--pj-heading-accent-end) 100%
+            rgb(0, 255, 242) 0%,
+            rgb(0, 170, 162) 100%
         );
 
     -webkit-background-clip: text;
@@ -679,7 +703,7 @@ p {
 
     border-radius: 999px;
 
-    background: var(--pj-cyan);
+    background: rgb(0, 170, 162);
 
     box-shadow:
         0 0 10px rgba(102, 199, 221, 0.30);

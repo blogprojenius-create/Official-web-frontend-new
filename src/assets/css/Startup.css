@@ -1,20 +1,21 @@
 /* =========================================================
-   ProJenius — STARTUP SUPPORTER PAGE STYLES
-   This stylesheet is imported ONLY by Startup.jsx, so every rule
-   below is already scoped to the Startup Supporter page and has
-   no effect on any other page, the navbar, or the footer.
+   ProJenius — STARTUP SUPPORTER PAGE
+   Complete replacement stylesheet
 
-   FONT SYSTEM (as requested):
-   - Hero section .......... "Poppins"
-   - Main / section headings  "Segoe UI Black" (weight 900)
-   - Everything else ........ "Segoe UI"
-   ========================================================= */
+   Requested updates:
+   1. Startup Support Platform images swap every 3 seconds.
+   2. Portfolio background added.
+   3. Portfolio images rotate every 3 seconds.
+   4. Startup Process cards have sequential flow animation.
+   5. Existing layout/alignment preserved.
+========================================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
 
-/* =========================================
-   0. PAGE WRAPPER — FULL WIDTH / NO OVERFLOW
-========================================= */
+
+/* =========================================================
+   PAGE WRAPPER
+========================================================= */
 
 .startup-page {
     width: 100%;
@@ -26,9 +27,10 @@
     width: 100%;
 }
 
-/* =========================================
-   1. HERO
-========================================= */
+
+/* =========================================================
+   HERO
+========================================================= */
 
 .header-wrap {
     min-height: 100vh;
@@ -71,22 +73,32 @@
     max-width: 620px;
 }
 
-/* =========================================
-   SHARED — ANIMATED BADGE DOT + HEADING LINE
-   Used on every section heading across the page.
-========================================= */
+
+/* =========================================================
+   SHARED DOT / LINE ANIMATION
+========================================================= */
 
 @keyframes startupDotPulse {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50%      { opacity: 0.45; transform: scale(0.7); }
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.45;
+        transform: scale(0.7);
+    }
 }
 
 @keyframes startupLinePulse {
-    0%, 100% {
+    0%,
+    100% {
         opacity: 0.35;
         transform: scaleX(0.75);
         box-shadow: 0 0 0 rgba(0, 170, 162, 0);
     }
+
     50% {
         opacity: 1;
         transform: scaleX(1);
@@ -107,9 +119,8 @@
     display: inline-block;
     border-radius: 50%;
     background: rgb(0, 170, 162);
-    box-shadow: 0 0 0 4px rgba(0, 170, 162, 0.10);
+    box-shadow: 0 0 0 4px rgba(0, 170, 162, 0.1);
     animation: startupDotPulse 2.6s ease-in-out infinite;
-    transform-origin: center;
 }
 
 .startup-heading-line,
@@ -126,26 +137,6 @@
     animation: startupLinePulse 2.6s ease-in-out infinite;
 }
 
-@media (prefers-reduced-motion: reduce) {
-    .startup-badge-dot,
-    .services-heading-dot,
-    .startup-process-dot,
-    .why-choose-dot,
-    .portfolio-heading-dot,
-    .startup-faq-dot,
-    .cta-badge-dot,
-    .startup-heading-line,
-    .services-heading-line,
-    .startup-process-line,
-    .why-choose-line,
-    .portfolio-heading-line,
-    .startup-faq-line,
-    .cta-heading-line {
-        animation: none;
-    }
-}
-
-/* Shared badge pill look */
 .startup-mini-badge,
 .services-heading-badge,
 .startup-process-badge,
@@ -174,13 +165,18 @@
     background: rgba(0, 170, 162, 0.15);
 }
 
-/* =========================================
-   2. STARTUP INTRO SECTION
-========================================= */
+
+/* =========================================================
+   STARTUP SUPPORT PLATFORM
+========================================================= */
 
 .startup-section {
     width: 100%;
-    background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+    background: linear-gradient(
+        180deg,
+        #f8fafc 0%,
+        #ffffff 100%
+    );
     padding: 90px 0;
     font-family: "Segoe UI", Arial, sans-serif;
 }
@@ -207,12 +203,24 @@
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
+    transition:
+        transform 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 0.5s ease;
 }
 
-.startup-img-one img {
+.startup-img-one img,
+.startup-img-two img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
+}
+
+.startup-img-one img,
+.startup-img-two img {
+    transition:
+        opacity 0.7s ease,
+        transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .startup-img-two {
@@ -225,15 +233,20 @@
     overflow: hidden;
     border: 6px solid #ffffff;
     box-shadow: 0 20px 40px rgba(15, 23, 42, 0.18);
+    transition:
+        transform 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+        box-shadow 0.5s ease;
 }
 
-.startup-img-two img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+/* Subtle visual movement while the two images swap */
+.startup-images-swapped .startup-img-one {
+    box-shadow: 0 25px 55px rgba(0, 170, 162, 0.16);
 }
 
-/* Intro text aligns left, matching the image column beside it */
+.startup-images-swapped .startup-img-two {
+    box-shadow: 0 25px 55px rgba(0, 170, 162, 0.22);
+}
+
 .startup-content {
     text-align: left;
 }
@@ -323,37 +336,18 @@
     margin: 0;
 }
 
-.startup-btn {
-    margin-top: 32px;
-    border: none;
-    outline: none;
-    padding: 14px 32px;
-    border-radius: 50px;
-    background: rgb(0, 170, 162);
-    color: #ffffff;
-    font-family: "Segoe UI", Arial, sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-    box-shadow: 0 8px 22px rgba(0, 170, 162, 0.28);
-    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
-}
 
-.startup-btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 14px 30px rgba(0, 170, 162, 0.38);
-}
-
-/* =========================================
-   3. SERVICES FOR STARTUPS (STEP FLOW)
-========================================= */
+/* =========================================================
+   SERVICES STEP FLOW
+========================================================= */
 
 .process-section {
     width: 100%;
-    background: linear-gradient(180deg, #f0f7ff 0%, #e8f4fb 100%);
+    background: linear-gradient(
+        180deg,
+        #f0f7ff 0%,
+        #e8f4fb 100%
+    );
     padding: 90px 0;
     font-family: "Segoe UI", Arial, sans-serif;
 }
@@ -500,7 +494,12 @@
 .process-arrow-line {
     width: 100%;
     height: 2px;
-    background: linear-gradient(90deg, rgba(0, 170, 162, 0.15), rgba(0, 170, 162, 0.5), rgba(0, 170, 162, 0.15));
+    background: linear-gradient(
+        90deg,
+        rgba(0, 170, 162, 0.15),
+        rgba(0, 170, 162, 0.5),
+        rgba(0, 170, 162, 0.15)
+    );
     position: absolute;
     top: 50%;
     left: 0;
@@ -522,9 +521,10 @@
     box-shadow: 0 4px 12px rgba(0, 170, 162, 0.15);
 }
 
-/* =========================================
-   4. STARTUP PROCESS (DARK GLASS BANNER)
-========================================= */
+
+/* =========================================================
+   STARTUP PROCESS — ANIMATED FLOWCHART
+========================================================= */
 
 .startup-process-section {
     width: 100%;
@@ -538,7 +538,12 @@
     align-items: center;
     justify-content: center;
     background:
-        linear-gradient(160deg, rgba(15, 23, 42, 0.88) 0%, rgba(0, 170, 162, 0.6) 50%, rgba(15, 23, 42, 0.92) 100%),
+        linear-gradient(
+            160deg,
+            rgba(15, 23, 42, 0.88) 0%,
+            rgba(0, 170, 162, 0.6) 50%,
+            rgba(15, 23, 42, 0.92) 100%
+        ),
         url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop");
     background-size: cover;
     background-position: center;
@@ -581,6 +586,10 @@
     margin: 0;
 }
 
+.startup-process-title-accent {
+    color: rgb(0, 170, 162);
+}
+
 .startup-process-line {
     width: 80px;
     margin: 18px auto 36px;
@@ -596,7 +605,69 @@
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 18px;
     height: 100%;
-    transition: all 0.3s ease;
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Flowchart-style animated reveal */
+@keyframes startupProcessFlow {
+    0% {
+        opacity: 0;
+        transform: translateY(18px) scale(0.98);
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.startup-process-card-animated {
+    animation:
+        startupProcessFlow 0.8s
+        cubic-bezier(0.22, 1, 0.36, 1)
+        var(--process-delay)
+        both;
+}
+
+.startup-process-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 80%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(0, 255, 242, 0.08),
+        transparent
+    );
+    transform: skewX(-20deg);
+    animation: processCardSweep 5s ease-in-out infinite;
+    animation-delay: var(--process-delay);
+    pointer-events: none;
+}
+
+@keyframes processCardSweep {
+    0%,
+    55% {
+        left: -120%;
+    }
+
+    80%,
+    100% {
+        left: 140%;
+    }
 }
 
 .startup-process-card:hover {
@@ -610,17 +681,28 @@
     min-width: 52px;
     height: 52px;
     border-radius: 14px;
-    background: linear-gradient(135deg, rgba(0, 170, 162, 0.3), rgba(0, 170, 162, 0.2));
+    background: linear-gradient(
+        135deg,
+        rgba(0, 170, 162, 0.3),
+        rgba(0, 170, 162, 0.2)
+    );
     border: 1px solid rgba(0, 170, 162, 0.4);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    position: relative;
+    z-index: 1;
 }
 
 .startup-process-icon i {
     font-size: 22px;
     color: rgb(0, 170, 162);
+}
+
+.startup-process-text {
+    position: relative;
+    z-index: 1;
 }
 
 .startup-process-text h4 {
@@ -639,9 +721,10 @@
     margin: 0;
 }
 
-/* =========================================
-   5. WHY CHOOSE US
-========================================= */
+
+/* =========================================================
+   WHY CHOOSE US
+========================================================= */
 
 .why-choose-section {
     width: 100%;
@@ -767,13 +850,23 @@
     margin: 0;
 }
 
-/* =========================================
-   6. PORTFOLIO SHOWCASE
-========================================= */
+
+/* =========================================================
+   PORTFOLIO
+========================================================= */
 
 .startup-portfolio-section {
     width: 100%;
-    background: #ffffff;
+    background:
+        linear-gradient(
+            180deg,
+            rgba(248, 250, 252, 0.96),
+            rgba(255, 255, 255, 0.98)
+        ),
+        url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=1600&auto=format&fit=crop");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     padding: 90px 0;
     font-family: "Segoe UI", Arial, sans-serif;
 }
@@ -816,6 +909,11 @@
     margin: 18px auto 0;
 }
 
+.startup-portfolio-carousel {
+    position: relative;
+    width: 100%;
+}
+
 .portfolio-images-row {
     width: 100%;
     display: flex;
@@ -833,13 +931,17 @@
     border: 6px solid #edf0ff;
     opacity: 0.6;
     transform: scale(0.9);
-    transition: 0.4s ease;
+    transition:
+        transform 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 0.65s ease,
+        border-color 0.65s ease;
 }
 
 .portfolio-small-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
 .active-image {
@@ -895,28 +997,47 @@
     font-size: 20px;
 }
 
-.startup-portfolio-section .carousel-control-prev,
-.startup-portfolio-section .carousel-control-next {
+.portfolio-nav-button {
+    position: absolute;
+    top: 35%;
     width: 56px;
     height: 56px;
-    top: 35%;
     opacity: 1;
     background: rgb(0, 170, 162);
     border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 5;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
-.startup-portfolio-section .carousel-control-prev { left: 0; }
-.startup-portfolio-section .carousel-control-next { right: 0; }
+.portfolio-nav-button:hover {
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 170, 162, 0.3);
+}
 
-.startup-portfolio-section .carousel-control-prev i,
-.startup-portfolio-section .carousel-control-next i {
+.portfolio-prev {
+    left: 0;
+}
+
+.portfolio-next {
+    right: 0;
+}
+
+.portfolio-nav-button i {
     font-size: 26px;
     color: #ffffff;
 }
 
-/* =========================================
-   7. FAQ SECTION
-========================================= */
+
+/* =========================================================
+   FAQ
+========================================================= */
 
 .startup-faq-section {
     width: 100%;
@@ -937,9 +1058,14 @@
     text-align: left;
 }
 
+.startup-faq-top {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
 .startup-faq-mini {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     margin-bottom: 16px;
 }
 
@@ -951,7 +1077,7 @@
     letter-spacing: -0.5px;
     color: #0f172a;
     margin: 0;
-    text-align: left;
+    text-align: center;
 }
 
 .startup-faq-title span {
@@ -960,7 +1086,17 @@
 
 .startup-faq-line {
     width: 76px;
-    margin: 16px 0 26px;
+    margin: 16px auto 20px;
+}
+
+.startup-faq-desc {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 15.5px;
+    line-height: 1.8;
+    color: #475569;
+    max-width: 820px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .startup-faq-images {
@@ -1017,15 +1153,6 @@
     padding-left: 0;
 }
 
-.startup-faq-desc {
-    font-family: "Segoe UI", Arial, sans-serif;
-    font-size: 15.5px;
-    line-height: 1.8;
-    color: #475569;
-    margin-bottom: 28px;
-    text-align: left;
-}
-
 .startup-accordion .accordion-item {
     border: 1px solid rgba(15, 23, 42, 0.08);
     border-radius: 14px !important;
@@ -1035,7 +1162,13 @@
     transition: all 0.28s ease;
 }
 
+.startup-accordion .accordion-item:hover {
+    border-color: rgba(0, 170, 162, 0.28);
+    box-shadow: 0 8px 24px rgba(0, 170, 162, 0.08);
+}
+
 .startup-accordion .accordion-button {
+    width: 100%;
     background: #ffffff;
     font-family: "Segoe UI", Arial, sans-serif;
     font-size: 16px;
@@ -1044,6 +1177,16 @@
     padding: 18px 24px;
     box-shadow: none !important;
     text-align: left;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.startup-accordion .accordion-button::after {
+    display: none !important;
 }
 
 .startup-accordion .accordion-button:not(.collapsed) {
@@ -1051,8 +1194,30 @@
     background: rgba(0, 170, 162, 0.04);
 }
 
-.startup-accordion .accordion-body {
-    padding: 0 24px 20px;
+.accordion-icon {
+    flex-shrink: 0;
+    font-size: 16px;
+    color: rgb(0, 170, 162);
+    transition: transform 0.3s ease;
+}
+
+.startup-accordion .accordion-item.open .accordion-icon {
+    transform: rotate(180deg);
+}
+
+.accordion-body-wrap {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.35s ease;
+}
+
+.accordion-body-wrap.show {
+    grid-template-rows: 1fr;
+}
+
+.accordion-body {
+    overflow: hidden;
+    padding: 0 24px;
     font-family: "Segoe UI", Arial, sans-serif;
     font-size: 14.5px;
     line-height: 1.75;
@@ -1060,9 +1225,14 @@
     text-align: left;
 }
 
-/* =========================================
-   8. CALL TO ACTION
-========================================= */
+.accordion-body-wrap.show .accordion-body {
+    padding-bottom: 20px;
+}
+
+
+/* =========================================================
+   CALL TO ACTION
+========================================================= */
 
 .startup-cta-section {
     width: 100%;
@@ -1090,7 +1260,11 @@
 .cta-glow-1 {
     width: 300px;
     height: 300px;
-    background: radial-gradient(circle, rgb(0, 170, 162), transparent 70%);
+    background: radial-gradient(
+        circle,
+        rgb(0, 170, 162),
+        transparent 70%
+    );
     top: -100px;
     right: -60px;
 }
@@ -1098,13 +1272,21 @@
 .cta-glow-2 {
     width: 260px;
     height: 260px;
-    background: radial-gradient(circle, rgb(0, 170, 162), transparent 70%);
+    background: radial-gradient(
+        circle,
+        rgb(0, 170, 162),
+        transparent 70%
+    );
     bottom: -80px;
     left: -40px;
 }
 
 .startup-cta-card-box {
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    background: linear-gradient(
+        135deg,
+        #0f172a 0%,
+        #1e293b 100%
+    );
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 24px;
     padding: 50px 36px;
@@ -1137,10 +1319,7 @@
 }
 
 .cta-highlight {
-    background: linear-gradient(135deg, rgb(0, 170, 162), rgb(0, 170, 162));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: rgb(0, 170, 162);
 }
 
 .cta-heading-line {
@@ -1165,23 +1344,27 @@
     flex-wrap: wrap;
 }
 
-.startup-cta-btn {
+.startup-cta-btn,
+.startup-cta-btn-outline {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
     padding: 15px 34px;
     border-radius: 50px;
-    background: rgb(0, 170, 162);
-    color: #ffffff !important;
     font-family: "Segoe UI", Arial, sans-serif;
     font-weight: 700;
     font-size: 15px;
     text-decoration: none;
-    border: none;
     cursor: pointer;
-    box-shadow: 0 8px 28px rgba(0, 170, 162, 0.4);
     transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.startup-cta-btn {
+    background: rgb(0, 170, 162);
+    color: #ffffff !important;
+    border: none;
+    box-shadow: 0 8px 28px rgba(0, 170, 162, 0.4);
 }
 
 .startup-cta-btn:hover {
@@ -1191,26 +1374,15 @@
     text-decoration: none;
 }
 
-.startup-cta-btn i {
+.startup-cta-btn i,
+.startup-cta-btn-outline i {
     font-size: 18px;
 }
 
 .startup-cta-btn-outline {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 15px 34px;
-    border-radius: 50px;
     background: transparent;
     color: #ffffff !important;
-    font-family: "Segoe UI", Arial, sans-serif;
-    font-weight: 700;
-    font-size: 15px;
-    text-decoration: none;
     border: 2px solid rgba(255, 255, 255, 0.2);
-    cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .startup-cta-btn-outline:hover {
@@ -1223,15 +1395,16 @@
 }
 
 .startup-cta-btn-outline i {
-    font-size: 18px;
     color: rgb(0, 170, 162);
 }
 
-/* =========================================
-   RESPONSIVE
-========================================= */
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
 
 @media (max-width: 992px) {
+
     .startup-container {
         grid-template-columns: 1fr;
         gap: 50px;
@@ -1270,7 +1443,12 @@
     .process-arrow-line {
         width: 2px;
         height: 100%;
-        background: linear-gradient(180deg, rgba(0, 170, 162, 0.15), rgba(0, 170, 162, 0.5), rgba(0, 170, 162, 0.15));
+        background: linear-gradient(
+            180deg,
+            rgba(0, 170, 162, 0.15),
+            rgba(0, 170, 162, 0.5),
+            rgba(0, 170, 162, 0.15)
+        );
         top: 0;
         left: 50%;
         transform: translateX(-50%);
@@ -1281,7 +1459,13 @@
     }
 }
 
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
 @media (max-width: 768px) {
+
     .startup-section,
     .process-section,
     .why-choose-section,
@@ -1330,6 +1514,10 @@
         padding-right: 0;
     }
 
+    .startup-cta-section {
+        padding: 70px 0;
+    }
+
     .cta-actions {
         flex-direction: column;
         width: 100%;
@@ -1351,9 +1539,36 @@
         font-size: 11px;
         letter-spacing: 1.3px;
     }
+
+    .startup-portfolio-section {
+        background-attachment: scroll;
+    }
+
+    .portfolio-nav-button {
+        width: 46px;
+        height: 46px;
+    }
+
+    .portfolio-nav-button i {
+        font-size: 21px;
+    }
+
+    .portfolio-prev {
+        left: 5px;
+    }
+
+    .portfolio-next {
+        right: 5px;
+    }
 }
 
+
+/* =========================================================
+   RESPONSIVE — SMALL MOBILE
+========================================================= */
+
 @media (max-width: 576px) {
+
     .startup-img-one {
         height: 240px;
     }
@@ -1383,8 +1598,70 @@
         gap: 8px;
     }
 
+    .portfolio-small-image {
+        width: 52px;
+        height: 52px;
+        border-width: 4px;
+    }
+
+    .active-image {
+        width: 90px;
+        height: 90px;
+    }
+
+    .portfolio-nav-button {
+        width: 40px;
+        height: 40px;
+    }
+
+    .portfolio-nav-button i {
+        font-size: 18px;
+    }
+
     .startup-service-card h4 {
         white-space: normal;
         font-size: 15px;
+    }
+
+    .startup-process-text h4 {
+        font-size: 17px;
+    }
+
+    .startup-process-text p {
+        font-size: 13.5px;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .startup-badge-dot,
+    .services-heading-dot,
+    .startup-process-dot,
+    .why-choose-dot,
+    .portfolio-heading-dot,
+    .startup-faq-dot,
+    .cta-badge-dot,
+    .startup-heading-line,
+    .services-heading-line,
+    .startup-process-line,
+    .why-choose-line,
+    .portfolio-heading-line,
+    .startup-faq-line,
+    .cta-heading-line,
+    .startup-process-card-animated,
+    .startup-process-card::before {
+        animation: none !important;
+    }
+
+    .startup-img-one,
+    .startup-img-two,
+    .portfolio-small-image,
+    .portfolio-nav-button {
+        transition: none !important;
     }
 }
