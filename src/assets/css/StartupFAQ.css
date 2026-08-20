@@ -1,0 +1,749 @@
+/* =========================================================
+   STARTUP FAQ — SCOPED ONLY TO FAQ SECTION
+   ========================================================= */
+
+.startup-faq-section {
+    width: 100%;
+    background: #ffffff;
+    padding: 55px 0 60px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* ---------------------------------------------------------
+   TOP FAQ HEADING
+   --------------------------------------------------------- */
+
+.startup-faq-section .startup-faq-top {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto 38px;
+    padding: 0 20px;
+    text-align: center !important;
+}
+
+.startup-faq-section .startup-faq-mini {
+    width: 100%;
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
+    margin: 0 0 16px;
+    text-align: center !important;
+}
+
+.startup-faq-section .startup-faq-badge {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 9px;
+
+    min-height: 40px;
+    padding: 9px 20px;
+
+    box-sizing: border-box;
+    border-radius: 999px;
+
+    background: rgba(0, 170, 162, 0.06);
+    border: 1px solid rgba(0, 170, 162, 0.35);
+
+    color: rgb(0, 170, 162);
+
+    font-family: "Segoe UI Black", "Segoe UI", sans-serif !important;
+    font-size: 13px;
+    font-weight: 900;
+    letter-spacing: 1.7px;
+    line-height: 1;
+
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.startup-faq-section .startup-faq-dot {
+    width: 8px;
+    height: 8px;
+    min-width: 8px;
+
+    display: inline-block;
+
+    border-radius: 50%;
+    background: rgb(0, 170, 162);
+
+    box-shadow:
+        0 0 0 4px rgba(0, 170, 162, 0.10),
+        0 0 12px rgba(0, 170, 162, 0.42);
+
+    animation: startupFaqDotPulse 2.8s ease-in-out infinite;
+}
+
+@keyframes startupFaqDotPulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.45;
+        transform: scale(0.72);
+    }
+}
+
+
+/* ---------------------------------------------------------
+   FAQ MAIN HEADING
+   --------------------------------------------------------- */
+
+.startup-faq-section .startup-faq-title {
+    width: 100%;
+    max-width: 1180px;
+
+    margin: 0 auto !important;
+    padding: 0;
+
+    color: #121929;
+
+    font-family: "Segoe UI Black", "Segoe UI", sans-serif !important;
+    font-size: clamp(42px, 4.2vw, 58px);
+    font-weight: 900 !important;
+    line-height: 1.08;
+    letter-spacing: -1.7px;
+
+    text-align: center !important;
+}
+
+.startup-faq-section .startup-faq-title span {
+    color: rgb(0, 170, 162);
+}
+
+.startup-faq-section .startup-faq-line {
+    width: 82px;
+    height: 5px;
+
+    margin: 16px auto 18px !important;
+
+    border-radius: 999px;
+    background: rgb(0, 170, 162);
+
+    box-shadow: 0 4px 14px rgba(0, 170, 162, 0.28);
+
+    animation: startupFaqLinePulse 2.8s ease-in-out infinite;
+}
+
+@keyframes startupFaqLinePulse {
+
+    0%,
+    100% {
+        opacity: 0.35;
+        transform: scaleX(0.75);
+        box-shadow: 0 0 0 rgba(0, 170, 162, 0);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scaleX(1);
+        box-shadow: 0 0 12px rgba(0, 170, 162, 0.65);
+    }
+}
+
+.startup-faq-section .startup-faq-desc {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto !important;
+    padding: 0;
+
+    color: #475569;
+
+    font-family: "Segoe UI", sans-serif !important;
+    font-size: 16px;
+    line-height: 1.75;
+
+    text-align: center !important;
+}
+
+
+/* ---------------------------------------------------------
+   FAQ CONTENT ROW
+   --------------------------------------------------------- */
+
+.startup-faq-section .startup-faq-content-row {
+    margin-top: 0 !important;
+}
+
+.startup-faq-section .startup-faq-left {
+    width: 100%;
+    padding-right: 18px;
+}
+
+
+/* ---------------------------------------------------------
+   FAQ IMAGES
+   --------------------------------------------------------- */
+
+.startup-faq-section .startup-faq-images {
+    display: flex;
+    gap: 16px;
+
+    width: 100%;
+    margin: 0 0 24px;
+
+    justify-content: center;
+}
+
+.startup-faq-section .startup-faq-image {
+    width: 50%;
+    height: 165px;
+
+    overflow: hidden;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 8px 20px rgba(15, 23, 42, 0.08);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.startup-faq-section .startup-faq-image:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 14px 30px rgba(15, 23, 42, 0.14);
+}
+
+.startup-faq-section .startup-faq-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.startup-faq-section .startup-faq-image:hover img {
+    transform: scale(1.05);
+}
+
+
+/* ---------------------------------------------------------
+   LEFT FEATURE CONTENT
+   --------------------------------------------------------- */
+
+.startup-faq-section .startup-feature-box {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 20px;
+
+    padding: 19px 0;
+
+    border-bottom: 1px solid rgba(15, 23, 42, 0.10);
+
+    text-align: left;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.startup-faq-section .startup-feature-box:hover {
+    transform: translateX(4px);
+    border-bottom-color: rgba(0, 170, 162, 0.35);
+}
+
+.startup-faq-section .startup-feature-box:last-child {
+    border-bottom: none;
+}
+
+.startup-faq-section .startup-feature-icon {
+    flex: 0 0 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-top: 3px;
+}
+
+.startup-faq-section .startup-feature-icon i {
+    font-size: 34px;
+    color: rgb(0, 170, 162) !important;
+}
+
+.startup-faq-section .startup-feature-content {
+    flex: 1;
+}
+
+.startup-faq-section .startup-feature-content h4 {
+    margin: 0 0 7px;
+
+    color: #0f172a;
+
+    font-family: "Segoe UI Black", "Segoe UI", sans-serif !important;
+    font-size: 20px;
+    font-weight: 900 !important;
+    line-height: 1.35;
+}
+
+.startup-faq-section .startup-feature-content p {
+    margin: 0;
+
+    color: #475569;
+
+    font-family: "Segoe UI", sans-serif !important;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+
+/* ---------------------------------------------------------
+   RIGHT FAQ ACCORDION
+   --------------------------------------------------------- */
+
+.startup-faq-section .startup-faq-right {
+    width: 100%;
+    padding-left: 18px;
+}
+
+.startup-faq-section .startup-accordion {
+    width: 100%;
+}
+
+
+/* ---------------------------------------------------------
+   FAQ CARD
+   --------------------------------------------------------- */
+
+.startup-faq-section .startup-faq-item {
+    width: 100%;
+
+    margin: 0 0 14px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(15, 23, 42, 0.13);
+    border-radius: 15px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 3px 12px rgba(15, 23, 42, 0.035);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.startup-faq-section .startup-faq-item:last-child {
+    margin-bottom: 0;
+}
+
+.startup-faq-section .startup-faq-item:hover {
+    transform: translateY(-3px);
+
+    border-color: rgba(15, 23, 42, 0.32);
+
+    box-shadow:
+        0 10px 25px rgba(15, 23, 42, 0.10);
+}
+
+.startup-faq-section .startup-faq-item.is-open {
+    border-color: rgba(0, 170, 162, 0.48);
+
+    box-shadow:
+        0 10px 28px rgba(0, 170, 162, 0.10);
+}
+
+
+/* ---------------------------------------------------------
+   QUESTION BUTTON
+   --------------------------------------------------------- */
+
+.startup-faq-section .startup-faq-question {
+    width: 100%;
+
+    min-height: 66px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 17px 22px;
+
+    border: 0;
+    outline: none;
+
+    background: #ffffff;
+
+    color: #0f172a;
+
+    font-family: "Segoe UI Black", "Segoe UI", sans-serif !important;
+    font-size: 17px;
+    font-weight: 900 !important;
+
+    line-height: 1.35;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+
+/*
+   IMPORTANT:
+   Bootstrap normally adds its own arrow through ::after.
+   This disables it completely.
+   The ONLY visible arrow is our .startup-faq-arrow.
+*/
+.startup-faq-section .startup-faq-question::after {
+    display: none !important;
+    content: none !important;
+}
+
+.startup-faq-section .startup-faq-question::-webkit-details-marker {
+    display: none;
+}
+
+.startup-faq-section .startup-faq-question:hover {
+    background: rgba(0, 170, 162, 0.025);
+}
+
+.startup-faq-section .startup-faq-item.is-open .startup-faq-question {
+    color: rgb(0, 170, 162);
+
+    background: rgba(0, 170, 162, 0.055);
+}
+
+.startup-faq-section .startup-faq-question-text {
+    flex: 1;
+
+    min-width: 0;
+
+    display: block;
+
+    color: inherit;
+
+    font-family: "Segoe UI Black", "Segoe UI", sans-serif !important;
+    font-weight: 900 !important;
+
+    white-space: normal;
+}
+
+
+/* ---------------------------------------------------------
+   ONLY ONE ARROW
+   --------------------------------------------------------- */
+
+.startup-faq-section .startup-faq-arrow {
+    flex: 0 0 auto;
+
+    width: 24px;
+    height: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #0f172a;
+
+    font-size: 18px;
+
+    line-height: 1;
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease;
+}
+
+.startup-faq-section .startup-faq-item.is-open .startup-faq-arrow {
+    color: rgb(0, 170, 162);
+}
+
+
+/* ---------------------------------------------------------
+   ANSWER ANIMATION
+   --------------------------------------------------------- */
+
+.startup-faq-section .startup-faq-answer-wrap {
+    display: grid;
+
+    grid-template-rows: 0fr;
+
+    transition:
+        grid-template-rows 0.35s ease;
+}
+
+.startup-faq-section .startup-faq-answer-wrap.is-open {
+    grid-template-rows: 1fr;
+}
+
+.startup-faq-section .startup-faq-answer {
+    min-height: 0;
+
+    overflow: hidden;
+
+    padding: 0 22px;
+
+    color: #475569;
+
+    font-family: "Segoe UI", sans-serif !important;
+    font-size: 15px;
+    line-height: 1.75;
+
+    opacity: 0;
+
+    transition:
+        opacity 0.25s ease,
+        padding 0.35s ease;
+}
+
+.startup-faq-section
+.startup-faq-answer-wrap.is-open
+.startup-faq-answer {
+    padding: 0 22px 20px;
+
+    opacity: 1;
+}
+
+
+/* ---------------------------------------------------------
+   REDUCE UNWANTED FAQ / PAGE GAPS
+   These are scoped to Startup only.
+   --------------------------------------------------------- */
+
+.startup-page .startup-section {
+    margin-bottom: 0 !important;
+}
+
+.startup-page .process-section {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.startup-page .startup-process-section {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.startup-page .why-choose-section {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.startup-page .startup-portfolio-section {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.startup-page .startup-faq-section {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.startup-page .startup-cta-section {
+    margin-top: 0 !important;
+}
+
+
+/* ---------------------------------------------------------
+   TABLET
+   --------------------------------------------------------- */
+
+@media (max-width: 992px) {
+
+    .startup-faq-section {
+        padding: 50px 0 55px;
+    }
+
+    .startup-faq-section .startup-faq-title {
+        font-size: 46px;
+        line-height: 1.1;
+    }
+
+    .startup-faq-section .startup-faq-left {
+        padding-right: 0;
+    }
+
+    .startup-faq-section .startup-faq-right {
+        padding-left: 0;
+        margin-top: 28px;
+    }
+
+    .startup-faq-section .startup-faq-images {
+        margin-bottom: 22px;
+    }
+
+    .startup-faq-section .startup-faq-image {
+        height: 180px;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE
+   --------------------------------------------------------- */
+
+@media (max-width: 768px) {
+
+    .startup-faq-section {
+        padding: 45px 0 50px;
+    }
+
+    .startup-faq-section .startup-faq-top {
+        margin-bottom: 30px;
+        padding: 0 16px;
+    }
+
+    .startup-faq-section .startup-faq-title {
+        font-size: 38px;
+        line-height: 1.14;
+        letter-spacing: -0.8px;
+    }
+
+    .startup-faq-section .startup-faq-desc {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .startup-faq-section .startup-faq-images {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .startup-faq-section .startup-faq-image {
+        width: 100%;
+        height: 190px;
+    }
+
+    .startup-faq-section .startup-feature-box {
+        gap: 15px;
+        padding: 17px 0;
+    }
+
+    .startup-faq-section .startup-feature-content h4 {
+        font-size: 18px;
+    }
+
+    .startup-faq-section .startup-feature-content p {
+        font-size: 14px;
+    }
+
+    .startup-faq-section .startup-faq-question {
+        min-height: 62px;
+        padding: 16px 18px;
+
+        font-size: 16px;
+    }
+
+    .startup-faq-section .startup-faq-answer {
+        font-size: 14px;
+    }
+
+    .startup-faq-section
+    .startup-faq-answer-wrap.is-open
+    .startup-faq-answer {
+        padding: 0 18px 18px;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   SMALL MOBILE
+   --------------------------------------------------------- */
+
+@media (max-width: 576px) {
+
+    .startup-faq-section {
+        padding: 40px 0 45px;
+    }
+
+    .startup-faq-section .startup-faq-badge {
+        min-height: 38px;
+        padding: 8px 14px;
+
+        font-size: 10px;
+        letter-spacing: 1.2px;
+    }
+
+    .startup-faq-section .startup-faq-dot {
+        width: 7px;
+        height: 7px;
+        min-width: 7px;
+    }
+
+    .startup-faq-section .startup-faq-title {
+        font-size: 32px;
+        line-height: 1.14;
+    }
+
+    .startup-faq-section .startup-faq-line {
+        width: 62px;
+        height: 4px;
+    }
+
+    .startup-faq-section .startup-faq-question {
+        min-height: 58px;
+
+        gap: 12px;
+
+        padding: 14px 16px;
+
+        font-size: 15px;
+    }
+
+    .startup-faq-section .startup-faq-arrow {
+        width: 20px;
+        height: 20px;
+        font-size: 16px;
+    }
+
+    .startup-faq-section .startup-faq-answer {
+        padding-left: 16px;
+        padding-right: 16px;
+
+        font-size: 14px;
+    }
+
+    .startup-faq-section
+    .startup-faq-answer-wrap.is-open
+    .startup-faq-answer {
+        padding: 0 16px 16px;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   REDUCED MOTION
+   --------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .startup-faq-section .startup-faq-dot,
+    .startup-faq-section .startup-faq-line {
+        animation: none !important;
+    }
+
+    .startup-faq-section .startup-faq-item,
+    .startup-faq-section .startup-faq-image,
+    .startup-faq-section .startup-faq-image img,
+    .startup-faq-section .startup-faq-arrow,
+    .startup-faq-section .startup-faq-answer-wrap,
+    .startup-faq-section .startup-faq-answer {
+        transition: none !important;
+    }
+}

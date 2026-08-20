@@ -15,7 +15,6 @@ import { Link, useNavigate } from "react-router-dom";
 
 import "../assets/css/JoinOurTeam.css";
 
-
 // =====================================================
 // OPEN JOB ROLES
 // =====================================================
@@ -54,7 +53,6 @@ const roles = [
   },
 ];
 
-
 // =====================================================
 // COMPANY VALUES
 // =====================================================
@@ -81,7 +79,6 @@ const values = [
       "We welcome curiosity, experiments, and better ways of solving everyday problems.",
   },
 ];
-
 
 // =====================================================
 // COLLABORATORS
@@ -110,33 +107,23 @@ const collaborators = [
   },
 ];
 
-
 // =====================================================
 // JOIN OUR TEAM
 // =====================================================
 
 export default function JoinOurTeam() {
-
   const navigate = useNavigate();
-
 
   // ===================================================
   // APPLY BUTTON
   // ===================================================
 
   const handleApply = (jobTitle) => {
-
-    navigate(
-      `/apply/${encodeURIComponent(jobTitle)}`
-    );
-
+    navigate(`/apply/${encodeURIComponent(jobTitle)}`);
   };
 
-
   return (
-
     <main className="join-team-page">
-
 
       {/* =================================================
           HERO
@@ -151,26 +138,33 @@ export default function JoinOurTeam() {
 
         <div className="container join-team-hero-content">
 
+          {/* Animated dot + label */}
           <div className="join-team-eyebrow">
-
-            <span />
-
+            <span className="join-team-hero-dot" />
             Careers at ProJenius
-
           </div>
 
-
+          {/* Main heading */}
           <h1>
-            Do meaningful work with people who love to learn.
+            <span className="join-team-hero-heading-blue">
+              Do meaningful work
+            </span>{" "}
+            <span className="join-team-hero-heading-white">
+              with people who love to learn.
+            </span>
           </h1>
 
+          {/* Animated line */}
+          <div
+            className="join-team-hero-line"
+            aria-hidden="true"
+          />
 
           <p>
             Join a growing team of builders, mentors,
             and creative thinkers shaping practical
             technology experiences.
           </p>
-
 
           <div className="join-team-actions">
 
@@ -179,11 +173,8 @@ export default function JoinOurTeam() {
               className="join-team-primary"
             >
               View open roles
-
               <ArrowRight size={18} />
-
             </a>
-
 
             <a
               href="#collaborate"
@@ -194,33 +185,26 @@ export default function JoinOurTeam() {
 
           </div>
 
-
           <div className="join-team-proof">
 
             <span>
               <BadgeCheck size={18} />
-
               Real projects
             </span>
 
-
             <span>
               <BadgeCheck size={18} />
-
               Continuous learning
             </span>
 
-
             <span>
               <BadgeCheck size={18} />
-
               Supportive team
             </span>
 
           </div>
 
         </div>
-
       </section>
 
 
@@ -239,15 +223,16 @@ export default function JoinOurTeam() {
               OUR CULTURE
             </span>
 
-
             <h2 className="join-team-culture-title">
-              Small team. Big opportunities <span className="join-team-highlight">to make an impact.</span>
+              Small team. Big opportunities{" "}
+              <span className="join-team-highlight">
+                to make an impact.
+              </span>
             </h2>
 
             <div className="join-team-culture-title-line"></div>
 
           </div>
-
 
           <p>
             At ProJenius, we believe the best work happens
@@ -275,16 +260,12 @@ export default function JoinOurTeam() {
               >
 
                 <div className="join-team-icon">
-
                   <Icon size={25} />
-
                 </div>
-
 
                 <h3>
                   {title}
                 </h3>
-
 
                 <p>
                   {description}
@@ -311,7 +292,6 @@ export default function JoinOurTeam() {
 
         <div className="container">
 
-
           <div className="join-team-section-head join-team-open-head">
 
             <div>
@@ -321,15 +301,16 @@ export default function JoinOurTeam() {
                 OPEN OPPORTUNITIES
               </span>
 
-
               <h2 className="join-team-open-title">
-                Find your place <span className="join-team-highlight">on the team.</span>
+                Find your place{" "}
+                <span className="join-team-highlight">
+                  on the team.
+                </span>
               </h2>
 
               <div className="join-team-open-title-line"></div>
 
             </div>
-
 
             <p>
               Don’t see the exact role you want?
@@ -348,36 +329,26 @@ export default function JoinOurTeam() {
                 key={role.title}
               >
 
-
-                {/* ROLE TYPE */}
-
                 <div className="join-team-role-top">
 
                   <span>
                     {role.type}
                   </span>
 
-
                   <MapPin size={17} />
 
                 </div>
 
-
-                {/* TITLE */}
 
                 <h3>
                   {role.title}
                 </h3>
 
 
-                {/* DESCRIPTION */}
-
                 <p>
                   {role.description}
                 </p>
 
-
-                {/* FOOTER */}
 
                 <div className="join-team-role-foot">
 
@@ -385,22 +356,15 @@ export default function JoinOurTeam() {
                     {role.location}
                   </span>
 
-
-                  {/* APPLY BUTTON */}
-
                   <button
                     type="button"
                     className="join-team-apply-btn"
-
                     onClick={() =>
                       handleApply(role.title)
                     }
                   >
-
                     Apply
-
                     <ArrowRight size={17} />
-
                   </button>
 
                 </div>
@@ -427,9 +391,6 @@ export default function JoinOurTeam() {
 
         <div className="container">
 
-
-          {/* COLLABORATION HEADING — FULL WIDTH ABOVE ALL CONTENT */}
-
           <div className="join-team-collab-heading">
 
             <span className="join-team-kicker join-team-collab-kicker">
@@ -438,14 +399,23 @@ export default function JoinOurTeam() {
             </span>
 
             <h2 className="join-team-collab-title">
-              Let’s create <span className="join-team-highlight">opportunities together.</span>
+              Let’s create{" "}
+              <span className="join-team-highlight">
+                opportunities together.
+              </span>
             </h2>
 
             <div className="join-team-collab-title-line"></div>
 
             <p>
-              <span>We partner with organisations that care about innovation, employability,</span>
-              <span>meaningful technology outcomes.</span>
+              <span>
+                We partner with organisations that care about innovation,
+                employability,
+              </span>
+
+              <span>
+                meaningful technology outcomes.
+              </span>
             </p>
 
           </div>
@@ -467,11 +437,9 @@ export default function JoinOurTeam() {
 
                   <Icon size={29} />
 
-
                   <h3>
                     {title}
                   </h3>
-
 
                   <p>
                     {description}
@@ -489,13 +457,11 @@ export default function JoinOurTeam() {
 
             <Handshake size={28} />
 
-
             <div>
 
               <strong>
                 Have a collaboration in mind?
               </strong>
-
 
               <span>
                 Tell us about your idea and we’ll
@@ -504,13 +470,9 @@ export default function JoinOurTeam() {
 
             </div>
 
-
             <Link to="/contact">
-
               Start a conversation
-
               <ArrowRight size={17} />
-
             </Link>
 
           </div>
@@ -531,18 +493,19 @@ export default function JoinOurTeam() {
           <div className="join-team-final-box">
 
             <h2>
-              Ready to build your <span className="join-team-highlight">next chapter?</span>
+              Ready to build your{" "}
+              <span className="join-team-highlight">
+                next chapter?
+              </span>
             </h2>
 
             <div className="join-team-final-title-line"></div>
-
 
             <p>
               Send us your resume or portfolio.
               We’re excited to meet people who are
               ready to learn and contribute.
             </p>
-
 
             <button
               type="button"
@@ -552,11 +515,8 @@ export default function JoinOurTeam() {
                 )
               }
             >
-
               Join our team
-
               <ArrowRight size={18} />
-
             </button>
 
           </div>
@@ -566,6 +526,5 @@ export default function JoinOurTeam() {
       </section>
 
     </main>
-
   );
 }

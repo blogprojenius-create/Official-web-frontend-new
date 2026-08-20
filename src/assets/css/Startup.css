@@ -1,20 +1,194 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+/* =========================================================
+   ProJenius — STARTUP SUPPORTER PAGE STYLES
+   This stylesheet is imported ONLY by Startup.jsx, so every rule
+   below is already scoped to the Startup Supporter page and has
+   no effect on any other page, the navbar, or the footer.
+
+   FONT SYSTEM (as requested):
+   - Hero section .......... "Poppins"
+   - Main / section headings  "Segoe UI Black" (weight 900)
+   - Everything else ........ "Segoe UI"
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
 
 /* =========================================
-   1. STARTUP INTRO SECTION
+   0. PAGE WRAPPER — FULL WIDTH / NO OVERFLOW
+========================================= */
+
+.startup-page {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+.startup-page section {
+    width: 100%;
+}
+
+/* =========================================
+   1. HERO
+========================================= */
+
+.header-wrap {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: "Poppins", sans-serif;
+}
+
+.header-wrap .title-section {
+    width: 100%;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}
+
+.header-wrap .page-title {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    color: #ffffff;
+    font-size: clamp(34px, 6vw, 64px);
+    line-height: 1.16;
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+.header-wrap .page-title .startup-hero-accent {
+    color: rgb(0, 255, 242);
+}
+
+.header-wrap .title-section p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.78);
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 12px auto 0;
+    max-width: 620px;
+}
+
+/* =========================================
+   SHARED — ANIMATED BADGE DOT + HEADING LINE
+   Used on every section heading across the page.
+========================================= */
+
+@keyframes startupDotPulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50%      { opacity: 0.45; transform: scale(0.7); }
+}
+
+@keyframes startupLinePulse {
+    0%, 100% {
+        opacity: 0.35;
+        transform: scaleX(0.75);
+        box-shadow: 0 0 0 rgba(0, 170, 162, 0);
+    }
+    50% {
+        opacity: 1;
+        transform: scaleX(1);
+        box-shadow: 0 0 12px rgba(0, 170, 162, 0.55);
+    }
+}
+
+.startup-badge-dot,
+.services-heading-dot,
+.startup-process-dot,
+.why-choose-dot,
+.portfolio-heading-dot,
+.startup-faq-dot,
+.cta-badge-dot {
+    width: 8px;
+    height: 8px;
+    min-width: 8px;
+    display: inline-block;
+    border-radius: 50%;
+    background: rgb(0, 170, 162);
+    box-shadow: 0 0 0 4px rgba(0, 170, 162, 0.10);
+    animation: startupDotPulse 2.6s ease-in-out infinite;
+    transform-origin: center;
+}
+
+.startup-heading-line,
+.services-heading-line,
+.startup-process-line,
+.why-choose-line,
+.portfolio-heading-line,
+.startup-faq-line,
+.cta-heading-line {
+    height: 4px;
+    border-radius: 999px;
+    background: rgb(0, 170, 162);
+    transform-origin: center;
+    animation: startupLinePulse 2.6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .startup-badge-dot,
+    .services-heading-dot,
+    .startup-process-dot,
+    .why-choose-dot,
+    .portfolio-heading-dot,
+    .startup-faq-dot,
+    .cta-badge-dot,
+    .startup-heading-line,
+    .services-heading-line,
+    .startup-process-line,
+    .why-choose-line,
+    .portfolio-heading-line,
+    .startup-faq-line,
+    .cta-heading-line {
+        animation: none;
+    }
+}
+
+/* Shared badge pill look */
+.startup-mini-badge,
+.services-heading-badge,
+.startup-process-badge,
+.why-choose-badge,
+.portfolio-heading-badge,
+.startup-faq-badge,
+.cta-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 18px;
+    border-radius: 999px;
+    background: rgba(0, 170, 162, 0.08);
+    border: 1px solid rgba(0, 170, 162, 0.35);
+    color: rgb(0, 170, 162);
+    font-family: "Segoe UI Black", "Segoe UI", Arial, sans-serif;
+    font-weight: 900;
+    font-size: 13px;
+    letter-spacing: 1.6px;
+    line-height: 1;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.startup-process-badge {
+    background: rgba(0, 170, 162, 0.15);
+}
+
+/* =========================================
+   2. STARTUP INTRO SECTION
 ========================================= */
 
 .startup-section {
     width: 100%;
     background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
     padding: 90px 0;
-    overflow: hidden;
+    font-family: "Segoe UI", Arial, sans-serif;
 }
 
 .startup-container {
     width: 100%;
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
     padding: 0 20px;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -59,172 +233,168 @@
     object-fit: cover;
 }
 
+/* Intro text aligns left, matching the image column beside it */
+.startup-content {
+    text-align: left;
+}
+
 .startup-mini-title {
     display: flex;
-    align-items: center;
-    gap: 12px;
+    justify-content: flex-start;
     margin-bottom: 20px;
 }
 
-.startup-mini-title > span {
-    display: inline-block;
-    padding: 6px 16px;
-    border-radius: 40px;
-    background: rgba(8, 145, 178, 0.08);
-    border: 1px solid rgba(8, 145, 178, 0.18);
-    color: #0891b2;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-.startup-content h2 {
-    font-size: clamp(32px, 4vw, 46px);
-    line-height: 1.18;
-    color: #0f172a;
-    font-weight: 800;
+.startup-main-heading {
+    font-family: "Segoe UI Black", "Segoe UI", Arial, sans-serif;
+    font-weight: 900;
+    font-size: clamp(30px, 3.6vw, 48px);
+    line-height: 1.16;
     letter-spacing: -0.5px;
-    margin-bottom: 20px;
-    font-family: 'Outfit', sans-serif;
+    color: #0f172a;
+    margin: 0;
+    text-align: left;
+}
+
+.startup-heading-highlight {
+    color: rgb(0, 170, 162);
+}
+
+.startup-content .startup-heading-line {
+    width: 80px;
+    margin: 16px 0 20px;
 }
 
 .startup-content p {
+    font-family: "Segoe UI", Arial, sans-serif;
     font-size: 16px;
     line-height: 1.8;
     color: #475569;
-    margin-bottom: 36px;
-    font-family: 'Outfit', sans-serif;
+    margin: 0 0 32px;
+    text-align: left;
 }
 
 .startup-services {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 18px;
+    gap: 10px;
 }
 
 .startup-service-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
     background: #ffffff;
     border: 1px solid rgba(15, 23, 42, 0.08);
     border-radius: 16px;
-    padding: 24px;
+    padding: 16px 18px;
     transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
     box-shadow: 0 4px 16px rgba(15, 23, 42, 0.04);
 }
 
 .startup-service-card:hover {
     transform: translateY(-6px);
-    border-color: rgba(8, 145, 178, 0.35);
-    box-shadow: 0 12px 28px rgba(8, 145, 178, 0.12);
+    border-color: rgba(0, 170, 162, 0.35);
+    box-shadow: 0 12px 28px rgba(0, 170, 162, 0.12);
 }
 
 .startup-icon {
+    flex: 0 0 52px;
     width: 52px;
     height: 52px;
-    background: linear-gradient(135deg, #0e7490, #66c7dd);
+    background: rgb(0, 170, 162);
     border-radius: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 16px;
-    box-shadow: 0 6px 18px rgba(14, 116, 144, 0.25);
+    box-shadow: 0 6px 18px rgba(0, 170, 162, 0.25);
 }
 
 .startup-icon i {
-    font-size: 24px;
+    font-size: 22px;
     color: #ffffff;
 }
 
 .startup-service-card h4 {
-    font-size: 18px;
-    line-height: 1.35;
+    font-family: "Segoe UI Black", "Segoe UI", Arial, sans-serif;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 1.3;
     color: #0f172a;
-    font-weight: 700;
-    font-family: 'Outfit', sans-serif;
     margin: 0;
 }
 
 .startup-btn {
-    margin-top: 35px;
+    margin-top: 32px;
     border: none;
     outline: none;
     padding: 14px 32px;
     border-radius: 50px;
-    background: linear-gradient(135deg, #0e7490, #66c7dd);
+    background: rgb(0, 170, 162);
     color: #ffffff;
+    font-family: "Segoe UI", Arial, sans-serif;
     font-size: 14px;
     font-weight: 700;
     display: inline-flex;
     align-items: center;
     gap: 10px;
     cursor: pointer;
-    box-shadow: 0 8px 22px rgba(14, 116, 144, 0.28);
+    box-shadow: 0 8px 22px rgba(0, 170, 162, 0.28);
     transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .startup-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 14px 30px rgba(14, 116, 144, 0.38);
+    box-shadow: 0 14px 30px rgba(0, 170, 162, 0.38);
 }
 
-
 /* =========================================
-   2. SERVICES FOR STARTUPS (STEP-FLOW LAYOUT)
+   3. SERVICES FOR STARTUPS (STEP FLOW)
 ========================================= */
 
 .process-section {
     width: 100%;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background: linear-gradient(180deg, #f0f7ff 0%, #e8f4fb 100%);
-    padding: 80px 0;
-    overflow: hidden;
+    padding: 90px 0;
+    font-family: "Segoe UI", Arial, sans-serif;
 }
 
 .process-section .container {
     width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.process-top {
+.services-heading-block {
     text-align: center;
     margin-bottom: 60px;
 }
 
-.process-top #sub-heading {
-    display: inline-block;
-    padding: 6px 18px;
-    border-radius: 40px;
-    background: rgba(8, 145, 178, 0.08);
-    border: 1px solid rgba(8, 145, 178, 0.18);
-    color: #0891b2;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 16px;
+.services-heading-badge {
+    justify-content: center;
+    margin-bottom: 18px;
 }
 
-.process-top #title {
-    font-size: clamp(28px, 4vw, 42px);
-    font-weight: 800;
-    color: #0f172a;
-    line-height: 1.15;
+.services-main-heading {
+    font-family: "Segoe UI Black", "Segoe UI", Arial, sans-serif;
+    font-weight: 900;
+    font-size: clamp(28px, 4vw, 44px);
+    line-height: 1.18;
     letter-spacing: -0.5px;
-    margin-bottom: 16px;
+    color: #0f172a;
+    margin: 0;
+    text-align: center;
 }
 
-.process-subtitle {
-    font-size: 16px;
-    line-height: 1.75;
-    color: #64748b;
-    max-width: 600px;
-    margin: 0 auto;
-    font-family: 'Outfit', sans-serif;
+.services-heading-accent {
+    color: rgb(0, 170, 162);
 }
 
-/* --- Step Flow Container --- */
+.services-heading-line {
+    width: 80px;
+    margin: 18px auto 0;
+}
+
 .process-flow {
     display: flex;
     align-items: stretch;
@@ -234,94 +404,88 @@
     margin: 0 auto;
 }
 
-/* --- Individual Step --- */
 .process-step {
     flex: 1;
     max-width: 340px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
 }
 
-/* --- Step Number Badge --- */
 .process-step-number {
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #0e7490, #66c7dd);
+    background: rgb(0, 170, 162);
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 18px;
-    box-shadow: 0 6px 20px rgba(14, 116, 144, 0.3);
+    box-shadow: 0 6px 20px rgba(0, 170, 162, 0.3);
     z-index: 2;
 }
 
 .process-step-number span {
+    font-family: "Segoe UI Black", "Segoe UI", Arial, sans-serif;
+    font-weight: 900;
     font-size: 15px;
-    font-weight: 800;
     color: #ffffff;
-    font-family: 'Outfit', sans-serif;
     line-height: 1;
 }
 
-/* --- Process Card --- */
 .process-card {
     text-align: center;
     padding: 36px 28px 32px;
     background: #ffffff;
     border-radius: 20px;
-    border: 1px solid rgba(14, 116, 144, 0.12);
+    border: 1px solid rgba(0, 170, 162, 0.12);
     box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
     width: 100%;
     flex: 1;
     transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
-    position: relative;
 }
 
 .process-card:hover {
     transform: translateY(-8px);
-    border-color: rgba(8, 145, 178, 0.4);
-    box-shadow: 0 18px 40px rgba(8, 145, 178, 0.15);
+    border-color: rgba(0, 170, 162, 0.4);
+    box-shadow: 0 18px 40px rgba(0, 170, 162, 0.15);
 }
 
 .process-icon {
     width: 72px;
     height: 72px;
-    background: rgba(8, 145, 178, 0.08);
+    background: rgba(0, 170, 162, 0.08);
     border-radius: 50%;
     margin: 0 auto 24px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgba(8, 145, 178, 0.22);
-    box-shadow: 0 8px 24px rgba(8, 145, 178, 0.12);
+    border: 1px solid rgba(0, 170, 162, 0.22);
+    box-shadow: 0 8px 24px rgba(0, 170, 162, 0.12);
 }
 
 .process-icon i {
     font-size: 30px;
-    color: #0891b2;
+    color: rgb(0, 170, 162);
 }
 
 .process-card h3 {
-    font-size: 22px;
-    font-weight: 700;
+    font-family: "Segoe UI Black", "Segoe UI", Arial, sans-serif;
+    font-weight: 900;
+    font-size: 20px;
     color: #0f172a;
     margin-bottom: 14px;
-    font-family: 'Outfit', sans-serif;
 }
 
 .process-card p {
+    font-family: "Segoe UI", Arial, sans-serif;
     font-size: 14.5px;
     line-height: 1.75;
     color: #475569;
     max-width: 300px;
     margin: 0 auto;
-    font-family: 'Outfit', sans-serif;
 }
 
-/* --- Arrow Connector Between Steps --- */
 .process-arrow {
     display: flex;
     align-items: center;
@@ -336,7 +500,7 @@
 .process-arrow-line {
     width: 100%;
     height: 2px;
-    background: linear-gradient(90deg, rgba(14, 116, 144, 0.15), rgba(14, 116, 144, 0.5), rgba(14, 116, 144, 0.15));
+    background: linear-gradient(90deg, rgba(0, 170, 162, 0.15), rgba(0, 170, 162, 0.5), rgba(0, 170, 162, 0.15));
     position: absolute;
     top: 50%;
     left: 0;
@@ -344,7 +508,7 @@
 
 .process-arrow i {
     font-size: 22px;
-    color: #0891b2;
+    color: rgb(0, 170, 162);
     background: #eef6fb;
     border-radius: 50%;
     width: 36px;
@@ -352,20 +516,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid rgba(8, 145, 178, 0.25);
+    border: 2px solid rgba(0, 170, 162, 0.25);
     position: relative;
     z-index: 1;
-    box-shadow: 0 4px 12px rgba(8, 145, 178, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 170, 162, 0.15);
 }
 
-
 /* =========================================
-   3. STARTUP PROCESS (CENTERED MODERN GLASS)
+   4. STARTUP PROCESS (DARK GLASS BANNER)
 ========================================= */
 
 .startup-process-section {
     width: 100%;
-    overflow: hidden;
+    font-family: "Segoe UI", Arial, sans-serif;
 }
 
 .startup-process-bg {
@@ -375,12 +538,18 @@
     align-items: center;
     justify-content: center;
     background:
-        linear-gradient(160deg, rgba(15, 23, 42, 0.88) 0%, rgba(14, 116, 144, 0.6) 50%, rgba(15, 23, 42, 0.92) 100%),
+        linear-gradient(160deg, rgba(15, 23, 42, 0.88) 0%, rgba(0, 170, 162, 0.6) 50%, rgba(15, 23, 42, 0.92) 100%),
         url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop");
     background-size: cover;
     background-position: center;
     padding: 80px 0;
-    position: relative;
+}
+
+.startup-process-bg .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .startup-process-content {
@@ -398,30 +567,24 @@
 
 .startup-process-mini {
     text-align: center;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
 }
 
-.startup-process-mini #sub-heading {
-    display: inline-block;
-    padding: 5px 16px;
-    border-radius: 40px;
-    background: rgba(102, 199, 221, 0.15);
-    border: 1px solid rgba(102, 199, 221, 0.3);
-    color: #66c7dd;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
-.startup-process-content h2 {
-    color: #ffffff;
-    font-size: clamp(28px, 4vw, 42px);
-    font-weight: 800;
-    text-align: center;
-    margin-bottom: 40px;
-    font-family: 'Outfit', sans-serif;
+.startup-process-title {
+    font-family: "Segoe UI Black", "Segoe UI", Arial, sans-serif;
+    font-weight: 900;
+    font-size: clamp(26px, 4vw, 40px);
+    line-height: 1.2;
     letter-spacing: -0.5px;
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+}
+
+.startup-process-line {
+    width: 80px;
+    margin: 18px auto 36px;
+    box-shadow: 0 0 12px rgba(0, 170, 162, 0.35);
 }
 
 .startup-process-card {
@@ -439,7 +602,7 @@
 .startup-process-card:hover {
     transform: translateY(-4px);
     background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(102, 199, 221, 0.4);
+    border-color: rgba(0, 170, 162, 0.4);
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
 }
 
@@ -447,8 +610,8 @@
     min-width: 52px;
     height: 52px;
     border-radius: 14px;
-    background: linear-gradient(135deg, rgba(8, 145, 178, 0.3), rgba(102, 199, 221, 0.2));
-    border: 1px solid rgba(102, 199, 221, 0.4);
+    background: linear-gradient(135deg, rgba(0, 170, 162, 0.3), rgba(0, 170, 162, 0.2));
+    border: 1px solid rgba(0, 170, 162, 0.4);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -457,35 +620,41 @@
 
 .startup-process-icon i {
     font-size: 22px;
-    color: #66c7dd;
+    color: rgb(0, 170, 162);
 }
 
 .startup-process-text h4 {
-    font-size: 20px;
-    font-weight: 700;
+    font-family: "Segoe UI Black", "Segoe UI", Arial, sans-serif;
+    font-weight: 900;
+    font-size: 18px;
     color: #ffffff;
     margin-bottom: 8px;
-    font-family: 'Outfit', sans-serif;
 }
 
 .startup-process-text p {
+    font-family: "Segoe UI", Arial, sans-serif;
     font-size: 14px;
     line-height: 1.7;
     color: #cbd5e1;
     margin: 0;
-    font-family: 'Outfit', sans-serif;
 }
 
-
 /* =========================================
-   4. WHY CHOOSE US SECTION
+   5. WHY CHOOSE US
 ========================================= */
 
 .why-choose-section {
     width: 100%;
     background: #ffffff;
     padding: 90px 0;
-    overflow: hidden;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.why-choose-section .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .why-choose-top {
@@ -493,15 +662,43 @@
 }
 
 .why-choose-content {
-    max-width: 440px;
+    max-width: 460px;
+    text-align: left;
+}
+
+.why-choose-mini-title {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 16px;
+}
+
+.why-choose-main-title {
+    font-family: "Segoe UI Black", "Segoe UI", Arial, sans-serif;
+    font-weight: 900;
+    font-size: clamp(28px, 3.6vw, 42px);
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    color: #0f172a;
+    margin: 0;
+    text-align: left;
+}
+
+.why-choose-main-title span {
+    color: rgb(0, 170, 162);
+}
+
+.why-choose-line {
+    width: 80px;
+    margin: 18px 0 22px;
 }
 
 .why-choose-content p {
+    font-family: "Segoe UI", Arial, sans-serif;
     font-size: 16px;
     line-height: 1.85;
     color: #475569;
     margin: 0;
-    font-family: 'Outfit', sans-serif;
+    text-align: left;
 }
 
 .why-choose-image {
@@ -520,6 +717,7 @@
 
 .why-card {
     width: 100%;
+    text-align: left;
     padding: 28px 26px;
     border: 1px solid rgba(15, 23, 42, 0.08);
     border-radius: 16px;
@@ -531,15 +729,15 @@
 
 .why-card:hover {
     transform: translateY(-6px);
-    border-color: rgba(8, 145, 178, 0.35);
-    box-shadow: 0 12px 28px rgba(8, 145, 178, 0.12);
+    border-color: rgba(0, 170, 162, 0.35);
+    box-shadow: 0 12px 28px rgba(0, 170, 162, 0.12);
 }
 
 .why-card-icon {
     width: 56px;
     height: 56px;
-    background: rgba(8, 145, 178, 0.08);
-    border: 1px solid rgba(8, 145, 178, 0.18);
+    background: rgba(0, 170, 162, 0.08);
+    border: 1px solid rgba(0, 170, 162, 0.18);
     border-radius: 14px;
     display: flex;
     align-items: center;
@@ -549,154 +747,74 @@
 
 .why-card-icon i {
     font-size: 26px;
-    color: #0891b2;
+    color: rgb(0, 170, 162);
 }
 
 .why-card h4 {
-    font-size: 20px;
+    font-family: "Segoe UI Black", "Segoe UI", Arial, sans-serif;
+    font-weight: 900;
+    font-size: 18px;
     line-height: 1.35;
     color: #0f172a;
-    font-weight: 700;
     margin-bottom: 10px;
-    font-family: 'Outfit', sans-serif;
 }
 
 .why-card p {
+    font-family: "Segoe UI", Arial, sans-serif;
     font-size: 14.5px;
     line-height: 1.75;
     color: #475569;
     margin: 0;
-    font-family: 'Outfit', sans-serif;
 }
 
-
 /* =========================================
-   5. PORTFOLIO SHOWCASE (ORIGINAL FORM RESTORED)
+   6. PORTFOLIO SHOWCASE
 ========================================= */
 
 .startup-portfolio-section {
     width: 100%;
     background: #ffffff;
-    padding: 50px 0 20px;
-    overflow: hidden;
+    padding: 90px 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.startup-portfolio-section .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .startup-portfolio-top {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 55px;
 }
 
-/* PORTFOLIO HEADING — ONLY THIS HEADING IS MODIFIED */
-.startup-portfolio-section .portfolio-heading-badge {
-    display: inline-flex;
-    align-items: center;
+.portfolio-heading-mini {
+    display: flex;
     justify-content: center;
-    gap: 9px;
-    padding: 9px 18px;
-    min-height: 40px;
-    box-sizing: border-box;
-    border-radius: 999px;
-    background: rgba(102, 199, 221, 0.08);
-    border: 1px solid rgba(102, 199, 221, 0.38);
-    color: #52bfdc;
-    font-family: 'Outfit', sans-serif;
-    font-size: 13px;
-    font-weight: 800;
-    letter-spacing: 1.7px;
-    line-height: 1;
-    text-transform: uppercase;
-    white-space: nowrap;
+    margin-bottom: 18px;
 }
 
-.startup-portfolio-section .portfolio-heading-dot {
-    width: 8px;
-    height: 8px;
-    min-width: 8px;
-    border-radius: 50%;
-    background: #52bfdc;
-    box-shadow: 0 0 0 4px rgba(82, 191, 220, 0.10);
-}
-
-.startup-portfolio-section .portfolio-heading-title {
-    margin: 22px 0 0;
-    padding: 0;
+.portfolio-heading-title {
+    font-family: "Segoe UI Black", "Segoe UI", Arial, sans-serif;
+    font-weight: 900;
+    font-size: clamp(28px, 4vw, 44px);
+    line-height: 1.18;
+    letter-spacing: -0.5px;
     color: #0f172a;
-    font-family: 'Outfit', sans-serif;
-    font-size: clamp(40px, 4.5vw, 58px);
-    font-weight: 800;
-    line-height: 1.12;
-    letter-spacing: -1.3px;
+    margin: 0;
     text-align: center;
 }
 
-.startup-portfolio-section .portfolio-heading-title span {
-    color: #159fc5;
+.portfolio-heading-title span {
+    color: rgb(0, 170, 162);
 }
 
-.startup-portfolio-section .portfolio-heading-line {
-    width: 78px;
-    height: 5px;
+.portfolio-heading-line {
+    width: 80px;
     margin: 18px auto 0;
-    border-radius: 999px;
-    background: #66c7dd;
-    box-shadow: 0 0 10px rgba(102, 199, 221, 0.30);
 }
-
-@media (max-width: 992px) {
-    .startup-portfolio-section .portfolio-heading-title {
-        font-size: clamp(36px, 5vw, 50px);
-    }
-
-    .startup-portfolio-section .portfolio-heading-line {
-        width: 74px;
-        height: 5px;
-        margin-top: 17px;
-    }
-}
-
-@media (max-width: 768px) {
-    .startup-portfolio-section .portfolio-heading-badge {
-        min-height: 40px;
-        padding: 8px 16px;
-        font-size: 11px;
-        letter-spacing: 1.5px;
-    }
-
-    .startup-portfolio-section .portfolio-heading-dot {
-        width: 7px;
-        height: 7px;
-        min-width: 7px;
-    }
-
-    .startup-portfolio-section .portfolio-heading-title {
-        font-size: 38px;
-        line-height: 1.14;
-    }
-
-    .startup-portfolio-section .portfolio-heading-line {
-        width: 70px;
-        height: 4px;
-        margin-top: 16px;
-    }
-}
-
-@media (max-width: 576px) {
-    .startup-portfolio-section .portfolio-heading-title {
-        font-size: 31px;
-    }
-
-    .startup-portfolio-section .portfolio-heading-badge {
-        padding: 8px 14px;
-        font-size: 10px;
-        letter-spacing: 1.2px;
-    }
-
-    .startup-portfolio-section .portfolio-heading-line {
-        width: 64px;
-        height: 4px;
-    }
-}
-
 
 .portfolio-images-row {
     width: 100%;
@@ -704,7 +822,7 @@
     align-items: center;
     justify-content: center;
     gap: 30px;
-    margin-bottom: 45px;
+    margin: 45px 0;
 }
 
 .portfolio-small-image {
@@ -727,7 +845,7 @@
 .active-image {
     width: 180px;
     height: 180px;
-    border-color: #66c7dd;
+    border-color: rgb(0, 170, 162);
     opacity: 1;
     transform: scale(1.1);
     z-index: 2;
@@ -736,33 +854,33 @@
 .portfolio-main-content {
     text-align: center;
     max-width: 800px;
-    margin: auto;
+    margin: 0 auto;
 }
 
 .portfolio-main-content h3 {
-    font-size: 28px;
-    color: #1a1a1a;
-    font-weight: 700;
+    font-family: "Segoe UI Black", "Segoe UI", Arial, sans-serif;
+    font-weight: 900;
+    font-size: 24px;
+    color: #0f172a;
     margin-bottom: 12px;
-    font-family: 'Outfit', sans-serif;
 }
 
 .portfolio-main-content span {
     display: block;
-    color: #66c7dd;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: rgb(0, 170, 162);
     font-size: 16px;
     font-weight: 600;
-    margin-bottom: 25px;
-    font-family: 'Outfit', sans-serif;
+    margin-bottom: 22px;
 }
 
 .portfolio-main-content p {
-    font-size: 18px;
-    line-height: 1.9;
-    color: #666;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.85;
+    color: #666666;
     max-width: 700px;
-    margin: 0 auto 28px;
-    font-family: 'Outfit', sans-serif;
+    margin: 0 auto 24px;
 }
 
 .portfolio-stars {
@@ -779,196 +897,70 @@
 
 .startup-portfolio-section .carousel-control-prev,
 .startup-portfolio-section .carousel-control-next {
-    width: 60px;
-    height: 60px;
+    width: 56px;
+    height: 56px;
     top: 35%;
     opacity: 1;
-    background: #66c7dd;
+    background: rgb(0, 170, 162);
     border-radius: 50%;
 }
 
-.startup-portfolio-section .carousel-control-prev {
-    left: 0;
-}
-
-.startup-portfolio-section .carousel-control-next {
-    right: 0;
-}
+.startup-portfolio-section .carousel-control-prev { left: 0; }
+.startup-portfolio-section .carousel-control-next { right: 0; }
 
 .startup-portfolio-section .carousel-control-prev i,
 .startup-portfolio-section .carousel-control-next i {
-    font-size: 28px;
+    font-size: 26px;
     color: #ffffff;
 }
 
-
 /* =========================================
-   6. FAQ ACCORDION SECTION (RESTORED & POLISHED)
+   7. FAQ SECTION
 ========================================= */
 
 .startup-faq-section {
     width: 100%;
-    position: relative;
-    margin-top: 30px;
-    background: #f8fbfd;
-    padding: 55px 0 60px;
-    border-top: 1px solid rgba(102, 199, 221, 0.22);
-    border-radius: 28px 28px 0 0;
-    box-shadow: 0 -10px 35px rgba(15, 23, 42, 0.07);
-    overflow: hidden;
+    background: #ffffff;
+    padding: 90px 0;
+    font-family: "Segoe UI", Arial, sans-serif;
 }
 
+.startup-faq-section .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
 .startup-faq-left {
     padding-right: 20px;
+    text-align: left;
 }
 
-/* FAQ heading is above BOTH columns */
-/* =========================================================
-   FAQ HEADING — FULL WIDTH ABOVE LEFT + RIGHT CONTENT
-   ========================================================= */
-
-.startup-faq-title-row {
-    width: 100%;
-    margin: 0 0 42px 0;
-    padding: 0;
+.startup-faq-mini {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    margin-bottom: 16px;
 }
 
-.startup-faq-title-col {
-    width: 100%;
-    max-width: 100%;
-    padding-left: 0;
-    padding-right: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center !important;
-}
-
-.startup-faq-title-col .startup-faq-mini {
-    width: 100%;
-    margin: 0 0 16px 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center !important;
-}
-
-/* Startup FAQ badge — same rounded radio style as OUR PORTFOLIO */
-.startup-faq-title-col .startup-faq-mini #sub-heading {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 9px;
-    padding: 9px 18px;
-    min-height: 40px;
-    box-sizing: border-box;
-    border-radius: 999px;
-    background: rgba(102, 199, 221, 0.08);
-    border: 1px solid rgba(102, 199, 221, 0.38);
-    color: #52bfdc;
-    font-family: 'Outfit', sans-serif;
-    font-size: 13px;
-    font-weight: 800;
-    letter-spacing: 1.7px;
-    line-height: 1;
-    text-transform: uppercase;
-    white-space: nowrap;
-}
-
-/* Round radio button */
-.startup-faq-radio-dot {
-    width: 8px;
-    height: 8px;
-    min-width: 8px;
-    min-height: 8px;
-    border-radius: 50%;
-    background: #52bfdc;
-    box-shadow: 0 0 0 4px rgba(82, 191, 220, 0.10);
-    display: inline-block;
-}
-
-/* FAQ main heading */
-.startup-faq-main-title {
-    width: 100% !important;
-    max-width: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    text-align: center !important;
-    white-space: nowrap !important;
-    font-family: 'Outfit', sans-serif;
-    font-size: clamp(24px, 3.2vw, 42px) !important;
-    font-weight: 800;
-    line-height: 1.12;
-    letter-spacing: -1px;
+.startup-faq-title {
+    font-family: "Segoe UI Black", "Segoe UI", Arial, sans-serif;
+    font-weight: 900;
+    font-size: clamp(26px, 3.4vw, 38px);
+    line-height: 1.2;
+    letter-spacing: -0.5px;
     color: #0f172a;
+    margin: 0;
+    text-align: left;
 }
 
-/* Highlight only "scalable digital products" */
-.startup-faq-highlight {
-    color: #159fc5;
+.startup-faq-title span {
+    color: rgb(0, 170, 162);
 }
 
-/* Heading underline */
-.startup-faq-title-line {
-    width: 78px;
-    height: 5px;
-    margin: 18px auto 0;
-    border-radius: 999px;
-    background: #66c7dd;
-    box-shadow: 0 0 10px rgba(102, 199, 221, 0.30);
-}
-
-@media (max-width: 768px) {
-    .startup-faq-title-col .startup-faq-mini #sub-heading {
-        min-height: 40px;
-        padding: 8px 16px;
-        font-size: 11px;
-        letter-spacing: 1.5px;
-    }
-
-    .startup-faq-radio-dot {
-        width: 7px;
-        height: 7px;
-        min-width: 7px;
-        min-height: 7px;
-    }
-}
-
-@media (max-width: 992px) {
-    .startup-faq-title-row {
-        margin-bottom: 35px;
-    }
-
-    .startup-faq-main-title {
-        font-size: clamp(22px, 4vw, 36px) !important;
-    }
-}
-
-@media (max-width: 768px) {
-    .startup-faq-title-row {
-        margin-bottom: 30px;
-    }
-
-    .startup-faq-title-col {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-    .startup-faq-main-title {
-        font-size: clamp(20px, 5vw, 30px) !important;
-        letter-spacing: -0.6px;
-    }
-
-    .startup-faq-title-line {
-        width: 64px;
-        height: 4px;
-        margin-top: 16px;
-    }
+.startup-faq-line {
+    width: 76px;
+    margin: 16px 0 26px;
 }
 
 .startup-faq-images {
@@ -996,28 +988,42 @@
     gap: 20px;
     padding: 20px 0;
     border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    text-align: left;
 }
 
 .startup-feature-icon i {
-    font-size: 36px;
-    color: #0891b2;
+    font-size: 34px;
+    color: rgb(0, 170, 162);
 }
 
 .startup-feature-content h4 {
-    font-size: 20px;
+    font-family: "Segoe UI Black", "Segoe UI", Arial, sans-serif;
+    font-weight: 900;
+    font-size: 18px;
     line-height: 1.35;
     color: #0f172a;
-    font-weight: 700;
     margin-bottom: 8px;
-    font-family: 'Outfit', sans-serif;
 }
 
 .startup-feature-content p {
+    font-family: "Segoe UI", Arial, sans-serif;
     font-size: 14.5px;
     line-height: 1.75;
     color: #475569;
     margin: 0;
-    font-family: 'Outfit', sans-serif;
+}
+
+.startup-faq-right {
+    padding-left: 0;
+}
+
+.startup-faq-desc {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 15.5px;
+    line-height: 1.8;
+    color: #475569;
+    margin-bottom: 28px;
+    text-align: left;
 }
 
 .startup-accordion .accordion-item {
@@ -1031,318 +1037,196 @@
 
 .startup-accordion .accordion-button {
     background: #ffffff;
-    font-size: 16.5px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 16px;
     font-weight: 700;
     color: #0f172a;
     padding: 18px 24px;
     box-shadow: none !important;
-    font-family: 'Outfit', sans-serif;
+    text-align: left;
 }
 
 .startup-accordion .accordion-button:not(.collapsed) {
-    color: #0891b2;
-    background: rgba(8, 145, 178, 0.04);
+    color: rgb(0, 170, 162);
+    background: rgba(0, 170, 162, 0.04);
 }
 
 .startup-accordion .accordion-body {
     padding: 0 24px 20px;
+    font-family: "Segoe UI", Arial, sans-serif;
     font-size: 14.5px;
     line-height: 1.75;
     color: #475569;
-    font-family: 'Outfit', sans-serif;
+    text-align: left;
 }
 
-
 /* =========================================
-   7. CALL TO ACTION — PREMIUM BANNER
+   8. CALL TO ACTION
 ========================================= */
 
 .startup-cta-section {
     width: 100%;
     background: #ffffff;
-    padding: 70px 0;
-    overflow: hidden;
+    padding: 64px 0;
     position: relative;
+    font-family: "Segoe UI", Arial, sans-serif;
 }
 
-/* Floating background glow */
+.startup-cta-section .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
 .cta-glow {
     position: absolute;
     border-radius: 50%;
     filter: blur(100px);
-    opacity: 0.22;
+    opacity: 0.25;
     pointer-events: none;
 }
 
 .cta-glow-1 {
-    width: 320px;
-    height: 320px;
-    background: radial-gradient(circle, #0e7490, transparent 70%);
-    top: -120px;
-    right: -70px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgb(0, 170, 162), transparent 70%);
+    top: -100px;
+    right: -60px;
 }
 
 .cta-glow-2 {
-    width: 280px;
-    height: 280px;
-    background: radial-gradient(circle, #66c7dd, transparent 70%);
-    bottom: -100px;
-    left: -50px;
+    width: 260px;
+    height: 260px;
+    background: radial-gradient(circle, rgb(0, 170, 162), transparent 70%);
+    bottom: -80px;
+    left: -40px;
 }
-
-/* CTA card */
 
 .startup-cta-card-box {
-    width: 100%;
-    background: linear-gradient(
-        135deg,
-        #0b1220 0%,
-        #111c30 55%,
-        #17263a 100%
-    );
-    border: 1px solid rgba(102, 199, 221, 0.18);
-    border-radius: 28px;
-    padding: 65px 40px;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 50px 36px;
     position: relative;
     z-index: 2;
-    overflow: hidden;
-    box-shadow: 0 25px 60px rgba(15, 23, 42, 0.22);
+    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.22);
 }
-
-/* Subtle card glow */
-
-.startup-cta-card-box::before {
-    content: "";
-    position: absolute;
-    width: 420px;
-    height: 420px;
-    top: -240px;
-    right: -180px;
-    background: radial-gradient(
-        circle,
-        rgba(102, 199, 221, 0.16),
-        transparent 70%
-    );
-    pointer-events: none;
-}
-
-/* Inner content */
 
 .startup-cta-inner {
-    max-width: 780px;
+    max-width: 720px;
     margin: 0 auto;
     text-align: center;
     position: relative;
-    z-index: 3;
+    z-index: 2;
 }
-
-/* Badge */
 
 .cta-badge {
-    display: inline-flex;
-    align-items: center;
     justify-content: center;
-    padding: 9px 20px;
-    min-height: 38px;
-    border-radius: 999px;
-    background: rgba(102, 199, 221, 0.08);
-    border: 1px solid rgba(102, 199, 221, 0.35);
-    color: #66c7dd;
-    font-size: 12px;
-    font-weight: 800;
-    letter-spacing: 1.8px;
-    line-height: 1;
-    text-transform: uppercase;
-    margin-bottom: 24px;
-    font-family: 'Outfit', sans-serif;
+    margin-bottom: 16px;
 }
-
-/* Heading */
 
 .startup-cta-section h2 {
-    margin: 0 0 20px;
+    font-family: "Segoe UI Black", "Segoe UI", Arial, sans-serif;
+    font-weight: 900;
+    font-size: clamp(24px, 3.2vw, 36px);
+    line-height: 1.22;
+    letter-spacing: -0.5px;
     color: #ffffff;
-    font-family: 'Outfit', sans-serif;
-    font-size: clamp(24px, 3.8vw, 58px);
-    font-weight: 800;
-    line-height: 1.12;
-    letter-spacing: -1.5px;
-    white-space: nowrap;
+    margin: 0;
 }
 
-/* Highlight */
-
 .cta-highlight {
-    background: linear-gradient(135deg, #159fc5, #66c7dd);
+    background: linear-gradient(135deg, rgb(0, 170, 162), rgb(0, 170, 162));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    white-space: nowrap;
 }
 
-/* Description */
+.cta-heading-line {
+    width: 80px;
+    margin: 16px auto 20px;
+}
 
 .startup-cta-section p {
-    max-width: 600px;
-    margin: 0 auto 30px;
-    color: rgba(255, 255, 255, 0.70);
-    font-family: 'Outfit', sans-serif;
-    font-size: 16px;
-    line-height: 1.75;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 540px;
+    margin: 0 auto 22px;
 }
-
-/* Buttons */
 
 .cta-actions {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 14px;
+    gap: 16px;
     flex-wrap: wrap;
 }
-
-/* Primary button */
 
 .startup-cta-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 9px;
-    padding: 14px 28px;
-    border-radius: 999px;
-    background: linear-gradient(135deg, #0e7490, #66c7dd);
+    gap: 10px;
+    padding: 15px 34px;
+    border-radius: 50px;
+    background: rgb(0, 170, 162);
     color: #ffffff !important;
-    font-family: 'Outfit', sans-serif;
-    font-size: 14px;
+    font-family: "Segoe UI", Arial, sans-serif;
     font-weight: 700;
+    font-size: 15px;
     text-decoration: none;
     border: none;
     cursor: pointer;
-    box-shadow: 0 10px 30px rgba(14, 116, 144, 0.35);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 28px rgba(0, 170, 162, 0.4);
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .startup-cta-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 15px 35px rgba(14, 116, 144, 0.50);
+    box-shadow: 0 14px 36px rgba(0, 170, 162, 0.55);
     color: #ffffff !important;
     text-decoration: none;
 }
 
 .startup-cta-btn i {
-    font-size: 17px;
+    font-size: 18px;
 }
-
-/* Secondary outline button */
 
 .startup-cta-btn-outline {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 9px;
-    padding: 13px 28px;
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(102, 199, 221, 0.45);
-    color: #66c7dd !important;
-    font-family: 'Outfit', sans-serif;
-    font-size: 14px;
+    gap: 10px;
+    padding: 15px 34px;
+    border-radius: 50px;
+    background: transparent;
+    color: #ffffff !important;
+    font-family: "Segoe UI", Arial, sans-serif;
     font-weight: 700;
+    font-size: 15px;
     text-decoration: none;
+    border: 2px solid rgba(255, 255, 255, 0.2);
     cursor: pointer;
-    transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .startup-cta-btn-outline:hover {
     transform: translateY(-3px);
-    background: rgba(102, 199, 221, 0.10);
-    border-color: #66c7dd;
-    color: #ffffff !important;
+    border-color: rgba(0, 170, 162, 0.5);
+    background: rgba(0, 170, 162, 0.08);
+    box-shadow: 0 8px 24px rgba(0, 170, 162, 0.15);
     text-decoration: none;
-    box-shadow: 0 8px 24px rgba(102, 199, 221, 0.15);
+    color: #ffffff !important;
 }
 
 .startup-cta-btn-outline i {
-    font-size: 17px;
-    color: #66c7dd;
+    font-size: 18px;
+    color: rgb(0, 170, 162);
 }
 
-/* CTA responsive */
-
-@media (max-width: 992px) {
-    .startup-cta-card-box {
-        padding: 55px 30px;
-    }
-
-    .startup-cta-section h2 {
-        font-size: clamp(22px, 4vw, 50px);
-        white-space: nowrap;
-    }
-}
-
-@media (max-width: 768px) {
-    .startup-cta-section {
-        padding: 60px 0;
-    }
-
-    .startup-cta-card-box {
-        border-radius: 22px;
-        padding: 45px 22px;
-    }
-
-    .cta-badge {
-        font-size: 10px;
-        letter-spacing: 1.4px;
-        padding: 8px 16px;
-        margin-bottom: 20px;
-    }
-
-    .startup-cta-section h2 {
-        font-size: 26px;
-        line-height: 1.15;
-        letter-spacing: -0.8px;
-        white-space: nowrap;
-    }
-
-    .startup-cta-section p {
-        font-size: 14px;
-        line-height: 1.7;
-        margin-bottom: 25px;
-    }
-
-    .cta-actions {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .startup-cta-btn,
-    .startup-cta-btn-outline {
-        width: 100%;
-        max-width: 300px;
-    }
-}
-
-@media (max-width: 576px) {
-    .startup-cta-card-box {
-        padding: 40px 18px;
-    }
-
-    .startup-cta-section h2 {
-        font-size: 21px;
-        line-height: 1.15;
-        white-space: nowrap;
-    }
-
-    .startup-cta-section p {
-        font-size: 13px;
-    }
-}
-
-
-/* =========================================
-   8. RESPONSIVE
-========================================= */
 /* =========================================
    RESPONSIVE
 ========================================= */
@@ -1350,29 +1234,19 @@
 @media (max-width: 992px) {
     .startup-container {
         grid-template-columns: 1fr;
-        gap: 60px;
+        gap: 50px;
     }
 
     .startup-images {
         min-height: 400px;
     }
 
-    .why-choose-top {
-        row-gap: 36px;
-    }
-
     .startup-faq-right {
-        padding-left: 0;
         margin-top: 40px;
     }
 
     .startup-process-content {
         padding: 40px 28px;
-    }
-
-    /* Step-flow stacks vertically on tablet */
-    .process-section {
-        min-height: auto;
     }
 
     .process-flow {
@@ -1396,7 +1270,7 @@
     .process-arrow-line {
         width: 2px;
         height: 100%;
-        background: linear-gradient(180deg, rgba(14, 116, 144, 0.15), rgba(14, 116, 144, 0.5), rgba(14, 116, 144, 0.15));
+        background: linear-gradient(180deg, rgba(0, 170, 162, 0.15), rgba(0, 170, 162, 0.5), rgba(0, 170, 162, 0.15));
         top: 0;
         left: 50%;
         transform: translateX(-50%);
@@ -1410,18 +1284,10 @@
 @media (max-width: 768px) {
     .startup-section,
     .process-section,
-    .why-choose-section {
-        padding: 60px 0;
-    }
-
-    .startup-portfolio-section {
-        padding: 40px 0 20px;
-    }
-
+    .why-choose-section,
+    .startup-portfolio-section,
     .startup-faq-section {
-        margin-top: 22px;
-        padding: 42px 0 50px;
-        border-radius: 22px 22px 0 0;
+        padding: 60px 0;
     }
 
     .startup-services {
@@ -1430,16 +1296,16 @@
 
     .startup-img-one {
         width: 100%;
-        height: 380px;
+        height: 340px;
     }
 
     .startup-img-two {
-        width: 220px;
-        height: 220px;
+        width: 200px;
+        height: 200px;
     }
 
     .why-choose-image {
-        height: 320px;
+        height: 300px;
     }
 
     .portfolio-images-row {
@@ -1460,8 +1326,8 @@
         flex-direction: column;
     }
 
-    .startup-cta-section {
-        padding: 70px 0;
+    .startup-faq-left {
+        padding-right: 0;
     }
 
     .cta-actions {
@@ -1472,6 +1338,18 @@
     .startup-cta-btn,
     .startup-cta-btn-outline {
         width: 100%;
+    }
+
+    .startup-mini-badge,
+    .services-heading-badge,
+    .startup-process-badge,
+    .why-choose-badge,
+    .portfolio-heading-badge,
+    .startup-faq-badge,
+    .cta-badge {
+        padding: 8px 15px;
+        font-size: 11px;
+        letter-spacing: 1.3px;
     }
 }
 
@@ -1504,830 +1382,9 @@
     .portfolio-images-row {
         gap: 8px;
     }
-}
 
-
-/* =========================================================
-   STARTUP HEADING — FINAL VISUAL UPDATE
-   Only the badge dot, heading color split and underline are changed.
-   Existing layout/alignment remains untouched.
-   ========================================================= */
-
-/* Badge content — styled like the reference "OUR PRODUCT" pill */
-.startup-mini-title .startup-mini-badge {
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 10px !important;
-
-    padding: 9px 18px !important;
-    min-height: 43px;
-    box-sizing: border-box;
-
-    border-radius: 999px !important;
-    background: rgba(102, 199, 221, 0.08) !important;
-    border: 1px solid rgba(102, 199, 221, 0.38) !important;
-
-    color: #52bfdc !important;
-    font-size: 13px !important;
-    font-weight: 800 !important;
-    letter-spacing: 1.7px !important;
-    line-height: 1 !important;
-    text-transform: uppercase;
-}
-
-/* Dot INSIDE the radio-style badge */
-.startup-mini-title .startup-badge-dot {
-    width: 8px !important;
-    height: 8px !important;
-    min-width: 8px !important;
-    padding: 0 !important;
-    border-radius: 50% !important;
-    display: inline-block !important;
-
-    background: #52bfdc !important;
-    box-shadow: 0 0 0 4px rgba(82, 191, 220, 0.10);
-}
-
-/* Main startup heading */
-.startup-content .startup-main-heading {
-    color: #0f172a !important;
-    margin-bottom: 0 !important;
-}
-
-/* Cyan part: Startups. */
-.startup-content .startup-heading-highlight {
-    color: #159fc5 !important;
-}
-
-/* Short cyan line below heading */
-.startup-content .startup-heading-line {
-    width: 88px;
-    height: 5px;
-    border-radius: 999px;
-    background: #22b8dc;
-    margin-top: 18px;
-    margin-bottom: 20px;
-}
-
-/* Keep the original description spacing natural after the new line */
-.startup-content .startup-main-heading + .startup-heading-line + p {
-    margin-top: 0;
-}
-
-/* Tablet */
-@media (max-width: 992px) {
-    .startup-content .startup-heading-line {
-        width: 82px;
-        height: 5px;
-        margin-top: 16px;
-        margin-bottom: 18px;
-    }
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-    .startup-mini-title .startup-mini-badge {
-        min-height: 40px;
-        padding: 8px 16px !important;
-        font-size: 11px !important;
-        letter-spacing: 1.5px !important;
-    }
-
-    .startup-content .startup-badge-dot {
-        width: 7px !important;
-        height: 7px !important;
-        min-width: 7px !important;
-    }
-
-    .startup-content .startup-heading-line {
-        width: 72px;
-        height: 4px;
-        margin-top: 15px;
-        margin-bottom: 18px;
-    }
-}
-
-
-/* =========================================================
-   SERVICES FOR STARTUPS — HEADING STYLE
-   ========================================================= */
-
-.services-startup-heading {
-    text-align: center !important;
-    margin-bottom: 45px !important;
-}
-
-.services-startup-badge {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 9px;
-    padding: 10px 22px;
-    border-radius: 999px;
-    background: rgba(102, 199, 221, 0.08);
-    border: 1px solid rgba(102, 199, 221, 0.38);
-    color: #0891b2;
-    font-family: 'Outfit', sans-serif;
-    font-size: 13px;
-    font-weight: 800;
-    letter-spacing: 1.8px;
-    text-transform: uppercase;
-    box-sizing: border-box;
-}
-
-.services-startup-dot {
-    width: 8px;
-    height: 8px;
-    min-width: 8px;
-    border-radius: 50%;
-    display: inline-block;
-    background: #66c7dd;
-    box-shadow: 0 0 0 4px rgba(102, 199, 221, 0.12);
-}
-
-.services-startup-title {
-    margin: 22px 0 0 !important;
-    padding: 0 !important;
-    color: #0f172a !important;
-    font-family: 'Outfit', sans-serif;
-    font-size: clamp(36px, 4.2vw, 52px) !important;
-    font-weight: 800 !important;
-    line-height: 1.12 !important;
-    letter-spacing: -1.5px !important;
-    text-align: center !important;
-}
-
-.services-startup-title span {
-    color: #159fc5 !important;
-}
-
-.services-startup-line {
-    width: 78px;
-    height: 5px;
-    margin: 18px auto 20px;
-    border-radius: 999px;
-    background: #66c7dd;
-    box-shadow: 0 0 10px rgba(102, 199, 221, 0.30);
-}
-
-.services-startup-heading .process-subtitle {
-    margin: 0 auto;
-    max-width: 600px;
-}
-
-@media (max-width: 768px) {
-    .services-startup-heading {
-        margin-bottom: 35px !important;
-    }
-
-    .services-startup-badge {
-        padding: 9px 18px;
-        font-size: 11px;
-        letter-spacing: 1.5px;
-    }
-
-    .services-startup-dot {
-        width: 7px;
-        height: 7px;
-        min-width: 7px;
-    }
-
-    .services-startup-title {
-        font-size: 34px !important;
-        line-height: 1.15 !important;
-        letter-spacing: -1px !important;
-    }
-
-    .services-startup-line {
-        width: 70px;
-        height: 4px;
-        margin-top: 16px;
-    }
-}
-
-@media (max-width: 576px) {
-    .services-startup-title {
-        font-size: 29px !important;
-    }
-
-    .services-startup-badge {
-        padding: 8px 15px;
-        font-size: 10px;
-        letter-spacing: 1.2px;
-    }
-}
-
-/* =========================================================
-   STARTUP PROCESS HEADING — FINAL UPDATE
-   Only badge, heading color and underline are changed.
-   Existing background is NOT changed.
-   ========================================================= */
-
-.startup-process-mini {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.startup-process-badge {
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 9px !important;
-    padding: 9px 18px !important;
-    min-height: 40px;
-    box-sizing: border-box;
-    border-radius: 999px !important;
-    background: rgba(102, 199, 221, 0.15) !important;
-    border: 1px solid rgba(102, 199, 221, 0.35) !important;
-    color: #66c7dd !important;
-    font-family: 'Outfit', sans-serif;
-    font-size: 13px !important;
-    font-weight: 800 !important;
-    letter-spacing: 1.8px !important;
-    line-height: 1 !important;
-    text-transform: uppercase;
-}
-
-.startup-process-dot {
-    width: 8px !important;
-    height: 8px !important;
-    min-width: 8px !important;
-    padding: 0 !important;
-    display: inline-block !important;
-    border-radius: 50% !important;
-    background: #66c7dd !important;
-    box-shadow: 0 0 0 4px rgba(102, 199, 221, 0.10);
-}
-
-.startup-process-content .startup-process-title {
-    margin: 0 !important;
-    padding: 0 !important;
-    text-align: center !important;
-    color: #ffffff !important;
-    font-family: 'Outfit', sans-serif;
-    font-size: clamp(32px, 4vw, 48px) !important;
-    font-weight: 800 !important;
-    line-height: 1.12 !important;
-    letter-spacing: -0.7px !important;
-}
-
-.startup-process-content .startup-process-title span {
-    color: #19a9d0 !important;
-}
-
-.startup-process-line {
-    width: 78px;
-    height: 5px;
-    margin: 18px auto 36px;
-    border-radius: 999px;
-    background: #66c7dd;
-    box-shadow: 0 0 12px rgba(102, 199, 221, 0.35);
-}
-
-@media (max-width: 992px) {
-    .startup-process-content .startup-process-title {
-        font-size: clamp(30px, 5vw, 42px) !important;
-    }
-
-    .startup-process-line {
-        width: 75px;
-        height: 5px;
-        margin-top: 17px;
-        margin-bottom: 32px;
-    }
-}
-
-@media (max-width: 768px) {
-    .startup-process-badge {
-        padding: 8px 16px !important;
-        font-size: 11px !important;
-        letter-spacing: 1.5px !important;
-    }
-
-    .startup-process-dot {
-        width: 7px !important;
-        height: 7px !important;
-        min-width: 7px !important;
-    }
-
-    .startup-process-content .startup-process-title {
-        font-size: 34px !important;
-        line-height: 1.15 !important;
-        letter-spacing: -0.6px !important;
-    }
-
-    .startup-process-line {
-        width: 70px;
-        height: 4px;
-        margin-top: 16px;
-        margin-bottom: 28px;
-    }
-}
-
-@media (max-width: 576px) {
-    .startup-process-badge {
-        padding: 8px 14px !important;
-        font-size: 10px !important;
-        letter-spacing: 1.2px !important;
-    }
-
-    .startup-process-content .startup-process-title {
-        font-size: 29px !important;
-    }
-
-    .startup-process-line {
-        width: 65px;
-        height: 4px;
-        margin-top: 15px;
-        margin-bottom: 24px;
-    }
-}
-
-/* =========================================================
-   WHY CHOOSE US — MATCHED HEADING STYLE
-   Only the badge, heading color split and underline are changed.
-   Existing background, columns, image, cards and alignment remain untouched.
-========================================================= */
-
-.why-choose-content .why-choose-mini-title {
-    display: flex;
-    align-items: center;
-    margin-bottom: 16px;
-}
-
-.why-choose-content .why-choose-badge {
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 9px !important;
-
-    padding: 9px 18px !important;
-    min-height: 40px;
-    box-sizing: border-box;
-
-    border-radius: 999px !important;
-
-    background: rgba(102, 199, 221, 0.08) !important;
-    border: 1px solid rgba(102, 199, 221, 0.38) !important;
-
-    color: #52bfdc !important;
-
-    font-family: 'Outfit', sans-serif;
-    font-size: 13px !important;
-    font-weight: 800 !important;
-    letter-spacing: 1.7px !important;
-    line-height: 1 !important;
-    text-transform: uppercase;
-
-    white-space: nowrap;
-}
-
-/* Dot stays INSIDE the radio-style pill */
-.why-choose-content .why-choose-dot {
-    width: 8px !important;
-    height: 8px !important;
-    min-width: 8px !important;
-
-    padding: 0 !important;
-    display: inline-block !important;
-
-    border-radius: 50% !important;
-
-    background: #52bfdc !important;
-    box-shadow: 0 0 0 4px rgba(82, 191, 220, 0.10);
-}
-
-/* Main heading — keeps the existing left alignment */
-.why-choose-content .why-choose-main-title {
-    margin: 0 !important;
-    padding: 0 !important;
-
-    color: #0f172a !important;
-
-    font-family: 'Outfit', sans-serif;
-    font-size: clamp(38px, 4.2vw, 58px) !important;
-    font-weight: 800 !important;
-    line-height: 1.12 !important;
-    letter-spacing: -1.2px !important;
-
-    text-align: left !important;
-}
-
-/* Only "Expert Support" changes to cyan */
-.why-choose-content .why-choose-main-title span {
-    color: #159fc5 !important;
-}
-
-/* Cyan line directly below the heading */
-.why-choose-content .why-choose-line {
-    width: 78px;
-    height: 5px;
-
-    margin-top: 18px;
-    margin-bottom: 22px;
-
-    border-radius: 999px;
-
-    background: #66c7dd;
-
-    box-shadow: 0 0 10px rgba(102, 199, 221, 0.30);
-}
-
-/* Keep paragraph positioning natural after the new line */
-.why-choose-content .why-choose-line + p {
-    margin-top: 0;
-}
-
-
-/* =========================================================
-   TABLET
-   Only heading sizing changes; layout stays as existing CSS.
-========================================================= */
-
-@media (max-width: 992px) {
-
-    .why-choose-content .why-choose-main-title {
-        font-size: clamp(36px, 5vw, 50px) !important;
-        line-height: 1.12 !important;
-    }
-
-    .why-choose-content .why-choose-line {
-        width: 74px;
-        height: 5px;
-        margin-top: 17px;
-        margin-bottom: 20px;
-    }
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 768px) {
-
-    .why-choose-content .why-choose-mini-title {
-        margin-bottom: 15px;
-    }
-
-    .why-choose-content .why-choose-badge {
-        min-height: 40px;
-        padding: 8px 16px !important;
-        font-size: 11px !important;
-        letter-spacing: 1.5px !important;
-    }
-
-    .why-choose-content .why-choose-dot {
-        width: 7px !important;
-        height: 7px !important;
-        min-width: 7px !important;
-    }
-
-    .why-choose-content .why-choose-main-title {
-        font-size: 38px !important;
-        line-height: 1.12 !important;
-        letter-spacing: -0.8px !important;
-    }
-
-    .why-choose-content .why-choose-line {
-        width: 70px;
-        height: 4px;
-        margin-top: 16px;
-        margin-bottom: 20px;
-    }
-}
-
-
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-
-@media (max-width: 576px) {
-
-    .why-choose-content .why-choose-badge {
-        min-height: 38px;
-        padding: 8px 14px !important;
-        font-size: 10px !important;
-        letter-spacing: 1.2px !important;
-    }
-
-    .why-choose-content .why-choose-main-title {
-        font-size: 32px !important;
-        line-height: 1.14 !important;
-    }
-
-    .why-choose-content .why-choose-line {
-        width: 64px;
-        height: 4px;
-        margin-top: 15px;
-        margin-bottom: 18px;
-    }
-}
-
-/* =========================================================
-   PORTFOLIO HEADING — MATCHED WITH THE OTHER SECTIONS
-   Existing portfolio images, carousel and section background
-   remain unchanged.
-========================================================= */
-
-.startup-portfolio-section .startup-portfolio-top {
-    text-align: center !important;
-    margin-bottom: 60px !important;
-}
-
-/* Portfolio badge */
-.startup-portfolio-section .portfolio-heading-badge {
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 9px !important;
-
-    padding: 9px 18px !important;
-    min-height: 40px;
-    box-sizing: border-box;
-
-    border-radius: 999px !important;
-
-    background: rgba(102, 199, 221, 0.08) !important;
-    border: 1px solid rgba(102, 199, 221, 0.38) !important;
-
-    color: #52bfdc !important;
-
-    font-family: 'Outfit', sans-serif;
-    font-size: 13px !important;
-    font-weight: 800 !important;
-    letter-spacing: 1.7px !important;
-    line-height: 1 !important;
-    text-transform: uppercase;
-
-    white-space: nowrap;
-}
-
-/* Dot INSIDE the portfolio badge */
-.startup-portfolio-section .portfolio-heading-dot {
-    width: 8px !important;
-    height: 8px !important;
-    min-width: 8px !important;
-
-    padding: 0 !important;
-    display: inline-block !important;
-
-    border-radius: 50% !important;
-
-    background: #52bfdc !important;
-    box-shadow: 0 0 0 4px rgba(82, 191, 220, 0.10);
-}
-
-/* Main portfolio heading */
-.startup-portfolio-section .portfolio-main-heading {
-    margin: 22px 0 0 !important;
-    padding: 0 !important;
-
-    color: #0f172a !important;
-
-    font-family: 'Outfit', sans-serif;
-    font-size: clamp(40px, 4.5vw, 58px) !important;
-    font-weight: 800 !important;
-    line-height: 1.12 !important;
-    letter-spacing: -1.3px !important;
-
-    text-align: center !important;
-}
-
-/* Cyan second line */
-.startup-portfolio-section .portfolio-main-heading span {
-    color: #159fc5 !important;
-}
-
-/* Short cyan line below heading */
-.startup-portfolio-section .portfolio-heading-line {
-    width: 78px;
-    height: 5px;
-
-    margin: 18px auto 0;
-
-    border-radius: 999px;
-
-    background: #66c7dd;
-
-    box-shadow: 0 0 10px rgba(102, 199, 221, 0.30);
-}
-
-
-/* =========================================================
-   TABLET
-========================================================= */
-
-@media (max-width: 992px) {
-
-    .startup-portfolio-section .portfolio-main-heading {
-        font-size: clamp(36px, 5vw, 50px) !important;
-        line-height: 1.12 !important;
-    }
-
-    .startup-portfolio-section .portfolio-heading-line {
-        width: 74px;
-        height: 5px;
-        margin-top: 17px;
-    }
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 768px) {
-
-    .startup-portfolio-section .portfolio-heading-badge {
-        min-height: 40px;
-        padding: 8px 16px !important;
-        font-size: 11px !important;
-        letter-spacing: 1.5px !important;
-    }
-
-    .startup-portfolio-section .portfolio-heading-dot {
-        width: 7px !important;
-        height: 7px !important;
-        min-width: 7px !important;
-    }
-
-    .startup-portfolio-section .portfolio-main-heading {
-        font-size: 38px !important;
-        line-height: 1.14 !important;
-        letter-spacing: -0.8px !important;
-    }
-
-    .startup-portfolio-section .portfolio-heading-line {
-        width: 70px;
-        height: 4px;
-        margin-top: 16px;
-    }
-}
-
-
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-
-@media (max-width: 576px) {
-
-    .startup-portfolio-section .portfolio-heading-badge {
-        min-height: 38px;
-        padding: 8px 14px !important;
-        font-size: 10px !important;
-        letter-spacing: 1.2px !important;
-    }
-
-    .startup-portfolio-section .portfolio-main-heading {
-        font-size: 31px !important;
-        line-height: 1.15 !important;
-    }
-
-    .startup-portfolio-section .portfolio-heading-line {
-        width: 64px;
-        height: 4px;
-        margin-top: 15px;
-    }
-}
-
-/* =========================================================
-   CTA BADGE DOT + HEADING LINE
-   Matches the OUR PORTFOLIO badge style
-========================================================= */
-
-.startup-cta-section .cta-badge {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 9px;
-}
-
-.startup-cta-section .cta-badge-dot {
-    width: 8px;
-    height: 8px;
-    min-width: 8px;
-    border-radius: 50%;
-    background: #66c7dd;
-    box-shadow: 0 0 0 4px rgba(102, 199, 221, 0.10);
-}
-
-.startup-cta-section .cta-heading-line {
-    width: 78px;
-    height: 5px;
-    margin: 0 auto 24px;
-    border-radius: 999px;
-    background: #66c7dd;
-    box-shadow: 0 0 10px rgba(102, 199, 221, 0.30);
-}
-
-@media (max-width: 768px) {
-    .startup-cta-section .cta-badge-dot {
-        width: 7px;
-        height: 7px;
-        min-width: 7px;
-    }
-
-    .startup-cta-section .cta-heading-line {
-        width: 70px;
-        height: 4px;
-        margin-bottom: 20px;
-    }
-}
-
-@media (max-width: 576px) {
-    .startup-cta-section .cta-heading-line {
-        width: 64px;
-        height: 4px;
-    }
-}
-
-/* =========================================================
-   DECORATIVE DOTS & LINES — BLINK ANIMATION
-   Applies only to the existing decorative dots and lines.
-   No layout, spacing, size, or alignment is changed.
-   ========================================================= */
-
-@keyframes decorativeBlink {
-    0%, 100% {
-        opacity: 1;
-    }
-
-    50% {
-        opacity: 0.28;
-    }
-}
-
-/* All decorative dots */
-.startup-badge-dot,
-.services-startup-dot,
-.startup-process-dot,
-.why-choose-dot,
-.portfolio-heading-dot,
-.startup-faq-radio-dot {
-    animation: decorativeBlink 1.4s ease-in-out infinite;
-}
-
-/* All decorative lines */
-.startup-heading-line,
-.services-startup-line,
-.startup-process-line,
-.why-choose-line,
-.portfolio-heading-line,
-.startup-faq-title-line,
-.process-arrow-line {
-    animation: decorativeBlink 1.4s ease-in-out infinite;
-}
-
-/* CTA decorative dot/line use inline styles, so animate the badge children */
-.cta-badge > span:first-child {
-    animation: decorativeBlink 1.4s ease-in-out infinite;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .startup-badge-dot,
-    .services-startup-dot,
-    .startup-process-dot,
-    .why-choose-dot,
-    .portfolio-heading-dot,
-    .startup-faq-radio-dot,
-    .startup-heading-line,
-    .services-startup-line,
-    .startup-process-line,
-    .why-choose-line,
-    .portfolio-heading-line,
-    .startup-faq-title-line,
-    .process-arrow-line,
-    .cta-badge > span:first-child {
-        animation: none;
-    }
-}
-
-
-/* =========================================================
-   FINAL CTA HEADING — KEEP ORIGINAL LOOK, FIX RIGHT CLIPPING
-   ========================================================= */
-
-@media (min-width: 992px) {
-    .startup-cta-section h2 {
-        width: max-content;
-        max-width: none;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-        white-space: nowrap;
-        margin-left: 0;
-        margin-right: 0;
-    }
-}
-
-@media (max-width: 991px) {
-    .startup-cta-section h2 {
-        width: 100%;
-        max-width: 100%;
-        position: static;
-        transform: none;
+    .startup-service-card h4 {
         white-space: normal;
+        font-size: 15px;
     }
 }

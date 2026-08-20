@@ -1,194 +1,936 @@
-.join-team-page { color: #152238; background: #fff; }
-.section-pad { padding: clamp(4.5rem, 8vw, 7.5rem) 0; }
-.join-team-hero { position: relative; overflow: hidden; padding: clamp(10rem, 16vw, 13rem) 0 clamp(6rem, 10vw, 8rem); background: radial-gradient(circle at 82% 20%, #1e8ca6 0, transparent 28%), linear-gradient(135deg, #07192f, #0c3151); color: #fff; }
-.join-team-grid { position: absolute; inset: 0; opacity: .16; background-image: linear-gradient(#a7e8f533 1px, transparent 1px), linear-gradient(90deg, #a7e8f533 1px, transparent 1px); background-size: 58px 58px; mask-image: linear-gradient(90deg, #000, transparent); }
-.join-team-hero-content { position: relative; max-width: 870px; }
-.join-team-eyebrow,.join-team-kicker { display: inline-flex; align-items: center; gap: 9px; color: #72d6e8; font-size: .76rem; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; }
-.join-team-eyebrow span { width: 28px; height: 2px; background: currentColor; }.join-team-hero h1 { max-width: 760px; margin: 1rem 0 1.25rem; color: #fff; font-size: clamp(2.9rem, 6vw, 5.5rem); letter-spacing: -.06em; line-height: .99; }.join-team-hero p { max-width: 620px; color: #d4e5ed; font-size: clamp(1.05rem, 2vw, 1.25rem); }
-.join-team-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 2rem; }.join-team-actions a,.join-team-final-box a { display: inline-flex; align-items: center; gap: 9px; padding: 13px 20px; border-radius: 999px; font-weight: 700; text-decoration: none; }.join-team-primary,.join-team-final-box a { color: #072139; background: #75d6e8; }.join-team-secondary { color: #fff; border: 1px solid #ffffff66; }.join-team-proof { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 3rem; color: #d6edf2; font-size: .9rem; }.join-team-proof span { display: inline-flex; align-items: center; gap: 7px; }
-.join-team-split,.join-team-section-head { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(2rem, 7vw, 7rem); align-items: end; }.join-team-split h2,.join-team-section-head h2,.join-team-final-box h2 { margin: .7rem 0 0; color: #102443; font-size: clamp(2rem, 4vw, 3.5rem); letter-spacing: -.04em; line-height: 1.05; }.join-team-split > p,.join-team-section-head > p { margin: 0; color: #5f6e82; font-size: 1.1rem; }.join-team-value-grid,.join-team-role-grid,.join-team-collab-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 3.4rem; }.join-team-value { padding: 28px; border: 1px solid #e1eaf1; border-radius: 18px; }.join-team-icon { display: grid; width: 50px; height: 50px; place-items: center; color: #0b728d; background: #e5f8fa; border-radius: 14px; }.join-team-value h3,.join-team-role h3,.join-team-collab-card h3 { margin: 20px 0 8px; color: #102443; font-size: 1.25rem; }.join-team-value p,.join-team-role p,.join-team-collab-card p { margin: 0; color: #657388; font-size: .95rem; }
-.join-team-roles { background: #f3f8fa; }.join-team-role-grid { grid-template-columns: repeat(2, 1fr); }.join-team-role { padding: 28px; border: 1px solid #deeaef; border-radius: 18px; background: #fff; transition: transform .2s ease, box-shadow .2s ease; }.join-team-role:hover { transform: translateY(-5px); box-shadow: 0 18px 38px #17425b18; }.join-team-role-top,.join-team-role-foot { display: flex; align-items: center; justify-content: space-between; gap: 12px; }.join-team-role-top { color: #087c96; }.join-team-role-top span { padding: 5px 9px; border-radius: 999px; background: #e2f8fa; font-size: .76rem; font-weight: 800; }.join-team-role h3 { font-size: 1.45rem; }.join-team-role-foot { margin-top: 23px; padding-top: 18px; border-top: 1px solid #e6edf1; color: #5a6979; font-size: .88rem; }.join-team-role-foot a,.join-team-collab-cta a { display: inline-flex; align-items: center; gap: 5px; color: #087c96; font-weight: 800; text-decoration: none; }
-.join-team-collab { background: #102b47; }.join-team-light-head h2,.join-team-light-head p { color: #fff; }.join-team-light-head > p { color: #c5d7e2; }.join-team-collab-card { padding: 30px; color: #75d6e8; border: 1px solid #ffffff21; border-radius: 18px; background: #ffffff0a; }.join-team-collab-card h3 { color: #fff; }.join-team-collab-card p { color: #c4d3de; }.join-team-collab-cta { display: flex; align-items: center; gap: 17px; margin-top: 22px; padding: 20px 24px; color: #d9eef3; border: 1px solid #ffffff24; border-radius: 16px; }.join-team-collab-cta div { display: grid; gap: 3px; flex: 1; }.join-team-collab-cta strong { color: #fff; }.join-team-collab-cta span { font-size: .9rem; }.join-team-collab-cta a { color: #75d6e8; white-space: nowrap; }
-.join-team-final { padding-top: 0; }.join-team-final-box { padding: clamp(2.2rem, 6vw, 4.7rem); text-align: center; border-radius: 22px; background: linear-gradient(110deg, #e3f8fb, #eef2ff); }.join-team-final-box h2 { margin: 0; }.join-team-final-box p { max-width: 610px; margin: 18px auto 26px; color: #5a6a7c; }.join-team-final-box a { background: #102b47; color: #fff; }
-@media (max-width: 900px) { .join-team-value-grid,.join-team-collab-grid { grid-template-columns: 1fr; }.join-team-split,.join-team-section-head { grid-template-columns: 1fr; gap: 18px; }.join-team-role-grid { grid-template-columns: 1fr; }.join-team-collab-cta { flex-wrap: wrap; } }
-@media (max-width: 560px) { .join-team-hero { padding-top: 9rem; }.join-team-hero h1 { font-size: 2.7rem; }.join-team-proof { gap: 11px; flex-direction: column; }.join-team-collab-cta a { width: 100%; }.join-team-collab-cta { align-items: flex-start; } }
+/* =========================================================
+   JOIN OUR TEAM — PAGE BASE
+   ========================================================= */
 
-/* Refined company-careers visual system */
 .join-team-page {
-  background: linear-gradient(180deg, #ffffff 0%, #f8fbfc 100%);
+  --join-accent: rgb(0, 170, 162);
+  --join-hero-blue: rgb(0, 255, 242);
+  --join-button: rgb(0, 224, 211);
+  --join-hero-white: rgb(255, 255, 255);
+  --join-hero-muted: rgb(187, 187, 187);
+
+  color: #152238;
+  background: #ffffff;
+
+  overflow-x: hidden;
+
+  font-family: "Segoe UI", sans-serif;
 }
+
+
+/* =========================================================
+   FONT SYSTEM
+   ========================================================= */
+
+.join-team-page * {
+  box-sizing: border-box;
+}
+
+.join-team-page h1,
+.join-team-page h2,
+.join-team-page h3 {
+  font-family: "Segoe UI Black", "Segoe UI", sans-serif;
+  font-weight: 900;
+}
+
+.join-team-page p,
+.join-team-page span,
+.join-team-page a,
+.join-team-page button {
+  font-family: "Segoe UI", sans-serif;
+}
+
+
+/* =========================================================
+   GENERAL SECTION SPACING
+   ========================================================= */
+
+.join-team-page .section-pad {
+  padding-top: clamp(3.5rem, 5vw, 5rem);
+  padding-bottom: clamp(3.5rem, 5vw, 5rem);
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
 
 .join-team-hero {
-  background: radial-gradient(circle at 84% 16%, rgba(75, 202, 219, 0.55) 0, transparent 22%), radial-gradient(circle at 58% 92%, rgba(44, 112, 162, 0.42) 0, transparent 34%), linear-gradient(135deg, #06182e 0%, #0c3555 100%);
+  position: relative;
+
+  min-height: calc(100vh - 80px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  padding: 6rem 1.5rem;
+
+  color: var(--join-hero-white);
+
+  background:
+    radial-gradient(
+      circle at 84% 16%,
+      rgba(0, 255, 242, 0.20) 0,
+      transparent 24%
+    ),
+    radial-gradient(
+      circle at 18% 82%,
+      rgba(0, 170, 162, 0.20) 0,
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #06182e 0%,
+      #0c3555 100%
+    );
 }
+
+
+/* Background grid */
+
+.join-team-grid {
+  position: absolute;
+  inset: 0;
+
+  opacity: 0.12;
+
+  background-image:
+    linear-gradient(
+      rgba(0, 255, 242, 0.18) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(0, 255, 242, 0.18) 1px,
+      transparent 1px
+    );
+
+  background-size: 58px 58px;
+
+  mask-image:
+    linear-gradient(
+      90deg,
+      #000000,
+      transparent
+    );
+
+  pointer-events: none;
+}
+
+
+/* Decorative circle */
 
 .join-team-hero::after {
   position: absolute;
-  right: clamp(24px, 8vw, 150px);
-  bottom: -78px;
+
+  right: clamp(30px, 8vw, 150px);
+  bottom: -100px;
+
   width: clamp(190px, 25vw, 340px);
   height: clamp(190px, 25vw, 340px);
-  border: 1px solid rgba(152, 239, 250, 0.28);
+
+  border: 1px solid rgba(0, 255, 242, 0.20);
+
   border-radius: 50%;
+
   content: "";
+
+  pointer-events: none;
 }
+
+
+/* =========================================================
+   HERO CONTENT
+   ========================================================= */
+
+.join-team-hero-content {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1050px;
+
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  font-family: "Poppins", sans-serif;
+}
+
+
+/* =========================================================
+   HERO EYEBROW
+   ========================================================= */
+
+.join-team-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  color: var(--join-accent);
+
+  font-family: "Poppins", sans-serif;
+  font-size: 0.78rem;
+  font-weight: 800;
+
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+
+  padding: 10px 18px;
+
+  border: 1px solid rgba(0, 170, 162, 0.45);
+  border-radius: 999px;
+
+  background: rgba(0, 170, 162, 0.08);
+
+  white-space: nowrap;
+}
+
+
+/* Animated dot */
+
+.join-team-hero-dot {
+  width: 8px;
+  height: 8px;
+
+  min-width: 8px;
+
+  border-radius: 50%;
+
+  background: var(--join-accent);
+
+  box-shadow:
+    0 0 0 4px rgba(0, 170, 162, 0.10),
+    0 0 14px rgba(0, 170, 162, 0.65);
+
+  animation:
+    joinTeamDotPulse 1.6s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   HERO HEADING
+   ========================================================= */
+
+.join-team-hero h1 {
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 1.5rem auto 0;
+
+  padding: 0;
+
+  font-family:
+    "Segoe UI Black",
+    "Segoe UI",
+    sans-serif;
+
+  font-size: clamp(3rem, 6.5vw, 6rem);
+
+  font-weight: 900;
+
+  letter-spacing: -0.055em;
+
+  line-height: 0.98;
+
+  text-align: center;
+}
+
+
+/* Requested alternative colors */
+
+.join-team-hero-heading-blue {
+  color: rgb(0, 255, 242);
+}
+
+.join-team-hero-heading-white {
+  color: rgb(255, 255, 255);
+}
+
+
+/* =========================================================
+   HERO ANIMATED LINE
+   ========================================================= */
+
+.join-team-hero-line {
+  position: relative;
+
+  width: 90px;
+  height: 5px;
+
+  margin: 22px auto 0;
+
+  overflow: hidden;
+
+  border-radius: 999px;
+
+  background: rgba(0, 170, 162, 0.30);
+
+  box-shadow:
+    0 0 12px rgba(0, 170, 162, 0.25);
+}
+
+
+.join-team-hero-line::after {
+  position: absolute;
+
+  top: 0;
+  left: -60%;
+
+  width: 60%;
+  height: 100%;
+
+  border-radius: inherit;
+
+  background: var(--join-accent);
+
+  content: "";
+
+  animation:
+    joinTeamLineMove 2.2s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   HERO PARAGRAPH
+   ========================================================= */
+
+.join-team-hero p {
+  width: 100%;
+  max-width: 720px;
+
+  margin: 1.5rem auto 0;
+
+  color: var(--join-hero-muted);
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: clamp(1rem, 1.7vw, 1.2rem);
+
+  line-height: 1.7;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+   ========================================================= */
+
+.join-team-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 14px;
+
+  margin-top: 2rem;
+}
+
+
+.join-team-actions a {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  min-height: 50px;
+
+  padding: 13px 22px;
+
+  border-radius: 999px;
+
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+/* Primary button */
 
 .join-team-primary {
-  box-shadow: 0 13px 30px rgba(90, 215, 232, 0.28);
+  color: rgb(0, 0, 0);
+
+  background: rgb(0, 224, 211);
+
+  box-shadow:
+    0 12px 30px rgba(0, 224, 211, 0.25);
 }
 
+
 .join-team-primary:hover {
-  background: #a2eff7;
-  box-shadow: 0 17px 36px rgba(90, 215, 232, 0.4);
+  color: rgb(0, 0, 0);
+
+  background: rgb(0, 255, 242);
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 17px 35px rgba(0, 224, 211, 0.38);
 }
+
+
+/* Secondary button */
+
+.join-team-secondary {
+  color: #ffffff;
+
+  border: 1px solid rgba(0, 224, 211, 0.65);
+
+  background: transparent;
+}
+
+
+.join-team-secondary:hover {
+  color: #ffffff;
+
+  border-color: var(--join-accent);
+
+  background: rgba(0, 170, 162, 0.14);
+
+  transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   HERO PROOF
+   ========================================================= */
+
+.join-team-proof {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 20px;
+
+  margin-top: 2.5rem;
+
+  color: #d6edf2;
+
+  font-family: "Poppins", sans-serif;
+
+  font-size: 0.9rem;
+}
+
+
+.join-team-proof span {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: #d6edf2;
+}
+
+
+.join-team-proof svg {
+  color: var(--join-accent);
+}
+
+
+/* =========================================================
+   COMMON KICKERS
+   ========================================================= */
+
+.join-team-kicker {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  color: var(--join-accent);
+
+  font-family: "Segoe UI", sans-serif;
+
+  font-size: 0.8rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.13em;
+
+  text-transform: uppercase;
+
+  padding: 9px 18px;
+
+  border: 1px solid rgba(0, 170, 162, 0.35);
+
+  border-radius: 999px;
+
+  background: rgba(0, 170, 162, 0.06);
+
+  white-space: nowrap;
+}
+
+
+.join-team-radio-dot {
+  width: 8px;
+  height: 8px;
+
+  min-width: 8px;
+
+  border-radius: 50%;
+
+  background: var(--join-accent);
+
+  box-shadow:
+    0 0 0 4px rgba(0, 170, 162, 0.10);
+
+  animation:
+    joinTeamDotPulse 1.6s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   COMMON HEADINGS
+   ========================================================= */
 
 .join-team-split h2,
 .join-team-section-head h2,
 .join-team-final-box h2 {
-  font-weight: 800;
+  margin: 0.7rem 0 0;
+
+  color: #102443;
+
+  font-family:
+    "Segoe UI Black",
+    "Segoe UI",
+    sans-serif;
+
+  font-size: clamp(2rem, 4vw, 3.5rem);
+
+  font-weight: 900;
+
+  letter-spacing: -0.04em;
+
+  line-height: 1.05;
 }
 
-/* Requested heading highlights only */
+
 .join-team-highlight {
-  color: #18bce8;
+  color: var(--join-accent);
 }
+
+
+/* =========================================================
+   CULTURE
+   ========================================================= */
+
+.join-team-split,
+.join-team-section-head {
+  display: grid;
+
+  grid-template-columns:
+    1.05fr
+    0.95fr;
+
+  gap: clamp(2rem, 7vw, 7rem);
+
+  align-items: end;
+}
+
+
+.join-team-split > p,
+.join-team-section-head > p {
+  margin: 0;
+
+  color: #5f6e82;
+
+  font-family: "Segoe UI", sans-serif;
+
+  font-size: 1.1rem;
+
+  line-height: 1.7;
+}
+
+
+.join-team-culture-head {
+  width: 100%;
+
+  max-width: 1200px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex !important;
+
+  flex-direction: column !important;
+
+  align-items: center !important;
+
+  justify-content: center !important;
+
+  gap: 18px !important;
+
+  text-align: center !important;
+}
+
+
+.join-team-culture-head > div {
+  width: 100%;
+
+  display: flex !important;
+
+  flex-direction: column !important;
+
+  align-items: center !important;
+
+  justify-content: center !important;
+
+  text-align: center !important;
+}
+
+
+.join-team-culture-title {
+  width: 100%;
+
+  max-width: 1150px;
+
+  margin: 18px auto 0 !important;
+
+  text-align: center !important;
+}
+
+
+.join-team-culture-title-line,
+.join-team-open-title-line,
+.join-team-collab-title-line,
+.join-team-final-title-line {
+  width: 78px;
+  height: 5px;
+
+  margin: 18px auto 0;
+
+  border-radius: 999px;
+
+  background: var(--join-accent);
+
+  animation:
+    joinTeamLineGlow 1.8s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   VALUE CARDS
+   ========================================================= */
+
+.join-team-value-grid,
+.join-team-role-grid,
+.join-team-collab-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 20px;
+
+  margin-top: 2.5rem;
+}
+
 
 .join-team-value {
-  box-shadow: 0 1px 0 rgba(16, 36, 67, 0.02);
-  transition: border-color 220ms ease, box-shadow 220ms ease, transform 220ms ease;
+  padding: 28px;
+
+  border: 1px solid #e1eaf1;
+
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 1px 0 rgba(16, 36, 67, 0.02);
+
+  transition:
+    border-color 220ms ease,
+    box-shadow 220ms ease,
+    transform 220ms ease;
 }
+
 
 .join-team-value:hover {
   transform: translateY(-6px);
-  border-color: #b7e2e9;
-  box-shadow: 0 20px 44px rgba(22, 61, 85, 0.11);
+
+  border-color: rgba(0, 170, 162, 0.45);
+
+  box-shadow:
+    0 20px 44px rgba(22, 61, 85, 0.11);
 }
 
-.join-team-value:nth-child(2) .join-team-icon {
-  background: #eaf0ff;
-  color: #4c5db4;
+
+.join-team-icon {
+  display: grid;
+
+  width: 50px;
+  height: 50px;
+
+  place-items: center;
+
+  color: var(--join-accent);
+
+  background: rgba(0, 170, 162, 0.10);
+
+  border-radius: 14px;
 }
 
-.join-team-value:nth-child(3) .join-team-icon {
-  background: #fff1df;
-  color: #bd701d;
+
+.join-team-value h3,
+.join-team-role h3,
+.join-team-collab-card h3 {
+  margin: 20px 0 8px;
+
+  color: #102443;
+
+  font-family:
+    "Segoe UI Black",
+    "Segoe UI",
+    sans-serif;
+
+  font-size: 1.25rem;
+
+  font-weight: 900;
 }
+
+
+.join-team-value p,
+.join-team-role p,
+.join-team-collab-card p {
+  margin: 0;
+
+  color: #657388;
+
+  font-family: "Segoe UI", sans-serif;
+
+  font-size: 0.95rem;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   OPEN ROLES
+   ========================================================= */
 
 .join-team-roles {
   position: relative;
-  background: linear-gradient(180deg, #f2f8fa, #f7fbfc);
+
+  background:
+    linear-gradient(
+      180deg,
+      #f2f8fa,
+      #f7fbfc
+    );
 }
+
+
+.join-team-role-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+
+.join-team-open-head {
+  display: flex !important;
+
+  flex-direction: column !important;
+
+  align-items: center !important;
+
+  justify-content: center !important;
+
+  gap: 18px !important;
+
+  text-align: center !important;
+}
+
+
+.join-team-open-head > div {
+  width: 100%;
+
+  display: flex !important;
+
+  flex-direction: column !important;
+
+  align-items: center !important;
+
+  justify-content: center !important;
+
+  text-align: center !important;
+}
+
+
+.join-team-open-title {
+  width: 100%;
+
+  max-width: 1150px;
+
+  margin: 18px auto 0 !important;
+
+  text-align: center !important;
+}
+
+
+.join-team-open-head > p {
+  width: 100%;
+
+  max-width: 850px;
+
+  margin: 0 auto !important;
+
+  text-align: center !important;
+}
+
 
 .join-team-role {
   position: relative;
+
   overflow: hidden;
+
   min-height: 270px;
+
+  padding: 28px;
+
+  border: 1px solid #deeaef;
+
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
 }
+
 
 .join-team-role::before {
   position: absolute;
+
   top: 0;
   left: 0;
+
   width: 4px;
   height: 100%;
-  background: linear-gradient(#72d6e8, #2563eb);
+
+  background: var(--join-accent);
+
   content: "";
+
   opacity: 0;
-  transition: opacity 220ms ease;
+
+  transition: opacity 0.25s ease;
 }
+
+
+.join-team-role:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(0, 170, 162, 0.40);
+
+  box-shadow:
+    0 22px 46px rgba(20, 66, 91, 0.14);
+}
+
 
 .join-team-role:hover::before {
   opacity: 1;
 }
 
-.join-team-role:hover {
-  transform: translateY(-6px);
-  border-color: #b4dfe7;
-  box-shadow: 0 22px 46px rgba(20, 66, 91, 0.14);
+
+.join-team-role-top,
+.join-team-role-foot {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 12px;
 }
 
-.join-team-role-foot a,
-.join-team-collab-cta a {
-  border-bottom: 1px solid transparent;
-  transition: color 180ms ease, border-color 180ms ease;
+
+.join-team-role-top {
+  color: var(--join-accent);
 }
 
-.join-team-role-foot a:hover,
-.join-team-collab-cta a:hover {
-  border-color: currentColor;
-  color: #05556d;
+
+.join-team-role-top span {
+  padding: 5px 9px;
+
+  border-radius: 999px;
+
+  background: rgba(0, 170, 162, 0.09);
+
+  color: var(--join-accent);
+
+  font-size: 0.76rem;
+
+  font-weight: 800;
 }
 
-.join-team-collab {
-  background: radial-gradient(circle at 88% 0%, rgba(35, 146, 169, 0.3), transparent 30%), #102b47;
+
+.join-team-role h3 {
+  font-size: 1.45rem;
 }
 
-.join-team-collab-card {
-  min-height: 205px;
-  transition: transform 220ms ease, background-color 220ms ease, border-color 220ms ease;
+
+.join-team-role-foot {
+  margin-top: 23px;
+
+  padding-top: 18px;
+
+  border-top: 1px solid #e6edf1;
+
+  color: #5a6979;
+
+  font-size: 0.88rem;
 }
 
-.join-team-collab-card:hover {
-  transform: translateY(-6px);
-  border-color: rgba(124, 225, 239, 0.56);
-  background: rgba(255, 255, 255, 0.13);
-}
-
-.join-team-collab-cta {
-  box-shadow: inset 0 1px rgba(255, 255, 255, 0.08);
-}
-
-.join-team-final-box {
-  position: relative;
-  overflow: hidden;
-  border: 1px solid #d4edf1;
-  box-shadow: 0 25px 54px rgba(26, 77, 101, 0.1);
-}
-
-.join-team-final-box::before,
-.join-team-final-box::after {
-  position: absolute;
-  width: 180px;
-  height: 180px;
-  border: 1px solid rgba(54, 158, 176, 0.16);
-  border-radius: 50%;
-  content: "";
-}
-
-.join-team-final-box::before { top: -110px; left: -70px; }
-.join-team-final-box::after { right: -80px; bottom: -120px; }
-.join-team-final-box > * { position: relative; }
-
-.join-team-page a:focus-visible {
-  outline: 3px solid #f6bd60;
-  outline-offset: 4px;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .join-team-page *,
-  .join-team-page *::before,
-  .join-team-page *::after {
-    scroll-behavior: auto !important;
-    transition-duration: 0.001ms !important;
-  }
-}
 
 /* =========================================================
    APPLY BUTTON
-========================================================= */
+   ========================================================= */
 
 .join-team-apply-btn {
   border: none;
+
   background: transparent;
 
-  color: #0788a8;
+  color: var(--join-accent);
 
   display: inline-flex;
+
   align-items: center;
+
   gap: 6px;
 
-  font-family: inherit;
+  font-family: "Segoe UI", sans-serif;
+
   font-size: 15px;
+
   font-weight: 700;
 
   cursor: pointer;
@@ -202,7 +944,7 @@
 
 
 .join-team-apply-btn:hover {
-  color: #005f7a;
+  color: #006c66;
 
   transform: translateX(3px);
 }
@@ -219,24 +961,308 @@
 }
 
 
-/* Final CTA button */
+/* =========================================================
+   COLLABORATION
+   ========================================================= */
+
+.join-team-collab {
+  background:
+    radial-gradient(
+      circle at 88% 0%,
+      rgba(0, 170, 162, 0.25),
+      transparent 30%
+    ),
+    #102b47;
+}
+
+
+.join-team-collab-heading {
+  width: 100%;
+
+  margin: 0 0 2.5rem;
+
+  padding: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+}
+
+
+.join-team-collab-title {
+  width: 100%;
+
+  margin: 18px 0 0 !important;
+
+  padding: 0;
+
+  color: #ffffff !important;
+
+  text-align: center;
+
+  font-size: clamp(2.6rem, 5vw, 4.5rem) !important;
+
+  line-height: 1.05;
+}
+
+
+.join-team-collab-title .join-team-highlight {
+  color: var(--join-accent) !important;
+}
+
+
+.join-team-collab-heading > p {
+  max-width: 1100px;
+
+  margin: 22px auto 0;
+
+  color: #c5d7e2;
+
+  font-size: 1.1rem;
+
+  line-height: 1.7;
+
+  text-align: center;
+}
+
+
+.join-team-collab-heading > p span {
+  display: block;
+}
+
+
+.join-team-collab-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+
+.join-team-collab-card {
+  min-height: 205px;
+
+  padding: 30px;
+
+  color: var(--join-accent);
+
+  border: 1px solid rgba(255, 255, 255, 0.13);
+
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.04);
+
+  transition:
+    transform 220ms ease,
+    background-color 220ms ease,
+    border-color 220ms ease;
+}
+
+
+.join-team-collab-card:hover {
+  transform: translateY(-6px);
+
+  border-color: rgba(0, 170, 162, 0.65);
+
+  background: rgba(0, 170, 162, 0.10);
+}
+
+
+.join-team-collab-card h3 {
+  color: #ffffff;
+}
+
+
+.join-team-collab-card p {
+  color: #c4d3de;
+}
+
+
+.join-team-collab-cta {
+  display: flex;
+
+  align-items: center;
+
+  gap: 17px;
+
+  margin-top: 22px;
+
+  padding: 20px 24px;
+
+  color: #d9eef3;
+
+  border: 1px solid rgba(255, 255, 255, 0.14);
+
+  border-radius: 16px;
+
+  box-shadow:
+    inset 0 1px rgba(255, 255, 255, 0.08);
+}
+
+
+.join-team-collab-cta > svg {
+  color: var(--join-accent);
+}
+
+
+.join-team-collab-cta div {
+  display: grid;
+
+  gap: 3px;
+
+  flex: 1;
+}
+
+
+.join-team-collab-cta strong {
+  color: #ffffff;
+}
+
+
+.join-team-collab-cta span {
+  font-size: 0.9rem;
+}
+
+
+.join-team-collab-cta a {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  color: var(--join-accent);
+
+  font-weight: 800;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.join-team-collab-cta a:hover {
+  color: rgb(0, 224, 211);
+
+  transform: translateX(3px);
+}
+
+
+/* =========================================================
+   FINAL CTA
+   ========================================================= */
+
+.join-team-final {
+  padding-top: 3.5rem !important;
+}
+
+
+.join-team-final-box {
+  position: relative;
+
+  overflow: hidden;
+
+  padding: clamp(2.2rem, 6vw, 4.7rem);
+
+  text-align: center;
+
+  border: 1px solid #d4edf1;
+
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      110deg,
+      #e3f8fb,
+      #eef2ff
+    );
+
+  box-shadow:
+    0 25px 54px rgba(26, 77, 101, 0.10);
+}
+
+
+.join-team-final-box::before,
+.join-team-final-box::after {
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  border: 1px solid rgba(0, 170, 162, 0.16);
+
+  border-radius: 50%;
+
+  content: "";
+}
+
+
+.join-team-final-box::before {
+  top: -110px;
+  left: -70px;
+}
+
+
+.join-team-final-box::after {
+  right: -80px;
+  bottom: -120px;
+}
+
+
+.join-team-final-box > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+.join-team-final-box h2 {
+  margin: 0;
+
+  color: #102443;
+}
+
+
+.join-team-final-box .join-team-highlight {
+  color: var(--join-accent);
+}
+
+
+.join-team-final-box p {
+  max-width: 610px;
+
+  margin: 16px auto 22px;
+
+  color: #5a6a7c;
+
+  line-height: 1.7;
+}
+
 
 .join-team-final-box button {
   border: none;
 
   display: inline-flex;
+
   align-items: center;
+
   gap: 8px;
 
   padding: 13px 22px;
 
   border-radius: 10px;
 
-  background: #18bce8;
+  background: rgb(0, 224, 211);
 
-  color: #07111f;
+  color: rgb(0, 0, 0);
 
-  font-family: inherit;
+  font-family: "Segoe UI", sans-serif;
 
   font-size: 15px;
 
@@ -246,401 +1272,288 @@
 
   transition:
     transform 0.25s ease,
-    box-shadow 0.25s ease;
+    box-shadow 0.25s ease,
+    background-color 0.25s ease;
 }
 
 
 .join-team-final-box button:hover {
+  background: rgb(0, 255, 242);
+
   transform: translateY(-2px);
 
   box-shadow:
     0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Highlight for "next chapter?" in the final CTA heading */
-.join-team-final-box .join-team-highlight {
-  color: #18bce8;
-}
 
 /* =========================================================
-   COLLABORATION HEADING — FULL WIDTH / CENTERED
+   ANIMATIONS
    ========================================================= */
 
-.join-team-collab-heading {
-  width: 100%;
-  margin: 0 0 3.4rem;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
+@keyframes joinTeamDotPulse {
 
-.join-team-collab-kicker {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 9px 18px;
-  min-height: 40px;
-  box-sizing: border-box;
-  border: 1px solid rgba(117, 214, 232, 0.45);
-  border-radius: 999px;
-  background: rgba(117, 214, 232, 0.08);
-  white-space: nowrap;
-}
+  0%,
+  100% {
+    transform: scale(1);
 
-.join-team-radio-dot {
-  width: 8px;
-  height: 8px;
-  min-width: 8px;
-  min-height: 8px;
-  border-radius: 50%;
-  background: #75d6e8;
-  box-shadow: 0 0 0 4px rgba(117, 214, 232, 0.10);
-  display: inline-block;
-}
+    opacity: 1;
 
-.join-team-collab-heading .join-team-collab-title {
-  width: 100%;
-  margin: 18px 0 0 !important;
-  padding: 0;
-  text-align: center;
-  white-space: nowrap;
-  font-size: clamp(2.6rem, 5vw, 4.5rem) !important;
-  line-height: 1.05;
-}
-
-.join-team-collab-title-line {
-  width: 78px;
-  height: 5px;
-  margin: 18px auto 0;
-  border-radius: 999px;
-  background: #75d6e8;
-}
-
-.join-team-collab-heading > p {
-  max-width: 1100px;
-  margin: 22px auto 0;
-  color: #c5d7e2;
-  font-size: 1.1rem;
-  line-height: 1.7;
-  text-align: center;
-}
-
-.join-team-collab-heading > p span {
-  display: block;
-  white-space: nowrap;
-}
-
-@media (max-width: 900px) {
-  .join-team-collab-heading {
-    margin-bottom: 2.8rem;
+    box-shadow:
+      0 0 0 4px rgba(0, 170, 162, 0.10),
+      0 0 12px rgba(0, 170, 162, 0.45);
   }
 
-  .join-team-collab-heading .join-team-collab-title {
-    white-space: normal;
-  }
+  50% {
+    transform: scale(1.35);
 
-  .join-team-collab-heading > p {
-    max-width: 680px;
+    opacity: 0.65;
+
+    box-shadow:
+      0 0 0 7px rgba(0, 170, 162, 0.05),
+      0 0 20px rgba(0, 170, 162, 0.75);
   }
 }
 
 
-/* =========================================================
-   COLLABORATION HEADING — ONLY "OPPORTUNITIES TOGETHER" BLUE
-   ========================================================= */
+@keyframes joinTeamLineMove {
 
-.join-team-collab-heading .join-team-collab-title {
-  color: #ffffff !important;
-}
-
-.join-team-collab-heading .join-team-highlight {
-  color: #18bce8 !important;
-}
-
-
-/* =========================================================
-   OPEN OPPORTUNITIES — CENTERED
-   ========================================================= */
-
-.join-team-open-head {
-  display: flex !important;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  grid-template-columns: none !important;
-  gap: 18px !important;
-  text-align: center;
-}
-
-.join-team-open-head > div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.join-team-open-head .join-team-kicker {
-  justify-content: center;
-}
-
-.join-team-open-head h2 {
-  margin-top: 18px !important;
-  text-align: center !important;
-  white-space: nowrap;
-}
-
-.join-team-open-head > p {
-  max-width: 850px;
-  margin: 0 auto !important;
-  text-align: center !important;
-}
-
-@media (max-width: 900px) {
-  .join-team-open-head h2 {
-    white-space: normal;
+  0% {
+    left: -60%;
+    opacity: 0;
   }
-}
 
-/* =========================================================
-   OUR CULTURE — CENTERED / RADIO DOT / LINE
-   ========================================================= */
-
-.join-team-culture-head {
-  width: 100%;
-  max-width: 1200px;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 18px !important;
-  text-align: center !important;
-}
-
-.join-team-culture-head > div {
-  width: 100%;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
-  text-align: center !important;
-}
-
-.join-team-culture-kicker {
-  display: inline-flex !important;
-  align-items: center;
-  justify-content: center;
-  gap: 9px;
-  font-size: 16px !important;
-  padding: 9px 18px;
-  min-height: 40px;
-  box-sizing: border-box;
-  border: 1px solid rgba(117, 214, 232, 0.45);
-  border-radius: 999px;
-  background: rgba(117, 214, 232, 0.08);
-  white-space: nowrap;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.join-team-culture-kicker .join-team-radio-dot {
-  width: 8px;
-  height: 8px;
-  min-width: 8px;
-  min-height: 8px;
-  border-radius: 50%;
-  background: #75d6e8;
-  box-shadow: 0 0 0 4px rgba(117, 214, 232, 0.10);
-  display: inline-block;
-}
-
-.join-team-culture-head .join-team-culture-title {
-  width: 100%;
-  max-width: 1150px;
-  margin: 18px auto 0 !important;
-  text-align: center !important;
-  white-space: nowrap;
-}
-
-.join-team-culture-title-line {
-  width: 78px;
-  height: 5px;
-  margin: 18px auto 0;
-  border-radius: 999px;
-  background: #75d6e8;
-}
-
-.join-team-culture-head > p {
-  width: 100%;
-  max-width: 950px;
-  margin: 0 auto !important;
-  text-align: center !important;
-}
-
-@media (max-width: 900px) {
-  .join-team-culture-head .join-team-culture-title {
-    white-space: normal;
-  }
-}
-
-
-/* =========================================================
-   OPEN OPPORTUNITIES — MATCH OUR CULTURE STYLE
-   ========================================================= */
-
-.join-team-open-head {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 18px !important;
-  text-align: center !important;
-}
-
-.join-team-open-head > div {
-  width: 100%;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
-  text-align: center !important;
-}
-
-.join-team-open-kicker {
-  display: inline-flex !important;
-  align-items: center;
-  justify-content: center;
-  gap: 9px;
-  padding: 9px 18px;
-  min-height: 40px;
-  box-sizing: border-box;
-  border: 1px solid rgba(117, 214, 232, 0.45);
-  border-radius: 999px;
-  background: rgba(117, 214, 232, 0.08);
-  font-size: 16px !important;
-  white-space: nowrap;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.join-team-open-kicker .join-team-radio-dot {
-  width: 8px;
-  height: 8px;
-  min-width: 8px;
-  min-height: 8px;
-  border-radius: 50%;
-  background: #75d6e8;
-  box-shadow: 0 0 0 4px rgba(117, 214, 232, 0.10);
-  display: inline-block;
-}
-
-.join-team-open-head .join-team-open-title {
-  width: 100%;
-  max-width: 1150px;
-  margin: 18px auto 0 !important;
-  text-align: center !important;
-  white-space: nowrap;
-}
-
-.join-team-open-title-line {
-  width: 78px;
-  height: 5px;
-  margin: 18px auto 0;
-  border-radius: 999px;
-  background: #75d6e8;
-}
-
-.join-team-open-head > p {
-  width: 100%;
-  max-width: 950px;
-  margin: 0 auto !important;
-  text-align: center !important;
-}
-
-@media (max-width: 900px) {
-  .join-team-open-head .join-team-open-title {
-    white-space: normal;
-  }
-}
-
-
-/* Final CTA heading underline */
-.join-team-final-title-line {
-  width: 78px;
-  height: 5px;
-  margin: 18px auto 0;
-  border-radius: 999px;
-  background: #75d6e8;
-}
-
-
-/* =========================================================
-   DECORATIVE DOTS & LINES — BLINK ANIMATION
-   ========================================================= */
-
-@keyframes joinTeamBlinkDecor {
-  0%, 100% {
+  25% {
     opacity: 1;
   }
-  50% {
-    opacity: 0.25;
+
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    left: 100%;
+    opacity: 0;
   }
 }
 
-/* All existing decorative dots */
-.join-team-radio-dot,
-.join-team-kicker::before {
-  animation: joinTeamBlinkDecor 1.4s ease-in-out infinite;
-}
 
-/* All existing decorative underline/short lines */
-.join-team-title-line,
-.join-team-open-title-line,
-.join-team-culture-title-line,
-.join-team-final-title-line,
-.join-team-section-line,
-.join-team-heading-line {
-  animation: joinTeamBlinkDecor 1.4s ease-in-out infinite;
+@keyframes joinTeamLineGlow {
+
+  0%,
+  100% {
+    opacity: 0.75;
+
+    transform: scaleX(0.88);
+  }
+
+  50% {
+    opacity: 1;
+
+    transform: scaleX(1);
+
+    box-shadow:
+      0 0 14px rgba(0, 170, 162, 0.45);
+  }
 }
 
 
 /* =========================================================
-   CONSISTENT SECTION SPACING
-   Reduced unnecessary top/bottom whitespace while keeping
-   all existing alignments and content unchanged.
+   FOCUS ACCESSIBILITY
    ========================================================= */
 
-.join-team-page > section.section-pad {
-  padding-top: clamp(3.5rem, 5vw, 5rem) !important;
-  padding-bottom: clamp(3.5rem, 5vw, 5rem) !important;
+.join-team-page a:focus-visible,
+.join-team-page button:focus-visible {
+  outline: 3px solid rgb(0, 224, 211);
+
+  outline-offset: 4px;
 }
 
-/* Keep the final CTA at the same vertical rhythm as the
-   other sections instead of using the old zero top padding. */
-.join-team-page > .join-team-final.section-pad {
-  padding-top: clamp(3.5rem, 5vw, 5rem) !important;
-  padding-bottom: clamp(3.5rem, 5vw, 5rem) !important;
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .join-team-hero {
+    min-height: calc(100vh - 70px);
+
+    padding:
+      5rem 1.25rem;
+  }
+
+
+  .join-team-hero h1 {
+    font-size: clamp(
+      2.7rem,
+      7vw,
+      4.5rem
+    );
+  }
+
+
+  .join-team-split,
+  .join-team-section-head {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+
+  .join-team-value-grid,
+  .join-team-collab-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .join-team-role-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .join-team-open-head {
+    gap: 15px !important;
+  }
+
+
+  .join-team-open-title,
+  .join-team-culture-title,
+  .join-team-collab-title {
+    white-space: normal;
+  }
+
+
+  .join-team-collab-heading > p span {
+    white-space: normal;
+  }
+
+
+  .join-team-collab-cta {
+    flex-wrap: wrap;
+  }
 }
 
-/* Same spacing between section headings and their content grids. */
-.join-team-value-grid,
-.join-team-role-grid,
-.join-team-collab-grid {
-  margin-top: 2.5rem !important;
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width: 560px) {
+
+  .join-team-hero {
+    min-height: calc(100svh - 65px);
+
+    padding:
+      4rem 1rem;
+  }
+
+
+  .join-team-hero-content {
+    max-width: 100%;
+  }
+
+
+  .join-team-eyebrow {
+    font-size: 0.68rem;
+
+    padding:
+      8px 13px;
+  }
+
+
+  .join-team-hero h1 {
+    margin-top: 1.25rem;
+
+    font-size: clamp(
+      2.35rem,
+      11vw,
+      3.4rem
+    );
+
+    letter-spacing: -0.045em;
+
+    line-height: 1;
+  }
+
+
+  .join-team-hero p {
+    max-width: 500px;
+
+    font-size: 0.98rem;
+
+    line-height: 1.65;
+  }
+
+
+  .join-team-actions {
+    width: 100%;
+
+    flex-direction: column;
+  }
+
+
+  .join-team-actions a {
+    width: min(100%, 300px);
+  }
+
+
+  .join-team-proof {
+    flex-direction: column;
+
+    gap: 11px;
+
+    margin-top: 2rem;
+  }
+
+
+  .join-team-page .section-pad {
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+
+
+  .join-team-value,
+  .join-team-role,
+  .join-team-collab-card {
+    padding: 24px;
+  }
+
+
+  .join-team-collab-cta {
+    align-items: flex-start;
+  }
+
+
+  .join-team-collab-cta a {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+
+  .join-team-final-box {
+    padding:
+      2.25rem 1.25rem;
+  }
 }
 
-/* Same spacing below the collaboration heading. */
-.join-team-collab-heading {
-  margin-bottom: 2.5rem !important;
-}
 
-/* Keep the existing CTA internal spacing compact and consistent. */
-.join-team-final-box p {
-  margin-top: 16px !important;
-  margin-bottom: 22px !important;
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .join-team-page *,
+  .join-team-page *::before,
+  .join-team-page *::after {
+    scroll-behavior: auto !important;
+
+    animation-duration: 0.001ms !important;
+
+    animation-iteration-count: 1 !important;
+
+    transition-duration: 0.001ms !important;
+  }
 }
