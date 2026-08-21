@@ -4344,3 +4344,263 @@
     height: 100vh;
   }
 }
+
+
+/* =========================================================
+   SERVICES PAGE — MASTER DESIGN SYSTEM OVERRIDES
+   Preserves the existing structure/alignment while enforcing
+   the shared ProJenius typography, spacing, accent and motion.
+   ========================================================= */
+
+/* Normal-section typography */
+.service-1,
+.service-1 * {
+  font-family: "Segoe UI", sans-serif;
+}
+
+.service-1 h1,
+.service-1 h2,
+.service-1 h3,
+.service-1 h4,
+.service-1 h5,
+.service-1 h6 {
+  font-family: "Segoe UI Black", "Segoe UI", sans-serif;
+}
+
+.service-1 .section-heading {
+  margin-bottom: 40px;
+}
+
+.service-1 #title {
+  color: rgb(255, 255, 255) !important;
+  font-family: "Segoe UI Black", "Segoe UI", sans-serif;
+  font-size: clamp(2rem, 4vw, 3.5rem) !important;
+  font-weight: 900;
+  line-height: 1.15;
+  margin: 0;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+.service-heading-line {
+  width: 78px;
+  height: 4px;
+  margin: 20px auto 0;
+  border-radius: 999px;
+  background: rgb(0, 170, 162);
+  animation: serviceHeadingLineBlink 3.2s ease-in-out infinite;
+  will-change: opacity;
+}
+
+@keyframes serviceHeadingLineBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.45; }
+}
+
+.service-description {
+  max-width: 900px;
+  margin: 24px auto 0;
+  color: rgb(187, 187, 187) !important;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 1rem !important;
+  font-weight: 400;
+  line-height: 1.7 !important;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+/* Keep the existing dark-card visual hierarchy; remove blue accents. */
+.service-1 {
+  padding: 90px 0;
+  background: #121929;
+}
+
+.service-1 .box {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 18px;
+  min-height: 450px;
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.service-1 .box::before {
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    transparent 110deg,
+    rgba(0, 170, 162, 0.22) 140deg,
+    rgb(0, 170, 162) 175deg,
+    rgb(0, 170, 162) 180deg,
+    rgba(0, 170, 162, 0.55) 185deg,
+    rgba(0, 170, 162, 0.22) 220deg,
+    transparent 250deg,
+    transparent 360deg
+  );
+  animation: serviceBorderLight 5s linear infinite;
+}
+
+.service-1 .box::after {
+  background: linear-gradient(180deg, rgba(18, 25, 41, 0.94) 0%, rgba(18, 25, 41, 0.98) 100%);
+}
+
+.service-1 .box:hover {
+  border-color: rgb(0, 170, 162);
+  box-shadow: 0 10px 25px rgba(0, 170, 162, 0.18);
+  transform: translateY(-5px);
+}
+
+.service-1 .service-icon {
+  width: 64px;
+  height: 64px;
+  margin-bottom: 24px;
+  border-radius: 18px;
+  background: rgba(0, 170, 162, 0.10);
+  border: 1px solid rgba(0, 170, 162, 0.35);
+}
+
+.service-1 .box:hover .service-icon {
+  background: rgba(0, 170, 162, 0.16);
+  border-color: rgb(0, 170, 162);
+  transform: scale(1.02);
+}
+
+.service-1 .icon {
+  color: rgb(0, 170, 162) !important;
+  font-size: 28px;
+}
+
+.service-1 .box-title {
+  color: rgb(255, 255, 255) !important;
+  font-family: "Segoe UI Black", "Segoe UI", sans-serif;
+  font-size: 1.25rem !important;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 16px;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+.service-1 .box-desc {
+  color: rgb(187, 187, 187) !important;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 1rem !important;
+  font-weight: 400;
+  line-height: 1.7 !important;
+  overflow-wrap: break-word;
+  word-break: normal;
+}
+
+.service-btn {
+  min-height: 48px;
+  margin-top: 24px;
+  padding: 14px 28px;
+  background: rgb(0, 170, 162);
+  border: 1px solid rgb(0, 170, 162);
+  border-radius: 10px;
+  color: rgb(0, 0, 0) !important;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.2;
+  box-shadow: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.service-btn:hover {
+  background: rgb(0, 170, 162);
+  border-color: rgb(0, 170, 162);
+  color: rgb(0, 0, 0) !important;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 170, 162, 0.25);
+}
+
+/* Secondary hero-style development area: Poppins only, without changing layout. */
+.development-hero,
+.development-hero * {
+  font-family: "Poppins", sans-serif;
+}
+
+.development-hero .hero-content h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+}
+
+.development-hero .hero-subtext,
+.development-hero .hero-pill,
+.development-hero .hero-btn-primary,
+.development-hero .hero-btn-secondary,
+.development-hero .stat-number,
+.development-hero .stat-label {
+  font-family: "Poppins", sans-serif;
+}
+
+/* Existing hero accent treatment retained; only typography is standardized. */
+.development-hero .hero-title-gradient {
+  background: linear-gradient(135deg, #0e7490 0%, #0284c7 50%, #66c7dd 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Responsive consistency */
+@media (max-width: 991px) {
+  .service-1 {
+    padding: 70px 5%;
+  }
+
+  .service-1 .box {
+    min-height: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .service-1 {
+    padding: 55px 20px;
+  }
+
+  .service-1 .section-heading {
+    margin-bottom: 40px;
+  }
+
+  .service-1 .box {
+    min-height: 0;
+    padding: 22px;
+  }
+
+  .service-heading-line {
+    margin-top: 16px;
+  }
+
+  .service-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .development-hero .hero-content h1 {
+    font-size: clamp(2.5rem, 9vw, 3.5rem);
+  }
+
+  .development-hero .hero-buttons {
+    gap: 14px;
+  }
+
+  .development-hero .hero-btn-primary,
+  .development-hero .hero-btn-secondary {
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: break-word;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-heading-line,
+  .service-1 .box::before {
+    animation: none !important;
+  }
+
+  .service-1 .box,
+  .service-btn {
+    transition: none !important;
+  }
+}

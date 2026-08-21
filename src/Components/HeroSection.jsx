@@ -38,28 +38,6 @@ const PARTICLES = [
     { size: 12, top: "22%", left: "70%", duration: "6.3s", delay: "1.5s" },
 ];
 
-function useScrollReveal(selector = ".reveal, .reveal-left, .reveal-right") {
-    useEffect(() => {
-        const els = document.querySelectorAll(selector);
-        if (!els.length) return;
-
-        const observer = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("visible");
-                        observer.unobserve(entry.target);
-                    }
-                });
-            },
-            { threshold: 0.15 }
-        );
-
-        els.forEach((el) => observer.observe(el));
-
-        return () => observer.disconnect();
-    }, [selector]);
-}
 
 function DotIndicators({ total, active, onDotClick }) {
     return (
@@ -101,7 +79,6 @@ export default function HeroSection() {
     const [activeSlide, setActiveSlide] = useState(0);
     const [isMobile, setIsMobile] = useState(false);
 
-    useScrollReveal();
 
     useEffect(() => {
         const mq = window.matchMedia("(max-width: 991px)");
@@ -207,13 +184,13 @@ export default function HeroSection() {
                                 className="btn"
                                 style={{
                                     backgroundColor: "rgb(0, 224, 211)",
-                                    color: "#000000",
+                                    color: "rgb(0, 0, 0)",
                                 }}
                             >
                                 <span
                                     className="btn-content"
                                     key={activeSlide}
-                                    style={{ color: "#000000" }}
+                                    style={{ color: "rgb(0, 0, 0)" }}
                                 >
                                     {slides[activeSlide].buttonText}
                                 </span>
@@ -254,7 +231,7 @@ export default function HeroSection() {
                                                     : "none",
                                             boxShadow:
                                                 activeSlide === realIndex
-                                                    ? "0 0 22px rgba(0, 224, 211, 0.75)"
+                                                    ? "0 0 22px rgba(0, 224, 211, 0.35)"
                                                     : "none",
                                             objectFit: "cover",
                                             transition:

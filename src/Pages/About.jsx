@@ -61,21 +61,29 @@ export default function About() {
 
     let repeatTimer = null;
 
+    const clearCounterTimer = () => {
+      if (repeatTimer) {
+        clearTimeout(repeatTimer);
+        repeatTimer = null;
+      }
+    };
+
     const startCounterLoop = () => {
+      clearCounterTimer();
       setCounterRun((value) => value + 1);
 
-      if (repeatTimer) clearInterval(repeatTimer);
+      const scheduleNextRun = () => {
+        repeatTimer = setTimeout(() => {
+          setCounterRun((value) => value + 1);
+          scheduleNextRun();
+        }, 5000);
+      };
 
-      repeatTimer = setInterval(() => {
-        setCounterRun((value) => value + 1);
-      }, 5000);
+      scheduleNextRun();
     };
 
     const stopCounterLoop = () => {
-      if (repeatTimer) {
-        clearInterval(repeatTimer);
-        repeatTimer = null;
-      }
+      clearCounterTimer();
     };
 
     const observer = new IntersectionObserver(

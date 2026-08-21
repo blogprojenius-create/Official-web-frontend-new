@@ -1,5 +1,5 @@
-import React, { useRef, useState } from "react";
-import { motion, useInView, AnimatePresence } from "framer-motion";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import Reveal from "../Components/Reveal";
 import "../index.css";
 import "../assets/css/Service-page.css";
@@ -86,15 +86,6 @@ export default function Services() {
       y: 0,
       scale: 1,
       transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] },
-    },
-  };
-
-  const subheadingVariants = {
-    hidden: { opacity: 0, letterSpacing: "0px" },
-    visible: {
-      opacity: 1,
-      letterSpacing: "3px",
-      transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] },
     },
   };
 
@@ -224,6 +215,8 @@ export default function Services() {
             >
               {"< What do you want to build? />"}
             </motion.h2>
+
+            <div className="service-heading-line" aria-hidden="true" />
 
             <p className="service-description">
               We create websites, web applications, mobile apps,

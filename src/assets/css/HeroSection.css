@@ -3,8 +3,9 @@
    ========================================= */
 
 .hero-wrapper {
+    font-family: "Poppins", sans-serif;
     background-image: linear-gradient(135deg, #121929, transparent), url('../images/projenius-banner.webp');
-    padding: 80px 20px 120px;
+    padding: 80px 5% 120px;
     position: relative;
     overflow: hidden;
     background-size: cover;
@@ -54,7 +55,7 @@
     width: 100%;
     height: 140px;
 
-    background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%221440%22%20zoomAndPan%3D%22magnify%22%20viewBox%3D%220%200%201080%20123.750003%22%20height%3D%22165%22%20preserveAspectRatio%3D%22none%22%20version%3D%221.0%22%3E%3Cdefs%3E%3CclipPath%20id%3D%2293f9834975%22%3E%3Cpath%20d%3D%22M%201.089844%200%20L%201078.910156%200%20L%201078.910156%20123.5%20L%201.089844%20123.5%20Z%20M%201.089844%200%20%22%20clip-rule%3D%22nonzero%22%2F%3E%3C%2FclipPath%3E%3CclipPath%20id%3D%226c8e690bbd%22%3E%3Cpath%20d%3D%22M%200.0898438%2011%20L%201077.910156%2011%20L%201077.910156%20123.5%20L%200.0898438%20123.5%20Z%20M%200.0898438%2011%20%22%20clip-rule%3D%22nonzero%22%2F%3E%3C%2FclipPath%3E%3CclipPath%20id%3D%224c34389736%22%3E%3Cpath%20d%3D%22M%200.0898438%208%20L%201077.910156%208%20L%201077.910156%20106.5625%20L%200.0898438%20106.5625%20Z%20M%200.0898438%208%20%22%20clip-rule%3D%22nonzero%22%2F%3E%3C%2FclipPath%3E%3CclipPath%20id%3D%22b5a758477e%22%3E%3Crect%20x%3D%220%22%20width%3D%221078%22%20y%3D%220%22%20height%3D%22124%22%2F%3E%3C%2FclipPath%3E%3C%2Fdefs%3E%3Cg%20clip-path%3D%22url(%2393f9834975)%22%3E%3Cg%20transform%3D%22matrix(1%2C%200%2C%200%2C%201%2C%201%2C%200.00000000000000159)%22%3E%3Cg%20clip-path%3D%22url(%23b5a758477e)%22%3E%3Cg%20clip-path%3D%22url(%236c8e690bbd)%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M%20-3.59375%2028.574219%20L%2088.101562%2062.867188%20L%20185.527344%2011.429688%20L%201096.726562%20102.871094%20L%201096.726562%20125.734375%20L%20-3.59375%20125.734375%20Z%20M%20-3.59375%2028.574219%20%22%20fill-opacity%3D%221%22%20fill-rule%3D%22nonzero%22%2F%3E%3C%2Fg%3E%3Cg%20clip-path%3D%22url(%234c34389736)%22%3E%3Cpath%20stroke-linecap%3D%22round%22%20transform%3D%22matrix(0.573081%2C%200%2C%200%2C%200.571511%2C%20-3.59211%2C%200.0000142953)%22%20fill%3D%22none%22%20stroke-linejoin%3D%22round%22%20d%3D%22M%20-0.00286252%2049.997633%20L%20160.001126%20110.001656%20L%20330.004511%2019.999038%20L%201920.004101%20179.998377%20%22%20stroke%3D%22%2366c7dd%22%20stroke-width%3D%2212%22%20stroke-opacity%3D%221%22%20stroke-miterlimit%3D%224%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+    background-image: url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20width%3D%221440%22%20zoomAndPan%3D%22magnify%22%20viewBox%3D%220%200%201080%20123.750003%22%20height%3D%22165%22%20preserveAspectRatio%3D%22none%22%20version%3D%221.0%22%3E%3Cdefs%3E%3CclipPath%20id%3D%2293f9834975%22%3E%3Cpath%20d%3D%22M%201.089844%200%20L%201078.910156%200%20L%201078.910156%20123.5%20L%201.089844%20123.5%20Z%20M%201.089844%200%20%22%20clip-rule%3D%22nonzero%22%2F%3E%3C%2FclipPath%3E%3CclipPath%20id%3D%226c8e690bbd%22%3E%3Cpath%20d%3D%22M%200.0898438%2011%20L%201077.910156%2011%20L%201077.910156%20123.5%20L%200.0898438%20123.5%20Z%20M%200.0898438%2011%20%22%20clip-rule%3D%22nonzero%22%2F%3E%3C%2FclipPath%3E%3CclipPath%20id%3D%224c34389736%22%3E%3Cpath%20d%3D%22M%200.0898438%208%20L%201077.910156%208%20L%201077.910156%20106.5625%20L%200.0898438%20106.5625%20Z%20M%200.0898438%208%20%22%20clip-rule%3D%22nonzero%22%2F%3E%3C%2FclipPath%3E%3CclipPath%20id%3D%22b5a758477e%22%3E%3Crect%20x%3D%220%22%20width%3D%221078%22%20y%3D%220%22%20height%3D%22124%22%2F%3E%3C%2FclipPath%3E%3C%2Fdefs%3E%3Cg%20clip-path%3D%22url(%2393f9834975)%22%3E%3Cg%20transform%3D%22matrix(1%2C%200%2C%200%2C%201%2C%201%2C%200.00000000000000159)%22%3E%3Cg%20clip-path%3D%22url(%23b5a758477e)%22%3E%3Cg%20clip-path%3D%22url(%236c8e690bbd)%22%3E%3Cpath%20fill%3D%22%23ffffff%22%20d%3D%22M%20-3.59375%2028.574219%20L%2088.101562%2062.867188%20L%20185.527344%2011.429688%20L%201096.726562%20102.871094%20L%201096.726562%20125.734375%20L%20-3.59375%20125.734375%20Z%20M%20-3.59375%2028.574219%20%22%20fill-opacity%3D%221%22%20fill-rule%3D%22nonzero%22%2F%3E%3C%2Fg%3E%3Cg%20clip-path%3D%22url(%234c34389736)%22%3E%3Cpath%20stroke-linecap%3D%22round%22%20transform%3D%22matrix(0.573081%2C%200%2C%200%2C%200.571511%2C%20-3.59211%2C%200.0000142953)%22%20fill%3D%22none%22%20stroke-linejoin%3D%22round%22%20d%3D%22M%20-0.00286252%2049.997633%20L%20160.001126%20110.001656%20L%20330.004511%2019.999038%20L%201920.004101%20179.998377%20%22%20stroke%3D%22%2300fff2%22%20stroke-width%3D%2212%22%20stroke-opacity%3D%221%22%20stroke-miterlimit%3D%224%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E');
 
     background-repeat: no-repeat;
     background-position: center bottom;
@@ -109,11 +110,12 @@
    ========================================= */
 
 .hero .subheading {
-    font-size: 26px;
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(1.1rem, 2vw, 1.4rem);
 
-    color: white;
+    color: rgb(255, 255, 255);
 
-    font-weight: 600;
+    font-weight: 700;
 
     opacity: 0;
 
@@ -133,15 +135,16 @@
    ========================================= */
 
 .hero .heading {
-    font-size: 66px;
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-family: "Poppins", sans-serif;
 
     line-height: 1.15;
 
     letter-spacing: 0;
 
-    color: white;
+    color: rgb(255, 255, 255);
 
-    font-weight: 700;
+    font-weight: 900;
 
     opacity: 0;
 
@@ -155,23 +158,6 @@
         forwards;
 }
 
-.hero .heading {
-    font-size: 66px;
-    line-height: 1.15;
-    letter-spacing: 0;
-    color: white;
-    font-weight: 700;
-
-    opacity: 0;
-    transform: translateY(36px);
-
-    animation:
-        fadeUp
-        0.75s
-        cubic-bezier(0.22, 1, 0.36, 1)
-        0.4s
-        forwards;
-}
 
 
 /* FORCE HERO HEADING INTO EXACTLY 2 LINES */
@@ -211,11 +197,12 @@
    ========================================= */
 
 .hero .description {
-    color: rgba(255, 255, 255, 0.88);
+    font-family: "Poppins", sans-serif;
+    color: rgb(187, 187, 187);
 
-    font-size: 21px;
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
 
-    line-height: 1.65;
+    line-height: 1.7;
 
     opacity: 0;
 
@@ -255,9 +242,9 @@
 
     justify-content: center;
 
-    gap: 20px;
+    gap: 14px;
 
-    margin-top: 30px;
+    margin-top: 24px;
 
     opacity: 0;
 
@@ -281,105 +268,42 @@
    ========================================= */
 
 .btn {
-    background-image:
-        linear-gradient(
-            90deg,
-            #22D3EE 0%,
-            #EC4899 25%,
-            #F97316 50%,
-            #EC4899 75%,
-            #22D3EE 100%
-        );
-
-    background-size: 300% 100%;
-
-    background-position: 0% 50%;
-
-    color: #ffffff;
-
-    /* ONLY BUTTON SIZE CHANGED */
-    padding: 15px 32px;
-
-    border-radius: 999px;
-
-    /* ONLY BUTTON FONT SIZE CHANGED */
-    font-size: 18px;
-    font-weight: 700;
-
-    overflow: hidden;
-
-    min-width: 240px;
-
+    background: rgb(0, 224, 211);
+    color: rgb(0, 0, 0);
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.2;
+    min-width: auto;
     text-align: center;
-
-    animation:
-        buttonWaterFlow
-        5s
-        linear
-        infinite;
-
+    border: 1px solid rgb(0, 224, 211);
+    animation: none;
     transition:
         transform 0.3s ease,
-        box-shadow 0.3s ease;
-
-    border: none;
-}
-
-
-@keyframes buttonWaterFlow {
-
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 150% 50%;
-    }
-
-    100% {
-        background-position: 300% 50%;
-    }
+        box-shadow 0.3s ease,
+        background-color 0.3s ease;
 }
 
 
 .btn:hover {
-    color: #ffffff;
-
-    transform: translateY(-2px);
-
-    box-shadow:
-        0 0 14px rgba(236, 72, 153, 0.45),
-        0 0 28px rgba(34, 211, 238, 0.30),
-        0 0 38px rgba(249, 115, 22, 0.18);
+    color: rgb(0, 0, 0);
+    background: rgb(0, 224, 211);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 224, 211, 0.25);
 }
 
 
 .btn-content {
     display: inline-block;
-
-    font-size: 18px;
-    font-weight: 700;
-
-    animation:
-        btnTextIn
-        0.5s
-        cubic-bezier(0.22, 1, 0.36, 1)
-        forwards;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.2;
 }
 
 
-@keyframes btnTextIn {
-
-    0% {
-        opacity: 0;
-        transform: translateY(12px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
 
 /* =========================================
@@ -426,10 +350,10 @@
 
 
 .hero-slide-dot.active {
-    background: #22D3EE !important;
+    background: rgb(0, 255, 242) !important;
 
     box-shadow:
-        0 0 0 4px rgba(236, 72, 153, 0.18);
+        0 0 0 4px rgba(0, 224, 211, 0.18);
 
     transform: scale(1.12);
 }
@@ -544,50 +468,17 @@
 .hero .thumb-img.active {
     opacity: 1 !important;
 
-    border-color: #22D3EE;
+    border-color: rgb(0, 255, 242);
 
     box-shadow:
-        0 0 10px rgba(236, 72, 153, 0.55),
-        0 0 20px rgba(34, 211, 238, 0.45),
+        0 0 10px rgba(0, 224, 211, 0.25),
+        0 0 20px rgba(0, 255, 242, 0.25),
         0 0 34px rgba(236, 72, 153, 0.25);
 
     animation: none;
 }
 
 
-/* =========================================
-   CIRCLE GLOW FLOW
-   ========================================= */
-
-@keyframes circleGlowFlow {
-
-    0% {
-        border-color: #22D3EE;
-
-        box-shadow:
-            0 0 10px rgba(236, 72, 153, 0.55),
-            0 0 20px rgba(34, 211, 238, 0.25),
-            0 0 34px rgba(249, 115, 22, 0.20);
-    }
-
-    50% {
-        border-color: #EC4899;
-
-        box-shadow:
-            0 0 10px rgba(34, 211, 238, 0.55),
-            0 0 20px rgba(236, 72, 153, 0.45),
-            0 0 34px rgba(249, 115, 22, 0.25);
-    }
-
-    100% {
-        border-color: #22D3EE;
-
-        box-shadow:
-            0 0 10px rgba(236, 72, 153, 0.55),
-            0 0 20px rgba(34, 211, 238, 0.25),
-            0 0 34px rgba(249, 115, 22, 0.20);
-    }
-}
 
 
 /* =========================================
@@ -596,13 +487,8 @@
 
 .hero .thumb-img:not(.active):hover {
     opacity: 0.9 !important;
-
-    border-color: #EC4899;
-
-    box-shadow:
-        0 0 10px rgba(34, 211, 238, 0.45),
-        0 0 22px rgba(236, 72, 153, 0.30);
-
+    border-color: rgb(0, 224, 211);
+    box-shadow: 0 0 18px rgba(0, 224, 211, 0.25);
     filter: brightness(1.05);
 }
 
@@ -703,7 +589,7 @@
 
     border-radius: 50%;
 
-    background: #22D3EE;
+    background: rgb(0, 255, 242);
 
     pointer-events: none;
 
@@ -762,25 +648,6 @@
     }
 
 
-    .hero .heading {
-        font-size: 51px;
-
-        line-height: 1.18;
-    }
-
-
-    .hero .subheading {
-        font-size: 21px;
-    }
-
-
-    .hero .description {
-        font-size: 18px;
-
-        line-height: 1.6;
-    }
-
-
     .hero .col-lg-7 {
         text-align: center;
     }
@@ -810,6 +677,11 @@
 
 @media (max-width: 575px) {
 
+    .hero .heading .hero-heading-line-1,
+    .hero .heading .hero-heading-line-2 {
+        white-space: normal;
+    }
+
     .hero-wrapper {
         padding: 100px 12px 12px;
     }
@@ -824,27 +696,6 @@
     }
 
 
-    .hero .heading {
-        font-size: 36px;
-
-        line-height: 1.2;
-
-        letter-spacing: 0;
-    }
-
-
-    .hero .subheading {
-        font-size: 17px;
-    }
-
-
-    .hero .description {
-        font-size: 16px;
-
-        line-height: 1.6;
-    }
-
-
     .hero-buttons {
         gap: 14px;
 
@@ -852,21 +703,11 @@
 
         justify-content: center;
     }
-
-
-    .hero .btn .btn-content {
-        font-size: 18px;
-    }
-
-
     .hero .btn {
         height: auto;
-
-        min-height: 50px;
-
+        min-height: 48px;
         min-width: min(100%, 220px);
-
-        padding: 12px 24px;
+        padding: 14px 28px;
     }
 
 
@@ -897,17 +738,6 @@
    ========================================= */
 
 @media (max-width: 380px) {
-
-    .hero .heading {
-        font-size: 31px;
-
-        line-height: 1.2;
-    }
-
-
-    .hero .subheading {
-        font-size: 15px;
-    }
 
 
     .hero-buttons,
@@ -971,4 +801,25 @@
     border-top: none !important;
 
     margin-top: 0 !important;
+}
+
+/* =========================================
+   ACCESSIBILITY / REDUCED MOTION
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-wrapper,
+    .hero-wrapper::before,
+    .hero-wrapper::after,
+    .hero .heading,
+    .hero .subheading,
+    .hero .description,
+    .hero-buttons,
+    .hero .thumb-img,
+    .hero-particle,
+    .btn,
+    .btn-content {
+        animation: none !important;
+        transition: none !important;
+    }
 }
