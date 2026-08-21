@@ -23,6 +23,17 @@
 
 
 /* =========================================================
+   CONTACT PAGE - HIDE NAVBAR ONLY
+   ========================================================= */
+
+body.contact-page-active nav,
+body.contact-page-active .navbar,
+body.contact-page-active .header-wrap {
+    display: none !important;
+}
+
+
+/* =========================================================
    HERO
    ========================================================= */
 
@@ -97,9 +108,6 @@
     overflow: clip;
 }
 
-
-/* Small controlled gap below hero */
-
 .contact-page .contact-hero + .contact-main-section {
     margin-top: 0;
 }
@@ -144,6 +152,33 @@
 
 
 /* =========================================================
+   GO BACK HOME LINK
+   ========================================================= */
+
+.contact-page .contact-home-link {
+    display: inline-block;
+
+    margin-top: 18px;
+
+    color: var(--contact-teal) !important;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.contact-page .contact-home-link:hover {
+    color: rgb(0, 140, 134) !important;
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
    QUOTE CONTENT ROW
    ========================================================= */
 
@@ -176,6 +211,18 @@
     box-shadow: var(--shadow-card, 0 10px 35px rgba(0, 0, 0, 0.08));
 
     height: 100%;
+
+    /* ONLY FORM WIDTH REDUCTION */
+    width: 90%;
+}
+
+
+/* Keep the form card centered inside its existing column */
+@media (min-width: 992px) {
+    .contact-page .quote-form-card {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .contact-page .quote-form-card h3 {
@@ -417,7 +464,7 @@
    ========================================================= */
 
 .contact-page .what-happens-card {
-     background: #fff;
+    background: #fff;
     border-radius: var(--radius-card, 18px);
     padding: clamp(24px, 4vw, 35px);
     box-shadow: var(--shadow-card, 0 10px 35px rgba(0, 0, 0, 0.08));
@@ -447,7 +494,6 @@
 .contact-page .step-item {
     display: grid;
 
-    /* Fixed number column + flexible text column */
     grid-template-columns: 40px minmax(0, 1fr);
 
     column-gap: 16px;
@@ -491,7 +537,7 @@
 }
 
 .contact-page .step-text {
-     min-width: 0;
+    min-width: 0;
 
     font-family: "Segoe UI", sans-serif;
 
@@ -718,6 +764,11 @@
         padding: 30px;
     }
 
+    /* Full width on tablet */
+    .contact-page .quote-form-card {
+        width: 100%;
+    }
+
     .contact-page .contact-quote-row {
         --bs-gutter-y: 30px;
     }
@@ -758,6 +809,11 @@
     .contact-page .talk-first-card,
     .contact-page .what-happens-card {
         padding: 24px;
+    }
+
+    /* Keep mobile form full width */
+    .contact-page .quote-form-card {
+        width: 100%;
     }
 
     .contact-page .quote-form-card h3 {
@@ -853,6 +909,10 @@
         padding: 20px;
     }
 
+    .contact-page .quote-form-card {
+        width: 100%;
+    }
+
     .contact-page .step-item {
         gap: 12px;
     }
@@ -871,4 +931,58 @@
     .contact-page .map-wrapper iframe {
         height: 320px;
     }
+}
+
+/* Remove Contact Page Navbar Bar */
+.contact-page .navbar,
+.contact-page .header-wrap,
+.contact-page header {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* Remove the dark rounded container/bar */
+.contact-page .navbar-container,
+.contact-page .nav-container,
+.contact-page .header-container {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* Keep page content positioning unchanged */
+.contact-page {
+    padding-top: 0 !important;
+}
+
+/* =========================================================
+   CONTACT PAGE - COMPLETELY REMOVE GLOBAL HEADER
+   ========================================================= */
+
+body.contact-page-active .header-wrap,
+body.contact-page-active .navbar,
+body.contact-page-active nav,
+body.contact-page-active header {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    max-height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    overflow: hidden !important;
+}
+
+/* Prevent any leftover header spacing */
+body.contact-page-active {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+body.contact-page-active .contact-page {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
 }

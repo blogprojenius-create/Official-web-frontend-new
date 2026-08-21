@@ -1,4 +1,4 @@
-import React, { useEffect, Suspense, lazy } from "react";
+import React, { useEffect, useRef, useState, Suspense, lazy } from "react";
 import "../index.css";
 import "../assets/css/About-page.css";
 import TeamSection from "../Components/TeamSection";
@@ -51,6 +51,55 @@ const counterStats = [
 ];
 
 export default function About() {
+  const achievementRef = useRef(null);
+  const [achievementVisible, setAchievementVisible] = useState(false);
+  const [counterRun, setCounterRun] = useState(0);
+
+  useEffect(() => {
+    const section = achievementRef.current;
+    if (!section) return;
+
+    let repeatTimer = null;
+
+    const startCounterLoop = () => {
+      setCounterRun((value) => value + 1);
+
+      if (repeatTimer) clearInterval(repeatTimer);
+
+      repeatTimer = setInterval(() => {
+        setCounterRun((value) => value + 1);
+      }, 5000);
+    };
+
+    const stopCounterLoop = () => {
+      if (repeatTimer) {
+        clearInterval(repeatTimer);
+        repeatTimer = null;
+      }
+    };
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        const isVisible = entry.isIntersecting;
+        setAchievementVisible(isVisible);
+
+        if (isVisible) {
+          startCounterLoop();
+        } else {
+          stopCounterLoop();
+        }
+      },
+      { threshold: 0.25 }
+    );
+
+    observer.observe(section);
+
+    return () => {
+      stopCounterLoop();
+      observer.disconnect();
+    };
+  }, []);
+
   useEffect(() => {
     AOS.init({
       duration: 600,
@@ -347,7 +396,7 @@ export default function About() {
           ACHIEVEMENTS SECTION
           ========================================================= */}
 
-      <section className="achieve-section">
+      <section className="achieve-section" ref={achievementRef}>
 
         {/* Decorative background elements */}
 
@@ -482,10 +531,13 @@ export default function About() {
 
                 <div className="achieve-card-number">
 
-                  <CountUp
-                    to={stat.end}
-                    suffix={stat.suffix}
-                  />
+                  {achievementVisible && (
+                    <CountUp
+                      key={`${stat.title}-${counterRun}`}
+                      to={stat.end}
+                      suffix={stat.suffix}
+                    />
+                  )}
 
                 </div>
 

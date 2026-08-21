@@ -5386,3 +5386,644 @@ img {
         padding-bottom: 54px !important;
     }
 }
+
+
+/* =========================================================
+   FINAL REQUESTED FIXES
+   Only the requested sections are adjusted. Existing colors,
+   typography, animations and unrelated alignments are preserved.
+   ========================================================= */
+
+/* 1. WHO WE ARE — center the left visual panel inside its column. */
+.about-1 .about-content-row > .col-lg-6:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.about-1 .about-content-row > .col-lg-6:first-child .wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.about-1 .about-content-row > .col-lg-6:first-child .about-principles {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* 2. WHO WE ARE — keep feature text on one line on desktop. */
+@media (min-width: 992px) {
+    .about-1 .about-features-stack .list {
+        white-space: nowrap;
+        min-width: 0;
+    }
+}
+
+/* 3. WHO WE ARE — give the right content a little more usable width
+      without changing the overall two-column structure. */
+@media (min-width: 1200px) {
+    .about-1 .about-content-row > .col-lg-6:first-child {
+        flex: 0 0 46%;
+        max-width: 46%;
+    }
+
+    .about-1 .about-content-row > .col-lg-6:last-child {
+        flex: 0 0 54%;
+        max-width: 54%;
+    }
+}
+
+/* 4–5. ACHIEVEMENTS — counters restart every time the section
+        enters the viewport; all card content stays centered. */
+.achieve-section .achieve-header,
+.achieve-section .achieve-card,
+.achieve-section .achieve-card-icon-wrap,
+.achieve-section .achieve-card-number,
+.achieve-section .achieve-card-title,
+.achieve-section .achieve-card-desc {
+    text-align: center !important;
+}
+
+.achieve-section .achieve-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.achieve-section .achieve-card-number {
+    width: 100%;
+}
+
+/* 6. ACHIEVEMENTS — icons are always visible in black. */
+.achieve-section .achieve-card-icon,
+.achieve-section .achieve-card-icon svg {
+    color: #000000 !important;
+}
+
+.achieve-section .achieve-card-icon svg {
+    stroke: #000000 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* 7. ACHIEVEMENTS — wider section/card area while preserving the
+      existing three-card layout. */
+.achieve-section .container {
+    width: min(100%, 1320px);
+    max-width: 1320px;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+@media (min-width: 1400px) {
+    .achieve-section .container {
+        width: min(100%, 1380px);
+        max-width: 1380px;
+    }
+}
+
+/* Responsive safety: never force one-line feature text off-screen. */
+@media (max-width: 991px) {
+    .about-1 .about-content-row > .col-lg-6:first-child,
+    .about-1 .about-content-row > .col-lg-6:last-child {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .about-1 .about-features-stack .list {
+        white-space: normal;
+    }
+
+    .achieve-section .container {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .achieve-section .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+/* =========================================================
+   FINAL TARGETED FIXES — USER REQUEST
+   Only the requested sections are adjusted.
+   ========================================================= */
+
+/* 1 + 3. WHO WE ARE — center the left visual and give the
+   complete content area more usable width on desktop. */
+@media (min-width: 992px) {
+    .about-1 > .container {
+        width: 100% !important;
+        max-width: 1380px !important;
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+    }
+
+    .about-1 .about-content-row {
+        align-items: center !important;
+    }
+
+    .about-1 .about-content-row > .col-lg-6:first-child {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .about-1 .about-content-row > .col-lg-6:first-child .wrapper {
+        width: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .about-1 .about-content-row > .col-lg-6:first-child .about-principles {
+        width: min(100%, 650px) !important;
+        margin: 0 auto !important;
+    }
+
+    .about-1 .about-content-row > .col-lg-6:last-child {
+        padding-left: 14px !important;
+        padding-right: 4px !important;
+    }
+
+    /* 2. Feature text stays on one line on desktop. */
+    .about-1 .about-features-stack li.list {
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: clip !important;
+        font-size: 14px !important;
+        padding-left: 14px !important;
+        padding-right: 12px !important;
+    }
+
+    .about-1 .about-features-stack li.list i {
+        flex: 0 0 auto !important;
+    }
+}
+
+/* 2. Do not force one-line text where it would create mobile overflow. */
+@media (max-width: 991px) {
+    .about-1 .about-features-stack li.list {
+        white-space: normal !important;
+    }
+}
+
+/* =========================================================
+   ACHIEVEMENTS — wider section + genuinely centered cards
+   + visible black icons
+   ========================================================= */
+.achieve-section {
+    width: 100% !important;
+}
+
+.achieve-section > .container {
+    width: 100% !important;
+    max-width: 1380px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 28px !important;
+    padding-right: 28px !important;
+}
+
+.achieve-header {
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+}
+
+.achieve-header .achievement-main-title {
+    width: 100% !important;
+    max-width: none !important;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.achieve-subtitle {
+    width: 100% !important;
+    max-width: 760px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+}
+
+.achieve-cards {
+    width: 100% !important;
+    max-width: 1320px !important;
+    margin: 0 auto !important;
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 28px !important;
+    align-items: stretch !important;
+}
+
+.achieve-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    text-align: center !important;
+}
+
+.achieve-card-icon-wrap {
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.achieve-card-icon,
+.achieve-card-icon svg {
+    color: #000000 !important;
+}
+
+.achieve-card-icon svg {
+    stroke: #000000 !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.achieve-card-number,
+.achieve-card-title,
+.achieve-card-desc,
+.achieve-card-bar {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+}
+
+.achieve-card-desc {
+    width: 100% !important;
+    max-width: 330px !important;
+}
+
+@media (max-width: 991px) {
+    .achieve-section > .container {
+        max-width: 960px !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    .achieve-cards {
+        grid-template-columns: 1fr !important;
+        max-width: 680px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .about-1 > .container,
+    .achieve-section > .container {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    .achieve-cards {
+        gap: 18px !important;
+    }
+
+    .achieve-card {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+}
+
+
+/* =========================================================
+   FINAL CLEAN FIXES — REQUESTED 7 ITEMS ONLY
+   ========================================================= */
+
+/* ---------- WIDTH / CENTERING ---------- */
+@media (min-width: 992px) {
+    /* Make the Who We Are section genuinely wider. */
+    .about-1 > .container {
+        width: 100% !important;
+        max-width: 1600px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        padding-left: 32px !important;
+        padding-right: 32px !important;
+    }
+
+    /* Make the Why Choose Us section genuinely wider. */
+    .about-3.container {
+        width: 100% !important;
+        max-width: none !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        border-left: 0 !important;
+        border-right: 0 !important;
+        background: #ffffff !important;
+    }
+
+    .about-3.container > .why-heading-fullwidth,
+    .about-3.container > .why-content-row {
+        width: min(100% - 64px, 1600px) !important;
+        max-width: 1600px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    /* Keep both section headings centered across the full section. */
+    .about-1 .about-heading-fullwidth,
+    .about-3 .why-heading-fullwidth {
+        width: 100% !important;
+        max-width: none !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        text-align: center !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .about-1 .about-heading-fullwidth .about-main-title,
+    .about-3 .why-heading-fullwidth .about-main-title {
+        width: 100% !important;
+        max-width: none !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        text-align: center !important;
+        white-space: nowrap !important;
+    }
+
+    /* Keep the two-column Who We Are layout, but give the right side more room. */
+    .about-1 .about-content-row > .col-lg-6:first-child {
+        flex: 0 0 45% !important;
+        max-width: 45% !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .about-1 .about-content-row > .col-lg-6:last-child {
+        flex: 0 0 55% !important;
+        max-width: 55% !important;
+        padding-left: 24px !important;
+        padding-right: 0 !important;
+    }
+
+    .about-1 .about-content-row > .col-lg-6:first-child .wrapper {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .about-1 .about-content-row > .col-lg-6:first-child .about-principles {
+        width: min(100%, 650px) !important;
+        margin: 0 auto !important;
+    }
+
+    /* ---------- SINGLE-LINE FEATURE CONTENT ---------- */
+    .about-1 .about-features-stack,
+    .about-1 .about-features-stack .icon-list {
+        width: 100% !important;
+    }
+
+    .about-1 .about-features-stack .list,
+    .about-1 .icon-list .list {
+        white-space: nowrap !important;
+        overflow: visible !important;
+        text-overflow: clip !important;
+        min-width: 0 !important;
+    }
+}
+
+/* ---------- WHY CHOOSE US HEADING: NEVER CLIP ON DESKTOP ---------- */
+@media (min-width: 1200px) {
+    .about-3 .why-heading-fullwidth .about-main-title {
+        font-size: clamp(46px, 3.6vw, 62px) !important;
+        letter-spacing: -2px !important;
+        white-space: nowrap !important;
+    }
+
+    .about-1 .about-heading-fullwidth .about-main-title {
+        font-size: clamp(46px, 3.6vw, 62px) !important;
+        letter-spacing: -2px !important;
+        white-space: nowrap !important;
+    }
+}
+
+/* ---------- ACHIEVEMENT SECTION ---------- */
+.achieve-section {
+    width: 100% !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+}
+
+.achieve-section > .container {
+    width: 100% !important;
+    max-width: 1600px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding-left: 32px !important;
+    padding-right: 32px !important;
+}
+
+.achieve-header {
+    width: 100% !important;
+    text-align: center !important;
+    align-items: center !important;
+}
+
+.achieve-header .achievement-main-title {
+    width: 100% !important;
+    max-width: none !important;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    white-space: nowrap !important;
+}
+
+.achieve-subtitle {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.achieve-cards {
+    width: 100% !important;
+    max-width: 1500px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 30px !important;
+}
+
+.achieve-card {
+    width: 100% !important;
+    min-width: 0 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    text-align: center !important;
+}
+
+.achieve-card-icon-wrap {
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* Force the actual SVG strokes to black and keep them visible. */
+.achieve-card-icon {
+    color: #000 !important;
+}
+
+.achieve-card-icon svg,
+.achieve-card-icon svg * {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    stroke: #000 !important;
+    color: #000 !important;
+}
+
+.achieve-card-number,
+.achieve-card-title,
+.achieve-card-desc,
+.achieve-card-bar {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+}
+
+/* ---------- BLINK / PULSE: DOT + EXISTING BUTTON ---------- */
+.about-badge-dot {
+    animation: aboutDotBlink 1.8s ease-in-out infinite !important;
+}
+
+@keyframes aboutDotBlink {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+        box-shadow: 0 0 0 4px rgba(102, 199, 221, 0.10), 0 0 12px rgba(102, 199, 221, 0.45);
+    }
+    50% {
+        opacity: 0.45;
+        transform: scale(0.72);
+        box-shadow: 0 0 0 7px rgba(102, 199, 221, 0.04), 0 0 20px rgba(102, 199, 221, 0.70);
+    }
+}
+
+.about-contact-btn,
+.about-hero-whatsapp {
+    animation: aboutButtonBlink 2.8s ease-in-out infinite;
+}
+
+@keyframes aboutButtonBlink {
+    0%, 100% {
+        box-shadow: 0 10px 24px rgba(102, 199, 221, 0.28);
+    }
+    50% {
+        box-shadow: 0 10px 30px rgba(102, 199, 221, 0.52), 0 0 0 5px rgba(102, 199, 221, 0.08);
+    }
+}
+
+/* ---------- RESPONSIVE: preserve layout instead of creating overflow ---------- */
+@media (max-width: 1199px) and (min-width: 992px) {
+    .about-1 .about-heading-fullwidth .about-main-title,
+    .about-3 .why-heading-fullwidth .about-main-title {
+        font-size: 50px !important;
+    }
+}
+
+@media (max-width: 991px) {
+    .about-1 > .container,
+    .about-3.container,
+    .achieve-section > .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    .about-1 .about-content-row > .col-lg-6:first-child,
+    .about-1 .about-content-row > .col-lg-6:last-child {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+
+    .about-1 .about-content-row > .col-lg-6:last-child {
+        padding-left: 0 !important;
+    }
+
+    .about-1 .about-heading-fullwidth .about-main-title,
+    .about-3 .why-heading-fullwidth .about-main-title,
+    .achieve-header .achievement-main-title {
+        white-space: normal !important;
+        overflow: visible !important;
+        text-align: center !important;
+    }
+
+    .about-1 .about-features-stack .list,
+    .about-1 .icon-list .list {
+        white-space: normal !important;
+    }
+
+    .achieve-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .achieve-cards {
+        grid-template-columns: 1fr !important;
+    }
+
+    .about-1 > .container,
+    .about-3.container,
+    .achieve-section > .container {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+}
+/* =========================================================
+   FINAL ICON VISIBILITY FIX - WHY CHOOSE US
+   Keeps the existing layout, size, spacing and colors unchanged.
+   Only makes the Bootstrap icon glyph visible inside the teal box.
+   ========================================================= */
+.about-3 .icon i.bi {
+    display: inline-block !important;
+    color: #000000 !important;
+    font-family: "bootstrap-icons" !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-size: 22px !important;
+    line-height: 1 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.about-3 .icon-box:hover .icon i.bi {
+    color: #ffffff !important;
+}
+
+/* =========================================================
+   FIX ONLY: AWARDS & RECOGNITION HEADING CENTER
+   ========================================================= */
+
+.awards-section .awards-heading .section-title {
+    width: 100% !important;
+    max-width: 900px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+}

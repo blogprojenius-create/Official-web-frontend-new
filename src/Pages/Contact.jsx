@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import TestimonialSection from "../Components/TestimonialSection";
 import "../index.css";
@@ -8,6 +8,14 @@ export default function Contact() {
   const form = useRef();
   const [showFaq, setShowFaq] = useState(false);
   const [activeFaq, setActiveFaq] = useState(null);
+
+  useEffect(() => {
+    document.body.classList.add("contact-page-active");
+
+    return () => {
+      document.body.classList.remove("contact-page-active");
+    };
+  }, []);
 
   const faqs = [
     {
@@ -77,14 +85,13 @@ export default function Contact() {
   return (
     <div className="contact-page">
 
-      
-
       {/* CONTACT / QUOTE SECTION */}
       <section className="contact-main-section">
         <div className="container">
 
           {/* CONFIRM YOUR QUOTE */}
           <div className="contact-section-heading text-center">
+
             <h2 className="confirm-quote-title">
               <span className="heading-black">Confirm Your</span>{" "}
               <span className="heading-teal">Quote</span>
@@ -94,6 +101,12 @@ export default function Contact() {
               Share your project details below. Our team will review your
               requirements and get back to you with clarity and confidence.
             </p>
+
+            {/* GO BACK HOME */}
+            <a href="/" className="contact-home-link">
+              ← Go Back to Home Page
+            </a>
+
           </div>
 
           <div className="row contact-quote-row">
@@ -165,22 +178,30 @@ export default function Contact() {
                         required
                       >
                         <option value="">Select a service</option>
+
                         <option value="Web Development">
                           Web Development
                         </option>
+
                         <option value="IoT Solutions">
                           IoT Solutions
                         </option>
+
                         <option value="UI/UX Design">
                           UI/UX Design
                         </option>
+
                         <option value="Carrier Guidance">
                           Carrier Guidance
                         </option>
+
                         <option value="Workshops">
                           Workshops
                         </option>
-                        <option value="Other">Other</option>
+
+                        <option value="Other">
+                          Other
+                        </option>
                       </select>
                     </div>
 
@@ -208,7 +229,9 @@ export default function Contact() {
                     </div>
 
                   </div>
+
                 </form>
+
               </div>
             </div>
 
@@ -343,12 +366,12 @@ export default function Contact() {
               <div className="row faq-grid-row">
 
                 {faqs.map((faq, index) => (
+
                   <div className="col-lg-6" key={index}>
 
                     <div
-                      className={`faq-grid-card ${
-                        activeFaq === index ? "active" : ""
-                      }`}
+                      className={`faq-grid-card ${activeFaq === index ? "active" : ""
+                        }`}
                       onClick={() =>
                         setActiveFaq(
                           activeFaq === index ? null : index
@@ -369,6 +392,7 @@ export default function Contact() {
                     </div>
 
                   </div>
+
                 ))}
 
               </div>

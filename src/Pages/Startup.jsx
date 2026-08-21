@@ -406,31 +406,40 @@ export default function Startup() {
 
               <div className="startup-process-line"></div>
 
-              <div className="row g-4 startup-process-grid">
+              <div className="startup-process-flowchart">
 
                 {processSteps.map((item, index) => (
-                  <div className="col-lg-6" key={index}>
-
+                  <React.Fragment key={index}>
                     <div
-                      className="startup-process-card startup-process-card-animated"
+                      className={`startup-process-flow-item flow-item-${index + 1}`}
                       style={{
                         "--process-delay": `${index * 0.18}s`,
                       }}
                     >
+                      <div className="startup-process-card startup-process-card-animated">
+                        <div className="startup-process-icon">
+                          <i className={`bi ${item.icon}`}></i>
+                        </div>
 
-                      <div className="startup-process-icon">
-                        <i className={`bi ${item.icon}`}></i>
+                        <div className="startup-process-text">
+                          <h4>{item.title}</h4>
+                          <p>{item.desc}</p>
+                        </div>
                       </div>
-
-                      <div className="startup-process-text">
-                        <h4>{item.title}</h4>
-
-                        <p>{item.desc}</p>
-                      </div>
-
                     </div>
 
-                  </div>
+                    {index < processSteps.length - 1 && (
+                      <span
+                        className={`startup-process-connector connector-${index + 1}`}
+                        aria-hidden="true"
+                      >
+                        <span className="startup-process-connector-line"></span>
+                        <span className="startup-process-connector-arrow">
+                          <i className="bi bi-chevron-right"></i>
+                        </span>
+                      </span>
+                    )}
+                  </React.Fragment>
                 ))}
 
               </div>
