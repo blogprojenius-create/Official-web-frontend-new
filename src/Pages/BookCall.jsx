@@ -189,16 +189,20 @@ function BookCall() {
           confirm_close: true,
           escape: true,
           backdropclose: false,
+
+          ondismiss: function () {
+            setLoading(false);
+          },
         },
+
+        /*
+         * STEP 4
+         * After successful Razorpay payment,
+         * verify payment with backend.
+         */
 
         handler: async function (response) {
           try {
-            /*
-             * STEP 4
-             * Send Razorpay payment details to backend.
-             * Backend verifies the signature.
-             */
-
             const verifyResponse = await fetch(
               `${API_BASE_URL}/api/payments/verify-payment`,
               {
@@ -263,26 +267,28 @@ function BookCall() {
               },
             });
           } catch (error) {
-            console.error("Payment verification error:", error);
+            console.error(
+              "Payment verification error:",
+              error
+            );
 
             alert(
               error.message ||
                 "Payment verification failed. Please contact support."
             );
-          }
-        },
 
-        modal: {
-          ondismiss: function () {
             setLoading(false);
-          },
+          }
         },
       };
 
       const razorpay = new window.Razorpay(options);
 
       razorpay.on("payment.failed", function (response) {
-        console.error("Razorpay payment failed:", response);
+        console.error(
+          "Razorpay payment failed:",
+          response
+        );
 
         setLoading(false);
 
@@ -296,7 +302,10 @@ function BookCall() {
 
       setLoading(false);
     } catch (error) {
-      console.error("Payment initialization error:", error);
+      console.error(
+        "Payment initialization error:",
+        error
+      );
 
       alert(
         error.message ||
@@ -305,6 +314,14 @@ function BookCall() {
 
       setLoading(false);
     }
+  };
+
+  const handleTermsClick = () => {
+    navigate("/terms-and-conditions", {
+      state: {
+        booking,
+      },
+    });
   };
 
   if (!booking.date || !booking.time) {
@@ -316,7 +333,9 @@ function BookCall() {
 
       <div className="book-call-container">
 
-        {/* LEFT SIDE */}
+        {/* =====================================================
+            LEFT SIDE
+        ===================================================== */}
 
         <section className="book-call-left">
 
@@ -350,7 +369,9 @@ function BookCall() {
 
             <div className="book-feature">
               <span>✓</span>
-              <p>Honest feedback on your current profile</p>
+              <p>
+                Honest feedback on your current profile
+              </p>
             </div>
 
             <div className="book-feature">
@@ -363,7 +384,9 @@ function BookCall() {
         </section>
 
 
-        {/* RIGHT SIDE */}
+        {/* =====================================================
+            RIGHT SIDE
+        ===================================================== */}
 
         <section className="book-call-card">
 
@@ -385,7 +408,9 @@ function BookCall() {
             onSubmit={handleSubmit}
           >
 
-            {/* NAME */}
+            {/* =================================================
+                NAME
+            ================================================= */}
 
             <div className="form-group">
 
@@ -407,7 +432,9 @@ function BookCall() {
             </div>
 
 
-            {/* EMAIL */}
+            {/* =================================================
+                EMAIL
+            ================================================= */}
 
             <div className="form-group">
 
@@ -429,7 +456,9 @@ function BookCall() {
             </div>
 
 
-            {/* PHONE */}
+            {/* =================================================
+                PHONE
+            ================================================= */}
 
             <div className="form-group">
 
@@ -470,7 +499,9 @@ function BookCall() {
             </div>
 
 
-            {/* BOOKING SUMMARY */}
+            {/* =================================================
+                BOOKING SUMMARY
+            ================================================= */}
 
             <div className="booking-summary">
 
@@ -519,7 +550,9 @@ function BookCall() {
             </div>
 
 
-            {/* PAYMENT BUTTON */}
+            {/* =================================================
+                PAYMENT BUTTON
+            ================================================= */}
 
             <button
               type="submit"
@@ -540,6 +573,35 @@ function BookCall() {
               )}
 
             </button>
+
+
+            {/* =================================================
+                TERMS & CONDITIONS
+            ================================================= */}
+
+            <div className="terms-container">
+
+              <span className="terms-lock">
+                🔒
+              </span>
+
+              <span className="terms-text">
+                By continuing, you agree to our{" "}
+                <button
+                  type="button"
+                  className="terms-link"
+                  onClick={handleTermsClick}
+                >
+                  Terms & Conditions
+                </button>
+              </span>
+
+            </div>
+
+
+            {/* =================================================
+                SECURE PAYMENT
+            ================================================= */}
 
             <p className="secure-payment-text">
               🔒 Secure payment powered by Razorpay

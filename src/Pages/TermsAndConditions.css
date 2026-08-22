@@ -1,0 +1,354 @@
+/* =========================================================
+   TERMS & CONDITIONS PAGE
+========================================================= */
+
+.terms-page {
+  min-height: 100vh;
+
+  background: #f4f8fc;
+
+  padding-top: 140px;
+  padding-right: 25px;
+  padding-bottom: 60px;
+  padding-left: 25px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   MAIN CONTAINER
+========================================================= */
+
+.terms-page-container {
+  width: 100%;
+
+  max-width: 900px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.terms-page-header {
+  text-align: center;
+
+  margin-bottom: 35px;
+}
+
+.terms-page-badge {
+  display: inline-flex;
+
+  padding: 7px 15px;
+
+  border-radius: 30px;
+
+  background: #e0f2fe;
+
+  color: #0284c7;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.8px;
+
+  margin-bottom: 15px;
+}
+
+.terms-page-header h1 {
+  margin: 0;
+
+  color: #172033;
+
+  font-size: clamp(34px, 5vw, 52px);
+
+  line-height: 1.1;
+
+  font-weight: 800;
+}
+
+.terms-page-header p {
+  max-width: 650px;
+
+  margin: 15px auto 0;
+
+  color: #64748b;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   CONTENT CARD
+========================================================= */
+
+.terms-content-card {
+  width: 100%;
+
+  background: #ffffff;
+
+  border: 1px solid #e2e8f0;
+
+  border-radius: 20px;
+
+  padding: 38px 42px;
+
+  box-sizing: border-box;
+
+  box-shadow:
+    0 20px 45px rgba(15, 23, 42, 0.08);
+}
+
+
+/* =========================================================
+   TERMS SECTION
+========================================================= */
+
+.terms-section {
+  padding-bottom: 25px;
+
+  margin-bottom: 25px;
+
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.terms-section:last-of-type {
+  border-bottom: 0;
+
+  margin-bottom: 0;
+
+  padding-bottom: 0;
+}
+
+.terms-section h2 {
+  margin: 0 0 10px;
+
+  color: #172033;
+
+  font-size: 18px;
+
+  line-height: 1.4;
+
+  font-weight: 800;
+}
+
+.terms-section p {
+  margin: 0 0 10px;
+
+  color: #64748b;
+
+  font-size: 14px;
+
+  line-height: 1.75;
+}
+
+.terms-section p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   AGREEMENT BOX
+========================================================= */
+
+.terms-agreement {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 12px;
+
+  margin-top: 30px;
+
+  padding: 17px 18px;
+
+  background: #f0f9ff;
+
+  border: 1px solid #bae6fd;
+
+  border-radius: 12px;
+
+  box-sizing: border-box;
+}
+
+.terms-agreement-icon {
+  width: 24px;
+  height: 24px;
+
+  flex: 0 0 24px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #0ea5e9;
+
+  color: #ffffff;
+
+  font-size: 12px;
+
+  font-weight: 800;
+}
+
+.terms-agreement p {
+  margin: 0;
+
+  color: #475569;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   BACK BUTTON
+========================================================= */
+
+.terms-back-button {
+  width: 100%;
+
+  height: 48px;
+
+  margin-top: 25px;
+
+  border: 0;
+
+  border-radius: 9px;
+
+  background: #0ea5e9;
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  font-weight: 800;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.terms-back-button:hover {
+  background: #0284c7;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 8px 18px rgba(14, 165, 233, 0.2);
+}
+
+.terms-back-button:active {
+  transform: translateY(0);
+}
+
+.terms-back-button span {
+  font-size: 18px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .terms-page {
+    padding-top: 120px;
+
+    padding-right: 20px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+  }
+
+  .terms-content-card {
+    padding: 30px;
+  }
+
+  .terms-page-header {
+    margin-bottom: 28px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .terms-page {
+    padding-top: 105px;
+
+    padding-right: 14px;
+    padding-bottom: 30px;
+    padding-left: 14px;
+  }
+
+  .terms-page-header h1 {
+    font-size: 34px;
+  }
+
+  .terms-page-header p {
+    font-size: 13px;
+
+    line-height: 1.6;
+  }
+
+  .terms-content-card {
+    padding: 22px 18px;
+
+    border-radius: 16px;
+  }
+
+  .terms-section {
+    padding-bottom: 20px;
+
+    margin-bottom: 20px;
+  }
+
+  .terms-section h2 {
+    font-size: 16px;
+  }
+
+  .terms-section p {
+    font-size: 13px;
+
+    line-height: 1.7;
+  }
+
+  .terms-agreement {
+    padding: 14px;
+
+    gap: 9px;
+  }
+
+  .terms-agreement p {
+    font-size: 12px;
+  }
+
+  .terms-back-button {
+    height: 46px;
+
+    font-size: 13px;
+  }
+}

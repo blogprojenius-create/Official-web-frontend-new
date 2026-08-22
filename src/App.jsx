@@ -17,6 +17,7 @@ import CareerGuidance from "./Pages/CareerGuidance";
 import JoinOurTeam from "./Pages/JoinOurTeam";
 import BookCall from "./Pages/BookCall";
 import JobApplication from "./Pages/JobApplication";
+import TermsAndConditions from "./Pages/TermsAndConditions";
 
 import Footer from "./Components/Footer";
 import PagePopup from "./Components/PagePopup";
@@ -193,7 +194,12 @@ export default function App() {
   path="/apply/:jobTitle"
   element={<JobApplication />}
 />
+<Route
+  path="/terms-and-conditions"
+  element={<TermsAndConditions />}
+/>
         </Routes>
+        
       </AnimatePresence>
 
       <Footer />
