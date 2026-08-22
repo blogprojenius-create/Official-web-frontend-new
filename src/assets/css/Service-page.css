@@ -230,7 +230,7 @@
 }
 
 .workshop-1 .even {
-  background-color: #E8F7FA;
+  background-color: rgb(0, 170, 162);
 }
 
 .workshop-1 .section {
@@ -367,8 +367,8 @@
 }
 
 .workshop-skill-card {
-  background: #f8fbff;
-  border: 1px solid #e4eaf3;
+  background: rgb(0, 170, 162);
+  border: 1px solid rgb(0, 170, 162);
   border-radius: 20px;
   box-shadow: 0 16px 40px rgba(18, 25, 41, 0.07);
   min-height: 260px;
@@ -390,7 +390,7 @@
 
 .workshop-skill-card:nth-child(2) i,
 .workshop-skill-card:nth-child(4) i {
-  background: linear-gradient(135deg, #0ea5e9, #38bdf8);
+  background: linear-gradient(135deg, rgb(0, 170, 162), rgb(0, 170, 162));
   color: #07142f;
 }
 
@@ -417,7 +417,7 @@
 
 .workshop-event-card {
   background: #ffffff;
-  border: 1px solid #e4eaf3;
+  border: 1px solid rgb(0, 170, 162);
   border-radius: 24px;
   box-shadow: 0 20px 50px rgba(18, 25, 41, 0.08);
   display: grid;
@@ -448,10 +448,10 @@
 }
 
 .workshop-event-image span {
-  background: rgb(170, 227, 225);
+  background: rgb(0, 170, 162);
   border-radius: 999px;
   bottom: 22px;
-  border: 1px solid #2ec3be;
+  border: 1px solid rgb(0, 170, 162);
   color: black;
   font-weight: 700;
   left: 22px;
@@ -503,8 +503,8 @@
 }
 
 .workshop-badges span {
-  background: rgb(170, 227, 225);
-  border: 1px solid #2ec3be;
+  background: rgb(0, 170, 162);
+  border: 1px solid rgb(0, 170, 162);
   border-radius: 999px;
   color: #121929;
   font-size: 13px;
@@ -513,7 +513,7 @@
 }
 
 .workshop-details span {
-  background: rgb(170, 227, 225);
+  background: rgb(0, 170, 162);
   border-radius: 10px;
   color: #010204;
   font-size: 14px;
@@ -613,7 +613,7 @@
 }
 
 .workshop-gallery-section #sub-heading {
-  color: #66c7dd;
+  color: rgb(0, 170, 162);
 }
 
 .workshop-gallery-section #title,
@@ -706,7 +706,7 @@
 
 .workshop-gallery-card {
   background: #ffffff;
-  border: 1px solid #e4eaf3;
+  border: 1px solid rgb(0, 170, 162);
   border-radius: 18px;
   box-shadow: 0 14px 36px rgba(18, 25, 41, 0.07);
   overflow: hidden;
@@ -774,7 +774,7 @@
 }
 
 .workshop-gallery-card span {
-  color: #38bdf8;
+  color: rgb(0, 170, 162);
   font-size: 13px;
   font-weight: 800;
   text-transform: uppercase;
@@ -822,7 +822,7 @@
 .dev-hero-glow-1 {
   width: 450px;
   height: 450px;
-  background: radial-gradient(circle, rgba(14, 116, 144, 0.12), transparent 70%);
+  background: radial-gradient(circle, rgba(0, 170, 162, 0.12), transparent 70%);
   top: -100px;
   right: -80px;
 }
@@ -830,7 +830,7 @@
 .dev-hero-glow-2 {
   width: 380px;
   height: 380px;
-  background: radial-gradient(circle, rgba(102, 199, 221, 0.14), transparent 70%);
+  background: radial-gradient(circle, rgba(0, 170, 162, 0.14), transparent 70%);
   bottom: -80px;
   left: -100px;
 }
@@ -850,12 +850,12 @@
   align-items: center;
   padding: 6px 18px;
   border-radius: 40px;
-  background: rgba(14, 116, 144, 0.08);
-  border: 1px solid rgba(14, 116, 144, 0.22);
+  background: rgba(0, 170, 162, 0.08);
+  border: 1px solid rgba(0, 170, 162, 0.22);
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 2px;
-  color: #0e7490;
+  color: rgb(0, 170, 162);
   text-transform: uppercase;
   font-family: 'Outfit', sans-serif;
 }
@@ -871,8 +871,8 @@
   height: 8px;
   min-width: 8px;
   border-radius: 50%;
-  background: #66c7dd;
-  box-shadow: 0 0 0 4px rgba(102, 199, 221, 0.12);
+  background: rgb(0, 170, 162);
+  box-shadow: 0 0 0 4px rgba(0, 170, 162, 0.12);
   display: inline-block;
   margin-right: 10px;
   animation: enterpriseHeadingBlink 3s ease-in-out infinite;
@@ -902,7 +902,7 @@
   width: 96px;
   height: 4px;
   border-radius: 999px;
-  background: #66c7dd;
+  background: rgb(0, 170, 162);
   transform: none;
   animation: enterpriseHeadingBlink 3s ease-in-out infinite;
 }
@@ -913,7 +913,7 @@
 }
 
 .hero-title-gradient {
-  background: linear-gradient(135deg, #0e7490 0%, #0284c7 50%, #66c7dd 100%);
+  background: linear-gradient(135deg, rgb(0, 170, 162) 0%, rgb(0, 170, 162) 50%, rgb(0, 170, 162) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -942,7 +942,7 @@
   gap: 6px;
   padding: 6px 14px;
   border-radius: 20px;
-  background: #f8fafc;
+  background: rgb(0, 170, 162);
   border: 1px solid #e2e8f0;
   font-size: 13px;
   font-weight: 600;
@@ -951,7 +951,7 @@
 }
 
 .hero-pill i {
-  color: #0e7490;
+  color: rgb(0, 170, 162);
   font-size: 14px;
 }
 
@@ -968,20 +968,20 @@
   display: inline-flex;
   align-items: center;
   padding: 15px 34px;
-  background: linear-gradient(135deg, #0e7490, #66c7dd);
+  background: linear-gradient(135deg, rgb(0, 170, 162), rgb(0, 170, 162));
   color: #ffffff !important;
   border-radius: 50px;
   text-decoration: none;
   font-weight: 700;
   font-size: 15px;
   font-family: 'Outfit', sans-serif;
-  box-shadow: 0 8px 24px rgba(14, 116, 144, 0.32);
+  box-shadow: 0 8px 24px rgba(0, 170, 162, 0.32);
   transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .hero-btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 14px 32px rgba(14, 116, 144, 0.45);
+  box-shadow: 0 14px 32px rgba(0, 170, 162, 0.45);
   color: #ffffff !important;
   text-decoration: none;
 }
@@ -1002,9 +1002,9 @@
 }
 
 .hero-btn-secondary:hover {
-  border-color: #0e7490;
-  background: rgba(14, 116, 144, 0.05);
-  color: #0e7490 !important;
+  border-color: rgb(0, 170, 162);
+  background: rgba(0, 170, 162, 0.05);
+  color: rgb(0, 170, 162) !important;
   transform: translateY(-3px);
   text-decoration: none;
 }
@@ -1027,7 +1027,7 @@
 .stat-number {
   font-size: 26px;
   font-weight: 800;
-  background: linear-gradient(135deg, #0e7490 0%, #0284c7 50%, #66c7dd 100%);
+  background: linear-gradient(135deg, rgb(0, 170, 162) 0%, rgb(0, 170, 162) 50%, rgb(0, 170, 162) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -1058,7 +1058,7 @@
 .hero-glass-card {
   background: #ffffff;
   border-radius: 20px;
-  border: 1px solid rgba(14, 116, 144, 0.18);
+  border: 1px solid rgba(0, 170, 162, 0.18);
   box-shadow: 0 24px 60px rgba(15, 23, 42, 0.12);
   overflow: hidden;
   position: relative;
@@ -1067,7 +1067,7 @@
 
 .hero-glass-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 30px 70px rgba(14, 116, 144, 0.18);
+  box-shadow: 0 30px 70px rgba(0, 170, 162, 0.18);
 }
 
 .glass-card-header {
@@ -1163,7 +1163,7 @@
   background: linear-gradient(135deg,
       #0f172a 0%,
       #1e293b 50%,
-      #0ea5e9 100%);
+      rgb(0, 170, 162) 100%);
   position: relative;
   overflow: hidden;
 }
@@ -1248,11 +1248,11 @@
   background: conic-gradient(from 0deg,
       transparent 0deg,
       transparent 110deg,
-      rgba(56, 189, 248, 0.6) 140deg,
+      rgba(0, 170, 162, 0.6) 140deg,
       #ffffff 175deg,
-      #38bdf8 180deg,
-      #66c7dd 185deg,
-      rgba(56, 189, 248, 0.6) 220deg,
+      rgb(0, 170, 162) 180deg,
+      rgb(0, 170, 162) 185deg,
+      rgba(0, 170, 162, 0.6) 220deg,
       transparent 250deg,
       transparent 360deg);
   opacity: 1;
@@ -1280,10 +1280,10 @@
 
 .service-1 .box:hover {
   background: rgba(255, 255, 255, .05);
-  border-color: rgba(56, 189, 248, 0.72);
+  border-color: rgba(0, 170, 162, 0.72);
   box-shadow:
-    0 26px 70px rgba(14, 165, 233, 0.2),
-    0 0 34px rgba(56, 189, 248, 0.22);
+    0 26px 70px rgba(0, 170, 162, 0.2),
+    0 0 34px rgba(0, 170, 162, 0.22);
   transform: translateY(-8px);
 }
 
@@ -1302,8 +1302,8 @@
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background: rgba(102, 199, 221, 0.12);
-  border: 1px solid rgba(102, 199, 221, 0.22);
+  background: rgba(0, 170, 162, 0.12);
+  border: 1px solid rgba(0, 170, 162, 0.22);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1312,13 +1312,13 @@
 }
 
 .service-1 .box:hover .service-icon {
-  background: rgba(102, 199, 221, 0.25);
-  border-color: #66c7dd;
+  background: rgba(0, 170, 162, 0.25);
+  border-color: rgb(0, 170, 162);
   transform: scale(1.08) rotate(5deg);
 }
 
 .service-1 .icon {
-  color: #66c7dd;
+  color: rgb(0, 170, 162);
   font-size: 34px;
   transition: all 0.3s ease;
 }
@@ -1348,7 +1348,7 @@
   margin-top: 25px;
   background: #ffffff;
   border: none;
-  color: #0e7490;
+  color: rgb(0, 170, 162);
   padding: 10px 28px;
   border-radius: 50px;
   font-weight: 700;
@@ -1360,10 +1360,10 @@
 }
 
 .service-btn:hover {
-  background: linear-gradient(135deg, #0e7490, #66c7dd);
+  background: linear-gradient(135deg, rgb(0, 170, 162), rgb(0, 170, 162));
   color: #ffffff !important;
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(14, 116, 144, 0.3);
+  box-shadow: 0 8px 20px rgba(0, 170, 162, 0.3);
   text-decoration: none;
 }
 
@@ -1397,7 +1397,7 @@
 }
 
 .career-guidance-process {
-  background: #f5f8fc;
+  background: rgb(0, 170, 162);
   padding: 92px 0;
 }
 
@@ -1435,7 +1435,7 @@
 }
 
 .internship-eyebrow {
-  color: #38bdf8;
+  color: rgb(0, 170, 162);
   display: inline-block;
   font-weight: 800;
   letter-spacing: 2px;
@@ -1460,7 +1460,7 @@
 .internship-roadmap-section,
 .internship-tech-section,
 .internship-process-section {
-  background: #f5f8fc;
+  background: rgb(0, 170, 162);
 }
 
 .internship-about-grid,
@@ -1486,7 +1486,7 @@
 .internship-stat-card,
 .internship-faq-item {
   background: #ffffff;
-  border: 1px solid #e4eaf3;
+  border: 1px solid rgb(0, 170, 162);
   box-shadow: 0 16px 40px rgba(18, 25, 41, 0.07);
 }
 
@@ -1501,7 +1501,7 @@
 }
 
 .internship-detail-card i {
-  color: #38bdf8;
+  color: rgb(0, 170, 162);
   font-size: 24px;
 }
 
@@ -1511,7 +1511,7 @@
 }
 
 .internship-domains-section::before {
-  background: radial-gradient(circle at top center, rgba(102, 199, 221, 0.08), transparent 55%);
+  background: radial-gradient(circle at top center, rgba(0, 170, 162, 0.08), transparent 55%);
   content: "";
   inset: 0;
   pointer-events: none;
@@ -1538,7 +1538,7 @@
   gap: 6px;
   justify-content: center;
   margin: 0 auto 40px;
-  background: #f1f5f9;
+  background: rgb(0, 170, 162);
   padding: 6px;
   border-radius: 999px;
   width: max-content;
@@ -1589,7 +1589,7 @@
 
 .internship-domain-card {
   background: #ffffff;
-  border: 1px solid #e4eaf3;
+  border: 1px solid rgb(0, 170, 162);
   border-radius: 20px;
   box-shadow: 0 12px 32px rgba(18, 25, 41, 0.05);
   color: inherit;
@@ -1605,14 +1605,14 @@
 }
 
 .internship-domain-card:hover {
-  border-color: rgba(56, 189, 248, 0.45);
+  border-color: rgba(0, 170, 162, 0.45);
   box-shadow: 0 18px 40px rgba(18, 25, 41, 0.1);
   transform: translateY(-6px);
 }
 
 .internship-domain-card.active {
-  border-color: #38bdf8;
-  box-shadow: 0 20px 46px rgba(56, 189, 248, 0.16);
+  border-color: rgb(0, 170, 162);
+  box-shadow: 0 20px 46px rgba(0, 170, 162, 0.16);
 }
 
 .domain-card-top {
@@ -1624,8 +1624,8 @@
 
 .domain-icon-shell {
   align-items: center;
-  background: #f8fbff;
-  border: 1px solid #e4eaf3;
+  background: rgb(0, 170, 162);
+  border: 1px solid rgb(0, 170, 162);
   border-radius: 16px;
   display: inline-flex;
   height: 58px;
@@ -1646,10 +1646,10 @@
 }
 
 .domain-category-tag {
-  background: #eef7ff;
-  border: 1px solid #d8ecff;
+  background: rgb(0, 170, 162);
+  border: 1px solid rgb(0, 170, 162);
   border-radius: 999px;
-  color: #0e7490;
+  color: rgb(0, 170, 162);
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.04em;
@@ -1668,7 +1668,7 @@
 
 .internship-domain-apply {
   align-items: center;
-  color: #38bdf8;
+  color: rgb(0, 170, 162);
   display: inline-flex;
   font-size: 14px;
   font-weight: 800;
@@ -1688,7 +1688,7 @@
 
 .internship-track-preview {
   background: linear-gradient(165deg, #121929 0%, #1a2744 100%);
-  border: 1px solid rgba(56, 189, 248, 0.18);
+  border: 1px solid rgba(0, 170, 162, 0.18);
   border-radius: 24px;
   box-shadow: 0 24px 56px rgba(18, 25, 41, 0.22);
   color: #ffffff;
@@ -1698,7 +1698,7 @@
 }
 
 .track-preview-label {
-  color: #38bdf8;
+  color: rgb(0, 170, 162);
   display: block;
   font-size: 12px;
   font-weight: 800;
@@ -1709,8 +1709,8 @@
 
 .track-preview-icon-shell {
   align-items: center;
-  background: rgba(56, 189, 248, 0.12);
-  border: 1px solid rgba(56, 189, 248, 0.28);
+  background: rgba(0, 170, 162, 0.12);
+  border: 1px solid rgba(0, 170, 162, 0.28);
   border-radius: 18px;
   display: inline-flex;
   height: 68px;
@@ -1727,15 +1727,15 @@
 }
 
 .track-preview-icon-shell i {
-  color: #38bdf8;
+  color: rgb(0, 170, 162);
   font-size: 30px;
 }
 
 .track-preview-category {
-  background: rgba(56, 189, 248, 0.12);
-  border: 1px solid rgba(56, 189, 248, 0.25);
+  background: rgba(0, 170, 162, 0.12);
+  border: 1px solid rgba(0, 170, 162, 0.25);
   border-radius: 999px;
-  color: #7dd3fc;
+  color: rgb(0, 170, 162);
   display: inline-block;
   font-size: 11px;
   font-weight: 800;
@@ -1776,7 +1776,7 @@
 }
 
 .internship-track-apply:hover {
-  background: #38bdf8;
+  background: rgb(0, 170, 162);
   color: #121929;
   transform: translateY(-2px);
 }
@@ -1790,7 +1790,7 @@
 }
 
 .internship-domain-card:nth-child(1) .domain-icon-shell {
-  background: linear-gradient(135deg, rgba(37, 99, 235, 0.12), rgba(56, 189, 248, 0.16));
+  background: linear-gradient(135deg, rgba(0, 170, 162, 0.12), rgba(0, 170, 162, 0.16));
 }
 
 .internship-domain-card:nth-child(2) .domain-icon-shell {
@@ -1798,11 +1798,11 @@
 }
 
 .internship-domain-card:nth-child(3) .domain-icon-shell {
-  background: linear-gradient(135deg, rgba(15, 118, 110, 0.12), rgba(34, 197, 94, 0.14));
+  background: linear-gradient(135deg, rgba(0, 170, 162, 0.12), rgba(34, 197, 94, 0.14));
 }
 
 .internship-domain-card:nth-child(4) .domain-icon-shell {
-  background: linear-gradient(135deg, rgba(6, 182, 212, 0.12), rgba(99, 102, 241, 0.14));
+  background: linear-gradient(135deg, rgba(0, 170, 162, 0.12), rgba(0, 170, 162, 0.14));
 }
 
 
@@ -1819,7 +1819,7 @@
 }
 
 .internship-domain-card:nth-child(8) .domain-icon-shell {
-  background: linear-gradient(135deg, rgba(20, 184, 166, 0.12), rgba(59, 130, 246, 0.14));
+  background: linear-gradient(135deg, rgba(20, 184, 166, 0.12), rgba(0, 170, 162, 0.14));
 }
 
 .internship-domain-card:nth-child(9) .domain-icon-shell {
@@ -1872,7 +1872,7 @@
 .internship-check-grid span,
 .internship-story-list span {
   align-items: center;
-  background: #f6f8fb;
+  background: rgb(0, 170, 162);
   border-radius: 14px;
   color: #4e5969;
   display: flex;
@@ -1883,7 +1883,7 @@
 
 .internship-check-grid i,
 .internship-story-list i {
-  color: #38bdf8;
+  color: rgb(0, 170, 162);
 }
 
 .internship-roadmap {
@@ -1899,7 +1899,7 @@
 }
 
 .internship-roadmap-card::after {
-  color: #38bdf8;
+  color: rgb(0, 170, 162);
   content: "\F285";
   font-family: bootstrap-icons;
   font-size: 24px;
@@ -1914,7 +1914,7 @@
 }
 
 .internship-roadmap-card span {
-  color: #38bdf8;
+  color: rgb(0, 170, 162);
   display: block;
   font-weight: 900;
   margin-bottom: 12px;
@@ -1934,7 +1934,7 @@
 }
 
 .internship-project-card i {
-  color: #38bdf8;
+  color: rgb(0, 170, 162);
   display: block;
   font-size: 32px;
   margin-bottom: 18px;
@@ -2064,7 +2064,7 @@
 }
 
 .internship-process-step::after {
-  color: #38bdf8;
+  color: rgb(0, 170, 162);
   content: "\F285";
   font-family: bootstrap-icons;
   font-size: 24px;
@@ -2081,7 +2081,7 @@
 .internship-process-step span {
   align-items: center;
   background: #ffffff;
-  border: 1px solid #e4eaf3;
+  border: 1px solid rgb(0, 170, 162);
   border-radius: 18px;
   box-shadow: 0 14px 34px rgba(18, 25, 41, 0.07);
   color: #121929;
@@ -2119,7 +2119,7 @@
 }
 
 .internship-faq-item p {
-  border-top: 1px solid #e4eaf3;
+  border-top: 1px solid rgb(0, 170, 162);
   color: #5c6574;
   line-height: 1.8;
   margin: 0;
@@ -2290,7 +2290,7 @@
 .modern-about-section {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(180deg, #f8fbff 0%, #ffffff 100%);
+  background: linear-gradient(180deg, rgb(0, 170, 162) 0%, #ffffff 100%);
   padding: clamp(72px, 8vw, 100px) 0;
 }
 
@@ -2305,7 +2305,7 @@
   top: 6px;
   width: 4px;
   height: 72px;
-  background: linear-gradient(180deg, #38bdf8, #2563eb);
+  background: linear-gradient(180deg, rgb(0, 170, 162), rgb(0, 170, 162));
   border-radius: 4px;
 }
 
@@ -2314,15 +2314,15 @@
   align-items: center;
   gap: 8px;
   padding: 6px 16px;
-  background: rgba(102, 199, 221, 0.1);
-  color: #0e7490;
+  background: rgba(0, 170, 162, 0.1);
+  color: rgb(0, 170, 162);
   font-weight: 800;
   font-size: 13px;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   border-radius: 999px;
   margin-bottom: 18px;
-  border: 1px solid rgba(102, 199, 221, 0.22);
+  border: 1px solid rgba(0, 170, 162, 0.22);
 }
 
 .modern-title {
@@ -2337,7 +2337,7 @@
 
 .modern-title .text-gradient {
   display: inline;
-  background: linear-gradient(135deg, #38bdf8, #2563eb);
+  background: linear-gradient(135deg, rgb(0, 170, 162), rgb(0, 170, 162));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -2360,7 +2360,7 @@
 .modern-detail-card {
   position: relative;
   background: #ffffff;
-  border: 1px solid #e4eaf3;
+  border: 1px solid rgb(0, 170, 162);
   border-radius: 20px;
   padding: 24px !important;
   box-shadow: 0 14px 36px rgba(18, 25, 41, 0.06);
@@ -2370,7 +2370,7 @@
 }
 
 .modern-detail-card:hover {
-  border-color: rgba(56, 189, 248, 0.35);
+  border-color: rgba(0, 170, 162, 0.35);
   box-shadow: 0 22px 44px rgba(18, 25, 41, 0.1);
 }
 
@@ -2426,20 +2426,20 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: linear-gradient(135deg, #0e7490, #38bdf8);
+  background: linear-gradient(135deg, rgb(0, 170, 162), rgb(0, 170, 162));
   color: #ffffff !important;
   font-weight: 700;
   padding: 14px 28px;
   border-radius: 999px;
   text-decoration: none;
   font-size: 15px;
-  box-shadow: 0 10px 24px rgba(14, 116, 144, 0.28);
+  box-shadow: 0 10px 24px rgba(0, 170, 162, 0.28);
   transition: all 0.3s ease;
 }
 
 .modern-btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 14px 32px rgba(14, 116, 144, 0.38);
+  box-shadow: 0 14px 32px rgba(0, 170, 162, 0.38);
   color: #ffffff !important;
 }
 
@@ -2452,16 +2452,16 @@
   font-weight: 700;
   padding: 14px 28px;
   border-radius: 999px;
-  border: 1px solid #dbe3ef;
+  border: 1px solid rgb(0, 170, 162);
   text-decoration: none;
   font-size: 15px;
   transition: all 0.3s ease;
 }
 
 .modern-btn-secondary:hover {
-  border-color: #38bdf8;
-  color: #0e7490 !important;
-  box-shadow: 0 8px 20px rgba(14, 165, 233, 0.12);
+  border-color: rgb(0, 170, 162);
+  color: rgb(0, 170, 162) !important;
+  box-shadow: 0 8px 20px rgba(0, 170, 162, 0.12);
 }
 
 .modern-grid {
@@ -2495,7 +2495,7 @@
   left: -10%;
   width: 400px;
   height: 400px;
-  background: rgba(102, 199, 221, 0.4);
+  background: rgba(0, 170, 162, 0.4);
 }
 
 .about-bg-blobs .blob-2 {
@@ -2503,7 +2503,7 @@
   right: -10%;
   width: 500px;
   height: 500px;
-  background: rgba(102, 126, 221, 0.3);
+  background: rgba(0, 170, 162, 0.3);
   animation-delay: -5s;
 }
 
@@ -2639,9 +2639,9 @@
 }
 
 .modern-btn-primary {
-  background: linear-gradient(135deg, #66c7dd, #388bff);
+  background: linear-gradient(135deg, rgb(0, 170, 162), rgb(0, 170, 162));
   color: #fff;
-  box-shadow: 0 10px 20px rgba(56, 139, 255, 0.3);
+  box-shadow: 0 10px 20px rgba(0, 170, 162, 0.3);
   position: relative;
   overflow: hidden;
 }
@@ -2663,7 +2663,7 @@
 
 .modern-btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 15px 25px rgba(56, 139, 255, 0.4);
+  box-shadow: 0 15px 25px rgba(0, 170, 162, 0.4);
   color: #fff;
 }
 
@@ -2683,9 +2683,9 @@
 }
 
 .modern-btn-secondary:hover {
-  border-color: #66c7dd;
-  color: #388bff;
-  background: rgba(102, 199, 221, 0.05);
+  border-color: rgb(0, 170, 162);
+  color: rgb(0, 170, 162);
+  background: rgba(0, 170, 162, 0.05);
   transform: translateY(-3px);
 }
 
@@ -2696,7 +2696,7 @@
 .modern-split {
   padding: 100px 0;
   position: relative;
-  background: radial-gradient(circle at center, rgba(102, 199, 221, 0.03) 0%, transparent 70%);
+  background: radial-gradient(circle at center, rgba(0, 170, 162, 0.03) 0%, transparent 70%);
 }
 
 .glass-panel {
@@ -2729,7 +2729,7 @@
 }
 
 .glass-panel:nth-child(2)::before {
-  background: linear-gradient(90deg, #388bff, #66c7dd);
+  background: linear-gradient(90deg, rgb(0, 170, 162), rgb(0, 170, 162));
 }
 
 .panel-header {
@@ -2754,8 +2754,8 @@
 }
 
 .badge-blue {
-  color: #388bff;
-  background: rgba(56, 139, 255, 0.1);
+  color: rgb(0, 170, 162);
+  background: rgba(0, 170, 162, 0.1);
 }
 
 .gradient-title {
@@ -2774,7 +2774,7 @@
   background: #ffffff;
   padding: 16px 20px;
   border-radius: 16px;
-  border: 1px solid #f1f5f9;
+  border: 1px solid rgb(0, 170, 162);
   box-shadow: 0 4px 12px rgba(18, 25, 41, 0.02);
   cursor: pointer;
 }
@@ -2798,8 +2798,8 @@
 
 /* Color Variants for Icons */
 .color-blue {
-  color: #3b82f6;
-  background: rgba(59, 130, 246, 0.1);
+  color: rgb(0, 170, 162);
+  background: rgba(0, 170, 162, 0.1);
 }
 
 .color-purple {
@@ -2981,9 +2981,9 @@
 /* Internship domain selector: corporate product surface */
 .internship-domains-section {
   padding: clamp(72px, 9vw, 116px) 0;
-  background: linear-gradient(180deg, #f8fbff 0%, #ffffff 48%);
+  background: linear-gradient(180deg, rgb(0, 170, 162) 0%, #ffffff 48%);
 }
-.internship-domains-section::before { background: radial-gradient(circle at 8% 18%, rgba(56, 189, 248, .11), transparent 26%), radial-gradient(circle at 86% 42%, rgba(37, 99, 235, .06), transparent 22%); }
+.internship-domains-section::before { background: radial-gradient(circle at 8% 18%, rgba(0, 170, 162, .11), transparent 26%), radial-gradient(circle at 86% 42%, rgba(0, 170, 162, .06), transparent 22%); }
 .internship-domains-heading { margin-bottom: 28px; }
 .internship-domains-heading #title { color: #0b1730; letter-spacing: -.03em; }
 .internship-filter-row { background: rgba(255,255,255,.82); box-shadow: 0 10px 28px rgba(15,23,42,.06); margin-bottom: 34px; padding: 5px; }
@@ -2993,12 +2993,12 @@
 .internship-domain-grid { gap: 14px; }
 .internship-domain-card { border-radius: 16px; box-shadow: none; min-height: 184px; padding: 20px; }
 .internship-domain-card:hover { box-shadow: 0 18px 34px rgba(15,23,42,.09); }
-.internship-domain-card.active { background: linear-gradient(145deg,#fff,#f3fbff); border-color:#38bdf8; box-shadow:0 16px 34px rgba(14,165,233,.13),inset 3px 0 0 #38bdf8; }
+.internship-domain-card.active { background: linear-gradient(145deg,#fff,rgb(0, 170, 162)); border-color:rgb(0, 170, 162); box-shadow:0 16px 34px rgba(0, 170, 162, .13),inset 3px 0 0 rgb(0, 170, 162); }
 .domain-icon-shell { border-radius: 15px; height: 56px; width: 56px; }
 .domain-category-tag { font-size: 10px; letter-spacing: .06em; padding: 6px 9px; }
 .internship-domain-card h3 { font-size: 16px !important; letter-spacing: -.015em; }
-.internship-track-preview { background:linear-gradient(155deg,#09152b 0%,#13284d 100%); border:1px solid rgba(125,211,252,.21); border-radius:20px; box-shadow:0 24px 52px rgba(15,23,42,.22); overflow:hidden; padding:27px; }
-.internship-track-preview::after { background:radial-gradient(circle,rgba(56,189,248,.18),transparent 68%); content:""; height:220px; pointer-events:none; position:absolute; right:-115px; top:-105px; width:220px; }
+.internship-track-preview { background:linear-gradient(155deg,#09152b 0%,#13284d 100%); border:1px solid rgba(0, 170, 162, .21); border-radius:20px; box-shadow:0 24px 52px rgba(15,23,42,.22); overflow:hidden; padding:27px; }
+.internship-track-preview::after { background:radial-gradient(circle,rgba(0, 170, 162, .18),transparent 68%); content:""; height:220px; pointer-events:none; position:absolute; right:-115px; top:-105px; width:220px; }
 .track-preview-header,.track-preview-identity,.internship-track-preview h3,.internship-track-preview p,.track-preview-facts,.internship-track-apply { position:relative; z-index:1; }
 .track-preview-header { align-items:center; display:flex; justify-content:space-between; margin-bottom:20px; }
 .track-preview-label { margin:0; }
@@ -3009,8 +3009,8 @@
 .internship-track-preview h3 { font-size:clamp(1.65rem,2.1vw,2rem); letter-spacing:-.035em; margin-bottom:11px; }
 .internship-track-preview p { font-size:14px; line-height:1.65; margin-bottom:19px; }
 .track-preview-facts { border-bottom:1px solid rgba(255,255,255,.12); border-top:1px solid rgba(255,255,255,.12); display:grid; gap:10px; margin-bottom:20px; padding:14px 0; }
-.track-preview-facts span { align-items:center; color:#dbeafe; display:flex; font-size:12px; font-weight:650; gap:9px; }
-.track-preview-facts i { color:#7dd3fc; font-size:14px; }
+.track-preview-facts span { align-items:center; color:rgb(0, 170, 162); display:flex; font-size:12px; font-weight:650; gap:9px; }
+.track-preview-facts i { color:rgb(0, 170, 162); font-size:14px; }
 .internship-track-apply { min-height:50px; padding:13px 20px; }
 @media (max-width:767px) { .internship-domains-section { padding:64px 0; } .internship-filter-row { justify-content:flex-start; width:100%; } .internship-track-preview { padding:24px; } }
 
@@ -3019,7 +3019,7 @@
 ========================================= */
 .internship-capabilities-section {
   padding: 50px 0 !important;
-  background: #f8fafc;
+  background: rgb(0, 170, 162);
   position: relative;
 }
 
@@ -3050,7 +3050,7 @@
   right: -80px;
   width: 220px;
   height: 220px;
-  background: radial-gradient(circle, rgba(56, 189, 248, 0.12) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(0, 170, 162, 0.12) 0%, transparent 70%);
   pointer-events: none;
 }
 
@@ -3070,17 +3070,17 @@
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #38bdf8;
+  color: rgb(0, 170, 162);
   padding: 4px 12px;
-  border: 1px solid rgba(56, 189, 248, 0.3);
+  border: 1px solid rgba(0, 170, 162, 0.3);
   border-radius: 50px;
   margin-bottom: 12px;
   align-self: flex-start;
 }
 
 .cap-label-blue {
-  color: #3b82f6;
-  border-color: rgba(59, 130, 246, 0.3);
+  color: rgb(0, 170, 162);
+  border-color: rgba(0, 170, 162, 0.3);
 }
 
 .cap-panel-desc {
@@ -3112,13 +3112,13 @@
 .cap-item-num {
   font-size: 11px;
   font-weight: 700;
-  color: rgba(56, 189, 248, 0.5);
+  color: rgba(0, 170, 162, 0.5);
   font-family: 'JetBrains Mono', monospace;
   min-width: 18px;
 }
 
 .cap-list-item i {
-  color: #38bdf8;
+  color: rgb(0, 170, 162);
   font-size: 16px;
   width: 18px;
   text-align: center;
@@ -3163,9 +3163,9 @@
   align-items: center;
   gap: 10px;
   padding: 10px 14px;
-  background: #f8fafc;
+  background: rgb(0, 170, 162);
   border-radius: 12px;
-  border: 1px solid #f1f5f9;
+  border: 1px solid rgb(0, 170, 162);
   transition: all 0.25s ease;
   cursor: default;
 }
@@ -3217,7 +3217,7 @@
 .metric-item {
   text-align: center;
   padding: 40px 24px;
-  background: #f8fafc;
+  background: rgb(0, 170, 162);
   border-radius: 20px;
   border: 1px solid #e2e8f0;
   position: relative;
@@ -3232,7 +3232,7 @@
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, #38bdf8, #3b82f6);
+  background: linear-gradient(90deg, rgb(0, 170, 162), rgb(0, 170, 162));
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -3240,7 +3240,7 @@
 .metric-item:hover {
   transform: translateY(-6px);
   box-shadow: 0 20px 40px rgba(18, 25, 41, 0.08);
-  border-color: #38bdf8;
+  border-color: rgb(0, 170, 162);
 }
 
 .metric-item:hover::before {
@@ -3296,7 +3296,7 @@
 }
 
 .success-proof-item i {
-  color: #38bdf8;
+  color: rgb(0, 170, 162);
   font-size: 18px;
 }
 
@@ -3306,7 +3306,7 @@
 .showcase-video-glow {
   position: absolute;
   inset: -2px;
-  background: linear-gradient(135deg, rgba(56, 189, 248, 0.3), rgba(59, 130, 246, 0.15), rgba(139, 92, 246, 0.2));
+  background: linear-gradient(135deg, rgba(0, 170, 162, 0.3), rgba(0, 170, 162, 0.15), rgba(139, 92, 246, 0.2));
   border-radius: 20px;
   z-index: -1;
   filter: blur(20px);
@@ -3410,15 +3410,15 @@
 .domain-card-copy { min-height:66px; }
 .internship-domain-card h3 { flex:initial; font-size:17px !important; line-height:1.32; margin:0 0 7px; overflow-wrap:anywhere; }
 .domain-card-caption { color:#7b8aa1; display:block; font-size:11px; font-weight:650; line-height:1.35; }
-.internship-domain-apply { border-top:1px solid #e9eff6; justify-content:space-between; margin-top:auto; padding-top:14px; width:100%; }
+.internship-domain-apply { border-top:1px solid rgb(0, 170, 162); justify-content:space-between; margin-top:auto; padding-top:14px; width:100%; }
 .domain-card-index { display:none; }
 
 /* Professional Bootstrap icon system — no emoji or illustrated assets */
-.domain-icon-shell,.track-preview-icon-shell { background:#f4f8fc !important; border:1px solid #dbe7f2; overflow:hidden; position:relative; }
-.domain-icon-shell i,.track-preview-icon-shell i { color:#0b6fae; font-size:27px; position:relative; transform-origin:center; transition:transform .3s cubic-bezier(.2,.8,.2,1),color .3s ease; z-index:1; }
+.domain-icon-shell,.track-preview-icon-shell { background:rgb(0, 170, 162) !important; border:1px solid rgb(0, 170, 162); overflow:hidden; position:relative; }
+.domain-icon-shell i,.track-preview-icon-shell i { color:rgb(0, 170, 162); font-size:27px; position:relative; transform-origin:center; transition:transform .3s cubic-bezier(.2,.8,.2,1),color .3s ease; z-index:1; }
 .track-preview-icon-shell i { font-size:31px; }
-.internship-domain-card.active .domain-icon-shell,.internship-track-preview .track-preview-icon-shell { background:#e8f7ff !important; border-color:#75cdf2; }
-.internship-domain-card:hover .domain-icon-shell i { color:#0284c7; transform:translateY(-3px) scale(1.08); }
+.internship-domain-card.active .domain-icon-shell,.internship-track-preview .track-preview-icon-shell { background:rgb(0, 170, 162) !important; border-color:rgb(0, 170, 162); }
+.internship-domain-card:hover .domain-icon-shell i { color:rgb(0, 170, 162); transform:translateY(-3px) scale(1.08); }
 .internship-domain-card.active .domain-icon-shell i,.internship-track-preview .track-preview-icon-shell i { animation:trackIconFloat 3s ease-in-out infinite; }
 @keyframes trackIconFloat { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-4px); } }
 @media (max-width:767px) { .internship-domain-card { min-height:210px; } }
@@ -3427,7 +3427,7 @@
 /* SVG icons render independently of any icon-font stylesheet */
 .domain-icon-shell svg,
 .track-preview-icon-shell svg {
-  color: #0b6fae;
+  color: rgb(0, 170, 162);
   height: 29px;
   position: relative;
   stroke-width: 2;
@@ -3437,7 +3437,7 @@
 }
 
 .track-preview-icon-shell svg { height: 33px; width: 33px; }
-.internship-domain-card:hover .domain-icon-shell svg { color: #0284c7; transform: translateY(-3px) scale(1.08); }
+.internship-domain-card:hover .domain-icon-shell svg { color: rgb(0, 170, 162); transform: translateY(-3px) scale(1.08); }
 .internship-domain-card.active .domain-icon-shell svg,
 .internship-track-preview .track-preview-icon-shell svg { animation: trackSvgIconFloat 3s ease-in-out infinite; }
 @keyframes trackSvgIconFloat { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-4px); } }
@@ -3448,16 +3448,16 @@
 .internship-domains-heading #sub-heading { align-items: center; display: inline-flex; gap: 9px; }
 .internship-domains-heading #sub-heading::before,
 .internship-domains-heading #sub-heading::after { background: currentColor; content: ""; height: 1px; opacity: .45; width: 26px; }
-.track-explorer-meta { align-items:center; border-bottom:1px solid #e8eef5; color:#60708a; display:flex; font-size:12px; font-weight:700; gap:26px; margin-bottom:22px; padding:0 3px 15px; position:relative; z-index:1; }
+.track-explorer-meta { align-items:center; border-bottom:1px solid rgb(0, 170, 162); color:#60708a; display:flex; font-size:12px; font-weight:700; gap:26px; margin-bottom:22px; padding:0 3px 15px; position:relative; z-index:1; }
 .track-explorer-meta span { align-items:center; display:inline-flex; gap:8px; }
-.track-explorer-meta i { color:#0284c7; font-size:14px; }
+.track-explorer-meta i { color:rgb(0, 170, 162); font-size:14px; }
 .internship-domain-card { position:relative; }
-.internship-domain-card::before { background:linear-gradient(90deg,#38bdf8,#2563eb); border-radius:0 0 4px 4px; content:""; height:3px; left:20px; opacity:0; position:absolute; top:0; transition:opacity .25s ease,width .25s ease; width:0; }
+.internship-domain-card::before { background:linear-gradient(90deg,rgb(0, 170, 162),rgb(0, 170, 162)); border-radius:0 0 4px 4px; content:""; height:3px; left:20px; opacity:0; position:absolute; top:0; transition:opacity .25s ease,width .25s ease; width:0; }
 .internship-domain-card:hover::before,.internship-domain-card.active::before { opacity:1; width:45px; }
 .domain-card-index { color:#a9b7c9; font-family:"Inter",sans-serif; font-size:11px; font-weight:800; letter-spacing:.08em; position:absolute; right:20px; top:84px; }
-.internship-domain-card.active .domain-card-index { color:#0ea5e9; }
+.internship-domain-card.active .domain-card-index { color:rgb(0, 170, 162); }
 .internship-track-preview { min-height:425px; }
-.track-preview-note { align-items:center; color:#b8d8ee; display:flex; font-size:11px; font-weight:700; gap:8px; line-height:1.4; margin:-5px 0 17px; position:relative; z-index:1; }
+.track-preview-note { align-items:center; color:rgb(0, 170, 162); display:flex; font-size:11px; font-weight:700; gap:8px; line-height:1.4; margin:-5px 0 17px; position:relative; z-index:1; }
 .track-preview-note i { color:#5eead4; font-size:15px; }
 .internship-track-apply { box-shadow:0 10px 24px rgba(0,0,0,.18); }
 @media (max-width:991px) { .track-explorer-meta { justify-content:center; } .internship-track-preview { min-height:0; } }
@@ -3842,10 +3842,10 @@
   min-height: 40px;
   padding: 9px 18px;
   box-sizing: border-box;
-  border: 1px solid rgba(102, 199, 221, 0.38);
+  border: 1px solid rgba(0, 170, 162, 0.38);
   border-radius: 999px;
-  background: rgba(102, 199, 221, 0.08);
-  color: #52bfdc;
+  background: rgba(0, 170, 162, 0.08);
+  color: rgb(0, 170, 162);
   font-family: 'Outfit', sans-serif;
   font-size: 13px;
   font-weight: 800;
@@ -3861,8 +3861,8 @@
   min-width: 8px;
   min-height: 8px;
   border-radius: 50%;
-  background: #52bfdc;
-  box-shadow: 0 0 0 4px rgba(82, 191, 220, 0.10);
+  background: rgb(0, 170, 162);
+  box-shadow: 0 0 0 4px rgba(0, 170, 162, 0.10);
   display: inline-block;
 }
 
@@ -3871,7 +3871,7 @@
 }
 
 .workshop-skill-highlight {
-  color: #159fc5;
+  color: rgb(0, 170, 162);
 }
 
 .workshop-skill-line {
@@ -3879,8 +3879,8 @@
   height: 5px;
   margin: 18px 0 0;
   border-radius: 999px;
-  background: #66c7dd;
-  box-shadow: 0 0 10px rgba(102, 199, 221, 0.30);
+  background: rgb(0, 170, 162);
+  box-shadow: 0 0 10px rgba(0, 170, 162, 0.30);
 }
 
 @media (max-width: 991px) {
@@ -3930,10 +3930,10 @@
   min-height: 40px;
   padding: 9px 18px;
   box-sizing: border-box;
-  border: 1px solid rgba(117, 214, 232, 0.45);
+  border: 1px solid rgba(0, 170, 162, 0.45);
   border-radius: 999px;
-  background: rgba(117, 214, 232, 0.08);
-  color: #66c7dd;
+  background: rgba(0, 170, 162, 0.08);
+  color: rgb(0, 170, 162);
   font-family: 'Outfit', sans-serif;
   font-size: 16px;
   font-weight: 800;
@@ -3949,8 +3949,8 @@
   min-width: 8px;
   min-height: 8px;
   border-radius: 50%;
-  background: #66c7dd;
-  box-shadow: 0 0 0 4px rgba(102, 199, 221, 0.10);
+  background: rgb(0, 170, 162);
+  box-shadow: 0 0 0 4px rgba(0, 170, 162, 0.10);
   display: inline-block;
 }
 
@@ -3970,8 +3970,8 @@
   height: 5px;
   margin: 18px auto 0;
   border-radius: 999px;
-  background: #66c7dd;
-  box-shadow: 0 0 10px rgba(102, 199, 221, 0.30);
+  background: rgb(0, 170, 162);
+  box-shadow: 0 0 10px rgba(0, 170, 162, 0.30);
 }
 
 @media (max-width: 767px) {
@@ -4008,7 +4008,7 @@
 
 /* Only the word "Event" is highlighted */
 .workshop-showcase-title .workshop-event-highlight {
-  color: #18bce8 !important;
+  color: rgb(0, 170, 162) !important;
 }
 
 
@@ -4030,10 +4030,10 @@
   min-height: 40px;
   padding: 9px 18px;
   box-sizing: border-box;
-  border: 1px solid rgba(117, 214, 232, 0.45);
+  border: 1px solid rgba(0, 170, 162, 0.45);
   border-radius: 999px;
-  background: rgba(117, 214, 232, 0.08);
-  color: #66c7dd;
+  background: rgba(0, 170, 162, 0.08);
+  color: rgb(0, 170, 162);
   font-family: 'Outfit', sans-serif;
   font-size: 16px;
   font-weight: 800;
@@ -4049,8 +4049,8 @@
   min-width: 8px;
   min-height: 8px;
   border-radius: 50%;
-  background: #66c7dd;
-  box-shadow: 0 0 0 4px rgba(102, 199, 221, 0.10);
+  background: rgb(0, 170, 162);
+  box-shadow: 0 0 0 4px rgba(0, 170, 162, 0.10);
   display: inline-block;
 }
 
@@ -4066,7 +4066,7 @@
 }
 
 .workshop-achievements-highlight {
-  color: #18bce8 !important;
+  color: rgb(0, 170, 162) !important;
 }
 
 .workshop-achievements-line {
@@ -4074,8 +4074,8 @@
   height: 5px;
   margin: 18px auto 0;
   border-radius: 999px;
-  background: #66c7dd;
-  box-shadow: 0 0 10px rgba(102, 199, 221, 0.30);
+  background: rgb(0, 170, 162);
+  box-shadow: 0 0 10px rgba(0, 170, 162, 0.30);
 }
 
 .workshop-achievements-heading .workshop-achievements-desc {
@@ -4231,7 +4231,7 @@
 }
 
 .workshop-hero .workshop-eyebrow {
-  color: rgb(0, 255, 242) !important;
+  color: rgb(0, 170, 162) !important;
 }
 
 /* Make the requested "Comes Alive" part cyan */
@@ -4240,9 +4240,9 @@
 }
 
 .workshop-hero .page-title .workshop-hero-highlight {
-  color: rgb(0, 255, 242) !important;
+  color: rgb(0, 170, 162) !important;
   background: none !important;
-  -webkit-text-fill-color: rgb(0, 255, 242) !important;
+  -webkit-text-fill-color: rgb(0, 170, 162) !important;
 }
 
 .workshop-hero .workshop-title-section p {
@@ -4537,7 +4537,7 @@
 
 /* Existing hero accent treatment retained; only typography is standardized. */
 .development-hero .hero-title-gradient {
-  background: linear-gradient(135deg, #0e7490 0%, #0284c7 50%, #66c7dd 100%);
+  background: linear-gradient(135deg, rgb(0, 170, 162) 0%, rgb(0, 170, 162) 50%, rgb(0, 170, 162) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -4602,5 +4602,304 @@
   .service-1 .box,
   .service-btn {
     transition: none !important;
+  }
+}
+/* =========================================================
+   FINAL BUTTON COLOR OVERRIDE
+   Only blue-colored buttons are changed.
+   Teal background: rgb(0, 170, 162)
+   Button text: black
+   No other layout/content/colors are changed.
+========================================================= */
+
+.hero-btn-primary,
+.hero-btn-primary:hover,
+.modern-btn-primary,
+.modern-btn-primary:hover,
+.workshop-whatsapp-btn,
+.workshop-whatsapp-btn:hover,
+.service-btn,
+.service-btn:hover,
+.internship-filter-btn.active,
+.internship-filter-btn.active:hover,
+.workshop-gallery-link,
+.workshop-gallery-link:hover,
+.internship-cta-box .btn,
+.internship-cta-box .btn:hover,
+.modern-course-content button,
+.modern-course-content button:hover {
+  background: rgb(0, 170, 162) !important;
+  border-color: rgb(0, 170, 162) !important;
+  color: rgb(0, 0, 0) !important;
+}
+
+/* =========================================================
+   COURSES PAGE — BLUE COURSE BUTTONS ONLY
+   Background: rgb(0, 170, 162)
+   Text: black
+   No other course-page styling is changed.
+   ========================================================= */
+
+/* Course category pills shown beside the rating */
+.modern-course-content .badge.bg-primary,
+.modern-course-content .badge.bg-primary:hover,
+.modern-course-content .badge.bg-primary:focus,
+.modern-course-content .badge.bg-primary:active {
+  background-color: rgb(0, 170, 162) !important;
+  background: rgb(0, 170, 162) !important;
+  color: rgb(0, 0, 0) !important;
+  border-color: rgb(0, 170, 162) !important;
+}
+
+/* View Course button */
+.modern-course-content .course-cta-btn,
+.modern-course-content .course-cta-btn:hover,
+.modern-course-content .course-cta-btn:focus,
+.modern-course-content .course-cta-btn:active,
+.modern-course-content .course-cta-btn:visited {
+  background-color: rgb(0, 170, 162) !important;
+  background: rgb(0, 170, 162) !important;
+  color: rgb(0, 0, 0) !important;
+  border-color: rgb(0, 170, 162) !important;
+  box-shadow: none;
+}
+
+.modern-course-content .course-cta-btn i {
+  color: rgb(0, 0, 0) !important;
+}
+
+/* =========================================================
+   INTERNSHIP PAGE — REQUESTED VISUAL FIXES
+   Existing layout/content preserved.
+   ========================================================= */
+
+:root {
+  --internship-teal: rgb(0, 170, 162);
+  --internship-black: rgb(0, 0, 0);
+  --internship-white: rgb(255, 255, 255);
+}
+
+/* 1. About the Internship — white background + teal accents */
+.internship-program-section {
+  background: var(--internship-white) !important;
+}
+.internship-program-section .reference-about-subheading {
+  color: var(--internship-teal) !important;
+  border-color: rgba(0,170,162,.30) !important;
+  background: rgba(0,170,162,.05) !important;
+}
+.internship-program-section .reference-about-subheading::before {
+  background: var(--internship-teal) !important;
+}
+.internship-program-section .reference-about-title .heading-gradient {
+  background: none !important;
+  -webkit-text-fill-color: var(--internship-teal) !important;
+  color: var(--internship-teal) !important;
+}
+.internship-program-section .reference-about-title::after {
+  background: var(--internship-teal) !important;
+}
+
+/* 2. Internship Domains — white background + teal accents */
+.internship-domains-section {
+  background: var(--internship-white) !important;
+}
+.internship-domains-section .reference-section-subheading {
+  color: var(--internship-teal) !important;
+  border-color: rgba(0,170,162,.30) !important;
+  background: rgba(0,170,162,.05) !important;
+}
+.internship-domains-section .reference-section-subheading::before {
+  background: var(--internship-teal) !important;
+}
+.internship-domains-section .reference-section-title .heading-gradient {
+  background: none !important;
+  -webkit-text-fill-color: var(--internship-teal) !important;
+  color: var(--internship-teal) !important;
+}
+.internship-domains-section .reference-section-title::after {
+  background: var(--internship-teal) !important;
+}
+
+/* 5. Selected track — dim teal shade */
+.internship-domain-card.active {
+  background: linear-gradient(
+    145deg,
+    rgba(255,255,255,1) 0%,
+    rgba(0,170,162,.24) 100%
+  ) !important;
+  border-color: var(--internship-teal) !important;
+  box-shadow:
+    0 16px 34px rgba(0,170,162,.10),
+    inset 3px 0 0 var(--internship-teal) !important;
+}
+
+/* 6. Technologies Covered — teal accents; only "Tools Used in" white */
+.internship-tech-section {
+  background-color: #0b0b1a !important;
+}
+.internship-tech-section .reference-section-subheading {
+  color: var(--internship-teal) !important;
+  border-color: rgba(0,170,162,.30) !important;
+  background: rgba(0,170,162,.06) !important;
+}
+.internship-tech-section .reference-section-subheading::before {
+  background: var(--internship-teal) !important;
+}
+.internship-tech-section .reference-section-title {
+  color: var(--internship-white) !important;
+}
+.internship-tech-section .reference-section-title .heading-gradient {
+  background: none !important;
+  -webkit-text-fill-color: var(--internship-teal) !important;
+  color: var(--internship-teal) !important;
+}
+.internship-tech-section .reference-section-title::after {
+  background: var(--internship-teal) !important;
+}
+
+/* 7. Program Highlights — white outer background */
+.internship-capabilities-section {
+  background: var(--internship-white) !important;
+}
+.internship-capabilities-section .reference-section-subheading {
+  color: var(--internship-teal) !important;
+  border-color: rgba(0,170,162,.30) !important;
+  background: rgba(0,170,162,.05) !important;
+}
+.internship-capabilities-section .reference-section-subheading::before {
+  background: var(--internship-teal) !important;
+}
+.internship-capabilities-section .reference-section-title .heading-gradient {
+  background: none !important;
+  -webkit-text-fill-color: var(--internship-teal) !important;
+  color: var(--internship-teal) !important;
+}
+.internship-capabilities-section .reference-section-title::after {
+  background: var(--internship-teal) !important;
+}
+
+/* 3. Benefits — teal buttons/cards + black text/icons */
+.internship-capabilities-section .cap-benefit-card {
+  background: var(--internship-teal) !important;
+  border-color: var(--internship-teal) !important;
+  color: var(--internship-black) !important;
+}
+.internship-capabilities-section .cap-benefit-card span,
+.internship-capabilities-section .cap-benefit-icon,
+.internship-capabilities-section .cap-benefit-icon i {
+  color: var(--internship-black) !important;
+}
+.internship-capabilities-section .cap-benefit-card:hover {
+  background: var(--internship-teal) !important;
+  border-color: var(--internship-teal) !important;
+  color: var(--internship-black) !important;
+}
+
+/* 8. Apply button — white normally, teal on hover + white text */
+.internship-track-apply {
+  background: var(--internship-white) !important;
+  color: var(--internship-black) !important;
+  border: 1px solid var(--internship-white) !important;
+}
+.internship-track-apply:hover,
+.internship-track-apply:focus,
+.internship-track-apply:active {
+  background: var(--internship-teal) !important;
+  border-color: var(--internship-teal) !important;
+  color: var(--internship-white) !important;
+}
+
+/* 9 & 10. Success Stories / Metrics — white cards + teal borders */
+.internship-metrics-section {
+  background: var(--internship-white) !important;
+}
+.internship-metrics-section .reference-section-subheading {
+  color: var(--internship-teal) !important;
+  border-color: rgba(0,170,162,.30) !important;
+  background: rgba(0,170,162,.05) !important;
+}
+.internship-metrics-section .reference-section-title .heading-gradient {
+  background: none !important;
+  -webkit-text-fill-color: var(--internship-teal) !important;
+  color: var(--internship-teal) !important;
+}
+.internship-metrics-section .metric-item {
+  background: var(--internship-white) !important;
+  border: 1px solid var(--internship-teal) !important;
+}
+.internship-metrics-section .metric-item strong,
+.internship-metrics-section .metric-item span {
+  color: var(--internship-black) !important;
+}
+.internship-metrics-section .metric-item:hover {
+  border-color: var(--internship-teal) !important;
+}
+
+/* 13. All section heading dots + lines — About-page blink style */
+.internship-program-section .reference-about-subheading::before,
+.internship-domains-section .reference-section-subheading::before,
+.internship-tech-section .reference-section-subheading::before,
+.internship-capabilities-section .reference-section-subheading::before,
+.internship-metrics-section .reference-section-subheading::before {
+  background: var(--internship-teal) !important;
+  box-shadow:
+    0 0 0 4px rgba(0,170,162,.10),
+    0 0 12px rgba(0,170,162,.45) !important;
+  animation: internshipHeadingDotBlink 1.6s ease-in-out infinite !important;
+}
+
+.internship-program-section .reference-about-title::after,
+.internship-domains-section .reference-section-title::after,
+.internship-tech-section .reference-section-title::after,
+.internship-capabilities-section .reference-section-title::after,
+.internship-metrics-section .reference-section-title::after {
+  background: var(--internship-teal) !important;
+  transform-origin: center !important;
+  animation: internshipHeadingLineBlink 1.8s ease-in-out infinite !important;
+}
+
+@keyframes internshipHeadingDotBlink {
+  0%,100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow:
+      0 0 0 4px rgba(0,170,162,.10),
+      0 0 12px rgba(0,170,162,.45);
+  }
+  50% {
+    opacity: .35;
+    transform: scale(.72);
+    box-shadow:
+      0 0 0 2px rgba(0,170,162,.06),
+      0 0 5px rgba(0,170,162,.18);
+  }
+}
+
+@keyframes internshipHeadingLineBlink {
+  0%,100% {
+    opacity: .4;
+    transform: scaleX(.82);
+    box-shadow: 0 0 0 rgba(0,170,162,0);
+  }
+  50% {
+    opacity: 1;
+    transform: scaleX(1);
+    box-shadow: 0 0 14px rgba(0,170,162,.58);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .internship-program-section .reference-about-subheading::before,
+  .internship-domains-section .reference-section-subheading::before,
+  .internship-tech-section .reference-section-subheading::before,
+  .internship-capabilities-section .reference-section-subheading::before,
+  .internship-metrics-section .reference-section-subheading::before,
+  .internship-program-section .reference-about-title::after,
+  .internship-domains-section .reference-section-title::after,
+  .internship-tech-section .reference-section-title::after,
+  .internship-capabilities-section .reference-section-title::after,
+  .internship-metrics-section .reference-section-title::after {
+    animation: none !important;
   }
 }

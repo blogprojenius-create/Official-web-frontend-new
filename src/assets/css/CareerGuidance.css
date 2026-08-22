@@ -2272,3 +2272,78 @@ th.col-us {
     transition: none;
   }
 }
+
+
+/* =========================================================
+   FINAL CAREER PAGE COLOR FIXES
+   1. Book a Call section: blue -> rgb(0, 170, 162)
+   2. "Everything You Need to Get Hired": black
+   ========================================================= */
+
+/* ---------- FIRST IMAGE: BOOK A CALL ---------- */
+.career-guidance-page #book-call .career-teal-icon {
+  color: rgb(0, 170, 162) !important;
+}
+
+.career-guidance-page #book-call .bc-chip-solid i {
+  color: rgb(0, 170, 162) !important;
+}
+
+.career-guidance-page #book-call .bc-cal-row.dates span.active {
+  background: rgb(0, 170, 162) !important;
+  background-color: rgb(0, 170, 162) !important;
+  color: #000000 !important;
+}
+
+.career-guidance-page #book-call .bc-time.active {
+  background: rgb(0, 170, 162) !important;
+  background-color: rgb(0, 170, 162) !important;
+  border-color: rgb(0, 170, 162) !important;
+  color: #000000 !important;
+}
+
+.career-guidance-page #book-call .bc-time:not(.disabled-slot):hover {
+  border-color: rgb(0, 170, 162) !important;
+}
+
+.career-guidance-page #book-call .btn-primary-custom,
+.career-guidance-page #book-call .btn-primary-custom.btn-lg {
+  background: rgb(0, 170, 162) !important;
+  background-color: rgb(0, 170, 162) !important;
+  border-color: rgb(0, 170, 162) !important;
+  color: #000000 !important;
+}
+
+.career-guidance-page #book-call .btn-primary-custom:hover,
+.career-guidance-page #book-call .btn-primary-custom:focus,
+.career-guidance-page #book-call .btn-primary-custom:focus-visible {
+  background: rgb(0, 150, 143) !important;
+  background-color: rgb(0, 150, 143) !important;
+  border-color: rgb(0, 150, 143) !important;
+  color: #ffffff !important;
+}
+
+/* Inline React styles must also be overridden. */
+.career-guidance-page #book-call .bc-mockup-body .bc-time.active,
+.career-guidance-page #book-call .bc-mockup-body .bc-cal-row.dates span.active,
+.career-guidance-page #book-call .bc-mockup-body button.btn-primary-custom {
+  --bs-btn-bg: rgb(0, 170, 162) !important;
+  --bs-btn-border-color: rgb(0, 170, 162) !important;
+}
+
+/* ---------- SECOND IMAGE: CORE SERVICES HEADING ---------- */
+.career-guidance-page #services .section-heading #title,
+.career-guidance-page #services .section-heading h2,
+.career-guidance-page #services .section-heading .cg-reference-title {
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000 !important;
+  background: none !important;
+  background-image: none !important;
+}
+
+.career-guidance-page #services .section-heading #title * {
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000 !important;
+  background: none !important;
+  background-image: none !important;
+}

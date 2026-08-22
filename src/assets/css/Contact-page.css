@@ -986,3 +986,37 @@ body.contact-page-active .contact-page {
     padding-top: 0 !important;
     margin-top: 0 !important;
 }
+
+/* =========================================================
+   FINAL CONTACT PAGE BUTTON COLOR OVERRIDE
+   ========================================================= */
+
+.contact-page button,
+.contact-page .btn,
+.contact-page a.btn,
+.contact-page [type="button"],
+.contact-page [type="submit"] {
+    background: rgb(0, 170, 162) !important;
+    border-color: rgb(0, 170, 162) !important;
+    color: rgb(0, 0, 0) !important;
+}
+
+.contact-page button:hover,
+.contact-page button:focus,
+.contact-page button:active,
+.contact-page .btn:hover,
+.contact-page .btn:focus,
+.contact-page .btn:active,
+.contact-page a.btn:hover,
+.contact-page a.btn:focus,
+.contact-page a.btn:active,
+.contact-page [type="button"]:hover,
+.contact-page [type="button"]:focus,
+.contact-page [type="button"]:active,
+.contact-page [type="submit"]:hover,
+.contact-page [type="submit"]:focus,
+.contact-page [type="submit"]:active {
+    background: rgb(0, 170, 162) !important;
+    border-color: rgb(0, 170, 162) !important;
+    color: rgb(0, 0, 0) !important;
+}

@@ -96,7 +96,7 @@ export default function Services() {
 
   return (
     <>
-      <section className="header-wrap" style={{backgroundImage:'linear-gradient(160deg, rgba(18,25,41,0.88), rgba(7,109,160,0.35), rgba(18,25,41,0.88)), url(/images/projenius-banner.webp)'}}>
+      <section className="header-wrap" style={{backgroundImage:'linear-gradient(160deg, rgba(18,25,41,0.88), rgba(0,170,162,0.35), rgba(18,25,41,0.88)), url(/images/projenius-banner.webp)'}}>
         <div className="container title-section" style={{position:'relative', zIndex:2}}>
           <h1 className="page-title">Development Services</h1>
           <p style={{color:'rgba(255,255,255,0.78)', fontSize:'16px', marginTop:'10px', fontWeight:400}}>Smart digital solutions built for real-world impact</p>
@@ -192,7 +192,7 @@ export default function Services() {
                     className="img-fluid"
                   />
                   <div className="hero-card-floating-badge">
-                    <i className="bi bi-lightning-charge-fill me-2" style={{ color: '#66c7dd' }}></i>
+                    <i className="bi bi-lightning-charge-fill me-2" style={{ color: 'rgb(0, 170, 162)' }}></i>
                     <span>Production Ready Code</span>
                   </div>
                 </div>

@@ -325,13 +325,19 @@ export default function Courses() {
           align-items: center;
           justify-content: center;
           gap: 10px;
-          color: #159fc5;
+          color: rgb(0, 170, 162);
           font-family: 'Outfit', sans-serif;
           font-size: 16px;
           font-weight: 800;
           letter-spacing: 2px;
           line-height: 1;
           text-transform: uppercase;
+
+          /* Radio-style outline around the label */
+          padding: 10px 18px;
+          border: 1px solid rgba(0, 170, 162, 0.28);
+          border-radius: 999px;
+          background: rgba(0, 170, 162, 0.05);
         }
 
         /* Radio-style dot */
@@ -341,12 +347,13 @@ export default function Courses() {
           min-width: 9px;
           min-height: 9px;
           border-radius: 50%;
-          background: #159fc5;
+          background: rgb(0, 170, 162);
           display: inline-block;
           position: relative;
           box-shadow:
-            0 0 0 4px rgba(21, 159, 197, 0.12),
-            0 0 0 7px rgba(21, 159, 197, 0.05);
+            0 0 0 4px rgba(0, 170, 162, 0.10),
+            0 0 12px rgba(0, 170, 162, 0.45);
+          animation: studentSuccessDotBlink 1.6s ease-in-out infinite;
         }
 
         .student-success-heading h2 {
@@ -366,9 +373,44 @@ export default function Courses() {
           height: 5px;
           margin: 18px auto 0 !important;
           border-radius: 999px;
-          background: #159fc5;
-          box-shadow: 0 0 10px rgba(21, 159, 197, 0.30);
+          background: rgb(0, 170, 162);
+          box-shadow: 0 0 10px rgba(0, 170, 162, 0.30);
           display: block;
+          transform-origin: center;
+          animation: studentSuccessLineBlink 1.8s ease-in-out infinite;
+        }
+
+        /* Blink animation adapted from the About page */
+        @keyframes studentSuccessDotBlink {
+          0%, 100% {
+            opacity: 1;
+            transform: scale(1);
+            box-shadow:
+              0 0 0 4px rgba(0, 170, 162, 0.10),
+              0 0 12px rgba(0, 170, 162, 0.45);
+          }
+
+          50% {
+            opacity: 0.35;
+            transform: scale(0.72);
+            box-shadow:
+              0 0 0 2px rgba(0, 170, 162, 0.06),
+              0 0 5px rgba(0, 170, 162, 0.18);
+          }
+        }
+
+        @keyframes studentSuccessLineBlink {
+          0%, 100% {
+            opacity: 0.4;
+            transform: scaleX(0.82);
+            box-shadow: 0 0 0 rgba(0, 170, 162, 0);
+          }
+
+          50% {
+            opacity: 1;
+            transform: scaleX(1);
+            box-shadow: 0 0 14px rgba(0, 170, 162, 0.58);
+          }
         }
 
         @media (max-width: 767px) {
@@ -386,6 +428,10 @@ export default function Courses() {
             height: 7px;
             min-width: 7px;
             min-height: 7px;
+          }
+
+          .student-success-label {
+            padding: 8px 14px;
           }
 
           .student-success-heading h2 {
@@ -1069,8 +1115,8 @@ export default function Courses() {
             href="/career-guidance"
             className="btn btn-lg fw-semibold cta-hover-effect border-0"
             style={{
-              backgroundColor: "#3DA9FC",
-              color: "#fff",
+              backgroundColor: "rgb(0, 170, 162) ",
+              color: "black",
               borderRadius: "8px",
               padding: "12px 30px",
             }}

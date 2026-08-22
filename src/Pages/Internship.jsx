@@ -341,6 +341,8 @@ export default function Internship() {
       <style>{`
         /* =========================================
            REFERENCE HEADING STYLE
+           Applied only to the internship section
+           headings shown in the reference images.
         ========================================= */
 
         .internship-program-section .reference-about-subheading,
@@ -351,14 +353,14 @@ export default function Internship() {
           display: inline-flex !important;
           align-items: center;
           justify-content: center;
-          gap: 10px;
+          gap: 9px;
 
-          padding: 10px 20px !important;
+          padding: 9px 18px !important;
 
-          border: 1px solid rgba(102, 199, 221, 0.30) !important;
+          border: 1px solid rgba(102, 199, 221, 0.28) !important;
           border-radius: 999px !important;
 
-          background: rgba(102, 199, 221, 0.08) !important;
+          background: rgba(102, 199, 221, 0.07) !important;
 
           color: #5bbbd3 !important;
 
@@ -367,58 +369,64 @@ export default function Internship() {
           font-weight: 800 !important;
           letter-spacing: 1.5px !important;
           line-height: 1 !important;
-
           text-transform: uppercase !important;
 
           box-sizing: border-box;
           position: relative;
         }
 
-        /* Radio-style dot inside every heading pill */
         .internship-program-section .reference-about-subheading::before,
         .internship-domains-section .reference-section-subheading::before,
         .internship-tech-section .reference-section-subheading::before,
         .internship-capabilities-section .reference-section-subheading::before,
         .internship-metrics-section .reference-section-subheading::before {
           content: "";
-
           width: 9px;
           height: 9px;
           min-width: 9px;
-
           border-radius: 50%;
-
           background: #66c7dd;
-
-          box-shadow:
-            0 0 0 4px rgba(102, 199, 221, 0.12);
-
+          box-shadow: 0 0 0 4px rgba(102, 199, 221, 0.12);
           display: inline-block;
         }
 
-        /* Main headings */
         .internship-program-section .reference-about-title,
         .internship-domains-section .reference-section-title,
         .internship-tech-section .reference-section-title,
         .internship-capabilities-section .reference-section-title,
         .internship-metrics-section .reference-section-title {
           color: #07142f !important;
-
           font-family: 'Outfit', sans-serif !important;
-
           font-size: clamp(38px, 5vw, 58px) !important;
-
           font-weight: 800 !important;
-
           line-height: 1.12 !important;
-
           letter-spacing: -1.5px !important;
-
           margin-top: 20px !important;
           margin-bottom: 0 !important;
         }
 
-        /* Blue gradient text */
+        .internship-program-section .reference-about-title::after,
+        .internship-domains-section .reference-section-title::after,
+        .internship-tech-section .reference-section-title::after,
+        .internship-capabilities-section .reference-section-title::after,
+        .internship-metrics-section .reference-section-title::after {
+          content: "";
+          display: block;
+          width: 120px;
+          height: 5px;
+          margin-top: 24px;
+          border-radius: 999px;
+          background: linear-gradient(90deg, #66c7dd 0%, #2f80ed 100%);
+        }
+
+        .internship-domains-section .reference-section-title::after,
+        .internship-tech-section .reference-section-title::after,
+        .internship-capabilities-section .reference-section-title::after,
+        .internship-metrics-section .reference-section-title::after {
+          margin-left: auto;
+          margin-right: auto;
+        }
+
         .internship-program-section .reference-about-title .heading-gradient,
         .internship-domains-section .reference-section-title .heading-gradient,
         .internship-tech-section .reference-section-title .heading-gradient,
@@ -429,51 +437,10 @@ export default function Internship() {
             #39b5df 0%,
             #2f80ed 100%
           ) !important;
-
           -webkit-background-clip: text !important;
           -webkit-text-fill-color: transparent !important;
           background-clip: text !important;
-
           color: transparent !important;
-        }
-
-        /* Underline */
-        .internship-program-section .reference-about-title::after,
-        .internship-domains-section .reference-section-title::after,
-        .internship-tech-section .reference-section-title::after,
-        .internship-capabilities-section .reference-section-title::after,
-        .internship-metrics-section .reference-section-title::after {
-          content: "";
-
-          display: block;
-
-          width: 120px;
-          height: 5px;
-
-          margin-top: 24px;
-
-          border-radius: 999px;
-
-          background: linear-gradient(
-            90deg,
-            #66c7dd 0%,
-            #2f80ed 100%
-          );
-        }
-
-        /* Center lines for centered sections */
-        .internship-domains-section .reference-section-title::after,
-        .internship-tech-section .reference-section-title::after,
-        .internship-capabilities-section .reference-section-title::after,
-        .internship-metrics-section .reference-section-title::after {
-          margin-left: auto;
-          margin-right: auto;
-        }
-
-        /* First section line stays left aligned */
-        .internship-program-section .reference-about-title::after {
-          margin-left: 0;
-          margin-right: auto;
         }
 
         .internship-program-section .reference-about-subheading {
@@ -484,21 +451,14 @@ export default function Internship() {
           max-width: 850px;
         }
 
-        /* =========================================
-           MOBILE
-        ========================================= */
-
         @media (max-width: 767px) {
-
           .internship-program-section .reference-about-subheading,
           .internship-domains-section .reference-section-subheading,
           .internship-tech-section .reference-section-subheading,
           .internship-capabilities-section .reference-section-subheading,
           .internship-metrics-section .reference-section-subheading {
             padding: 8px 15px !important;
-
             font-size: 12px !important;
-
             letter-spacing: 1.2px !important;
           }
 
@@ -508,9 +468,7 @@ export default function Internship() {
           .internship-capabilities-section .reference-section-title,
           .internship-metrics-section .reference-section-title {
             font-size: clamp(32px, 9vw, 44px) !important;
-
             letter-spacing: -0.8px !important;
-
             margin-top: 16px !important;
           }
 
@@ -520,20 +478,424 @@ export default function Internship() {
           .internship-capabilities-section .reference-section-title::after,
           .internship-metrics-section .reference-section-title::after {
             width: 100px;
-
             height: 4px;
-
             margin-top: 18px;
           }
+        }
+      /* =========================================
+         FINAL INTERNSHIP COLOR CORRECTIONS
+         Requested color: rgb(0, 170, 162)
+      ========================================= */
 
-          .internship-program-section .reference-about-title::after {
-            margin-left: 0;
-            margin-right: auto;
+      .internship-program-section,
+      .internship-domains-section,
+      .internship-capabilities-section,
+      .internship-metrics-section {
+        background: #ffffff !important;
+      }
+
+      /* Remove the old blue gradient from all highlighted heading words. */
+      .internship-program-section .reference-about-title .heading-gradient,
+      .internship-domains-section .reference-section-title .heading-gradient,
+      .internship-tech-section .reference-section-title .heading-gradient,
+      .internship-capabilities-section .reference-section-title .heading-gradient,
+      .internship-metrics-section .reference-section-title .heading-gradient {
+        background: none !important;
+        background-image: none !important;
+        color: rgb(0, 170, 162) !important;
+        -webkit-text-fill-color: rgb(0, 170, 162) !important;
+        -webkit-background-clip: initial !important;
+        background-clip: initial !important;
+      }
+
+      /* All section eyebrow text, dots and lines use the exact teal. */
+      .internship-program-section .reference-about-subheading,
+      .internship-domains-section .reference-section-subheading,
+      .internship-tech-section .reference-section-subheading,
+      .internship-capabilities-section .reference-section-subheading,
+      .internship-metrics-section .reference-section-subheading {
+        color: rgb(0, 170, 162) !important;
+        border-color: rgba(0, 170, 162, 0.30) !important;
+        background: rgba(0, 170, 162, 0.06) !important;
+      }
+
+      .internship-program-section .reference-about-subheading::before,
+      .internship-domains-section .reference-section-subheading::before,
+      .internship-tech-section .reference-section-subheading::before,
+      .internship-capabilities-section .reference-section-subheading::before,
+      .internship-metrics-section .reference-section-subheading::before {
+        background: rgb(0, 170, 162) !important;
+        box-shadow: 0 0 0 4px rgba(0, 170, 162, 0.13) !important;
+        animation: internshipDotBlink 1.6s ease-in-out infinite !important;
+      }
+
+      .internship-program-section .reference-about-title::after,
+      .internship-domains-section .reference-section-title::after,
+      .internship-tech-section .reference-section-title::after,
+      .internship-capabilities-section .reference-section-title::after,
+      .internship-metrics-section .reference-section-title::after {
+        background: rgb(0, 170, 162) !important;
+        animation: internshipLineBlink 1.8s ease-in-out infinite !important;
+      }
+
+      /* About section: remove the pale/teal blob background. */
+      .internship-program-section .about-bg-blobs {
+        display: none !important;
+      }
+
+      /* Domain cards: black text/icons and dim teal selected state. */
+      .internship-domain-card {
+        background: #ffffff !important;
+        color: #000000 !important;
+      }
+
+      .internship-domain-card h3,
+      .internship-domain-card .domain-card-caption,
+      .internship-domain-card .domain-card-copy,
+      .internship-domain-card svg,
+      .internship-domain-card .domain-icon-shell {
+        color: #000000 !important;
+      }
+
+      .internship-domain-card .domain-icon-shell {
+        background: rgb(0, 170, 162) !important;
+        border-color: rgb(0, 170, 162) !important;
+      }
+
+      .internship-domain-card .domain-icon-shell svg {
+        color: #000000 !important;
+        stroke: #000000 !important;
+      }
+
+      .internship-domain-card .domain-category-tag {
+        background: rgb(0, 170, 162) !important;
+        color: #000000 !important;
+        border-color: rgb(0, 170, 162) !important;
+      }
+
+      .internship-domain-card .internship-domain-apply {
+        background: rgb(0, 170, 162) !important;
+        color: #000000 !important;
+        border-top-color: rgb(0, 170, 162) !important;
+        border-radius: 10px !important;
+        padding: 10px 12px !important;
+      }
+
+      .internship-domain-card .internship-domain-apply i {
+        color: #000000 !important;
+      }
+
+      .internship-domain-card.active {
+        background: rgba(0, 170, 162, 0.14) !important;
+        border-color: rgb(0, 170, 162) !important;
+        box-shadow: 0 10px 28px rgba(0, 170, 162, 0.12) !important;
+      }
+
+      /* Technologies section stays dark. Only the requested text/accent colors change. */
+      .internship-tech-section {
+        background: #0b0b1a !important;
+      }
+
+      .internship-tech-section .reference-section-title {
+        color: #ffffff !important;
+      }
+
+      .internship-tech-section .reference-section-title .heading-gradient {
+        color: rgb(0, 170, 162) !important;
+        -webkit-text-fill-color: rgb(0, 170, 162) !important;
+      }
+
+      .internship-tech-section .tech-carousel-item span {
+        color: #ffffff;
+      }
+
+      /* Program Highlights: white page background; preserve dark learning panel. */
+      .internship-capabilities-section {
+        background: #ffffff !important;
+      }
+
+      /* Benefits cards behave like buttons: white normally, teal with white text on hover. */
+      .internship-capabilities-section .capabilities-light {
+        background: #ffffff !important;
+      }
+
+      .internship-capabilities-section .cap-benefit-card {
+        background: #ffffff !important;
+        color: #000000 !important;
+        border: 1px solid rgba(0, 170, 162, 0.22) !important;
+        transition: background-color 0.25s ease, color 0.25s ease, transform 0.2s ease;
+      }
+
+      .internship-capabilities-section .cap-benefit-card span,
+      .internship-capabilities-section .cap-benefit-card i {
+        color: #000000 !important;
+      }
+
+      .internship-capabilities-section .cap-benefit-card:hover {
+        background: rgb(0, 170, 162) !important;
+        color: #ffffff !important;
+      }
+
+      .internship-capabilities-section .cap-benefit-card:hover span,
+      .internship-capabilities-section .cap-benefit-card:hover i {
+        color: #ffffff !important;
+      }
+
+      /* Metrics section: white background and teal borders/accents. */
+      .internship-metrics-section {
+        background: #ffffff !important;
+      }
+
+      .internship-metrics-section .metric-item {
+        background: #ffffff !important;
+        border: 1px solid rgb(0, 170, 162) !important;
+      }
+
+      .internship-metrics-section .metric-item strong,
+      .internship-metrics-section .metric-item span,
+      .internship-metrics-section .metric-item i,
+      .internship-metrics-section .success-proof-item {
+        color: #000000 !important;
+      }
+
+      .internship-metrics-section .metric-icon {
+        background: rgba(0, 170, 162, 0.10) !important;
+        color: rgb(0, 170, 162) !important;
+      }
+
+      .internship-metrics-section .metric-icon i {
+        color: rgb(0, 170, 162) !important;
+      }
+
+      .internship-metrics-section .success-proof-item i {
+        color: rgb(0, 170, 162) !important;
+      }
+
+      /* Apply button: white normally, teal on hover with white text. */
+      .internship-track-apply {
+        background: #ffffff !important;
+        color: #000000 !important;
+        border: 1px solid rgba(0, 170, 162, 0.25) !important;
+      }
+
+      .internship-track-apply i {
+        color: #000000 !important;
+      }
+
+      .internship-track-apply:hover {
+        background: rgb(0, 170, 162) !important;
+        color: #ffffff !important;
+        border-color: rgb(0, 170, 162) !important;
+      }
+
+      .internship-track-apply:hover i {
+        color: #ffffff !important;
+      }
+
+      /* Exact blink animation requested for every heading dot and underline. */
+      @keyframes internshipDotBlink {
+        0%, 100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 0.35;
+          transform: scale(0.78);
+        }
+      }
+
+      @keyframes internshipLineBlink {
+        0%, 100% {
+          opacity: 1;
+          transform: scaleX(1);
+        }
+        50% {
+          opacity: 0.35;
+          transform: scaleX(0.72);
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .internship-program-section .reference-about-subheading::before,
+        .internship-domains-section .reference-section-subheading::before,
+        .internship-tech-section .reference-section-subheading::before,
+        .internship-capabilities-section .reference-section-subheading::before,
+        .internship-metrics-section .reference-section-subheading::before,
+        .internship-program-section .reference-about-title::after,
+        .internship-domains-section .reference-section-title::after,
+        .internship-tech-section .reference-section-title::after,
+        .internship-capabilities-section .reference-section-title::after,
+        .internship-metrics-section .reference-section-title::after {
+          animation: none !important;
+        }
+      }
+
+      `}</style>
+
+      {/* =========================================================
+          SELECTED TRACK PANEL — FINAL TEAL OVERRIDE
+          Exact teal: rgb(0, 170, 162)
+      ========================================================= */}
+      <style>{`
+        .internship-domains-section .internship-track-preview {
+          background: #07142f !important;
+          background-image: none !important;
+          border: 1px solid rgb(0, 170, 162) !important;
+          border-radius: 20px !important;
+          color: #ffffff !important;
+          box-shadow: 0 24px 52px rgba(7, 20, 47, 0.22) !important;
+        }
+
+        .internship-domains-section .internship-track-preview::before,
+        .internship-domains-section .internship-track-preview::after {
+          background: none !important;
+          background-image: none !important;
+          box-shadow: none !important;
+        }
+
+        .internship-domains-section .internship-track-preview .track-preview-label {
+          color: rgb(0, 170, 162) !important;
+        }
+
+        .internship-domains-section .internship-track-preview .track-preview-status,
+        .internship-domains-section .internship-track-preview .track-preview-status i {
+          color: #bbf7d0 !important;
+        }
+
+        .internship-domains-section .internship-track-preview .track-preview-icon-shell {
+          background: rgb(0, 170, 162) !important;
+          background-image: none !important;
+          border: 1px solid rgb(0, 170, 162) !important;
+          color: #000000 !important;
+          box-shadow: none !important;
+        }
+
+        .internship-domains-section .internship-track-preview .track-preview-icon-shell svg,
+        .internship-domains-section .internship-track-preview .track-preview-icon-shell i {
+          color: #000000 !important;
+          stroke: #000000 !important;
+        }
+
+        .internship-domains-section .internship-track-preview .track-preview-category {
+          background: rgba(0, 170, 162, 0.10) !important;
+          background-image: none !important;
+          border: 1px solid rgba(0, 170, 162, 0.45) !important;
+          color: rgb(0, 170, 162) !important;
+          box-shadow: none !important;
+        }
+
+        .internship-domains-section .internship-track-preview h3 {
+          color: #ffffff !important;
+        }
+
+        .internship-domains-section .internship-track-preview p {
+          color: rgba(255, 255, 255, 0.78) !important;
+        }
+
+        .internship-domains-section .internship-track-preview .track-preview-facts {
+          border-top: 1px solid rgba(255, 255, 255, 0.14) !important;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.14) !important;
+        }
+
+        .internship-domains-section .internship-track-preview .track-preview-facts span,
+        .internship-domains-section .internship-track-preview .track-preview-facts i {
+          color: rgb(0, 170, 162) !important;
+        }
+
+        .internship-domains-section .internship-track-preview .track-preview-note,
+        .internship-domains-section .internship-track-preview .track-preview-note i {
+          color: rgb(0, 170, 162) !important;
+        }
+
+        /* APPLY BUTTON — force teal over all existing blue/white rules */
+        .internship-domains-section .internship-track-preview a.internship-track-apply,
+        .internship-domains-section .internship-track-preview .internship-track-apply {
+          display: flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+          gap: 12px !important;
+          width: 100% !important;
+          min-height: 64px !important;
+          box-sizing: border-box !important;
+          background: rgb(0, 170, 162) !important;
+          background-image: none !important;
+          color: #000000 !important;
+          border: 1px solid rgb(0, 170, 162) !important;
+          border-radius: 999px !important;
+          box-shadow: none !important;
+          text-decoration: none !important;
+          opacity: 1 !important;
+          -webkit-text-fill-color: #000000 !important;
+          transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease !important;
+        }
+
+        .internship-domains-section .internship-track-preview .internship-track-apply span,
+        .internship-domains-section .internship-track-preview .internship-track-apply i {
+          color: #000000 !important;
+          -webkit-text-fill-color: #000000 !important;
+        }
+
+        .internship-domains-section .internship-track-preview a.internship-track-apply:hover,
+        .internship-domains-section .internship-track-preview .internship-track-apply:hover {
+          background: rgb(0, 150, 143) !important;
+          background-image: none !important;
+          color: #ffffff !important;
+          border-color: rgb(0, 170, 162) !important;
+          transform: translateY(-2px) !important;
+          box-shadow: 0 10px 25px rgba(0, 170, 162, 0.25) !important;
+          -webkit-text-fill-color: #ffffff !important;
+        }
+
+        .internship-domains-section .internship-track-preview .internship-track-apply:hover span,
+        .internship-domains-section .internship-track-preview .internship-track-apply:hover i {
+          color: #ffffff !important;
+          -webkit-text-fill-color: #ffffff !important;
+        }
+
+        .internship-domains-section .internship-track-preview a.internship-track-apply:focus,
+        .internship-domains-section .internship-track-preview a.internship-track-apply:focus-visible,
+        .internship-domains-section .internship-track-preview .internship-track-apply:focus,
+        .internship-domains-section .internship-track-preview .internship-track-apply:focus-visible {
+          background: rgb(0, 170, 162) !important;
+          background-image: none !important;
+          color: #000000 !important;
+          border-color: rgb(0, 170, 162) !important;
+          outline: 2px solid rgba(0, 170, 162, 0.35) !important;
+          outline-offset: 3px !important;
+          box-shadow: none !important;
+          -webkit-text-fill-color: #000000 !important;
+        }
+
+        .internship-domains-section .internship-track-preview .internship-track-apply:focus i,
+        .internship-domains-section .internship-track-preview .internship-track-apply:focus-visible i {
+          color: #000000 !important;
+          -webkit-text-fill-color: #000000 !important;
+        }
+
+        .internship-domains-section .internship-track-preview * {
+          --track-blue: rgb(0, 170, 162) !important;
+        }
+
+        .internship-domains-section .internship-track-preview .track-preview-label,
+        .internship-domains-section .internship-track-preview .track-preview-category,
+        .internship-domains-section .internship-track-preview .track-preview-facts span,
+        .internship-domains-section .internship-track-preview .track-preview-facts i,
+        .internship-domains-section .internship-track-preview .track-preview-note,
+        .internship-domains-section .internship-track-preview .track-preview-note i {
+          text-shadow: none !important;
+        }
+
+        @media (max-width: 767px) {
+          .internship-domains-section .internship-track-preview {
+            border-radius: 18px !important;
+          }
+
+          .internship-domains-section .internship-track-preview a.internship-track-apply,
+          .internship-domains-section .internship-track-preview .internship-track-apply {
+            min-height: 58px !important;
           }
         }
       `}</style>
-
-      {/* HERO */}
       <section
         className="header-wrap internship-hero"
         style={{
@@ -552,33 +914,22 @@ export default function Internship() {
         </div>
       </section>
 
-      {/* ABOUT THE INTERNSHIP */}
       <section className="internship-program-section modern-about-section">
-
         <div className="about-bg-blobs">
           <div className="blob blob-1"></div>
           <div className="blob blob-2"></div>
         </div>
 
         <div className="container relative z-10">
-
           <div className="internship-about-grid modern-grid">
-
             <motion.div
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
-              transition={{
-                duration: 0.8,
-                ease: "easeOut"
-              }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
               className="about-content-wrapper"
             >
-
-              <div
-                className="about-accent-line"
-                aria-hidden="true"
-              ></div>
+              <div className="about-accent-line" aria-hidden="true"></div>
 
               <span
                 id="sub-heading"
@@ -587,10 +938,7 @@ export default function Internship() {
                 About the Internship
               </span>
 
-              <h2
-                id="title"
-                className="modern-title reference-about-title"
-              >
+              <h2 id="title" className="modern-title reference-about-title">
                 Practical Training{" "}
                 <span className="text-gradient heading-gradient">
                   Built Around Real Work
@@ -604,31 +952,21 @@ export default function Internship() {
               </p>
 
               <div className="modern-cta-group">
-
-                <a
-                  href="#apply"
-                  className="modern-btn-primary"
-                >
+                <a href="#apply" className="modern-btn-primary">
                   <span>Start Your Journey</span>
-
                   <i
                     className="bi bi-arrow-right-short"
                     aria-hidden="true"
                   ></i>
                 </a>
 
-                <a
-                  href="#brochure"
-                  className="modern-btn-secondary"
-                >
+                <a href="#brochure" className="modern-btn-secondary">
                   <span>Download Syllabus</span>
-
                   <i
                     className="bi bi-cloud-arrow-down"
                     aria-hidden="true"
                   ></i>
                 </a>
-
               </div>
             </motion.div>
 
@@ -636,27 +974,16 @@ export default function Internship() {
               className="internship-detail-grid modern-detail-grid"
               initial="hidden"
               whileInView="visible"
-              viewport={{
-                once: true,
-                margin: "-100px"
-              }}
+              viewport={{ once: true, margin: "-100px" }}
               variants={{
-                hidden: {
-                  opacity: 0
-                },
-
+                hidden: { opacity: 0 },
                 visible: {
                   opacity: 1,
-
-                  transition: {
-                    staggerChildren: 0.15
-                  }
-                }
+                  transition: { staggerChildren: 0.15 },
+                },
               }}
             >
-
               {programDetails.map((detail, index) => {
-
                 const [title, desc] = detail.split(": ");
 
                 return (
@@ -664,31 +991,21 @@ export default function Internship() {
                     className="internship-detail-card modern-detail-card"
                     key={detail}
                     variants={{
-                      hidden: {
-                        opacity: 0,
-                        y: 30
-                      },
-
+                      hidden: { opacity: 0, y: 30 },
                       visible: {
                         opacity: 1,
                         y: 0,
-
                         transition: {
                           type: "spring",
-                          stiffness: 100
-                        }
-                      }
+                          stiffness: 100,
+                        },
+                      },
                     }}
-                    whileHover={{
-                      y: -8,
-                      scale: 1.02
-                    }}
+                    whileHover={{ y: -8, scale: 1.02 }}
                   >
-
                     <div className="card-bg-gradient"></div>
 
                     <div className="card-content-relative">
-
                       <div
                         className={`card-icon-wrapper ${
                           index === 0
@@ -700,7 +1017,6 @@ export default function Internship() {
                             : "color-orange"
                         }`}
                       >
-
                         <img
                           src={`/images/icon-${index + 1}.png`}
                           alt={title}
@@ -708,60 +1024,42 @@ export default function Internship() {
                           style={{
                             width: "32px",
                             height: "32px",
-                            objectFit: "contain"
+                            objectFit: "contain",
                           }}
                         />
-
                       </div>
 
                       <div className="card-text">
-
                         <h4>{title}</h4>
-
                         <span>{desc}</span>
-
                       </div>
-
                     </div>
-
                   </motion.div>
                 );
-
               })}
-
             </motion.div>
-
           </div>
-
         </div>
-
       </section>
 
-      {/* SHOWCASE */}
       <section className="internship-showcase-section">
-
         <div className="container showcase-container">
-
           <div className="showcase-header">
-
             <h2>
               How ProJenius transforms your <br />
               career with real-world projects
             </h2>
 
             <p>
-              Discover how ProJenius uses hands-on training to prepare
-              students for the tech industry.
+              Discover how ProJenius uses hands-on training to prepare students
+              for the tech industry.
             </p>
-
           </div>
 
           <div className="showcase-video-container">
-
             <div className="showcase-video-glow"></div>
 
             <div className="showcase-video-inner">
-
               <iframe
                 width="100%"
                 height="100%"
@@ -772,42 +1070,20 @@ export default function Internship() {
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
               ></iframe>
-
             </div>
-
           </div>
-
         </div>
-
       </section>
 
-      {/* INTERNSHIP DOMAINS */}
-      <section
-        className="internship-domains-section"
-        id="apply"
-      >
-
+      <section className="internship-domains-section" id="apply">
         <div className="container">
-
           <motion.div
             className="section-heading text-center internship-domains-heading"
-            initial={{
-              opacity: 0,
-              y: 24
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0
-            }}
-            viewport={{
-              once: true,
-              margin: "-80px"
-            }}
-            transition={{
-              duration: 0.55
-            }}
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.55 }}
           >
-
             <span
               id="sub-heading"
               className="reference-section-subheading"
@@ -815,10 +1091,7 @@ export default function Internship() {
               Internship Domains
             </span>
 
-            <h2
-              id="title"
-              className="reference-section-title"
-            >
+            <h2 id="title" className="reference-section-title">
               Choose Your{" "}
               <span className="heading-gradient">
                 Technology Track
@@ -829,7 +1102,6 @@ export default function Internship() {
               Select a domain to preview the learning outcome, then apply
               directly for your preferred track.
             </p>
-
           </motion.div>
 
           <div
@@ -837,247 +1109,158 @@ export default function Internship() {
             role="tablist"
             aria-label="Internship domain filters"
           >
-
             {domainFilters.map((filter) => (
-
               <button
                 className={`internship-filter-btn ${
-                  activeFilter === filter
-                    ? "active"
-                    : ""
+                  activeFilter === filter ? "active" : ""
                 }`}
                 key={filter}
                 type="button"
                 role="tab"
-                aria-selected={
-                  activeFilter === filter
-                }
-                onClick={() =>
-                  handleFilterChange(filter)
-                }
+                aria-selected={activeFilter === filter}
+                onClick={() => handleFilterChange(filter)}
               >
                 {filter}
               </button>
-
             ))}
-
           </div>
 
           <div
             className="track-explorer-meta"
             aria-label="Internship program overview"
           >
-
             <span>
-              <i
-                className="bi bi-grid-1x2"
-                aria-hidden="true"
-              ></i>{" "}
+              <i className="bi bi-grid-1x2" aria-hidden="true"></i>{" "}
               {visibleDomains.length} tracks available
             </span>
 
             <span>
-              <i
-                className="bi bi-kanban"
-                aria-hidden="true"
-              ></i>{" "}
+              <i className="bi bi-kanban" aria-hidden="true"></i>{" "}
               Project-based learning
             </span>
 
             <span>
-              <i
-                className="bi bi-calendar-check"
-                aria-hidden="true"
-              ></i>{" "}
+              <i className="bi bi-calendar-check" aria-hidden="true"></i>{" "}
               New cohorts now open
             </span>
-
           </div>
 
           <div className="internship-domain-layout">
-
-            <div
-              className="internship-domain-grid"
-              role="list"
-            >
-
+            <div className="internship-domain-grid" role="list">
               {visibleDomains.map((domain, index) => {
-
                 const DomainIcon = domain.icon;
 
                 return (
                   <motion.button
                     className={`internship-domain-card ${
-                      selectedDomain.title === domain.title
-                        ? "active"
-                        : ""
+                      selectedDomain.title === domain.title ? "active" : ""
                     }`}
                     key={domain.title}
                     type="button"
                     role="listitem"
-                    aria-pressed={
-                      selectedDomain.title === domain.title
-                    }
-                    onClick={() =>
-                      setSelectedDomain(domain)
-                    }
-                    initial={{
-                      opacity: 0,
-                      y: 20
-                    }}
-                    whileInView={{
-                      opacity: 1,
-                      y: 0
-                    }}
-                    viewport={{
-                      once: true,
-                      margin: "-40px"
-                    }}
+                    aria-pressed={selectedDomain.title === domain.title}
+                    onClick={() => setSelectedDomain(domain)}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-40px" }}
                     transition={{
                       duration: 0.4,
-                      delay: index * 0.04
+                      delay: index * 0.04,
                     }}
-                    whileHover={{
-                      y: -6
-                    }}
+                    whileHover={{ y: -6 }}
                   >
-
                     <div className="domain-card-top">
-
                       <div className="domain-icon-shell">
-
                         <DomainIcon
                           aria-hidden="true"
                           strokeWidth={2}
                         />
-
                       </div>
 
                       <span className="domain-category-tag">
                         {domain.category}
                       </span>
-
                     </div>
 
                     <div className="domain-card-copy">
-
                       <h3>{domain.title}</h3>
-
                       <span className="domain-card-caption">
                         Career-focused internship
                       </span>
-
                     </div>
 
                     <span className="internship-domain-apply">
-
                       View Track{" "}
-
                       <i
                         className="bi bi-arrow-right-short"
                         aria-hidden="true"
                       ></i>
-
                     </span>
-
                   </motion.button>
                 );
-
               })}
-
             </div>
 
             <motion.aside
               className="internship-track-preview"
               key={selectedDomain.title}
-              initial={{
-                opacity: 0,
-                x: 20
-              }}
-              animate={{
-                opacity: 1,
-                x: 0
-              }}
-              transition={{
-                duration: 0.35
-              }}
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.35 }}
             >
-
               <div className="track-preview-header">
-
                 <span className="track-preview-label">
                   Selected Track
                 </span>
 
                 <span className="track-preview-status">
-
                   <i
                     className="bi bi-check2-circle"
                     aria-hidden="true"
                   ></i>{" "}
-
                   Open
-
                 </span>
-
               </div>
 
               <div className="track-preview-identity">
-
                 <div className="track-preview-icon-shell">
-
                   <SelectedDomainIcon
                     aria-hidden="true"
                     strokeWidth={2}
                   />
-
                 </div>
 
                 <span className="track-preview-category">
                   {selectedDomain.category}
                 </span>
-
               </div>
 
-              <h3>
-                {selectedDomain.title}
-              </h3>
+              <h3>{selectedDomain.title}</h3>
 
-              <p>
-                {selectedDomain.outcome}
-              </p>
+              <p>{selectedDomain.outcome}</p>
 
               <div
                 className="track-preview-facts"
                 aria-label="Program details"
               >
-
                 <span>
-
                   <i
                     className="bi bi-calendar3"
                     aria-hidden="true"
                   ></i>{" "}
-
                   Flexible duration
-
                 </span>
 
                 <span>
-
                   <i
                     className="bi bi-person-workspace"
                     aria-hidden="true"
                   ></i>{" "}
-
                   Mentor-led projects
-
                 </span>
-
               </div>
 
               <div className="track-preview-note">
-
                 <i
                   className="bi bi-shield-check"
                   aria-hidden="true"
@@ -1086,42 +1269,29 @@ export default function Internship() {
                 <span>
                   Certificate and portfolio review included
                 </span>
-
               </div>
 
               <a
-                href={getWhatsAppApplyLink(
-                  selectedDomain.title
-                )}
+                href={getWhatsAppApplyLink(selectedDomain.title)}
                 target="_blank"
                 rel="noreferrer"
                 className="internship-track-apply"
               >
-
                 Apply for this track
 
                 <i
                   className="bi bi-arrow-up-right"
                   aria-hidden="true"
                 ></i>
-
               </a>
-
             </motion.aside>
-
           </div>
-
         </div>
-
       </section>
 
-      {/* TECHNOLOGIES COVERED */}
       <section className="internship-tech-section">
-
         <div className="container">
-
           <div className="section-heading text-center">
-
             <span
               id="sub-heading"
               className="reference-section-subheading"
@@ -1129,93 +1299,60 @@ export default function Internship() {
               Technologies Covered
             </span>
 
-            <h2
-              id="title"
-              className="reference-section-title"
-            >
-
+            <h2 id="title" className="reference-section-title">
               Tools Used in{" "}
-
               <span className="heading-gradient">
                 Real Development
               </span>
-
             </h2>
-
           </div>
-
         </div>
 
         <div className="tech-carousel-wrapper">
-
           <div className="tech-carousel-track">
-
             <ul className="tech-carousel-list">
-
               {technologies.map((tech) => (
-
                 <li
                   key={tech.name}
                   className="tech-carousel-item"
                 >
-
                   <img
                     src={tech.logo}
                     alt={tech.name}
                     className="tech-carousel-logo"
                   />
 
-                  <span>
-                    {tech.name}
-                  </span>
-
+                  <span>{tech.name}</span>
                 </li>
-
               ))}
-
             </ul>
 
             <ul
               className="tech-carousel-list"
               aria-hidden="true"
             >
-
               {technologies.map((tech) => (
-
                 <li
                   key={`dup-${tech.name}`}
                   className="tech-carousel-item"
                 >
-
                   <img
                     src={tech.logo}
                     alt={tech.name}
                     className="tech-carousel-logo"
                   />
 
-                  <span>
-                    {tech.name}
-                  </span>
-
+                  <span>{tech.name}</span>
                 </li>
-
               ))}
-
             </ul>
-
           </div>
-
         </div>
-
       </section>
 
-      {/* PROGRAM HIGHLIGHTS */}
       <section className="internship-capabilities-section">
-
         <div className="container">
-
           <div className="section-heading text-center">
-
             <span
               id="sub-heading"
               className="reference-section-subheading"
@@ -1223,49 +1360,28 @@ export default function Internship() {
               Program Highlights
             </span>
 
-            <h2
-              id="title"
-              className="reference-section-title"
-            >
-
+            <h2 id="title" className="reference-section-title">
               What Makes This Internship{" "}
-
               <span className="heading-gradient">
                 Different
               </span>
-
             </h2>
-
           </div>
 
           <div className="capabilities-layout">
-
             <motion.div
               className="capabilities-panel capabilities-dark"
-              initial={{
-                opacity: 0,
-                y: 40
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0
-              }}
-              viewport={{
-                once: true,
-                margin: "-80px"
-              }}
-              transition={{
-                duration: 0.6
-              }}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.6 }}
             >
-
               <div className="cap-panel-label">
                 What Interns Will Learn
               </div>
 
               <h3>
-                Work Like a
-                <br />
+                Work Like a<br />
                 Modern Tech Team
               </h3>
 
@@ -1276,121 +1392,70 @@ export default function Internship() {
               </p>
 
               <div className="cap-panel-list">
+                {learningPoints.map((point, index) => (
+                  <div
+                    className="cap-list-item"
+                    key={point.text}
+                  >
+                    <span className="cap-item-num">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
 
-                {learningPoints.map(
-                  (point, index) => (
+                    <i className={`bi ${point.icon}`}></i>
 
-                    <div
-                      className="cap-list-item"
-                      key={point.text}
-                    >
-
-                      <span className="cap-item-num">
-                        {String(index + 1).padStart(
-                          2,
-                          "0"
-                        )}
-                      </span>
-
-                      <i
-                        className={`bi ${point.icon}`}
-                      ></i>
-
-                      <span>
-                        {point.text}
-                      </span>
-
-                    </div>
-
-                  )
-                )}
-
+                    <span>{point.text}</span>
+                  </div>
+                ))}
               </div>
-
             </motion.div>
 
             <motion.div
               className="capabilities-panel capabilities-light"
-              initial={{
-                opacity: 0,
-                y: 40
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0
-              }}
-              viewport={{
-                once: true,
-                margin: "-80px"
-              }}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-80px" }}
               transition={{
                 duration: 0.6,
-                delay: 0.15
+                delay: 0.15,
               }}
             >
-
               <div className="cap-panel-label cap-label-blue">
                 Benefits
               </div>
 
               <h3>
-                Career Support
-                <br />
+                Career Support<br />
                 Beyond Training
               </h3>
 
               <div className="cap-benefits-grid">
-
-                {benefits.map(
-                  (benefit) => (
-
-                    <motion.div
-                      className="cap-benefit-card"
-                      key={benefit.text}
-                      whileHover={{
-                        y: -4
-                      }}
-                      transition={{
-                        duration: 0.2
-                      }}
+                {benefits.map((benefit) => (
+                  <motion.div
+                    className="cap-benefit-card"
+                    key={benefit.text}
+                    whileHover={{ y: -4 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <div
+                      className={`cap-benefit-icon color-${benefit.color}`}
                     >
+                      <i
+                        className={`bi ${benefit.icon}`}
+                      ></i>
+                    </div>
 
-                      <div
-                        className={`cap-benefit-icon color-${benefit.color}`}
-                      >
-
-                        <i
-                          className={`bi ${benefit.icon}`}
-                        ></i>
-
-                      </div>
-
-                      <span>
-                        {benefit.text}
-                      </span>
-
-                    </motion.div>
-
-                  )
-                )}
-
+                    <span>{benefit.text}</span>
+                  </motion.div>
+                ))}
               </div>
-
             </motion.div>
-
           </div>
-
         </div>
-
       </section>
 
-      {/* SUCCESS STORIES */}
       <section className="internship-metrics-section">
-
         <div className="container">
-
           <div className="section-heading text-center">
-
             <span
               id="sub-heading"
               className="reference-section-subheading"
@@ -1398,132 +1463,71 @@ export default function Internship() {
               Success Stories
             </span>
 
-            <h2
-              id="title"
-              className="reference-section-title"
-            >
-
+            <h2 id="title" className="reference-section-title">
               Growth You Can{" "}
-
               <span className="heading-gradient">
                 Measure
               </span>
-
             </h2>
-
           </div>
 
           <div
             className="metrics-strip"
             ref={statsRef}
           >
-
-            {stats.map(
-              (stat, index) => (
-
-                <motion.div
-                  className="metric-item"
-                  key={stat.label}
-                  initial={{
-                    opacity: 0,
-                    y: 30
-                  }}
-                  whileInView={{
-                    opacity: 1,
-                    y: 0
-                  }}
-                  viewport={{
-                    once: true
-                  }}
-                  transition={{
-                    duration: 0.5,
-                    delay: index * 0.12
-                  }}
+            {stats.map((stat, index) => (
+              <motion.div
+                className="metric-item"
+                key={stat.label}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.12,
+                }}
+              >
+                <div
+                  className={`metric-icon color-${stat.color}`}
                 >
+                  <i className={`bi ${stat.icon}`}></i>
+                </div>
 
-                  <div
-                    className={`metric-icon color-${stat.color}`}
-                  >
+                <strong>
+                  {statCounts[index]}
+                  {stat.suffix}
+                </strong>
 
-                    <i
-                      className={`bi ${stat.icon}`}
-                    ></i>
-
-                  </div>
-
-                  <strong>
-
-                    {statCounts[index]}
-                    {stat.suffix}
-
-                  </strong>
-
-                  <span>
-                    {stat.label}
-                  </span>
-
-                </motion.div>
-
-              )
-            )}
-
+                <span>{stat.label}</span>
+              </motion.div>
+            ))}
           </div>
 
           <div className="success-proof-row">
-
-            {successStories.map(
-              (story) => (
-
-                <div
-                  className="success-proof-item"
-                  key={story.text}
-                >
-
-                  <i
-                    className={`bi ${story.icon}`}
-                  ></i>
-
-                  <span>
-                    {story.text}
-                  </span>
-
-                </div>
-
-              )
-            )}
-
+            {successStories.map((story) => (
+              <div
+                className="success-proof-item"
+                key={story.text}
+              >
+                <i className={`bi ${story.icon}`}></i>
+                <span>{story.text}</span>
+              </div>
+            ))}
           </div>
-
         </div>
-
       </section>
 
-      {/* CTA */}
       <section className="internship-cta-section">
-
         <div className="container">
-
           <div className="internship-cta-box">
-
-            <h2>
-              Ready to Start Your Tech Journey?
-            </h2>
+            <h2>Ready to Start Your Tech Journey?</h2>
 
             <div>
-
-              <a
-                href="/contact"
-                className="btn"
-              >
-
+              <a href="/contact" className="btn">
                 <span className="btn-content">
-
                   Apply Now{" "}
-
                   <i className="bi bi-arrow-up-right ms-3"></i>
-
                 </span>
-
               </a>
 
               <a
@@ -1532,15 +1536,10 @@ export default function Internship() {
               >
                 Contact Us
               </a>
-
             </div>
-
           </div>
-
         </div>
-
       </section>
-
     </>
   );
 }
